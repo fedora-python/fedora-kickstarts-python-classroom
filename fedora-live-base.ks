@@ -5,7 +5,7 @@
 # Does not include package selection (other then mandatory)
 # Does not include localization packages or configuration
 
-# Does includes "default" language customization (kickstarts including
+# Does includes "default" language configuration (kickstarts including
 # this template can override these settings)
 
 lang en_US.UTF-8
@@ -18,8 +18,9 @@ xconfig --startxonboot
 part / --size 4096
 services --enabled=NetworkManager --disabled=network,sshd
 
-repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-8&arch=$basearch
-repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f8&arch=$basearch
+#repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-8&arch=$basearch
+#repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f8&arch=$basearch
+repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
 
 %packages
 @base-x
