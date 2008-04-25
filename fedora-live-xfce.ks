@@ -1,6 +1,10 @@
-# Fedora Project Spin
-# (c) Rahul Sundaram <sundaram@fedoraproject.org>
-# GPlv2 or later
+# fedora-live-xfce.ks
+#
+# Description:
+# - Fedora Live Spin with the light-weight XFCE Desktop Environment
+#
+# Maintainer(s):
+# - Rahul Sundaram <sundaram a fedoraproject.org>
 
 %include fedora-live-base.ks
 
