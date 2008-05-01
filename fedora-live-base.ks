@@ -1,10 +1,11 @@
 # fedora-live-base.ks
 #
-# Version independent kickstart configuration
+# Version independent kickstart configuration for Fedora Live Media
+#
 # Defines the basics for all kickstarts in the fedora-live branch
 # Does not include package selection (other then mandatory)
 # Does not include localization packages or configuration
-
+#
 # Does includes "default" language configuration (kickstarts including
 # this template can override these settings)
 

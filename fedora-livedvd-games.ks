@@ -1,11 +1,7 @@
 %include fedora-live-base.ks
 part / --size 8000
 
-# customize repo configuration for local builds
-# repo --name=development --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
-
-
-%packages --ignoremissing
+%packages
 
 # games
 

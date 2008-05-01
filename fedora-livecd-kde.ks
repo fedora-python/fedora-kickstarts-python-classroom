@@ -1,4 +1,4 @@
-%include livecd-fedora-base-desktop.ks
+%include fedora-live-base.ks
 
 %packages
 @kde-desktop
@@ -41,7 +41,7 @@ fonts-KOI8-R-100dpi
 tibetan-machine-uni-fonts
 
 # FIXME/TODO: recheck the removals here
-# try to remove some packages from livecd-fedora-base-desktop.ks
+# try to remove some packages from fedora-live-base.ks
 -gdm
 -authconfig-gtk
 

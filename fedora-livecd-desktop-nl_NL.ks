@@ -1,4 +1,4 @@
-# fedora-live-desktop-nl_NL.ks
+# fedora-livecd-desktop-nl_NL.ks
 #
 # Maintainer(s):
 # - Jeroen van Meeuwen <kanarip a fedoraunity.org>

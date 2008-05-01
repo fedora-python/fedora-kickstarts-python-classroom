@@ -1,4 +1,4 @@
-# fedora-live-developer-nl_NL.ks
+# fedora-livedvd-developer-nl_NL.ks
 #
 # Maintainer(s):
 # - Jeroen van Meeuwen <kanarip a fedoraunity.org>

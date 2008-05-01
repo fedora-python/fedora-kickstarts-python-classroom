@@ -1,4 +1,4 @@
-# fedora-live-xfce.ks
+# fedora-livecd-xfce.ks
 #
 # Description:
 # - Fedora Live Spin with the light-weight XFCE Desktop Environment

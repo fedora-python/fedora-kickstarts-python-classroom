@@ -1,4 +1,4 @@
-# fedora-live-desktop-en_US.ks
+# fedora-livecd-desktop-en_US.ks
 #
 # Maintainer(s):
 # - UNKNOWN

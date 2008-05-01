@@ -1,9 +1,9 @@
-# fedora-live-electronic-lab-nl_NL.ks
+# fedora-livecd-electronic-lab-nl_NL.ks
 #
 # Maintainer(s):
 # - Jeroen van Meeuwen <kanarip a fedoraunity.org>
 
-%include fedora-live-electronic-lab.ks
+%include fedora-livecd-electronic-lab.ks
 
 lang nl_NL
 keyboard us

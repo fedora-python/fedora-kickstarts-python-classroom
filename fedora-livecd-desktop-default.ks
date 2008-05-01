@@ -1,4 +1,7 @@
-# fedora-live-desktop-en.ks
+# fedora-livecd-desktop-default.ks
+#
+# Includes all languages with a default of en_US locale settings
+#
 
 %include fedora-livecd-desktop.ks
 
