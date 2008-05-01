@@ -1,9 +1,9 @@
-# fedora-live-kde-nl_NL.ks
+# fedora-live-developer-nl_NL.ks
 #
 # Maintainer(s):
 # - Jeroen van Meeuwen <kanarip a fedoraunity.org>
 
-%include fedora-live-kde.ks
+%include fedora-livedvd-developer.ks
 
 lang nl_NL
 keyboard us

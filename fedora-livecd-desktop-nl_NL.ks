@@ -1,6 +1,9 @@
 # fedora-live-desktop-nl_NL.ks
+#
+# Maintainer(s):
+# - Jeroen van Meeuwen <kanarip a fedoraunity.org>
 
-%include fedora-live-desktop.ks
+%include fedora-livecd-desktop.ks
 
 lang nl_NL.UTF-8
 keyboard us

@@ -1,69 +1,63 @@
-%include fedora-live-base.ks
+%include livecd-fedora-base-desktop.ks
 
 %packages
 @kde-desktop
-kdegames
-k3b
+
+# include nm-applet directly
+NetworkManager-gnome
+
+# unwanted packages from @kde-desktop
+# don't include these for now to fit on a cd
+# digikam (~11 megs), ktorrent (~3 megs), amarok (~14 megs),
+# kdegames (~23 megs)
+-amarok
+-digikam
+-kdeedu
+-scribus
+#-ktorrent
+#-kdegames
+#-kftpgrabber*
+
+# KDE 3
 koffice-kword
 koffice-kspread
 koffice-kpresenter
 koffice-filters
-twinkle
+k3b
 filelight
-krusader
+# twinkle (~10 megs)
+#twinkle
 
+# some extras
+fuse
 
-# if it is enough space include koffice-krita (~40 megs)
-koffice-krita
+# additional fonts
+@fonts
+fonts-ISO8859-2
+#cjkunifonts-ukai
+madan-fonts
+fonts-KOI8-R
+fonts-KOI8-R-100dpi
+tibetan-machine-uni-fonts
 
-# some other extra packages
-gnupg
-synaptics
-hal-cups-utils
-nss-mdns
-
-# ignore comps.xml and make sure these packages are included
-kpowersave
-rhgb
-man-pages
-smolt-firstboot
-knetworkmanager
-
-#some changes that we don't want...
--specspo
--scribus
--kdeaddons
--kdemultimedia-extras
--kdeartwork-extras
--kmymoney2
--basket
--speedcrunch
--autofs
-
+# FIXME/TODO: recheck the removals here
 # try to remove some packages from livecd-fedora-base-desktop.ks
--scim*
 -gdm
 -authconfig-gtk
--m17n*
--PolicyKit-gnome
--gnome-doc-utils-stylesheets
--anthy
--kasumi
--pygtkglext
--python-devel
--libchewing
 
-# workaround for the moment (requirements of hplip)
-python-imaging
-python-reportlab
+# save some space (from @base)
+-make
+-nss_db
+-autofs
 
 %end
 
 %post
+
 # create /etc/sysconfig/desktop (needed for installation)
 cat > /etc/sysconfig/desktop <<EOF
 DESKTOP="KDE"
-DISPLAYMANAGER="KDE"
+DISPLAYMANAGER="KDM"
 EOF
 
 # add initscript
@@ -88,11 +82,12 @@ sed -i 's/#AutoLoginUser=fred/AutoLoginUser=fedora/' /etc/kde/kdm/kdmrc
 sed -i 's/#PreselectUser=Default/PreselectUser=Default/' /etc/kde/kdm/kdmrc
 sed -i 's/#DefaultUser=johndoe/DefaultUser=fedora/' /etc/kde/kdm/kdmrc
 
-# disable screensaver
-sed -i 's/Enabled=true/Enabled=false/' /usr/share/kde-settings/kde-profile/default/share/config/kdesktoprc
-
-# workaround to put liveinst on desktop and in menu
-sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
-EOF
+# add liveinst.desktop to favorites menu
+mkdir -p /home/fedora/.kde/share/config/
+cat > /home/fedora/.kde/share/config/kickoffrc << MENU_EOF
+[Favorites]
+FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/kde4/systemsettings.desktop,/usr/share/applications/liveinst.desktop
+MENU_EOF
+chown -R fedora:fedora /home/fedora/.kde/
 
 %end

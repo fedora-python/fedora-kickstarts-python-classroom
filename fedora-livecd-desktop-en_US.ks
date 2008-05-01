@@ -1,6 +1,9 @@
 # fedora-live-desktop-en_US.ks
+#
+# Maintainer(s):
+# - UNKNOWN
 
-%include fedora-live-desktop.ks
+%include fedora-livecd-desktop.ks
 
 lang en_US.UTF-8
 keyboard us

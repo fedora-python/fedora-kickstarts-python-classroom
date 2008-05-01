@@ -1,6 +1,6 @@
 # fedora-live-desktop-en.ks
 
-%include fedora-live-desktop.ks
+%include fedora-livecd-desktop.ks
 
 lang en_US.UTF-8
 keyboard us
