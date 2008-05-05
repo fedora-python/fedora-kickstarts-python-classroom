@@ -38,7 +38,8 @@ totem
 totem-mozplugin
 pidgin
 claws-mail
-brasero
+# brasero has more dependencies
+gnomebaker
 drivel
 liferea
 quodlibet
@@ -52,6 +53,7 @@ transmission
 cups-pdf
 bluez-gnome
 alsa-plugins-pulseaudio
+pavucontrol
 
 # Command line
 ntfs-3g
@@ -98,22 +100,31 @@ xfwm4-themes
 -aspell-*
 -man-pages-*
 -scim-tables-*
--wqy-bitmap-fonts
--dejavu-fonts-experimental
--dejavu-fonts
+
+fonts-ISO8859-2 
+cjkunifonts-ukai 
+madan-fonts 
+fonts-KOI8-R 
+fonts-KOI8-R-100dpi 
+tibetan-machine-uni-fonts
+
+
+#-wqy-bitmap-fonts
+#-dejavu-fonts-experimental
+#-dejavu-fonts
 
 # drop more fonts
--lohit-fonts-*
--thaifonts-scalable
--paktype-fonts
--VLGothic-fonts
--baekmuk-ttf-fonts-*
--kacst-fonts
--lklug-fonts
--jomolhari-fonts
--abyssinica-fonts
--cjkunifonts-uming
-
+#-lohit-fonts-*
+#-thaifonts-scalable
+#-paktype-fonts
+#-VLGothic-fonts
+#-baekmuk-ttf-fonts-*
+#-kacst-fonts
+#-lklug-fonts
+#-jomolhari-fonts
+#-abyssinica-fonts
+#-cjkunifonts-uming
+#
 # more fun with space saving
 -scim-lang-chinese
 scim-chewing

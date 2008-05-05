@@ -35,6 +35,7 @@ maniadrive-music
 nethack-vultures
 neverball
 nexuiz
+nogravity
 openarena
 pinball
 scorched3d
@@ -61,12 +62,15 @@ clanbomber
 gnubg
 gnugo
 hedgewars
+lbrickbuster2
 liquidwar
 londonlaw
+lure
 machineball
 nazghul-haxima
 nethack
 openlierox
+pioneers
 quake3
 quake3-demo
 quarry
@@ -106,11 +110,12 @@ njam
 seahorse-adventures
 shippy
 tecnoballz
+#wordwarvi (under review)
 #(xgalaga renamed)
 xgalaxy
 zasx
 
-# falling blocks games (small)
+# falling blocks games (small) 
 
 crack-attack
 crystal-stacker
@@ -158,3 +163,4 @@ games-menus
 wget
 
 %end
+end
