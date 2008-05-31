@@ -1,5 +1,8 @@
-# Description : Live image for Fedora Electronic Lab
-# last updated: 10 October 2007
+# fedora-livecd-electronic-lab.ks
+#
+# Maintainer(s):
+# - Chitlesh Goorah <chitlesh a fedoraproject.org>
+# - Tibaut North <tnorth a fedoraproject.org>
 
 %include fedora-live-base.ks
 
@@ -110,6 +113,7 @@ uisp
 
 #computing
 octave
+octave-forge
 
 %end
 
@@ -125,8 +129,7 @@ ButtonsOnRight=FIAX
 CustomButtonPositions=true
 EOF
 
-
-# kill stupid klipper
+# kill klipper
 cat > /usr/share/kde-settings/kde-profile/default/share/config/klipperrc <<EOF
 [General]
 AutoStart=false
@@ -217,21 +220,22 @@ chmod 755 /etc/skel/.kde/env/start-custom.sh
 
 cat > /etc/skel/.kde/shutdown/stop-custom.sh << EOF
 #/bin/sh
-if [-n "$GNOME_KEYRING_PID"];then
-kill $GNOME_KEYRING_PID
+if [-n "$GNOME_KEYRING_PID"]; then
+	kill $GNOME_KEYRING_PID
 fi
 EOF
+
 chmod 755 /etc/skel/.kde/shutdown/stop-custom.sh
 
 ###### Fedora Electronic Lab ####################################################
 
 # FEL doesn't need these and boots slowly
-/sbin/chkconfig --del anacron
-/sbin/chkconfig --del sendmail
-/sbin/chkconfig --del nfs
-/sbin/chkconfig --del nfslock
-/sbin/chkconfig --del rpcidmapd
-/sbin/chkconfig --del rpcbind
+/sbin/chkconfig anacron off
+/sbin/chkconfig sendmail off
+/sbin/chkconfig nfs off
+/sbin/chkconfig nfslock off
+/sbin/chkconfig rpcidmapd off
+/sbin/chkconfig rpcbind off
 
 %end
 
