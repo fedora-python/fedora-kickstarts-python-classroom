@@ -1,0 +1,37 @@
+
+Name:       spin-kickstarts
+Version:    @VERSION@
+Release:    @RELEASE@%{?dist}
+License:    GPLv2+
+Summary:    Kickstart files and templates for creating your own Fedora Spins
+Group:      Applications/System
+URL:        http://fedorahosted.org/spin-kickstarts
+Source0:    http://fedorahosted.org/releases/s/p/%{name}/%{name}-%{version}.tar.gz
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildArch:  noarch
+
+%description
+A number of kickstarts you can use to create customized (Fedora) Spins
+
+%prep
+%setup -q
+
+%build
+%configure
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root,-)
+%dir %{_datadir}/%{name}/
+%{_datadir}/%{name}/*
+
+%changelog
+* @DATESTAMP@ Jeroen van Meeuwen <kanarip a fedoraunity.org> @VERSION@-@RELEASE@
+- Initial packaging
