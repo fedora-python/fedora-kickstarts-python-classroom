@@ -3,10 +3,12 @@
 kickstartdir = $(pkgdatadir)/
 kickstart_DATA = \
     fedora-live-base.ks \
+    fedora-livecd-desktop-de_DE.ks \
     fedora-livecd-desktop-default.ks \
     fedora-livecd-desktop-en_US.ks \
     fedora-livecd-desktop.ks \
     fedora-livecd-desktop-nl_NL.ks \
+    fedora-livecd-desktop-pt_PT.ks \
     fedora-livecd-electronic-lab.ks \
     fedora-livecd-electronic-lab-nl_NL.ks \
     fedora-livecd-kde-de_DE.ks \
