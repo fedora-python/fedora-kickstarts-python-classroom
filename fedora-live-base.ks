@@ -116,6 +116,79 @@ if [ -b \`readlink -f /dev/live\` ]; then
    mount -o ro /dev/live /mnt/live
 fi
 
+# enable swaps unless requested otherwise
+swaps=\`blkid -t TYPE=swap -o device\`
+if ! strstr "\`cat /proc/cmdline\`" noswap -a [ -n "\$swaps" ] ; then
+  for s in \$swaps ; do
+    action "Enabling swap partition \$s" swapon \$s
+  done
+fi
+
+# add fedora user with no passwd
+useradd -c "Fedora Live" fedora
+passwd -d fedora > /dev/null
+
+# turn off firstboot for livecd boots
+chkconfig --level 345 firstboot off 2>/dev/null
+
+# don't start yum-updatesd for livecd boots
+chkconfig --level 345 yum-updatesd off 2>/dev/null
+
+# don't do packagekit checking by default
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /apps/gnome-packagekit/frequency_get_updates never >/dev/null
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /apps/gnome-packagekit/frequency_refresh_cache never >/dev/null
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-packagekit/notify_available false >/dev/null
+
+# apparently, the gconf keys aren't enough
+mkdir -p /home/fedora/.config/autostart
+echo "X-GNOME-Autostart-enabled=false" >> /home/fedora/.config/autostart/gpk-update-icon.desktop
+chown -R fedora:fedora /home/fedora/.config
+
+
+
+# don't start cron/at as they tend to spawn things which are
+# disk intensive that are painful on a live image
+chkconfig --level 345 crond off 2>/dev/null
+chkconfig --level 345 atd off 2>/dev/null
+chkconfig --level 345 anacron off 2>/dev/null
+chkconfig --level 345 readahead_early off 2>/dev/null
+chkconfig --level 345 readahead_later off 2>/dev/null
+
+# make it so that we don't do writing to the overlay for things which
+# are just tmpdirs/caches
+mount -t tmpfs varcacheyum /var/cache/yum
+mount -t tmpfs tmp /tmp
+mount -t tmpfs vartmp /var/tmp
+
+# Stopgap fix for RH #217966; should be fixed in HAL instead
+touch /media/.hal-mtab
+
+# workaround clock syncing on shutdown that we don't want (#297421)
+sed -i -e 's/hwclock/no-such-hwclock/g' /etc/rc.d/init.d/halt
+EOF
+
+# bah, hal starts way too late
+cat > /etc/rc.d/init.d/fedora-late-live << EOF
+#!/bin/bash
+#
+# live: Late init script for live image
+#
+# chkconfig: 345 99 01
+# description: Late init script for live image.
+
+. /etc/init.d/functions
+
+if ! strstr "\`cat /proc/cmdline\`" liveimg || [ "\$1" != "start" ] || [ -e /.liveimg-late-configured ] ; then
+    exit 0
+fi
+
+exists() {
+    which \$1 >/dev/null 2>&1 || return
+    \$*
+}
+
+touch /.liveimg-late-configured
+
 # read some variables out of /proc/cmdline
 for o in \`cat /proc/cmdline\` ; do
     case \$o in
@@ -137,40 +210,11 @@ if strstr "\`cat /proc/cmdline\`" textinst ; then
    /usr/sbin/liveinst --text \$ks
 fi
 
-# enable swaps unless requested otherwise
-swaps=\`blkid -t TYPE=swap -o device\`
-if ! strstr "\`cat /proc/cmdline\`" noswap -a [ -n "\$swaps" ] ; then
-  for s in \$swaps ; do
-    action "Enabling swap partition \$s" swapon \$s
-  done
+# configure X, allowing user to override xdriver
+if [ -n "\$xdriver" ]; then
+   exists system-config-display --noui --reconfig --set-depth=24 \$xdriver
 fi
 
-# configure X, allowing user to override xdriver
-exists system-config-display --noui --reconfig --set-depth=24 \$xdriver
-
-# add fedora user with no passwd
-useradd -c "Fedora Live" fedora
-passwd -d fedora > /dev/null
-
-# turn off firstboot for livecd boots
-echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
-
-# don't start yum-updatesd for livecd boots
-chkconfig --level 345 yum-updatesd off 2>/dev/null
-
-# don't start cron/at as they tend to spawn things which are
-# disk intensive that are painful on a live image
-chkconfig --level 345 crond off 2>/dev/null
-chkconfig --level 345 atd off 2>/dev/null
-chkconfig --level 345 anacron off 2>/dev/null
-chkconfig --level 345 readahead_early off 2>/dev/null
-chkconfig --level 345 readahead_later off 2>/dev/null
-
-# Stopgap fix for RH #217966; should be fixed in HAL instead
-touch /media/.hal-mtab
-
-# workaround clock syncing on shutdown that we don't want (#297421)
-sed -i -e 's/hwclock/no-such-hwclock/g' /etc/rc.d/init.d/halt
 EOF
 
 # workaround avahi segfault (#279301)
@@ -181,15 +225,18 @@ chmod 755 /etc/rc.d/init.d/fedora-live
 /sbin/restorecon /etc/rc.d/init.d/fedora-live
 /sbin/chkconfig --add fedora-live
 
+chmod 755 /etc/rc.d/init.d/fedora-late-live
+/sbin/restorecon /etc/rc.d/init.d/fedora-late-live
+/sbin/chkconfig --add fedora-late-live
+
+# work around for poor key import UI in PackageKit
+rm -f /var/lib/rpm/__db*
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora
+
+# save a little bit of space at least...
+rm -f /boot/initrd*
 # make sure there aren't core files lying around
 rm -f /core*
-
-# make the initrd we care about
-rm -f /boot/initrd*.img
-cp /etc/sysconfig/mkinitrd /etc/mayflower.conf
-ver=`ls /boot/vmlinuz* |head -n 1 |sed -e 's;/boot/vmlinuz-;;'`
-/usr/lib/livecd-creator/mayflower -f /boot/initrd-$ver.img $ver
-rm -f /etc/mayflower.conf
 
 %end
 
@@ -203,7 +250,4 @@ if [ "$(uname -i)" = "i386" -o "$(uname -i)" = "x86_64" ]; then
   if [ ! -d $LIVE_ROOT/LiveOS ]; then mkdir -p $LIVE_ROOT/LiveOS ; fi
   cp /usr/bin/livecd-iso-to-disk $LIVE_ROOT/LiveOS
 fi
-
-# move the initrd we created to be the booted one
-mv $INSTALL_ROOT/boot/initrd-*.img $LIVE_ROOT/isolinux/initrd0.img
 %end
