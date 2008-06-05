@@ -8,18 +8,24 @@ kickstart_DATA = \
     fedora-livecd-desktop-en_US.ks \
     fedora-livecd-desktop.ks \
     fedora-livecd-desktop-nl_NL.ks \
+    fedora-livecd-desktop-pt_BR.ks \
     fedora-livecd-desktop-pt_PT.ks \
     fedora-livecd-electronic-lab.ks \
     fedora-livecd-electronic-lab-nl_NL.ks \
+    fedora-livecd-electronic-lab-pt_PT.ks \
     fedora-livecd-kde-de_DE.ks \
     fedora-livecd-kde.ks \
     fedora-livecd-kde-nl_NL.ks \
+    fedora-livecd-kde-pt_PT.ks \
     fedora-livecd-xfce.ks \
     fedora-livecd-xfce-nl_NL.ks \
+    fedora-livecd-xfce-pt_PT.ks \
     fedora-livedvd-developer.ks \
     fedora-livedvd-developer-nl_NL.ks \
+    fedora-livedvd-developer-pt_PT.ks \
     fedora-livedvd-games.ks \
-    fedora-livedvd-games-nl_NL.ks
+    fedora-livedvd-games-nl_NL.ks \
+    fedora-livedvd-games-pt_PT.ks
 
 EXTRA_DIST =               \
     $(kickstart_DATA)      \
