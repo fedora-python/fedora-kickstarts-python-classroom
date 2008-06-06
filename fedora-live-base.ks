@@ -118,14 +118,64 @@ fi
 
 # enable swaps unless requested otherwise
 swaps=\`blkid -t TYPE=swap -o device\`
-if ! strstr "\`cat /proc/cmdline\`" noswap -a [ -n "\$swaps" ] ; then
+if ! strstr "\`cat /proc/cmdline\`" noswap && [ -n "\$swaps" ] ; then
   for s in \$swaps ; do
     action "Enabling swap partition \$s" swapon \$s
   done
 fi
 
+mountPersistentHome() {
+  # support label/uuid
+  if [ "\${homedev##LABEL=}" != "\${homedev}" -o "\${homedev##UUID=}" != "\${homedev}" ]; then
+    homedev=\`/sbin/blkid -o device -t "\$homedev"\`
+  fi
+
+  # if we're given a file rather than a blockdev, loopback it
+  if [ ! -b "\$homedev" ]; then
+    loopdev=\`losetup -f\`
+    if [ "\${homedev##/mnt/live}" != "\${homedev}" ]; then
+      action "Remounting live store r/w" mount -o remount,rw /mnt/live
+    fi
+    losetup \$loopdev \$homedev
+    homedev=\$loopdev
+  fi
+
+  # if it's encrypted, we need to unlock it
+  if [ "\$(/lib/udev/vol_id -t \$homedev)" = "crypto_LUKS" ]; then
+    echo
+    echo "Setting up encrypted /home device"
+    cryptsetup luksOpen \$homedev EncHome <&1
+    homedev=/dev/mapper/EncHome
+  fi
+
+  # and finally do the mount
+  mount \$homedev /home
+  [ -x /sbin/restorecon ] && /sbin/restorecon /home
+  if [ -d /home/fedora ]; then USERADDARGS="-M" ; fi
+}
+
+findPersistentHome() {
+  for arg in \`cat /proc/cmdline\` ; do 
+    if [ "\${arg##persistenthome=}" != "\${arg}" ]; then
+      homedev=\${arg##persistenthome=}
+      return
+    fi
+  done
+}
+
+if strstr "\`cat /proc/cmdline\`" persistenthome= ; then
+  findPersistentHome
+elif [ -e /mnt/live/LiveOS/home.img ]; then
+  homedev=/mnt/live/LiveOS/home.img
+fi
+
+# if we have a persistent /home, then we want to go ahead and mount it
+if ! strstr "\`cat /proc/cmdline\`" nopersistenthome && [ -n "\$homedev" ] ; then
+  action "Mounting persistent /home" mountPersistentHome
+fi
+
 # add fedora user with no passwd
-useradd -c "Fedora Live" fedora
+action "Adding fedora user" useradd \$USERADDARGS -c "Fedora Live" fedora
 passwd -d fedora > /dev/null
 
 # turn off firstboot for livecd boots
@@ -166,6 +216,20 @@ touch /media/.hal-mtab
 
 # workaround clock syncing on shutdown that we don't want (#297421)
 sed -i -e 's/hwclock/no-such-hwclock/g' /etc/rc.d/init.d/halt
+
+# and hack so that we eject the cd on shutdown if we're using a CD...
+if strstr "\`cat /proc/cmdline\`" CDLABEL= ; then
+  cat >> /sbin/halt.local << FOE
+#!/bin/bash
+# we want to eject the cd on halt, but let's also try to avoid
+# io errors due to not being able to get files...
+cat /sbin/halt > /dev/null
+cat /sbin/reboot > /dev/null
+/usr/sbin/eject -p -m \$(readlink -f /dev/live) >/dev/null 2>&1
+FOE
+chmod +x /sbin/halt.local
+fi
+
 EOF
 
 # bah, hal starts way too late
