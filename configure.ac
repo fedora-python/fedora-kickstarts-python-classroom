@@ -1,11 +1,10 @@
 AC_INIT([spin-kickstarts], 0.01)
-AC_SUBST([RELEASE], 1)
+AC_SUBST([RELEASE], 2)
 
 ALL_LINGUAS="bn_IN bn ca cs da de el es fi fr gl gu hi hr hu is it ja ko ml ms nb nl or pa pl pt pt_BR ru sk sl sr@latin sr sv ta tr uk zh_CN zh_TW"
 
 AM_INIT_AUTOMAKE
 AM_MAINTAINER_MODE
-AM_PATH_PYTHON
 
 #dnl prevent to copy po/Makefile.in.in
 #GETTEXT_PACKAGE=revisor
@@ -15,8 +14,6 @@ AM_PATH_PYTHON
 #AC_PROG_LN_S
 
 AC_SUBST(DATESTAMP,`date +"%a %b %d %Y"`)
-
-#AM_PATH_PYTHON
 
 AC_CONFIG_FILES([
 Makefile
