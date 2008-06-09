@@ -34,4 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * @DATESTAMP@ Jeroen van Meeuwen <kanarip a fedoraunity.org> @VERSION@-@RELEASE@
+- Second build for review #448072
+
+* Fri May 23 2008 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.01-1
 - Initial packaging
