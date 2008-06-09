@@ -1,3 +1,8 @@
+# fedora-livedvd-games.ks
+#
+# Maintainer(s):
+# - Rahul Sundaram <sundaram a fedoraunity.org>
+
 %include fedora-live-base.ks
 part / --size 8000
 
