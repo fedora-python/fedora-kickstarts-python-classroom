@@ -14,7 +14,6 @@ kdelibs
 kdenetwork
 kdegraphics
 kdeutils
-knetworkmanager
 kde-settings
 kmenu-gnome
 kdesvn
