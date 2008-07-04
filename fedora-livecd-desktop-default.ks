@@ -9,6 +9,7 @@ lang en_US.UTF-8
 keyboard us
 timezone US/Eastern
 
+%packages
 @afrikaans-support
 @albanian-support
 @arabic-support
@@ -96,4 +97,4 @@ timezone US/Eastern
 @welsh-support
 @xhosa-support
 @zulu-support
-
+%end
