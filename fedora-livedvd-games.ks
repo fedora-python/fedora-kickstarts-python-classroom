@@ -6,7 +6,7 @@
 %include fedora-live-base.ks
 part / --size 8000
 
-%packages
+%packages --ignoremissing
 
 # games
 
@@ -168,4 +168,3 @@ games-menus
 wget
 
 %end
-end
