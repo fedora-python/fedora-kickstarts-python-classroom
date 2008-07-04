@@ -65,6 +65,7 @@ pharosc-doc
 pharosc-magic-devel
 pharosc-synopsys
 pharosc-xcircuit
+sk2py
 
 
 #Hardware Description Languages
