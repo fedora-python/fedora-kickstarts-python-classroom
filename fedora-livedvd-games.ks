@@ -6,7 +6,7 @@
 %include fedora-live-base.ks
 part / --size 8000
 
-%packages --ignoremissing
+%packages
 
 # games
 
@@ -25,6 +25,7 @@ bzflag
 #croquet (pending)
 crossfire-client
 egoboo
+extremetuxracer
 FlightGear
 flight-of-the-amazon-queen-cd
 freeciv
@@ -33,11 +34,14 @@ freedoom
 freedroidrpg
 frozen-bubble
 gl-117
+glest
+glob2
 lincity-ng
 manaworld
 maniadrive
 maniadrive-music
 nethack-vultures
+netpanzer
 neverball
 nexuiz
 nogravity
@@ -48,22 +52,31 @@ supertux
 supertuxkart
 torcs
 tremulous
-#vdrift
+ultimatestunts
+vdrift
 vegastrike
 warzone2100
 wesnoth
 widelands
 worminator
 wormux
+xmoto
 xpilot-ng
 
 # traditional (small)
 
+abe
+alex4
 ballz
 blobwars
+bolzplatz2006
 bombardier
 bsd-games
+cdogs-sdl
 clanbomber
+clonekeen
+foobillard
+glaxium
 gnubg
 gnugo
 hedgewars
@@ -75,6 +88,7 @@ machineball
 nazghul-haxima
 nethack
 openlierox
+pachi
 pioneers
 quake3
 quake3-demo
@@ -84,17 +98,23 @@ rogue
 rott-shareware
 scorchwentbonkers
 seahorse-adventures
+solarwolf
+sopwith
+starfighter
 stormbaancoureur
 ularn
 urbanterror
 vavoom
 worldofpadman
+xblast
 
 # arcade classics(ish) (big)
 
 auriferous
+alienblaster
 duel3
 lmarbles
+powermanga
 raidem
 raidem-music
 trackballs
@@ -106,6 +126,7 @@ uqm-content-voice
 # arcade classics(ish) (small)
 
 ballbuster
+CriticalMass
 dd2
 KoboDeluxe
 lacewing
@@ -115,13 +136,14 @@ njam
 seahorse-adventures
 shippy
 tecnoballz
-#wordwarvi (under review)
+wordwarvi
 #(xgalaga renamed)
 xgalaxy
 zasx
 
 # falling blocks games (small) 
 
+amoebax
 crack-attack
 crystal-stacker
 fbg
@@ -138,8 +160,11 @@ pingus
 escape
 magicor
 mirrormagic
+pipenightdreams
+pipepanic
 pychess
 rocksndiamonds
+vodovod
 
 # card games
 
@@ -151,6 +176,7 @@ bygfoot
 celestia
 childsplay
 gcompris
+planets
 stellarium
 tuxpaint
 tuxpaint-stamps
@@ -168,3 +194,4 @@ games-menus
 wget
 
 %end
+
