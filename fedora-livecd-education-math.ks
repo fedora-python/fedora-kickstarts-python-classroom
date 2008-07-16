@@ -3,7 +3,7 @@
 # Filename:
 #   fedora-livecd-education-math.ks
 # Version:
-#   alpha 5
+#   beta 1
 # Description:
 #   Fedora Live Spin including mainly software for educational & mathematical purposes
 # Maintainers:
