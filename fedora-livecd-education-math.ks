@@ -4,6 +4,8 @@
 #   fedora-livecd-education-math.ks
 # Description:
 #   Fedora Live Spin including mainly software for educational & mathematical purposes
+# Known Issues:
+#   * user is not able to log in after having installed the spin due to problems with kdm / generic-logos
 # Maintainers:
 #   Sebastian Dziallas <sdz AT fedoraproject DOT org>
 #   Fedora Education SIG
@@ -132,11 +134,10 @@ sed -i 's/#PreselectUser=Default/PreselectUser=Default/' /etc/kde/kdm/kdmrc
 sed -i 's/#DefaultUser=johndoe/DefaultUser=fedora/' /etc/kde/kdm/kdmrc
 
 # add apps to favorites menu
-# known issue: /usr/share/applications/liveinst.desktop has been removed due to issues with kdm and generic-logos
 mkdir -p /home/fedora/.kde/share/config/
 cat > /home/fedora/.kde/share/config/kickoffrc << MENU_EOF
 [Favorites]
-FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applications/kde4/dolphin.desktop
+FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/liveinst.desktop
 MENU_EOF
 chown -R fedora:fedora /home/fedora/.kde/
 
@@ -144,6 +145,6 @@ chown -R fedora:fedora /home/fedora/.kde/
 cp /etc/xdg/autostart/nm-applet.desktop /usr/share/autostart/
 
 # fix issues with unbranding
-sed -i -e "s/Fedora/Generic/g" /etc/fedora-rel
+sed -i -e "s/Fedora/Generic/g" /etc/fedora-release
 
 %end
