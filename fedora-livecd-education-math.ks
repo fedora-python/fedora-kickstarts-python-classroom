@@ -1,9 +1,7 @@
-# Fedora EDU Math
+# Fedora Education Math
 #
 # Filename:
 #   fedora-livecd-education-math.ks
-# Version:
-#   beta 1
 # Description:
 #   Fedora Live Spin including mainly software for educational & mathematical purposes
 # Maintainers:
@@ -133,15 +131,19 @@ sed -i 's/#AutoLoginUser=fred/AutoLoginUser=fedora/' /etc/kde/kdm/kdmrc
 sed -i 's/#PreselectUser=Default/PreselectUser=Default/' /etc/kde/kdm/kdmrc
 sed -i 's/#DefaultUser=johndoe/DefaultUser=fedora/' /etc/kde/kdm/kdmrc
 
-# add liveinst.desktop to favorites menu
+# add apps to favorites menu
+# known issue: /usr/share/applications/liveinst.desktop has been removed due to issues with kdm and generic-logos
 mkdir -p /home/fedora/.kde/share/config/
 cat > /home/fedora/.kde/share/config/kickoffrc << MENU_EOF
 [Favorites]
-FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/liveinst.desktop
+FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applications/kde4/dolphin.desktop
 MENU_EOF
 chown -R fedora:fedora /home/fedora/.kde/
 
 # workaround to start nm-applet automatically
 cp /etc/xdg/autostart/nm-applet.desktop /usr/share/autostart/
+
+# fix issues with unbranding
+sed -i -e "s/Fedora/Generic/g" /etc/fedora-rel
 
 %end
