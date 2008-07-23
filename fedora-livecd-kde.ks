@@ -1,24 +1,31 @@
 %include fedora-live-base.ks
 
 %packages
-@kde-desktop
 
-# include nm-applet directly
-NetworkManager-gnome
+@kde-desktop
 
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
-# digikam (~11 megs), ktorrent (~3 megs), amarok (~14 megs),
-# kdegames (~23 megs)
--amarok
--digikam
--kdeedu
--scribus
-#-ktorrent
-#-kdegames
-#-kftpgrabber*
 
-# KDE 3
+### amarok has duplicate functionality with juk (~14 megs)
+#-amarok
+### digikam has duplicate functionality with gwenview (~11 megs)
+-digikam
+### kdeedu is too big for the live images
+-kdeedu
+### scribus is too big for the live images
+-scribus
+### kget has also basic torrent features (~3 megs)
+-ktorrent
+### konqueror is also able to browse ftp shares (~1 megs)
+#-kftpgrabber*
+### kaffeine has duplicate functionality with dragonplayer (~3 megs)
+-kaffeine*
+### the removal of kdegames will free ~31 megs
+#-kdegames
+
+
+# Useful additional KDE3 applications
 koffice-kword
 koffice-kspread
 koffice-kpresenter
@@ -28,17 +35,21 @@ filelight
 # twinkle (~10 megs)
 #twinkle
 
+
 # some extras
 fuse
+pavucontrol
+
 
 # additional fonts
 @fonts
-fonts-ISO8859-2
-#cjkunifonts-ukai
-madan-fonts
-fonts-KOI8-R
-fonts-KOI8-R-100dpi
+fonts-ISO8859-2 
+#cjkunifonts-ukai 
+madan-fonts 
+fonts-KOI8-R 
+fonts-KOI8-R-100dpi 
 tibetan-machine-uni-fonts
+
 
 # FIXME/TODO: recheck the removals here
 # try to remove some packages from fedora-live-base.ks
@@ -89,5 +100,10 @@ cat > /home/fedora/.kde/share/config/kickoffrc << MENU_EOF
 FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/kde4/systemsettings.desktop,/usr/share/applications/liveinst.desktop
 MENU_EOF
 chown -R fedora:fedora /home/fedora/.kde/
+
+# show liveinst.desktop on and in menu
+sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
+
+EOF
 
 %end
