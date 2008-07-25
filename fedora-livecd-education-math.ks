@@ -5,7 +5,7 @@
 # Description:
 #   Fedora Live Spin including mainly software for educational & mathematical purposes
 # Known Issues:
-#   * user is not able to log in after having installed the spin due to problems with kdm / generic-logos
+#   # 456299: user is not able to log in after having installed the spin due to problems with kdm / generic-logos
 # Maintainers:
 #   Sebastian Dziallas <sdz AT fedoraproject DOT org>
 #   Fedora Education SIG
@@ -140,6 +140,9 @@ cat > /home/fedora/.kde/share/config/kickoffrc << MENU_EOF
 FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/liveinst.desktop
 MENU_EOF
 chown -R fedora:fedora /home/fedora/.kde/
+
+# show liveinst.desktop on and in menu
+sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
 
 # workaround to start nm-applet automatically
 cp /etc/xdg/autostart/nm-applet.desktop /usr/share/autostart/
