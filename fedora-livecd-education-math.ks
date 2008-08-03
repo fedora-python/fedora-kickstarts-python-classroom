@@ -1,11 +1,11 @@
-# Fedora EDU Math
+# Fedora Education Math
 #
 # Filename:
 #   fedora-livecd-education-math.ks
-# Version:
-#   beta 1
 # Description:
 #   Fedora Live Spin including mainly software for educational & mathematical purposes
+# Known Issues:
+#   # 456299: user is not able to log in after having installed the spin due to problems with kdm / generic-logos
 # Maintainers:
 #   Sebastian Dziallas <sdz AT fedoraproject DOT org>
 #   Fedora Education SIG
@@ -133,7 +133,7 @@ sed -i 's/#AutoLoginUser=fred/AutoLoginUser=fedora/' /etc/kde/kdm/kdmrc
 sed -i 's/#PreselectUser=Default/PreselectUser=Default/' /etc/kde/kdm/kdmrc
 sed -i 's/#DefaultUser=johndoe/DefaultUser=fedora/' /etc/kde/kdm/kdmrc
 
-# add liveinst.desktop to favorites menu
+# add apps to favorites menu
 mkdir -p /home/fedora/.kde/share/config/
 cat > /home/fedora/.kde/share/config/kickoffrc << MENU_EOF
 [Favorites]
@@ -141,7 +141,13 @@ FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applica
 MENU_EOF
 chown -R fedora:fedora /home/fedora/.kde/
 
+# show liveinst.desktop on and in menu
+sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
+
 # workaround to start nm-applet automatically
 cp /etc/xdg/autostart/nm-applet.desktop /usr/share/autostart/
+
+# fix issues with unbranding
+sed -i -e "s/Fedora/Generic/g" /etc/fedora-release
 
 %end
