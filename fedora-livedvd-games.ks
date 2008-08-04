@@ -54,14 +54,12 @@ torcs
 tremulous
 ultimatestunts
 vdrift
-vegastrike
 warzone2100
 wesnoth
 widelands
 worminator
 wormux
 xmoto
-xpilot-ng
 
 # traditional (small)
 
@@ -169,6 +167,7 @@ vodovod
 # card games
 
 poker2d
+PySolFC
 
 # educational/simulation
 
