@@ -10,6 +10,7 @@ kickstart_DATA = \
     fedora-livecd-desktop-nl_NL.ks \
     fedora-livecd-desktop-pt_BR.ks \
     fedora-livecd-desktop-pt_PT.ks \
+    fedora-livecd-education-math.ks \
     fedora-livecd-electronic-lab.ks \
     fedora-livecd-electronic-lab-nl_NL.ks \
     fedora-livecd-electronic-lab-pt_PT.ks \
@@ -23,6 +24,7 @@ kickstart_DATA = \
     fedora-livedvd-developer.ks \
     fedora-livedvd-developer-nl_NL.ks \
     fedora-livedvd-developer-pt_PT.ks \
+    fedora-livedvd-electronic-lab.ks \
     fedora-livedvd-games.ks \
     fedora-livedvd-games-nl_NL.ks \
     fedora-livedvd-games-pt_PT.ks
