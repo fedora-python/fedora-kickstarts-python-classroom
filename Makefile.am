@@ -46,7 +46,7 @@ DISTCLEANFILES =           \
 install-exec-local:
 
 uninstall-local:
-	rm -f $(DESTDIR)$(pkgdatadir)
+	rm -rf $(DESTDIR)$(pkgdatadir)
 
 clean:
 	rm -f ChangeLog
