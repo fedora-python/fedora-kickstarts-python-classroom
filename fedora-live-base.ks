@@ -33,15 +33,14 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 @base-x
 @base
 @core
+@fonts
 @admin-tools
 @dial-up
 @hardware-support
 @printing
 kernel
 memtest86+
-
-# for live initrd
-livecd-tools
+firstaidkit-plugin-all
 
 # save some space
 -specspo
@@ -73,9 +72,6 @@ livecd-tools
 -xsane
 -xsane-gimp
 -sane-backends
-
-# lots of people want to have this
-gparted
 
 # livecd bits to set up the livecd and be able to install
 anaconda
