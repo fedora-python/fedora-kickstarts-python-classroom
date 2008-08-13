@@ -4,8 +4,6 @@
 #   fedora-livecd-education-math.ks
 # Description:
 #   Fedora Live Spin including mainly software for educational & mathematical purposes
-# Known Issues:
-#   # 456299: user is not able to log in after having installed the spin due to problems with kdm / generic-logos
 # Maintainers:
 #   Sebastian Dziallas <sdz AT fedoraproject DOT org>
 #   Fedora Education SIG
@@ -42,10 +40,6 @@ orpie
 # some extras
 fuse
 pavucontrol
-
-# comply with Fedora's policies
--fedora-logos
-generic-logos
 
 # additional fonts
 # @fonts
@@ -146,8 +140,5 @@ sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desk
 
 # workaround to start nm-applet automatically
 cp /etc/xdg/autostart/nm-applet.desktop /usr/share/autostart/
-
-# fix issues with unbranding
-sed -i -e "s/Fedora/Generic/g" /etc/fedora-release
 
 %end
