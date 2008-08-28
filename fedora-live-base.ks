@@ -25,7 +25,7 @@ services --enabled=NetworkManager --disabled=network,sshd
 # To compose against rawhide, use the following "repo" (disabled by default)
 repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
 
-# To compose against local trees, use:
+# To compose against local trees, (edit and) use:
 #repo --name=f9 --baseurl=http://localrepo/fedora/releases/9/Everything/$basearch/os/
 #repo --name=f9-updates --baseurl=http://localrepo/fedora/updates/9/$basearch/
 
@@ -149,7 +149,7 @@ mountPersistentHome() {
 }
 
 findPersistentHome() {
-  for arg in \`cat /proc/cmdline\` ; do 
+  for arg in \`cat /proc/cmdline\` ; do
     if [ "\${arg##persistenthome=}" != "\${arg}" ]; then
       homedev=\${arg##persistenthome=}
       return
