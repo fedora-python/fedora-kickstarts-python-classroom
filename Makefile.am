@@ -2,6 +2,7 @@
 
 kickstartdir = $(pkgdatadir)/
 kickstart_DATA = \
+    fedora-aos.ks \
     fedora-live-base.ks \
     fedora-livecd-desktop-de_DE.ks \
     fedora-livecd-desktop-default.ks \
