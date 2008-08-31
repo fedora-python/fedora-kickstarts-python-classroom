@@ -36,15 +36,12 @@ broffice.org-draw
 -baekmuk-*
 -cjkunifonts-*
 -VLGothic-fonts
--dejavu-fonts-experimental
 
 
 # Saving space in order to get BrOffice.org in
 -gnome-utils
--planner
--aspell-*
--codeina
 -gnome-games-*
+-planner
 -scim-python*
 -scim-chewing
 -scim-pinyin
@@ -54,15 +51,14 @@ broffice.org-draw
 -evince-djvu
 -ekiga
 -f-spot
-
-
-# Debranding the spin
--fedora-logos
-generic-logos
+-cheese
+-sound-juicer
 
 %end
 
+
 %post
+
 # system-config-keyboard doesn't really work (missing xorg.conf etc)
 cat >>/etc/X11/xorg.conf << EOF
 Section "InputDevice"
@@ -71,8 +67,5 @@ Section "InputDevice"
     Option "XkbLayout" "br-abnt2"
 EndSection
 EOF
-
-# Needed for spin debranding
-sed -i -e 's/Fedora/Generic/g' /etc/fedora-release
 
 %end
