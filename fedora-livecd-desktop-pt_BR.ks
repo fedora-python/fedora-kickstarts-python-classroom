@@ -3,6 +3,8 @@
 # Maintainer(s):
 # - Igor Pires Soares <igor at projetofedora.org>
 
+%include fedora-livecd-desktop.ks
+
 lang pt_BR.UTF-8
 keyboard br-abnt2
 timezone America/Sao_Paulo
