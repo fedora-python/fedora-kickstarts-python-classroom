@@ -20,12 +20,12 @@ hunspell-pt
 -gnumeric
 -gimp-*
 broffice.org-writer
-broffice.org-math
+broffice.org-calc
 broffice.org-impress
 broffice.org-draw
 
 
-# We won't use these Asiatic fonts anyway
+# We won't use these Asian fonts anyway
 -lklug-fonts
 -abyssinica-fonts
 -jomolhari-fonts
