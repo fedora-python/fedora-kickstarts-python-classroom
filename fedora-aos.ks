@@ -5,7 +5,7 @@ lang C
 keyboard us
 timezone US/Eastern
 auth --useshadow --enablemd5
-selinux --disabled
+selinux --permissive
 firewall --disabled
 bootloader --timeout=1 --append="acpi=force"
 network --bootproto=dhcp --device=eth0 --onboot=on
