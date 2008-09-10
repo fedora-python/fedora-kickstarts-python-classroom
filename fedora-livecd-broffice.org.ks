@@ -37,16 +37,25 @@ broffice.org-draw
 -cjkunifonts-*
 -VLGothic-fonts
 
+# Assure we won't get these Asian input methods
+-libchewing
+-anthy
+-kasumi
+-scim-chewing
+-scim-pinyin
 
 # Saving space in order to get BrOffice.org in
 -gnome-utils
 -gnome-games-*
+-gnome-audio
+-gnome-doc-utils-stylesheets
+-gnome-user-share
+-gnome-phone-manager
 -planner
 -scim-python*
--scim-chewing
--scim-pinyin
 -dasher
 -system-config-language
+-system-config-lvm
 -evince-dvi
 -evince-djvu
 -ekiga
