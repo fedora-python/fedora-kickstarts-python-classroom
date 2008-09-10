@@ -1,9 +1,9 @@
 # Description : Live DVD image for Fedora Electronic Lab
-# last updated: 11 June 2008
+# last updated: 10 August 2008
 #
 # Maintainer(s):
 # - Chitlesh Goorah <chitlesh a fedoraproject.org>
-# - Thibault North <tnorth a fedoraproject.org>
+# - Thibault North  <tnorth a fedoraproject.org>
 
 %include fedora-livecd-kde.ks
 
@@ -13,23 +13,33 @@
 kmenu-gnome
 kdesvn
 yakuake
+kdebluetooth
 
 
-# include default fedora wallpaper
-desktop-backgrounds-basic
+# removing useless application from KDE ks
+-kdegames
+-koffice-kword
+-koffice-kspread
+-koffice-kpresenter
+-koffice-filters
 
-wget
-planner
 
 # some projects based on ghdl and gtkwave needs
 zlib-devel
 
-#project management
+
+# Office
 vym
-koffice-kspread
-koffice-kword
-koffice-kplato
-koffice-filters
+openoffice.org-writer
+openoffice.org-math
+openoffice.org-writer2latex
+openoffice.org-calc
+openoffice.org-impress
+openoffice.org-extendedPDF
+openoffice.org-ooolatex
+kile
+planner
+
 
 # some other extra packages
 ntfsprogs
@@ -43,14 +53,21 @@ gnupg
 hal-cups-utils
 firefox
 libflashsupport
-kile
+bluez-gnome
+gnome-bluetooth
 
 
 # ignore comps.xml and make sure these packages are included
 rhgb
 make
+# include default fedora wallpaper
+desktop-backgrounds-basic
+fedora-logos
+wget
+tkcvs
 
-#vlsi
+
+# vlsi
 alliance-doc
 irsim
 gds2pov
@@ -67,21 +84,20 @@ pharosc-synopsys
 pharosc-xcircuit
 sk2py
 
-
-#Hardware Description Languages
+# Hardware Description Languages
 gtkwave
 iverilog
 drawtiming
 ghdl
 freehdl
 
-#spice
+# spice
 ngspice
 gnucap
-#gspiceui
+gspiceui
 gwave
 
-#PCB and schematics
+# PCB and schematics
 geda-gschem
 geda-examples
 geda-gsymcheck
@@ -94,7 +110,7 @@ gresistor
 kicad
 pcb
 
-#Micro Programming
+# Micro Programming
 piklab
 ktechlab
 pikloops
@@ -105,7 +121,7 @@ gtkterm
 picocom
 minicom
 
-#embedded
+# embedded
 arm-gp2x-linux*
 avr-*
 avrdude
@@ -113,9 +129,16 @@ dfu-programmer
 avarice
 uisp
 
-#computing
+# computing
 octave
 octave-forge
+
+# Oracle Berkeley database
+db4-cxx
+db4-tcl
+
+# Extra support for compiling SystemC (not yet fedora compatible)
+compat-gcc-34-c++
 
 %end
 
@@ -123,60 +146,34 @@ octave-forge
 
 ###### Fedora Electronic Lab ####################################################
 
-# Fedora Electronic Lab: Kwin buttons
-cat > /usr/share/kde-settings/kde-profile/default/share/config/kwinrc <<EOF
-[Style]
-ButtonsOnLeft=MB
-ButtonsOnRight=FIAX
-CustomButtonPositions=true
-EOF
+# Fedora Electronic Lab:
 
+mkdir -p /home/fedora/.kde/share/config/
 
 # kill stupid klipper
-cat > /usr/share/kde-settings/kde-profile/default/share/config/klipperrc <<EOF
+cat > /home/fedora/.kde/share/config/klipperrc <<EOF
 [General]
 AutoStart=false
 EOF
 
-# use the LCD_Style clock as alliance's windows demand a lot of space on kicker
-cat > /usr/share/kde-settings/kde-profile/default/share/config/clock_panelappletrc <<EOF
-[Digital]
-LCD_Style=false
-Show_Date=false
-Show_Seconds=true
-
-[General]
-Type=Digital
-EOF
-
-
-cat > /usr/share/kde-settings/kde-profile/default/share/config/kxkbrc <<EOF
+cat > /home/fedora/.kde/share/config/kxkbrc <<EOF
 [Layout]
-DisplayNames=
-EnableXkbOptions=false
-IncludeGroups=
-LayoutList=us,de,ch,fr,jp
+DisplayNames=us,ch,de,fr
+IndicatorOnly=false
+LayoutList=us,ch,de,fr
 Model=pc104
 Options=
-ResetOldOptions=false
+ResetOldOptions=true
 ShowFlag=true
 ShowSingle=true
-StickySwitching=false
-StickySwitchingDepth=2
 SwitchMode=Global
 Use=true
 EOF
 
 # Chitlesh doesn't like the KDE icon on the kicker, but fedora's
-# This is a feature for Fedora and not for KDE
-cp -fp /usr/share/icons/Bluecurve/16x16/apps/gnome-main-menu.png /usr/share/icons/crystalsvg/16x16/apps/kmenu.png
-cp -fp /usr/share/icons/Bluecurve/24x24/apps/gnome-main-menu.png /usr/share/icons/crystalsvg/22x22/apps/kmenu.png
-cp -fp /usr/share/icons/Bluecurve/32x32/apps/gnome-main-menu.png /usr/share/icons/crystalsvg/32x32/apps/kmenu.png
-cp -fp /usr/share/icons/Bluecurve/48x48/apps/gnome-main-menu.png /usr/share/icons/crystalsvg/48x48/apps/kmenu.png
-
+# icon taken from fedora-logos and applied by kde-settings
 
 # FEL doesn't need these and boots slowly
-/sbin/chkconfig anacron   off 2>/dev/null
 /sbin/chkconfig sendmail  off 2>/dev/null
 /sbin/chkconfig nfs       off 2>/dev/null
 /sbin/chkconfig nfslock   off 2>/dev/null
