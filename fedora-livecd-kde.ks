@@ -1,3 +1,12 @@
+# fedora-livecd-kde.ks
+#
+# Description:
+# - Fedora Live Spin with the K Desktop Environment (KDE)
+#
+# Maintainer(s):
+# - Sebastian Vahl <fedora@deadbabylon.de>
+# - Fedora KDE SIG
+
 %include fedora-live-base.ks
 
 %packages
@@ -43,12 +52,12 @@ pavucontrol
 
 # additional fonts
 @fonts
-fonts-ISO8859-2 
+#fonts-ISO8859-2 
 #cjkunifonts-ukai 
-madan-fonts 
-fonts-KOI8-R 
-fonts-KOI8-R-100dpi 
-tibetan-machine-uni-fonts
+#madan-fonts 
+#fonts-KOI8-R 
+#fonts-KOI8-R-100dpi 
+#tibetan-machine-uni-fonts
 
 
 # FIXME/TODO: recheck the removals here
