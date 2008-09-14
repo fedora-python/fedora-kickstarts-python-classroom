@@ -1,4 +1,3 @@
-
 Name:       spin-kickstarts
 Version:    @VERSION@
 Release:    @RELEASE@%{?dist}
@@ -29,6 +28,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
+%doc COPYING README AUTHORS NEWS
 %dir %{_datadir}/%{name}/
 %{_datadir}/%{name}/*
 
