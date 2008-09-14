@@ -36,6 +36,9 @@ broffice.org-draw
 -baekmuk-*
 -cjkunifonts-*
 -VLGothic-fonts
+-padauk-fonts
+-khmeros-fonts-base
+-un-core-fonts-*
 
 # Assure we won't get these Asian input methods
 -libchewing
@@ -47,15 +50,12 @@ broffice.org-draw
 # Saving space in order to get BrOffice.org in
 -gnome-utils
 -gnome-games-*
--gnome-audio
 -gnome-doc-utils-stylesheets
--gnome-user-share
 -gnome-phone-manager
 -planner
 -scim-python*
 -dasher
 -system-config-language
--system-config-lvm
 -evince-dvi
 -evince-djvu
 -ekiga
