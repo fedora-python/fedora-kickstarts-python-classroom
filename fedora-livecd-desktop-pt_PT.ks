@@ -19,7 +19,7 @@ cat >>/etc/X11/xorg.conf << EOF
 Section "InputDevice"
     Identifier "Keyboard0"
     Driver "kbd"
-    Option "XkbLayout" "pt-latin1"
+    Option "XkbLayout" "pt"
 EndSection
 EOF
 %end
