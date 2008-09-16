@@ -21,7 +21,7 @@ services --enabled=network
 # This information is used by appliance-tools but
 # not by the livecd tools.
 #
-part / --size 450 --fstype ext3 --ondisk sda
+part / --size 550 --fstype ext3 --ondisk sda
 
 #
 # Repositories
