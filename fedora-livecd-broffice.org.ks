@@ -52,6 +52,7 @@ broffice.org-draw
 -gnome-games-*
 -gnome-doc-utils-stylesheets
 -gnome-phone-manager
+-gnome-speech
 -planner
 -scim-python*
 -dasher
@@ -62,6 +63,10 @@ broffice.org-draw
 -f-spot
 -cheese
 -sound-juicer
+-gok
+-festival-*
+-festvox-slt-arctic-hts
+
 
 %end
 
