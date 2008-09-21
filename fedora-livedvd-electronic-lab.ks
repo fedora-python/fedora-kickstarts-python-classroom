@@ -7,6 +7,9 @@
 
 %include fedora-livecd-kde.ks
 
+# DVD payload
+part / --size=8192
+
 %packages
 
 # KDE basic packages
@@ -58,7 +61,6 @@ gnome-bluetooth
 
 
 # ignore comps.xml and make sure these packages are included
-rhgb
 make
 # include default fedora wallpaper
 desktop-backgrounds-basic
