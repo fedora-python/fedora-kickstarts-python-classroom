@@ -11,12 +11,15 @@
 
 %packages
 
+# workaround to put it on the beta
+phonon-backend-xine
+
 @kde-desktop
 
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
 
-### amarok has duplicate functionality with juk (~14 megs)
+### amarok has duplicate functionality with juk (~10 megs)
 #-amarok
 ### digikam has duplicate functionality with gwenview (~11 megs)
 -digikam
@@ -47,7 +50,8 @@ filelight
 
 # some extras
 fuse
-pavucontrol
+# nice to have but pulls in gstreamer
+#pavucontrol
 
 
 # additional fonts
