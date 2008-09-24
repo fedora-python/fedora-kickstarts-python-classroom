@@ -37,10 +37,11 @@ festvox-slt-arctic-hts
 scim-chewing
 scim-pinyin
 
-# These two are "traditional Unix workstation" tools - if you want them,
-# you can install them separately.
+# Sendmail has slow startup and is in general not necessary -
+# long term we should evaluate dropping local SMTP entirely
+# and fix cron
 -sendmail
--autofs
+ssmtp
 
 # save some space
 -gnome-user-docs
