@@ -13,6 +13,7 @@ firefox
 NetworkManager-vpnc
 NetworkManager-openvpn
 NetworkManager-gnome
+NetworkManager-pptp
 
 # we don't include @office so that we don't get OOo.  but some nice bits
 
@@ -24,7 +25,7 @@ gimp
 inkscape
 galculator
 desktop-backgrounds-compat
-xscreensaver-base
+gnome-screensaver
 setroubleshoot
 
 # development
@@ -34,7 +35,6 @@ geany
 xdg-user-dirs
 @java
 totem
--totem-xine
 totem-mozplugin
 pidgin
 claws-mail
@@ -44,7 +44,8 @@ drivel
 liferea
 quodlibet
 gftp
-mirage
+ristretto
+asunder
 tracker-search-tool
 
 gnome-power-manager
@@ -62,6 +63,7 @@ wget
 irssi
 mutt
 yum-utils
+ssmtp
 
 # xfce packages
 @xfce-desktop
@@ -101,30 +103,6 @@ xfwm4-themes
 -man-pages-*
 -scim-tables-*
 
-fonts-ISO8859-2 
-cjkunifonts-ukai 
-madan-fonts 
-fonts-KOI8-R 
-fonts-KOI8-R-100dpi 
-tibetan-machine-uni-fonts
-
-
-#-wqy-bitmap-fonts
-#-dejavu-fonts-experimental
-#-dejavu-fonts
-
-# drop more fonts
-#-lohit-fonts-*
-#-thaifonts-scalable
-#-paktype-fonts
-#-VLGothic-fonts
-#-baekmuk-ttf-fonts-*
-#-kacst-fonts
-#-lklug-fonts
-#-jomolhari-fonts
-#-abyssinica-fonts
-#-cjkunifonts-uming
-#
 # more fun with space saving
 -scim-lang-chinese
 scim-chewing
