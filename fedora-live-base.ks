@@ -57,6 +57,7 @@ sendmail
 #ssmtp
 -numactl
 -isdn4k-utils
+-autofs
 # smartcards won't really work on the livecd.
 -coolkey
 -ccid
