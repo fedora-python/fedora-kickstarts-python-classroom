@@ -1,3 +1,7 @@
+# Maintained by the Fedora Desktop SIG:
+# http://fedoraproject.org/wiki/SIGs/Desktop
+# mailto:fedora-desktop-list@redhat.com
+
 %include fedora-live-base.ks
 
 %packages
@@ -33,11 +37,17 @@ festvox-slt-arctic-hts
 scim-chewing
 scim-pinyin
 
+# Sendmail has slow startup and is in general not necessary -
+# long term we should evaluate dropping local SMTP entirely
+# and fix cron
+-sendmail
+ssmtp
+
 # save some space
 -gnome-user-docs
 -gimp-help
 -evolution-help
--autofs
+-gnome-games-help
 -nss_db
 -vino
 
