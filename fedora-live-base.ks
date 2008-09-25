@@ -53,8 +53,8 @@ memtest86+
 -sox
 -hplip
 -hpijs
--sendmail
-ssmtp
+sendmail
+#ssmtp
 -numactl
 -isdn4k-utils
 # smartcards won't really work on the livecd.
