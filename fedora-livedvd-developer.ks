@@ -2,7 +2,7 @@
 
 part / --size 6000
 
-%packages --ignoremissing
+%packages
 # Libraries
 @development-libs
 @gnome-software-development
