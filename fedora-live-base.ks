@@ -40,7 +40,8 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 @printing
 kernel
 memtest86+
-firstaidkit-plugin-all
+
+#firstaidkit-plugin-all
 
 # save some space
 -specspo
@@ -52,6 +53,10 @@ firstaidkit-plugin-all
 -sox
 -hplip
 -hpijs
+-sendmail
+ssmtp
+-numactl
+-isdn4k-utils
 # smartcards won't really work on the livecd.
 -coolkey
 -ccid
