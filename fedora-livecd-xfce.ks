@@ -17,14 +17,20 @@ NetworkManager-openvpn
 NetworkManager-gnome
 NetworkManager-pptp
 
+#nss-mdns
+
 # we don't include @office so that we don't get OOo.  but some nice bits
 
 abiword
 gnumeric
+
 evince
 -evince-dvi
+-evince-djvu
+
 gimp
 inkscape
+
 galculator
 desktop-backgrounds-compat
 gnome-screensaver
@@ -65,7 +71,6 @@ wget
 irssi
 mutt
 yum-utils
-ssmtp
 
 # xfce packages
 @xfce-desktop
@@ -101,21 +106,23 @@ xfce4-websearch-plugin
 xfwm4-themes
 
 # dictionaries are big
--aspell-*
--man-pages-*
--scim-tables-*
+#-aspell-*
+#-man-pages-*
+#-scim-tables-*
 
 # more fun with space saving
--scim-lang-chinese
-scim-chewing
-scim-pinyin
+#-scim-lang-chinese
+#scim-chewing
+#scim-pinyin
 -gimp-help
+
 
 # save some space
 -autofs
 -nss_db
 -sendmail
-
+ssmtp
+-acpid
 # system-config-printer does printer management better
 # xfprint has now been made as optional in comps.
 system-config-printer
@@ -148,20 +155,19 @@ EOF
 cat >> /etc/rc.d/init.d/fedora-live << EOF
 chown -R fedora:fedora /home/fedora
 
-# set up timed auto-login for after 10 seconds
-cat >> /etc/gdm/custom.conf << _EOF_
+# disable screensaver locking
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null
+# set up timed auto-login for after 60 seconds
+cat >> /etc/gdm/custom.conf << FOE
 [daemon]
 TimedLoginEnable=true
 TimedLogin=fedora
-TimedLoginDelay=10
-_EOF_
+TimedLoginDelay=60
+FOE
 
-if [ -e /usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png ] ; then
-    cp /usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png /home/fedora/.face
-    chown fedora:fedora /home/fedora/.face
-    # TODO: would be nice to get e-d-s to pick this one up too... but how?
-fi
 EOF
+
+
 
 %end
 
