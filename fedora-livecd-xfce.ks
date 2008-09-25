@@ -11,6 +11,11 @@
 %include fedora-live-base.ks
 
 %packages
+
+# gdm depends on gnome-session but lacks a dependency. Temporary workaround
+
+gnome-session
+
 firefox
 NetworkManager-vpnc
 NetworkManager-openvpn
