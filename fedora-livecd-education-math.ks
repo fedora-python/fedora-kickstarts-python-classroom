@@ -22,16 +22,21 @@ kdebase
 kdegraphics
 kdemultimedia
 kdeutils
-koffice-kpresenter
-koffice-kspread
-koffice-kword
+# koffice-kpresenter
+# koffice-kspread
+# koffice-kword
 kde-settings-pulseaudio
 NetworkManager-gnome
+
+# additional office packages
+# koffice pulls in kdelibs3
+abiword
+gnumeric
 
 # mathematical apps selected by the SIG
 kdeedu-math
 qalculate-gtk
-wxmaxima
+wxMaxima
 octave
 gnuplot
 Macaulay2
@@ -39,7 +44,7 @@ orpie
 
 # some extras
 fuse
-pavucontrol
+# pavucontrol
 
 # additional fonts
 # @fonts
