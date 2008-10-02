@@ -150,15 +150,15 @@ compat-gcc-34-c++
 
 # Fedora Electronic Lab:
 
-mkdir -p /home/fedora/.kde/share/config/
+mkdir -p /home/liveuser/.kde/share/config/
 
 # kill stupid klipper
-cat > /home/fedora/.kde/share/config/klipperrc <<EOF
+cat > /home/liveuser/.kde/share/config/klipperrc <<EOF
 [General]
 AutoStart=false
 EOF
 
-cat > /home/fedora/.kde/share/config/kxkbrc <<EOF
+cat > /home/liveuser/.kde/share/config/kxkbrc <<EOF
 [Layout]
 DisplayNames=us,ch,de,fr
 IndicatorOnly=false
