@@ -158,7 +158,7 @@ Language=en
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
-chown -R fedora:fedora /home/liveuser
+chown -R liveuser:liveuser /home/liveuser
 
 # disable screensaver locking
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null

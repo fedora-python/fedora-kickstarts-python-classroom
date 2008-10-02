@@ -190,7 +190,7 @@ fi
 # make fedora user use KDE
 echo "startkde" > /home/liveuser/.xsession
 chmod a+x /home/liveuser/.xsession
-chown fedora:fedora /home/liveuser/.xsession
+chown liveuser:liveuser /home/liveuser/.xsession
 
 # set up autologin for user fedora
 sed -i 's/#AutoLoginEnable=true/AutoLoginEnable=true/' /etc/kde/kdm/kdmrc

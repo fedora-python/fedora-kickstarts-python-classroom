@@ -21,6 +21,6 @@ timezone Europe/Berlin
 mkdir -p /home/liveuser/.kde/env
 echo "system-config-keyboard --noui de-latin1-nodeadkeys" > /home/liveuser/.kde/env/keyboard.sh
 chmod +x /home/liveuser/.kde/env/keyboard.sh
-chown -R fedora:fedora /home/liveuser/.kde/env/
+chown -R liveuser:liveuser /home/liveuser/.kde/env/
 
 %end

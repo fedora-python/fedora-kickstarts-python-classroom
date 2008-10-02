@@ -96,7 +96,7 @@ fi
 # make fedora user use KDE
 echo "startkde" > /home/liveuser/.xsession
 chmod a+x /home/liveuser/.xsession
-chown fedora:fedora /home/liveuser/.xsession
+chown liveuser:liveuser /home/liveuser/.xsession
 
 # set up autologin for user fedora
 sed -i 's/#AutoLoginEnable=true/AutoLoginEnable=true/' /etc/kde/kdm/kdmrc
@@ -112,7 +112,7 @@ cat > /home/liveuser/.kde/share/config/kickoffrc << MENU_EOF
 [Favorites]
 FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/kde4/systemsettings.desktop,/usr/share/applications/liveinst.desktop
 MENU_EOF
-chown -R fedora:fedora /home/liveuser/.kde/
+chown -R liveuser:liveuser /home/liveuser/.kde/
 
 # show liveinst.desktop on and in menu
 sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
