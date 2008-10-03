@@ -29,6 +29,9 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 #repo --name=f9 --baseurl=http://localrepo/fedora/releases/9/Everything/$basearch/os/
 #repo --name=f9-updates --baseurl=http://localrepo/fedora/updates/9/$basearch/
 
+#repo --name=rawhide2 --baseurl=http://koji.fedoraproject.org/static-repos/dist-f10-build-current/i386
+repo --name=local --baseurl=file:///tmp/local
+
 %packages
 @base-x
 @base
