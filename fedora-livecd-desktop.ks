@@ -63,14 +63,14 @@ scim-pinyin
 %end
 
 %post
-cat >> /etc/rc.d/init.d/fedora-live << EOF
+cat >> /etc/rc.d/init.d/livesys << EOF
 # disable screensaver locking
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null
 # set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
 TimedLoginEnable=true
-TimedLogin=fedora
+TimedLogin=liveuser
 TimedLoginDelay=60
 FOE
 

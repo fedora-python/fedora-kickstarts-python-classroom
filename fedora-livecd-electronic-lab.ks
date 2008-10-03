@@ -179,7 +179,7 @@ DISPLAYMANAGER="KDE"
 EOF
 
 # add initscript qnd # Fedora Electronic Lab:  KDE keyboard layouts
-cat >> /etc/rc.d/init.d/fedora-live << EOF
+cat >> /etc/rc.d/init.d/livesys << EOF
 
 if [ -e /usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png ] ; then
     # use image also for kdm
@@ -188,17 +188,17 @@ if [ -e /usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png ] ; then
 fi
 
 # make fedora user use KDE
-echo "startkde" > /home/fedora/.xsession
-chmod a+x /home/fedora/.xsession
-chown fedora:fedora /home/fedora/.xsession
+echo "startkde" > /home/liveuser/.xsession
+chmod a+x /home/liveuser/.xsession
+chown liveuser:liveuser /home/liveuser/.xsession
 
 # set up autologin for user fedora
 sed -i 's/#AutoLoginEnable=true/AutoLoginEnable=true/' /etc/kde/kdm/kdmrc
-sed -i 's/#AutoLoginUser=fred/AutoLoginUser=fedora/' /etc/kde/kdm/kdmrc
+sed -i 's/#AutoLoginUser=fred/AutoLoginUser=liveuser/' /etc/kde/kdm/kdmrc
 
 # set up user fedora as default user and preselected user
 sed -i 's/#PreselectUser=Default/PreselectUser=Default/' /etc/kde/kdm/kdmrc
-sed -i 's/#DefaultUser=johndoe/DefaultUser=fedora/' /etc/kde/kdm/kdmrc
+sed -i 's/#DefaultUser=johndoe/DefaultUser=liveuser/' /etc/kde/kdm/kdmrc
 
 # disable screensaver
 sed -i 's/Enabled=true/Enabled=false/' /usr/share/kde-settings/kde-profile/default/share/config/kdesktoprc

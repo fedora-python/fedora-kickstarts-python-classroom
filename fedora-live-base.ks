@@ -92,7 +92,7 @@ isomd5sum
 
 %post
 # FIXME: it'd be better to get this installed from a package
-cat > /etc/rc.d/init.d/fedora-live << EOF
+cat > /etc/rc.d/init.d/livesys << EOF
 #!/bin/bash
 #
 # live: Init script for live image
@@ -134,7 +134,10 @@ mountPersistentHome() {
   fi
 
   # if we're given a file rather than a blockdev, loopback it
-  if [ ! -b "\$homedev" ]; then
+  if [ "\${homedev##mtd}" != "\${homedev}" ]; then
+    # mtd devs don't have a block device but get magic-mounted with -t jffs2
+    mountopts="-t jffs2"
+  elif [ ! -b "\$homedev" ]; then
     loopdev=\`losetup -f\`
     if [ "\${homedev##/mnt/live}" != "\${homedev}" ]; then
       action "Remounting live store r/w" mount -o remount,rw /mnt/live
@@ -144,7 +147,7 @@ mountPersistentHome() {
   fi
 
   # if it's encrypted, we need to unlock it
-  if [ "\$(/lib/udev/vol_id -t \$homedev)" = "crypto_LUKS" ]; then
+  if [ "\$(/lib/udev/vol_id -t \$homedev 2>/dev/null)" = "crypto_LUKS" ]; then
     echo
     echo "Setting up encrypted /home device"
     plymouth ask-for-password --command="cryptsetup luksOpen \$homedev EncHome"
@@ -152,9 +155,12 @@ mountPersistentHome() {
   fi
 
   # and finally do the mount
-  mount \$homedev /home
+  mount \$mountopts \$homedev /home
+  # if we have /home under what's passed for persistent home, then
+  # we should make that the real /home.  useful for mtd device on olpc
+  if [ -d /home/home ]; then mount --bind /home/home /home ; fi
   [ -x /sbin/restorecon ] && /sbin/restorecon /home
-  if [ -d /home/fedora ]; then USERADDARGS="-M" ; fi
+  if [ -d /home/liveuser ]; then USERADDARGS="-M" ; fi
 }
 
 findPersistentHome() {
@@ -178,8 +184,8 @@ if ! strstr "\`cat /proc/cmdline\`" nopersistenthome && [ -n "\$homedev" ] ; the
 fi
 
 # add fedora user with no passwd
-action "Adding fedora user" useradd \$USERADDARGS -c "Fedora Live" fedora
-passwd -d fedora > /dev/null
+action "Adding live user" useradd \$USERADDARGS -c "Live System User" liveuser
+passwd -d liveuser > /dev/null
 
 # turn off firstboot for livecd boots
 chkconfig --level 345 firstboot off 2>/dev/null
@@ -233,7 +239,7 @@ fi
 EOF
 
 # bah, hal starts way too late
-cat > /etc/rc.d/init.d/fedora-late-live << EOF
+cat > /etc/rc.d/init.d/livesys-late << EOF
 #!/bin/bash
 #
 # live: Late init script for live image
@@ -286,13 +292,13 @@ EOF
 touch /etc/resolv.conf
 /sbin/restorecon /etc/resolv.conf
 
-chmod 755 /etc/rc.d/init.d/fedora-live
-/sbin/restorecon /etc/rc.d/init.d/fedora-live
-/sbin/chkconfig --add fedora-live
+chmod 755 /etc/rc.d/init.d/livesys
+/sbin/restorecon /etc/rc.d/init.d/livesys
+/sbin/chkconfig --add livesys
 
-chmod 755 /etc/rc.d/init.d/fedora-late-live
-/sbin/restorecon /etc/rc.d/init.d/fedora-late-live
-/sbin/chkconfig --add fedora-late-live
+chmod 755 /etc/rc.d/init.d/livesys-late
+/sbin/restorecon /etc/rc.d/init.d/livesys-late
+/sbin/chkconfig --add livesys-late
 
 # work around for poor key import UI in PackageKit
 rm -f /var/lib/rpm/__db*

@@ -111,7 +111,7 @@ DISPLAYMANAGER="KDM"
 EOF
 
 # add initscript
-cat >> /etc/rc.d/init.d/fedora-live << EOF
+cat >> /etc/rc.d/init.d/livesys << EOF
 
 if [ -e /usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png ] ; then
     # use image also for kdm
@@ -120,25 +120,25 @@ if [ -e /usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png ] ; then
 fi
 
 # make fedora user use KDE
-echo "startkde" > /home/fedora/.xsession
-chmod a+x /home/fedora/.xsession
-chown fedora:fedora /home/fedora/.xsession
+echo "startkde" > /home/liveuser/.xsession
+chmod a+x /home/liveuser/.xsession
+chown liveuser:liveuser /home/liveuser/.xsession
 
 # set up autologin for user fedora
 sed -i 's/#AutoLoginEnable=true/AutoLoginEnable=true/' /etc/kde/kdm/kdmrc
-sed -i 's/#AutoLoginUser=fred/AutoLoginUser=fedora/' /etc/kde/kdm/kdmrc
+sed -i 's/#AutoLoginUser=fred/AutoLoginUser=liveuser/' /etc/kde/kdm/kdmrc
 
 # set up user fedora as default user and preselected user
 sed -i 's/#PreselectUser=Default/PreselectUser=Default/' /etc/kde/kdm/kdmrc
-sed -i 's/#DefaultUser=johndoe/DefaultUser=fedora/' /etc/kde/kdm/kdmrc
+sed -i 's/#DefaultUser=johndoe/DefaultUser=liveuser/' /etc/kde/kdm/kdmrc
 
 # add apps to favorites menu
-mkdir -p /home/fedora/.kde/share/config/
-cat > /home/fedora/.kde/share/config/kickoffrc << MENU_EOF
+mkdir -p /home/liveuser/.kde/share/config/
+cat > /home/liveuser/.kde/share/config/kickoffrc << MENU_EOF
 [Favorites]
 FavoriteURLs=/usr/share/applications/kde4/konqbrowser.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/liveinst.desktop
 MENU_EOF
-chown -R fedora:fedora /home/fedora/.kde/
+chown -R liveuser:liveuser /home/liveuser/.kde/
 
 # show liveinst.desktop on and in menu
 sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop

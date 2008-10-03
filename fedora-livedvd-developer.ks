@@ -107,9 +107,9 @@ BEGIN {
 }' < /etc/yum.repos.d/fedora.repo > /etc/yum.repos.d/fedora.repo.tmp
 mv /etc/yum.repos.d/fedora.repo{.tmp,}
 
-cat >> /etc/rc.d/init.d/fedora-live << EOF
+cat >> /etc/rc.d/init.d/livesys << EOF
 # Put link to demonstration videos on the desktop
-pushd /home/fedora/Desktop
+pushd /home/liveuser/Desktop
 ln -s /usr/share/eclipse-demos-0.0.1 "Eclipse demonstration videos"
 popd
 EOF

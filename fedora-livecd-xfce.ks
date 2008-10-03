@@ -142,9 +142,9 @@ cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startxfce4
 EOF
 
-mkdir -p /home/fedora/.config/tracker
+mkdir -p /home/liveuser/.config/tracker
 
-cat > /home/fedora/.config/tracker/tracker.cfg <<EOF
+cat > /home/liveuser/.config/tracker/tracker.cfg <<EOF
 [Indexing]
 EnableIndexing=false
 Language=en
@@ -157,8 +157,8 @@ EnableIndexing=false
 Language=en
 EOF
 
-cat >> /etc/rc.d/init.d/fedora-live << EOF
-chown -R fedora:fedora /home/fedora
+cat >> /etc/rc.d/init.d/livesys << EOF
+chown -R liveuser:liveuser /home/liveuser
 
 # disable screensaver locking
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null
@@ -166,7 +166,7 @@ gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
 TimedLoginEnable=true
-TimedLogin=fedora
+TimedLogin=liveuser
 TimedLoginDelay=60
 FOE
 
