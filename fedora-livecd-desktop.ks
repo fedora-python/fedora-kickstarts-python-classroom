@@ -15,7 +15,7 @@ NetworkManager-vpnc
 NetworkManager-openvpn
 # we don't include @office so that we don't get OOo.  but some nice bits
 abiword
-gnumeric
+#gnumeric
 #planner
 #inkscape
 
@@ -30,6 +30,7 @@ festvox-slt-arctic-hts
 -scim-tables-*
 -wqy-bitmap-fonts
 -dejavu-fonts-experimental
+-words
 
 # more fun with space saving
 -scim-lang-chinese
@@ -38,26 +39,27 @@ scim-chewing
 scim-pinyin
 
 # save some space
+-yelp
 -gnome-user-docs
 -gimp-help
+-gimp-help-browser
 -evolution-help
+-gnome-games
 -gnome-games-help
 -nss_db
 -vino
-
+-isdn4k-utils
 -dasher
 -evince-dvi
 -evince-djvu
 # not needed for gnome
 -acpid
-# temporary - drags in many deps
+
+# these pull in excessive dependencies
 -ekiga
 -tomboy
 -f-spot
 
-# try to get down to cd sized for the alpha
--gnumeric
--isdn4k-utils
 # hack to deal with conditionals + multiarch blargh
 -scim-bridge-gtk.i386
 %end
