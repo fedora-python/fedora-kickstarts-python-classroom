@@ -21,7 +21,6 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 tcsh
 kernel*
 -kernel*debug*
--kernel*-devel*
 -kernel-kdump*
 -syslog-ng
 # Desktop Packages
