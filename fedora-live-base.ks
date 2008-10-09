@@ -14,7 +14,7 @@ auth --useshadow --enablemd5
 selinux --enforcing
 firewall --disabled
 xconfig --startxonboot
-part / --size 4096
+part / --size 3072
 services --enabled=NetworkManager --disabled=network,sshd
 
 # To compose against the current release tree, use the following "repo" (enabled by default)
