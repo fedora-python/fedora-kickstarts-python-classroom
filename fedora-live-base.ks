@@ -122,6 +122,9 @@ if ! strstr "\`cat /proc/cmdline\`" noswap && [ -n "\$swaps" ] ; then
   for s in \$swaps ; do
     action "Enabling swap partition \$s" swapon \$s
   done
+  if [ -f /mnt/live/LiveOS/swap.img ]; then
+    action "Enabling swap file" swapon /mnt/live/LiveOS/swap.img
+  fi
 fi
 
 mountPersistentHome() {
