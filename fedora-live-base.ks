@@ -196,6 +196,9 @@ chkconfig --level 345 yum-updatesd off 2>/dev/null
 # turn off mdmonitor by default
 chkconfig --level 345 mdmonitor off 2>/dev/null
 
+# turn off setroubleshoot on the live image to preserve resources
+chkconfig --level 345 setroubleshoot off 2>/dev/null
+
 # don't do packagekit checking by default
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /apps/gnome-packagekit/frequency_get_updates never >/dev/null
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /apps/gnome-packagekit/frequency_get_upgrades never >/dev/null
