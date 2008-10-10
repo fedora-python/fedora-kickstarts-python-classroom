@@ -219,7 +219,7 @@ chkconfig --level 345 readahead_later off 2>/dev/null
 
 # make it so that we don't do writing to the overlay for things which
 # are just tmpdirs/caches
-mount -t tmpfs varcacheyum /var/cache/yum
+mount -t tmpfs -o mode=0755 varcacheyum /var/cache/yum
 mount -t tmpfs tmp /tmp
 mount -t tmpfs vartmp /var/tmp
 [ -x /sbin/restorecon ] && /sbin/restorecon /var/cache/yum /tmp /var/tmp >/dev/null 2>&1
