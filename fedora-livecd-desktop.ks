@@ -39,7 +39,6 @@ scim-chewing
 scim-pinyin
 
 # save some space
--yelp
 -gnome-user-docs
 -gimp-help
 -gimp-help-browser
