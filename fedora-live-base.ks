@@ -113,7 +113,7 @@ touch /.liveimg-configured
 # mount live image
 if [ -b \`readlink -f /dev/live\` ]; then
    mkdir -p /mnt/live
-   mount -o ro /dev/live /mnt/live
+   mount -o ro /dev/live /mnt/live 2>/dev/null || mount /dev/live /mnt/live
 fi
 
 # enable swaps unless requested otherwise
