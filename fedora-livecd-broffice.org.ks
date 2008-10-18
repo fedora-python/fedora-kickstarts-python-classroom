@@ -39,6 +39,7 @@ broffice.org-draw
 -padauk-fonts
 -khmeros-fonts-base
 -un-core-fonts-*
+-smc-fonts-meera
 
 # Assure we won't get these Asian input methods
 -libchewing
@@ -52,7 +53,6 @@ broffice.org-draw
 -gnome-games-*
 -gnome-doc-utils-stylesheets
 -gnome-phone-manager
--gnome-speech
 -planner
 -scim-python*
 -dasher
@@ -62,10 +62,6 @@ broffice.org-draw
 -ekiga
 -f-spot
 -cheese
--sound-juicer
--gok
--festival-*
--festvox-slt-arctic-hts
 
 %end
 
