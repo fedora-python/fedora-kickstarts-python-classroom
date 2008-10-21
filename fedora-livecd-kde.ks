@@ -11,6 +11,9 @@
 
 %packages
 
+# adding this manually although it should be a dependency (#466768)
+usermode-gtk
+
 # make kpackagekit the default on the kde live images
 kpackagekit
 -gnome-packagekit
