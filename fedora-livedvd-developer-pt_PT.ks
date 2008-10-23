@@ -12,6 +12,3 @@ timezone Europe/Lisbon
 %packages
 @portuguese-support
 %end
-
-%post
-%end
