@@ -12,7 +12,7 @@ keyboard us
 timezone US/Eastern
 auth --useshadow --enablemd5
 selinux --enforcing
-firewall --disabled
+firewall --enabled
 xconfig --startxonboot
 part / --size 3072
 services --enabled=NetworkManager --disabled=network,sshd
@@ -339,9 +339,11 @@ fi
 
 # if liveinst or textinst is given, start anaconda
 if strstr "\`cat /proc/cmdline\`" liveinst ; then
+   plymouth --quit
    /usr/sbin/liveinst \$ks
 fi
 if strstr "\`cat /proc/cmdline\`" textinst ; then
+   plymouth --quit
    /usr/sbin/liveinst --text \$ks
 fi
 
