@@ -5,16 +5,10 @@
 
 %include fedora-live-base.ks
 
-selinux --disabled
-
 %packages
 
 # sugar!
 @sugar-desktop
-# add temporarily until it gets added to comps
-sugar-browse
-sugar-calculator
-sugar-log
 
 # rebranding
 -fedora-release
