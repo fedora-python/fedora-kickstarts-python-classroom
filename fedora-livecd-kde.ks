@@ -11,9 +11,6 @@
 
 %packages
 
-# adding this manually although it should be a dependency (#466768)
-usermode-gtk
-
 # make kpackagekit the default on the kde live images
 kpackagekit
 -gnome-packagekit
@@ -78,6 +75,11 @@ liveusb-creator
 -make
 -nss_db
 -autofs
+
+# save some space (from @input-methods)
+-scim-python-pinyin
+scim-pinyin
+
 
 %end
 
