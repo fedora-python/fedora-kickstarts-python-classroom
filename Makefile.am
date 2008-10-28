@@ -3,6 +3,7 @@
 kickstartdir = $(pkgdatadir)/
 kickstart_DATA = \
     fedora-aos.ks \
+    fedora-install-fedora.ks \
     fedora-live-base.ks \
     fedora-livecd-desktop.ks \
     fedora-livecd-desktop-default.ks \
