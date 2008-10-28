@@ -41,20 +41,21 @@ broffice.org-draw
 -un-core-fonts-*
 -smc-fonts-meera
 
-# Assure we won't get these Asian input methods
+# Assure we won't get these input methods
 -libchewing
 -anthy
 -kasumi
--scim-chewing
--scim-pinyin
+-iok
+-scim*
+-m17n*
 
 # Saving space in order to get BrOffice.org in
 -gnome-utils
 -gnome-games-*
 -gnome-doc-utils-stylesheets
 -gnome-phone-manager
+-gnome-speech
 -planner
--scim-python*
 -dasher
 -system-config-language
 -evince-dvi
@@ -62,6 +63,10 @@ broffice.org-draw
 -ekiga
 -f-spot
 -cheese
+-sound-juicer
+-gok
+-festival-*
+-festvox-slt-arctic-hts
 
 %end
 
