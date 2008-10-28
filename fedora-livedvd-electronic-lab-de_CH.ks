@@ -3,7 +3,7 @@
 # Maintainer(s):
 # - Fabian Affolter <fab a fedoraproject.org>
 
-%include fedora-livecd-electronic-lab.ks
+%include fedora-livedvd-electronic-lab.ks
 
 lang de_DE
 keyboard sg-latin1
