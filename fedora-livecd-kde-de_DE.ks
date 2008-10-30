@@ -11,15 +11,13 @@ timezone Europe/Berlin
 
 %packages
 @german-support
+# exclude input methods
+-m17n*
+-scim*
 
 # don't use kpackagekit until it's translated
 -kpackagekit
 gnome-packagekit
-
-# don't install unnecessary input methods
--scim*
--m17n*
--iok
 
 # don't install unnecessary fonts
 -abyssinica-fonts

@@ -11,4 +11,7 @@ timezone Europe/Lisbon
 
 %packages
 @portuguese-support
+# exclude input methods
+-m17n*
+-scim*
 %end

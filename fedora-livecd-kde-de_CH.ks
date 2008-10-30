@@ -11,7 +11,9 @@ timezone Europe/Zurich
 
 %packages
 @german-support
-
+# exclude input methods
+-m17n*
+-scim*
 %end
 
 %post

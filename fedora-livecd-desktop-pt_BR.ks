@@ -11,6 +11,9 @@ timezone America/Sao_Paulo
 
 %packages
 @brazilian-support
+# exclude input methods
+-m17n*
+-scim*
 %end
 
 %post

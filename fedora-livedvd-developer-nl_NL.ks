@@ -11,4 +11,7 @@ timezone Europe/Amsterdam
 
 %packages
 @dutch-support
+# exclude input methods
+-m17n*
+-scim*
 %end

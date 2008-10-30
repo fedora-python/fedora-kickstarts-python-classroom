@@ -41,13 +41,9 @@ broffice.org-draw
 -un-core-fonts-*
 -smc-fonts-meera
 
-# Assure we won't get these input methods
--libchewing
--anthy
--kasumi
--iok
--scim*
+# exclude input methods
 -m17n*
+-scim*
 
 # Saving space in order to get BrOffice.org in
 -gnome-utils

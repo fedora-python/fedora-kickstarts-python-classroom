@@ -68,17 +68,15 @@ fuse
 
 # FIXME/TODO: recheck the removals here
 # try to remove some packages from livecd-fedora-base-desktop.ks
--scim*
 -gdm
 -authconfig-gtk
--m17n*
 -PolicyKit-gnome
 -gnome-doc-utils-stylesheets
--anthy
--kasumi
 -pygtkglext
 -python-devel
--libchewing
+# exclude input methods
+-scim*
+-m17n*
 
 # save some space (from @base)
 -make

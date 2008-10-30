@@ -113,12 +113,8 @@ xfwm4-themes
 # dictionaries are big
 #-aspell-*
 #-man-pages-*
-#-scim-tables-*
 
 # more fun with space saving
-#-scim-lang-chinese
-#scim-chewing
-#scim-pinyin
 -gimp-help
 
 

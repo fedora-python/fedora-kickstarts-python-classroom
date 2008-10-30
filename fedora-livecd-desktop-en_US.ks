@@ -9,3 +9,8 @@ lang en_US.UTF-8
 keyboard us
 timezone US/Eastern
 
+%packages
+# exclude input methods
+-m17n*
+-scim*
+%end
