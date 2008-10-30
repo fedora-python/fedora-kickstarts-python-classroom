@@ -10,10 +10,6 @@
 # sugar!
 @sugar-desktop
 
-# rebranding
--fedora-release
-generic-release
-
 # display manager
 slim
 
@@ -116,6 +112,10 @@ slim
 #@walloon-support
 #@xhosa-support
 #@zulu-support
+
+# exclude input methods
+-scim*
+-m17n*
 
 # These fonts are only used in the commented-out locales above
 -lklug-fonts
