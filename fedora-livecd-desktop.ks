@@ -27,16 +27,9 @@ festvox-slt-arctic-hts
 -aspell-*
 -hunspell-*
 -man-pages-*
--scim-tables-*
 -wqy-bitmap-fonts
 -dejavu-fonts-experimental
 -words
-
-# more fun with space saving
--scim-lang-chinese
--scim-python*
-scim-chewing
-scim-pinyin
 
 # save some space
 -gnome-user-docs
@@ -60,9 +53,6 @@ totem-gstreamer
 -ekiga
 -tomboy
 -f-spot
-
-# hack to deal with conditionals + multiarch blargh
--scim-bridge-gtk.i386
 %end
 
 %post
