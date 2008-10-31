@@ -325,6 +325,7 @@ Section "Device"
 
 	Option     "AccelMethod" "EXA"
 	Option     "NoCompression" "true"
+        Option     "MigrationHeuristic" "greedy"
 	Option     "PanelGeometry" "1200x900"
 EndSection
 
