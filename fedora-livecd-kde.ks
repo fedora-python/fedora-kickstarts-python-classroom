@@ -23,7 +23,7 @@ kpackagekit
 ### amarok has duplicate functionality with juk (~10 megs)
 #-amarok
 ### digikam has duplicate functionality with gwenview (~11 megs)
--digikam
+#-digikam
 ### kdeedu is too big for the live images
 -kdeedu
 ### scribus is too big for the live images
@@ -47,13 +47,15 @@ k3b
 filelight
 # twinkle (~10 megs)
 #twinkle
+konq-plugins
+kdeedu-kstars
 
 
 # some extras
 fuse
 liveusb-creator
-# nice to have but pulls in gstreamer
-#pavucontrol
+# nice to have but pulls in gstreamer (~3 megs)
+pavucontrol
 
 
 # additional fonts
