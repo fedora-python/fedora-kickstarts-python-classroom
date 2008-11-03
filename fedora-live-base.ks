@@ -34,7 +34,6 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 @base
 @core
 @fonts
-@input-methods
 @admin-tools
 @dial-up
 @hardware-support
