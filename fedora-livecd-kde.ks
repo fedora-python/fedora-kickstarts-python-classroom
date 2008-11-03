@@ -46,7 +46,7 @@ koffice-filters
 k3b
 filelight
 # twinkle (~10 megs)
-#twinkle
+twinkle
 konq-plugins
 kdeedu-kstars
 
@@ -77,11 +77,6 @@ pavucontrol
 -make
 -nss_db
 -autofs
-
-# save some space (from @input-methods)
--scim-python-pinyin
-scim-pinyin
-
 
 %end
 
