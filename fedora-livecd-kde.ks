@@ -24,8 +24,9 @@ kpackagekit
 #-amarok
 ### digikam has duplicate functionality with gwenview (~11 megs)
 #-digikam
-### kdeedu is too big for the live images
+### kdeedu is too big for the live images, but include kdeedu-kstars
 -kdeedu
+kdeedu-kstars
 ### scribus is too big for the live images
 -scribus
 ### kget has also basic torrent features (~3 megs)
@@ -47,8 +48,6 @@ k3b
 filelight
 # twinkle (~10 megs)
 twinkle
-konq-plugins
-kdeedu-kstars
 
 
 # some extras
@@ -56,7 +55,8 @@ fuse
 liveusb-creator
 # nice to have but pulls in gstreamer (~3 megs)
 pavucontrol
-
+konq-plugins
+kde-plasma-lancelot
 
 # additional fonts
 @fonts
