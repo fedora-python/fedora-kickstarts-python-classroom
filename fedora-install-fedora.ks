@@ -5,7 +5,7 @@
 
 # Use a part of 'iso' to define how large you want your isos.
 # Only used when composing to more than one iso.
-# Default is 670 (megs), CD size.
+# Default is 695 (megs), CD size.
 # Listed below is the size of a DVD if you wanted to split higher.
 #part iso --size=4998
 
