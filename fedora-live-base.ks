@@ -99,8 +99,12 @@ cat > /etc/rc.d/init.d/livesys << EOF
 
 . /etc/init.d/functions
 
-if ! strstr "\`cat /proc/cmdline\`" liveimg || [ "\$1" != "start" ] || [ -e /.liveimg-configured ] ; then
+if ! strstr "\`cat /proc/cmdline\`" liveimg || [ "\$1" != "start" ]; then
     exit 0
+fi
+
+if [ -e /.liveimg-configured ] ; then
+    configdone=1
 fi
 
 exists() {
@@ -183,6 +187,17 @@ if ! strstr "\`cat /proc/cmdline\`" nopersistenthome && [ -n "\$homedev" ] ; the
   action "Mounting persistent /home" mountPersistentHome
 fi
 
+# make it so that we don't do writing to the overlay for things which
+# are just tmpdirs/caches
+mount -t tmpfs -o mode=0755 varcacheyum /var/cache/yum
+mount -t tmpfs tmp /tmp
+mount -t tmpfs vartmp /var/tmp
+[ -x /sbin/restorecon ] && /sbin/restorecon /var/cache/yum /tmp /var/tmp >/dev/null 2>&1
+
+if [ -n "\$configdone" ]; then
+  exit 0
+fi
+
 # add fedora user with no passwd
 action "Adding live user" useradd \$USERADDARGS -c "Live System User" liveuser
 passwd -d liveuser > /dev/null
@@ -219,13 +234,6 @@ chkconfig --level 345 atd off 2>/dev/null
 chkconfig --level 345 anacron off 2>/dev/null
 chkconfig --level 345 readahead_early off 2>/dev/null
 chkconfig --level 345 readahead_later off 2>/dev/null
-
-# make it so that we don't do writing to the overlay for things which
-# are just tmpdirs/caches
-mount -t tmpfs -o mode=0755 varcacheyum /var/cache/yum
-mount -t tmpfs tmp /tmp
-mount -t tmpfs vartmp /var/tmp
-[ -x /sbin/restorecon ] && /sbin/restorecon /var/cache/yum /tmp /var/tmp >/dev/null 2>&1
 
 # Stopgap fix for RH #217966; should be fixed in HAL instead
 touch /media/.hal-mtab
