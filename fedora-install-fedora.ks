@@ -44,6 +44,7 @@ wireshark-gnome
 # Devel packages
 @development-libs
 @development-tools
+@fedora-packager
 @gnome-software-development
 @java-development
 @kde-software-development
