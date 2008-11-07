@@ -62,7 +62,7 @@ wireshark-gnome
 @sql-server
 @web-server --optional
 # Keep dap off the install media, makes Eng & Sci show up
-+-dap-server-cgi
+-dap-server-cgi
 # Virt group
 @virtualization --optional
 # filesystem stuff
