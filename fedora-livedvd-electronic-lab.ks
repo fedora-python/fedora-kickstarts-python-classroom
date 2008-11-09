@@ -1,5 +1,5 @@
 # Description : Live DVD image for Fedora Electronic Lab
-# last updated: 10 August 2008
+# last updated: 09 November 2008 - ready for F10 Cambridge.
 #
 # Maintainer(s):
 # - Chitlesh Goorah <chitlesh a fedoraproject.org>
@@ -25,7 +25,7 @@ kdebluetooth
 -koffice-kspread
 -koffice-kpresenter
 -koffice-filters
-
+-kdeedu-kstars
 
 # some projects based on ghdl and gtkwave needs
 zlib-devel
@@ -130,6 +130,12 @@ avrdude
 dfu-programmer
 avarice
 uisp
+# debugging tools
+gdb
+valgrind
+kdbg
+wireshark-gnome
+qemu
 
 # computing
 octave
@@ -150,15 +156,17 @@ compat-gcc-34-c++
 
 # Fedora Electronic Lab:
 
-mkdir -p /home/liveuser/.kde/share/config/
+cat >> /etc/rc.d/init.d/livesys << EOF
 
 # kill stupid klipper
-cat > /home/liveuser/.kde/share/config/klipperrc <<EOF
+cat > /home/liveuser/.kde/share/config/klipperrc <<KLIPPER_EOF
 [General]
 AutoStart=false
-EOF
+KLIPPER_EOF
 
-cat > /home/liveuser/.kde/share/config/kxkbrc <<EOF
+chown liveuser:liveuser /home/liveuser/.kde/share/config/klipperrc
+
+cat > /home/liveuser/.kde/share/config/kxkbrc << KXKBRC_EOF
 [Layout]
 DisplayNames=us,ch,de,fr
 IndicatorOnly=false
@@ -170,7 +178,9 @@ ShowFlag=true
 ShowSingle=true
 SwitchMode=Global
 Use=true
-EOF
+KXKBRC_EOF
+
+chown liveuser:liveuser /home/liveuser/.kde/share/config/kxkbrc
 
 # Chitlesh doesn't like the KDE icon on the kicker, but fedora's
 # icon taken from fedora-logos and applied by kde-settings
@@ -182,5 +192,6 @@ EOF
 /sbin/chkconfig rpcidmapd off 2>/dev/null
 /sbin/chkconfig rpcbind   off 2>/dev/null
 
+EOF
 
 %end
