@@ -34,6 +34,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * @DATESTAMP@ Jeroen van Meeuwen <kanarip a fedoraunity.org> @VERSION@-@RELEASE@
+- Package updates to kickstarts into F-10 package
+
+* Fri Nov 07 2008 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.10.1-1
 - Second build for review #448072
 
 * Fri May 23 2008 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.01-1
