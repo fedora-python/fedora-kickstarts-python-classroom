@@ -15,6 +15,9 @@
 kpackagekit
 -gnome-packagekit
 
+# make sure /usr/bin/pactl is there (#466544)
+pulseaudio-utils
+
 @kde-desktop
 
 # unwanted packages from @kde-desktop
@@ -57,6 +60,9 @@ liveusb-creator
 pavucontrol
 konq-plugins
 kde-plasma-lancelot
+# make sure alsaunmute is there
+alsa-utils
+
 
 # additional fonts
 @fonts
