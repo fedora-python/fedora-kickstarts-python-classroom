@@ -13,7 +13,6 @@ part / --size=8192
 %packages
 
 # KDE basic packages
-kmenu-gnome
 kdesvn
 yakuake
 kdebluetooth
@@ -55,7 +54,6 @@ syslinux
 gnupg
 hal-cups-utils
 firefox
-libflashsupport
 bluez-gnome
 gnome-bluetooth
 
@@ -140,6 +138,7 @@ qemu
 # computing
 octave
 octave-forge
+qtoctave
 
 # Oracle Berkeley database
 db4-cxx
@@ -147,6 +146,13 @@ db4-tcl
 
 # Extra support for compiling SystemC (not yet fedora compatible)
 compat-gcc-34-c++
+
+# TCL gui apps through ssh support, e.g modelsim and cadence icfb
+xorg-x11-fonts-100dpi
+xorg-x11-fonts-ISO8859-1-100dpi
+xorg-x11-fonts-ISO8859-9-100dpi
+xorg-x11-fonts-Type1
+
 
 %end
 
