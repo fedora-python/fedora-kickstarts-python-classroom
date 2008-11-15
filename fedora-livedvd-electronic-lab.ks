@@ -1,5 +1,5 @@
 # Description : Live DVD image for Fedora Electronic Lab
-# last updated: 09 November 2008 - ready for F10 Cambridge.
+# last updated: 15 November 2008 - ready for F10 Cambridge.
 #
 # Maintainer(s):
 # - Chitlesh Goorah <chitlesh a fedoraproject.org>
