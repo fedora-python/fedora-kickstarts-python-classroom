@@ -1,5 +1,5 @@
 AC_INIT([spin-kickstarts], 0.10.3)
-AC_SUBST([RELEASE], 2)
+AC_SUBST([RELEASE], 3)
 
 ALL_LINGUAS="bn_IN bn ca cs da de el es fi fr gl gu hi hr hu is it ja ko ml ms nb nl or pa pl pt pt_BR ru sk sl sr@latin sr sv ta tr uk zh_CN zh_TW"
 

@@ -34,6 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * @DATESTAMP@ Jeroen van Meeuwen <kanarip a fedoraunity.org> @VERSION@-@RELEASE@
+- Point fedora-live-base.ks repos to f-10
 - Remove sysprof from fedora-livedvd-developer.ks
 - Latest and final rebuild for Fedora 10
 
