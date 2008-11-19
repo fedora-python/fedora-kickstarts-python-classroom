@@ -55,7 +55,6 @@ scons
 sharutils
 socat
 sox
-sysprof
 tcp_wrappers-devel
 tcsh
 texi2html
