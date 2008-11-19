@@ -18,16 +18,16 @@ part / --size 3072
 services --enabled=NetworkManager --disabled=network,sshd
 
 # To compose against the current release tree, use the following "repo" (enabled by default)
-#repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-9&arch=$basearch
+repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-10&arch=$basearch
 # To include updates, use the following "repo" (enabled by default)
-#repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f9&arch=$basearch
+repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f10&arch=$basearch
 
 # To compose against rawhide, use the following "repo" (disabled by default)
-repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
+#repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
 
 # To compose against local trees, (edit and) use:
-#repo --name=f9 --baseurl=http://localrepo/fedora/releases/9/Everything/$basearch/os/
-#repo --name=f9-updates --baseurl=http://localrepo/fedora/updates/9/$basearch/
+#repo --name=f10 --baseurl=http://localrepo/fedora/releases/10/Everything/$basearch/os/
+#repo --name=f10-updates --baseurl=http://localrepo/fedora/updates/10/$basearch/
 
 %packages
 @base-x
