@@ -34,6 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * @DATESTAMP@ Jeroen van Meeuwen <kanarip a fedoraunity.org> @VERSION@-@RELEASE@
+- Remove sysprof from fedora-livedvd-developer.ks
 - Latest and final rebuild for Fedora 10
 
 * Sat Nov 08 2008 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.10.2-1
