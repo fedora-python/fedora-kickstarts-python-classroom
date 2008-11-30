@@ -3,7 +3,7 @@
 # Maintainer(s):
 # - Jeroen van Meeuwen <kanarip a fedoraunity.org>
 
-%include fedora-livecd-electronic-lab.ks
+%include fedora-livedvd-electronic-lab.ks
 
 lang nl_NL
 keyboard us

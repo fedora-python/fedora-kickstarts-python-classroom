@@ -37,6 +37,11 @@ rm -rf $RPM_BUILD_ROOT
 - Remove fedora-livecd-desktop-default.ks
 
 * Sat Nov 29 2008 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.11.0-1
+- Point fedora-live-base.ks repos to f-10
+- Remove sysprof from fedora-livedvd-developer.ks
+- Latest and final rebuild for Fedora 10
+
+* Sat Nov 08 2008 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.10.2-1
 - Package updates to kickstarts into F-10 package
 
 * Fri Nov 07 2008 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.10.1-1

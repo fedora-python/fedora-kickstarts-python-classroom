@@ -34,6 +34,30 @@ gnome-packagekit
 -thaifonts-scalable
 -VLGothic-fonts
 
+# don't use kpackagekit until it's translated
+-kpackagekit
+gnome-packagekit
+
+# don't install unnecessary input methods
+-scim*
+-m17n*
+-iok
+
+# don't install unnecessary fonts
+-abyssinica-fonts
+-cjkunifonts-uming
+-jomolhari-fonts
+-kacst-fonts
+-khmeros-fonts-base
+-lklug-fonts
+-un-core-fonts-dotum
+-padauk-fonts
+-paktype-fonts
+-smc-fonts-meera
+-stix-fonts
+-thaifonts-scalable
+-VLGothic-fonts
+
 %end
 
 %post
