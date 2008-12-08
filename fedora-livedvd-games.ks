@@ -8,6 +8,9 @@ part / --size 8000
 
 %packages
 
+# Include a desktop environment (#474775)
+@gnome-desktop
+
 # games
 
 # traditional (big)
