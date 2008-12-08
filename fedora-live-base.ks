@@ -254,6 +254,8 @@ if strstr "\`cat /proc/cmdline\`" CDLABEL= ; then
 cat /sbin/halt > /dev/null
 cat /sbin/reboot > /dev/null
 /usr/sbin/eject -p -m \$(readlink -f /dev/live) >/dev/null 2>&1
+echo "Please remove the CD from your drive and press Enter to finish restarting"
+read -t 30 < /dev/console
 FOE
 chmod +x /sbin/halt.local
 fi
