@@ -138,6 +138,18 @@ cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startxfce4
 EOF
 
+mkdir -p /home/liveuser/.config/xfce4
+
+cat > /home/liveuser/.config/xfce4/helpers.rc <<EOF
+MailReader=sylpheed-claws
+EOF
+
+mkdir -p /root/.config/xfce4
+
+cat > /root/.config/xfce4/helpers.rc <<EOF
+MailReader=sylpheed-claws
+EOF
+
 mkdir -p /home/liveuser/.config/tracker
 
 cat > /home/liveuser/.config/tracker/tracker.cfg <<EOF
