@@ -11,6 +11,9 @@
 # sugar!
 @sugar-desktop
 
+# e-mail client
+alpine
+
 # display manager
 slim
 
