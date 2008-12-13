@@ -150,4 +150,15 @@ chmod 755 /sbin/halt.local
 
 ###### Gnome display stuff ##################################################
 
-gconftool-2 --type boolean --set /apps/nautilus/preferences/always_use_browser true
+gconftool-2 --set /apps/nautilus/preferences/desktop_font --type string "Sans 8"
+gconftool-2 --set /desktop/gnome/interface/document_font_name --type string "Sans 8"
+gconftool-2 --set /desktop/gnome/interface/font_name --type string "Sans 8"
+gconftool-2 --set /apps/metacity/general/titlebar_font --type string "Sans Bold 8"
+gconftool-2 --set /desktop/gnome/interface/monospace_font_name --type string "Monospace 8"
+gconftool-2 --set /apps/metacity/window_keybindings/toggle_fullscreen --type string "<Alt>F11"
+gconftool-2 --set /desktop/gnome/interface/toolbar_style --type string "icons"
+gconftool-2 --set /desktop/gnome/sound/default_mixer_tracks --type list --list-type string "[PCM]"
+gconftool-2 --set /apps/gnome-power-manager/notify/low_capacity --type bool 0
+gconftool-2 --set /apps/compiz/plugins/move/allscreens/options/constrain_y --type bool 0
+gconftool-2 --set /apps/panel/toplevels/top_panel_screen0/size --type integer 19
+gconftool-2 --set /apps/panel/toplevels/bottom_panel_screen0/size --type integer 19
