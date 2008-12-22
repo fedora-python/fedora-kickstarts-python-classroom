@@ -105,7 +105,7 @@ fuse
 # create /etc/sysconfig/desktop (needed for installation)
 cat > /etc/sysconfig/desktop <<EOF
 DESKTOP="KDE"
-DISPLAYMANAGER="KDM"
+DISPLAYMANAGER="KDE"
 EOF
 
 # add initscript
