@@ -3,13 +3,12 @@
 # Maintainer(s):
 # - Rahul Sundaram <sundaram a fedoraunity.org>
 
-%include fedora-live-base.ks
-part / --size 8000
+%include fedora-livecd-desktop.ks
+
+# The recommended part size for DVDs is too close to use for the games spin
+part / --size 10240
 
 %packages
-
-# Include a desktop environment (#474775)
-@gnome-desktop
 
 # games
 
@@ -56,7 +55,7 @@ supertuxkart
 torcs
 tremulous
 ultimatestunts
-vdrift
+# vdrift (Only works with binary drivers that won't be on the DVD)
 warzone2100
 wesnoth
 widelands
@@ -101,7 +100,7 @@ scorchwentbonkers
 seahorse-adventures
 solarwolf
 sopwith
-starfighter
+# starfighter (Removed from Fedora due to License)
 stormbaancoureur
 ularn
 urbanterror
@@ -120,9 +119,9 @@ raidem
 raidem-music
 trackballs
 trackballs-music
-uqm
-uqm-content-3domusic
-uqm-content-voice
+# uqm (uqm-data was removed due to license and 100MB is a bit much to download)
+# uqm-content-3domusic
+# uqm-content-voice
 
 # arcade classics(ish) (small)
 
