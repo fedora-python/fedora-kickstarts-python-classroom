@@ -29,7 +29,6 @@ festvox-slt-arctic-hts
 -aspell-*
 -hunspell-*
 -man-pages-*
--wqy-bitmap-fonts
 -words
 
 %end
