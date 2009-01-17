@@ -1,7 +1,8 @@
 # fedora-livedvd-games.ks
 #
 # Maintainer(s):
-# - Rahul Sundaram <sundaram a fedoraunity.org>
+# - Bruno Wolff III <bruno@wolff.to>
+# - Formerly maintained by Rahul Sundaram
 
 %include fedora-livecd-desktop.ks
 
