@@ -57,7 +57,6 @@ fuse
 -abyssinica-fonts
 -cjkunifonts-uming
 -baekmuk-ttf-fonts-gulim
--dejavu-fonts-experimental
 -jomolhari-fonts
 -kacst-fonts
 -paktype-fonts

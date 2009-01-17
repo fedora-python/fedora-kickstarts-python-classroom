@@ -27,8 +27,6 @@ festvox-slt-arctic-hts
 -aspell-*
 -hunspell-*
 -man-pages-*
--wqy-bitmap-fonts
--dejavu-fonts-experimental
 -words
 
 # save some space
