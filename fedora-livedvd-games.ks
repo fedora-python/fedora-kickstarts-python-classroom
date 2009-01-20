@@ -48,7 +48,7 @@ netpanzer
 neverball
 nexuiz
 nogravity
-openarena
+# openarena (cut because of size, may be restored later if larger iso's allowed)
 pinball
 scorched3d
 supertux
