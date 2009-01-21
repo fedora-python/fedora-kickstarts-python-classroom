@@ -35,9 +35,6 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 @core
 @fonts
 @input-methods
-# scim-python-pinyin is too big so use scim-pinyin instead for live
--scim-python-pinyin
-scim-pinyin
 @admin-tools
 @dial-up
 @hardware-support
