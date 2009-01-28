@@ -11,6 +11,8 @@
 
 %packages
 
+### fixes and space issues
+
 # make kpackagekit the default on the kde live images
 kpackagekit
 -gnome-packagekit
@@ -18,61 +20,64 @@ kpackagekit
 # make sure /usr/bin/pactl is there (#466544)
 pulseaudio-utils
 
+# make sure alsaunmute is there
+alsa-utils
+
+# remove input methods to free space
+-scim*
+-m17n*
+-ibus*
+
+
+### The KDE-Desktop
+
 @kde-desktop
 
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
 
-### amarok has duplicate functionality with juk (~10 megs)
+### amarok has duplicate functionality with juk (~13 megs)
 #-amarok
 ### digikam has duplicate functionality with gwenview (~11 megs)
-#-digikam
+-digikam
 ### kdeedu is too big for the live images, but include kdeedu-kstars
--kdeedu
-kdeedu-kstars
+-kdeedu*
 ### scribus is too big for the live images
 -scribus
 ### kget has also basic torrent features (~3 megs)
 -ktorrent
 ### konqueror is also able to browse ftp shares (~1 megs)
-#-kftpgrabber*
+-kftpgrabber*
 ### kaffeine has duplicate functionality with dragonplayer (~3 megs)
 -kaffeine*
-### the removal of kdegames will free ~31 megs
+### the removal of kdegames will free ~35 megs
 #-kdegames
+# some more
+-kipi-plugins
+-konq-plugins
+-kdeplasma-addons
 
 
-# Useful additional KDE3 applications
+# koffice
 koffice-kword
 koffice-kspread
 koffice-kpresenter
 koffice-filters
+
+
+# Useful additional KDE3 applications
 k3b
 filelight
 # twinkle (~10 megs)
-twinkle
-
+#twinkle
 
 # some extras
 fuse
 liveusb-creator
+#kde-plasma-lancelot
+
 # nice to have but pulls in gstreamer (~3 megs)
-pavucontrol
-konq-plugins
-kde-plasma-lancelot
-# make sure alsaunmute is there
-alsa-utils
-
-
-# additional fonts
-@fonts
-#fonts-ISO8859-2 
-#cjkunifonts-ukai 
-#madan-fonts 
-#fonts-KOI8-R 
-#fonts-KOI8-R-100dpi 
-#tibetan-machine-uni-fonts
-
+#pavucontrol
 
 # FIXME/TODO: recheck the removals here
 # try to remove some packages from fedora-live-base.ks
