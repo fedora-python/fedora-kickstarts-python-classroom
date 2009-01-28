@@ -11,28 +11,6 @@ timezone Europe/Berlin
 
 %packages
 @german-support
-# exclude input methods
--m17n*
--scim*
-
-# don't use kpackagekit until it's translated
--kpackagekit
-gnome-packagekit
-
-# don't install unnecessary fonts
--abyssinica-fonts
--cjkunifonts-uming
--jomolhari-fonts
--kacst-fonts
--khmeros-fonts-base
--lklug-fonts
--un-core-fonts-dotum
--padauk-fonts
--paktype-fonts
--smc-fonts-meera
--stix-fonts
--thaifonts-scalable
--VLGothic-fonts
 
 # don't use kpackagekit until it's translated
 -kpackagekit
@@ -45,11 +23,12 @@ gnome-packagekit
 
 # don't install unnecessary fonts
 -abyssinica-fonts
--cjkunifonts-uming
+-cjkuni*fonts*
 -jomolhari-fonts
 -kacst-fonts
 -khmeros-fonts-base
 -lklug-fonts
+-lohit-fonts*
 -un-core-fonts-dotum
 -padauk-fonts
 -paktype-fonts
@@ -57,6 +36,9 @@ gnome-packagekit
 -stix-fonts
 -thaifonts-scalable
 -VLGothic-fonts
+
+# remove kdegames to free needed space
+-kdegames*
 
 %end
 
