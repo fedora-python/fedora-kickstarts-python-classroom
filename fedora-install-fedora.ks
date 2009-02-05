@@ -40,6 +40,7 @@ joe
 emacs
 k3b
 @system-tools
+mc
 wireshark-gnome
 # Devel packages
 @development-libs
