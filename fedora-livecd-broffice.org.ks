@@ -1,7 +1,10 @@
 # fedora-livecd-broffice.ks
 #
-# Maintainer(s):
-# - Igor Pires Soares <igor at projetofedora.org>
+# Description:
+# - Provides the legal brand BrOffice.org for OpenOffice.org in Brazil
+#
+# Maintainer:
+# - Igor Pires Soares <igor at fedoraproject.org>
 
 
 %include fedora-livecd-desktop.ks
@@ -28,6 +31,8 @@ broffice.org-draw
 # We won't use these Asian fonts anyway
 -lklug-fonts
 -abyssinica-fonts
+-andika-fonts
+-bitstream-vera-*
 -jomolhari-fonts
 -lohit-fonts-*
 -thaifonts-scalable
@@ -35,19 +40,34 @@ broffice.org-draw
 -paktype-fonts
 -baekmuk-*
 -cjkunifonts-*
--VLGothic-fonts
+-VLGothic-fonts-*
 -padauk-fonts
 -khmeros-fonts-base
--un-core-fonts-*
+-un-*
 -smc-fonts-meera
+-samyak-fonts-*
+-sarai-fonts
+-stix-fonts
+-cjkuni-*
+-doulos-fonts
+-hanazono-fonts
+-urw-fonts
+-thai-*
 
-# exclude input methods
+# remove input methods
+-@input-methods
 -m17n*
 -scim*
+-iok
+-anthy
+-kasumi
+-libchewing
+-ibus-*
 
 # Saving space in order to get BrOffice.org in
--gnome-utils
+-@games
 -gnome-games-*
+-gnome-utils
 -gnome-doc-utils-stylesheets
 -gnome-phone-manager
 -gnome-speech
@@ -57,6 +77,7 @@ broffice.org-draw
 -evince-dvi
 -evince-djvu
 -ekiga
+-tomboy
 -f-spot
 -cheese
 -sound-juicer
