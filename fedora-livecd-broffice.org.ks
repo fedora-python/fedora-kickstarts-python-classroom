@@ -31,25 +31,18 @@ broffice.org-draw
 # We won't use these Asian fonts anyway
 -lklug-fonts
 -abyssinica-fonts
--andika-fonts
--bitstream-vera-*
 -jomolhari-fonts
 -lohit-fonts-*
--thaifonts-scalable
 -kacst-fonts
 -paktype-fonts
 -baekmuk-*
--cjkunifonts-*
 -VLGothic-fonts-*
 -padauk-fonts
--khmeros-fonts-base
 -un-*
--smc-fonts-meera
 -samyak-fonts-*
 -sarai-fonts
 -stix-fonts
 -cjkuni-*
--doulos-fonts
 -hanazono-fonts
 -urw-fonts
 -thai-*
@@ -70,20 +63,19 @@ broffice.org-draw
 -gnome-utils
 -gnome-doc-utils-stylesheets
 -gnome-phone-manager
+-gnome-user-share
 -gnome-speech
 -planner
--dasher
 -system-config-language
--evince-dvi
--evince-djvu
--ekiga
--tomboy
--f-spot
+-system-config-lvm
 -cheese
 -sound-juicer
 -gok
 -festival-*
 -festvox-slt-arctic-hts
+-NetworkManager-vpnc
+-NetworkManager-openvpn
+-compiz-*
 
 %end
 
