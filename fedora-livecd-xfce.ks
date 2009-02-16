@@ -12,9 +12,8 @@
 
 %packages
 
-# gdm depends on gnome-session but lacks a dependency. Temporary workaround
-
-gnome-session
+# remove imsettings-xfce for now until it gets re-written
+-imsettings-xfce
 
 firefox
 NetworkManager-vpnc
@@ -53,7 +52,6 @@ pidgin
 claws-mail
 # brasero has more dependencies
 gnomebaker
-drivel
 liferea
 quodlibet
 gftp
@@ -179,14 +177,6 @@ TimedLoginDelay=60
 FOE
 
 EOF
-
-
-%post
-
-# remove this session file from gnome-session package to make xfce the default
-# temporary hack till this file is split up from the package
-
-rm -rf /usr/share/xsessions/gnome.desktop
 
 %end
 
