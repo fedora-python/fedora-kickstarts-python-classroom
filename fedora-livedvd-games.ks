@@ -11,6 +11,11 @@ part / --size 10240
 
 %packages
 
+# Wine pulls in i386 libraries under x86_86 making that spin too big.
+# Also the point is to show off Fedora games, not running windows games.
+
+-wine
+
 # games
 
 # traditional (big)
@@ -25,7 +30,6 @@ beneath-a-steel-sky-cd
 blobAndConquer
 boswars
 bzflag
-#croquet (pending)
 crossfire-client
 egoboo
 extremetuxracer
@@ -56,7 +60,6 @@ supertuxkart
 torcs
 tremulous
 ultimatestunts
-# vdrift (Only works with binary drivers that won't be on the DVD)
 warzone2100
 wesnoth
 widelands
@@ -101,7 +104,6 @@ scorchwentbonkers
 seahorse-adventures
 solarwolf
 sopwith
-# starfighter (Removed from Fedora due to License)
 stormbaancoureur
 ularn
 urbanterror
@@ -120,9 +122,6 @@ raidem
 raidem-music
 trackballs
 trackballs-music
-# uqm (uqm-data was removed due to license and 100MB is a bit much to download)
-# uqm-content-3domusic
-# uqm-content-voice
 
 # arcade classics(ish) (small)
 
@@ -138,7 +137,6 @@ seahorse-adventures
 shippy
 tecnoballz
 wordwarvi
-#(xgalaga renamed)
 xgalaxy
 zasx
 
@@ -191,9 +189,6 @@ taxipilot
 
 # utilities
 
-dosbox
 games-menus
-wget
 
 %end
-
