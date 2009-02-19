@@ -1,7 +1,7 @@
 # fedora-livecd-broffice.ks
 #
 # Description:
-# - Provides the legal brand BrOffice.org for OpenOffice.org in Brazil
+# - Provides the legal brand "BrOffice.org" for OpenOffice.org in Brazil
 #
 # Maintainer:
 # - Igor Pires Soares <igor at fedoraproject.org>
@@ -13,22 +13,29 @@ lang pt_BR.UTF-8
 keyboard br-abnt2
 timezone America/Sao_Paulo
 
-%packages
+
+%packages --instLangs en_US:pt_BR
+
+# L10n packages
 @brazilian-support
 hunspell-pt
 
-
-# To avoid double functionality we will drop abiword and gnumeric and put BrOffice.org in
+# To avoid double functionality we will drop abiword and gnumeric and include BrOffice.org
 -abiword
 -gnumeric
--gimp-*
-broffice.org-writer
-broffice.org-calc
-broffice.org-impress
-broffice.org-draw
+-planner
+broffice.org-*
 
+# Include some desktop packages
+@java
+totem-xine
+vino
+gnome-games
+system-config-display
+brasero
+bitstream-vera-*
 
-# We won't use these Asian fonts anyway
+# We won't use these Asian fonts
 -lklug-fonts
 -abyssinica-fonts
 -jomolhari-fonts
@@ -44,7 +51,6 @@ broffice.org-draw
 -stix-fonts
 -cjkuni-*
 -hanazono-fonts
--urw-fonts
 -thai-*
 
 # remove input methods
@@ -56,26 +62,6 @@ broffice.org-draw
 -kasumi
 -libchewing
 -ibus-*
-
-# Saving space in order to get BrOffice.org in
--@games
--gnome-games-*
--gnome-utils
--gnome-doc-utils-stylesheets
--gnome-phone-manager
--gnome-user-share
--gnome-speech
--planner
--system-config-language
--system-config-lvm
--cheese
--sound-juicer
--gok
--festival-*
--festvox-slt-arctic-hts
--NetworkManager-vpnc
--NetworkManager-openvpn
--compiz-*
 
 %end
 
