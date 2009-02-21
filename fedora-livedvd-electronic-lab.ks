@@ -69,6 +69,7 @@ tkcvs
 
 # vlsi
 alliance-doc
+electric
 irsim
 gds2pov
 magic-doc
@@ -91,11 +92,13 @@ drawtiming
 ghdl
 freehdl
 
-# spice
+# spice and circuit
 ngspice
 gnucap
 gspiceui
 gwave
+linsmith
+
 
 # PCB and schematics
 geda-gschem
@@ -115,6 +118,7 @@ piklab
 ktechlab
 pikloops
 sdcc
+gsim85
 
 # Serial Port Terminals
 gtkterm
@@ -153,6 +157,15 @@ xorg-x11-fonts-ISO8859-1-100dpi
 xorg-x11-fonts-ISO8859-9-100dpi
 xorg-x11-fonts-Type1
 
+# Perl Modules
+perl-Hardware-Verilog-Parser
+perl-Hardware-Vhdl-Lexer
+perl-Hardware-Vhdl-Parser
+perl-Hardware-Vhdl-Tidy
+perl-ModelSim-List
+perl-Perlilog
+perl-Verilog
+vhd2vl
 
 %end
 
