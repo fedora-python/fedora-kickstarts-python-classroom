@@ -75,7 +75,6 @@ ballz
 blobwars
 bolzplatz2006
 bombardier
-bsd-games
 cdogs-sdl
 clanbomber
 clonekeen
