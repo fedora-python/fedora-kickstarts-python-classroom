@@ -75,7 +75,6 @@ ballz
 blobwars
 bolzplatz2006
 bombardier
-bsd-games
 cdogs-sdl
 clanbomber
 clonekeen
@@ -183,8 +182,6 @@ tuxpaint-stamps
 tuxtype2
 
 # kde based games
-ksirk
-poker2d-kde
 taxipilot
 
 # utilities
