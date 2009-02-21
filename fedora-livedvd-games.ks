@@ -16,11 +16,6 @@ part / --size 10240
 
 -wine
 
-# Trim some fat brought in by the live desktop ks
-
--evolution
--libgweather
-
 # games
 
 # traditional (big)
