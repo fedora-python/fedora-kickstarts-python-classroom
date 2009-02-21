@@ -16,6 +16,11 @@ part / --size 10240
 
 -wine
 
+# Trim some fat brought in by the live desktop ks
+
+-evolution
+-libgweather
+
 # games
 
 # traditional (big)
@@ -183,8 +188,6 @@ tuxpaint-stamps
 tuxtype2
 
 # kde based games
-ksirk
-poker2d-kde
 taxipilot
 
 # utilities
