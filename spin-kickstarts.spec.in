@@ -34,6 +34,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * @DATESTAMP@ Jeroen van Meeuwen <kanarip a fedoraunity.org> @VERSION@-@RELEASE@
+- Added de_CH localized spins
+
+* Tue Feb 23 2009 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.11.0-2
 - Remove fedora-livecd-desktop-default.ks
 
 * Sat Nov 29 2008 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.11.0-1
