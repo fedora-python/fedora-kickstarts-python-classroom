@@ -17,6 +17,10 @@
 kpackagekit
 -gnome-packagekit
 
+# use system-config-printer-kde instead of system-config-printer
+-system-config-printer
+system-config-printer-kde
+
 # make sure /usr/bin/pactl is there (#466544)
 pulseaudio-utils
 
@@ -52,9 +56,12 @@ alsa-utils
 -kaffeine*
 ### the removal of kdegames will free ~35 megs
 #-kdegames
+### kdeartwork is not really needed
+-kdeartwork
+
 # some more
 -kipi-plugins
--konq-plugins
+#-konq-plugins
 -kdeplasma-addons
 
 
@@ -74,7 +81,6 @@ filelight
 # some extras
 fuse
 liveusb-creator
-#kde-plasma-lancelot
 
 # nice to have but pulls in gstreamer (~3 megs)
 #pavucontrol
