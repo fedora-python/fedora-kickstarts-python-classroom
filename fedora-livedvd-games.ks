@@ -73,11 +73,9 @@ abe
 alex4
 ballz
 blobwars
-bolzplatz2006
 bombardier
 cdogs-sdl
 clanbomber
-clonekeen
 foobillard
 glaxium
 gnubg
@@ -93,12 +91,9 @@ nethack
 openlierox
 pachi
 pioneers
-quake3
-quake3-demo
 quarry
 Ri-li
 rogue
-rott-shareware
 scorchwentbonkers
 seahorse-adventures
 solarwolf
@@ -106,7 +101,6 @@ sopwith
 stormbaancoureur
 ularn
 urbanterror
-vavoom
 worldofpadman
 xblast
 
