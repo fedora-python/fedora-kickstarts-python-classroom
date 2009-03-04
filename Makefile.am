@@ -13,7 +13,7 @@ kickstart_DATA = \
     fedora-livecd-desktop-nl_NL.ks \
     fedora-livecd-desktop-pt_BR.ks \
     fedora-livecd-desktop-pt_PT.ks \
-    fedora-livecd-education-math.ks \
+    fedora-livecd-education.ks \
     fedora-livecd-kde.ks \
     fedora-livecd-kde-de_CH.ks \
     fedora-livecd-kde-de_DE.ks \
