@@ -23,10 +23,6 @@ kickstart_DATA = \
     fedora-livecd-xfce-de_CH.ks \
     fedora-livecd-xfce-nl_NL.ks \
     fedora-livecd-xfce-pt_PT.ks \
-    fedora-livedvd-developer.ks \
-    fedora-livedvd-developer-de_CH.ks \
-    fedora-livedvd-developer-nl_NL.ks \
-    fedora-livedvd-developer-pt_PT.ks \
     fedora-livedvd-electronic-lab.ks \
     fedora-livedvd-electronic-lab-de_CH.ks \
     fedora-livedvd-electronic-lab-nl_NL.ks \
