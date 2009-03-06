@@ -16,6 +16,8 @@
 -imsettings-xfce
 
 firefox
+NetworkManager-vpnc
+NetworkManager-openvpn
 NetworkManager-gnome
 NetworkManager-pptp
 
