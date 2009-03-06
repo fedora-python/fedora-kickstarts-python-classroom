@@ -121,6 +121,14 @@ if [ -b \`readlink -f /dev/live\` ]; then
    mount -o ro /dev/live /mnt/live 2>/dev/null || mount /dev/live /mnt/live
 fi
 
+livedir="LiveOS"
+for arg in \`cat /proc/cmdline\` ; do
+  if [ "\${arg##live_dir=}" != "\${arg}" ]; then
+    livedir=\${arg##live_dir=}
+    return
+  fi
+done
+
 # enable swaps unless requested otherwise
 swaps=\`blkid -t TYPE=swap -o device\`
 if ! strstr "\`cat /proc/cmdline\`" noswap && [ -n "\$swaps" ] ; then
@@ -128,8 +136,8 @@ if ! strstr "\`cat /proc/cmdline\`" noswap && [ -n "\$swaps" ] ; then
     action "Enabling swap partition \$s" swapon \$s
   done
 fi
-if ! strstr "\`cat /proc/cmdline\`" noswap && [ -f /mnt/live/LiveOS/swap.img ] ; then
-  action "Enabling swap file" swapon /mnt/live/LiveOS/swap.img
+if ! strstr "\`cat /proc/cmdline\`" noswap && [ -f /mnt/live/\${livedir}/swap.img ] ; then
+  action "Enabling swap file" swapon /mnt/live/\${livedir}/swap.img
 fi
 
 mountPersistentHome() {
@@ -179,8 +187,8 @@ findPersistentHome() {
 
 if strstr "\`cat /proc/cmdline\`" persistenthome= ; then
   findPersistentHome
-elif [ -e /mnt/live/LiveOS/home.img ]; then
-  homedev=/mnt/live/LiveOS/home.img
+elif [ -e /mnt/live/\${livedir}/home.img ]; then
+  homedev=/mnt/live/\${livedir}/home.img
 fi
 
 # if we have a persistent /home, then we want to go ahead and mount it
