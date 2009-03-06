@@ -11,6 +11,8 @@
 @sound-and-video
 @gnome-desktop
 nss-mdns
+NetworkManager-vpnc
+NetworkManager-openvpn
 # we don't include @office so that we don't get OOo.  but some nice bits
 abiword
 #gnumeric
