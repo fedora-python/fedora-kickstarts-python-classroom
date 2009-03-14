@@ -1,9 +1,8 @@
 # Description : Live DVD image for Fedora Electronic Lab
-# last updated: 15 November 2008 - ready for F10 Cambridge.
 #
 # Maintainer(s):
 # - Chitlesh Goorah <chitlesh a fedoraproject.org>
-# - Thibault North  <tnorth a fedoraproject.org>
+# - Thibault North  <tnorth   a fedoraproject.org>
 
 %include fedora-livecd-kde.ks
 
@@ -12,8 +11,22 @@ part / --size=8192
 
 %packages
 
+@electronic-lab
+
+
+# Embedded design
+eclipse-cdt
+eclipse-cdt-sdk
+eclipse-egit
+eclipse-epic
+eclipse-rcp
+eclipse-subclipse
+doxygen
+splint
+
 # KDE basic packages
 kdesvn
+kdesdk
 yakuake
 kdebluetooth
 
@@ -31,6 +44,7 @@ zlib-devel
 
 
 # Office
+dia
 vym
 openoffice.org-writer
 openoffice.org-math
@@ -40,98 +54,18 @@ openoffice.org-impress
 openoffice.org-extendedPDF
 openoffice.org-ooolatex
 kile
+tetex-IEEEtran
 planner
+graphviz
 
 
 # some other extra packages
-ntfsprogs
-ntfs-3g
-synaptics
-setroubleshoot
-smolt
-smolt-firstboot
-syslinux
-gnupg
-hal-cups-utils
 firefox
-bluez-gnome
-gnome-bluetooth
-
-
-# ignore comps.xml and make sure these packages are included
 make
-# include default fedora wallpaper
-desktop-backgrounds-basic
-fedora-logos
 wget
 tkcvs
 
 
-# vlsi
-alliance-doc
-electric
-irsim
-gds2pov
-magic-doc
-toped
-xcircuit
-qucs
-netgen
-pharosc
-pharosc-alliance-devel
-pharosc-doc
-pharosc-magic-devel
-pharosc-synopsys
-pharosc-xcircuit
-sk2py
-
-# Hardware Description Languages
-gtkwave
-iverilog
-drawtiming
-ghdl
-freehdl
-
-# spice and circuit
-ngspice
-gnucap
-gspiceui
-gwave
-linsmith
-
-
-# PCB and schematics
-geda-gschem
-geda-examples
-geda-gsymcheck
-geda-gattrib
-geda-utils
-geda-docs
-geda-gnetlist
-gerbv
-gresistor
-kicad
-pcb
-
-# Micro Programming
-piklab
-ktechlab
-pikloops
-sdcc
-gsim85
-
-# Serial Port Terminals
-gtkterm
-picocom
-minicom
-
-# embedded
-arm-gp2x-linux*
-avr-*
-avrdude
-dfu-programmer
-avarice
-uisp
 # debugging tools
 gdb
 valgrind
@@ -139,33 +73,17 @@ kdbg
 wireshark-gnome
 qemu
 
-# computing
-octave
-octave-forge
-qtoctave
 
-# Oracle Berkeley database
+# EDA/CAD department
 db4-cxx
 db4-tcl
+perl-Test-Pod
+perl-Test-Pod-Coverage
 
-# Extra support for compiling SystemC (not yet fedora compatible)
+
+# Extra support for compiling SystemC (not fedora compatible)
 compat-gcc-34-c++
 
-# TCL gui apps through ssh support, e.g modelsim and cadence icfb
-xorg-x11-fonts-100dpi
-xorg-x11-fonts-ISO8859-1-100dpi
-xorg-x11-fonts-ISO8859-9-100dpi
-xorg-x11-fonts-Type1
-
-# Perl Modules
-perl-Hardware-Verilog-Parser
-perl-Hardware-Vhdl-Lexer
-perl-Hardware-Vhdl-Parser
-perl-Hardware-Vhdl-Tidy
-perl-ModelSim-List
-perl-Perlilog
-perl-Verilog
-vhd2vl
 
 %end
 
