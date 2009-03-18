@@ -12,19 +12,13 @@
 
 %packages
 
-# remove imsettings-xfce for now until it gets re-written
--imsettings-xfce
-
 firefox
 NetworkManager-vpnc
 NetworkManager-openvpn
 NetworkManager-gnome
 NetworkManager-pptp
 
-#nss-mdns
-
 # we don't include @office so that we don't get OOo.  but some nice bits
-
 abiword
 gnumeric
 
@@ -59,7 +53,7 @@ ristretto
 asunder
 tracker-search-tool
 
-gnome-power-manager
+xfce4-power-manager
 seahorse
 transmission
 cups-pdf
@@ -80,6 +74,7 @@ yum-utils
 gtk-xfce-engine
 orage
 thunar-volman
+gigolo
 xarchiver
 xfce4-battery-plugin
 xfce4-clipman-plugin
@@ -88,8 +83,6 @@ xfce4-datetime-plugin
 xfce4-dict-plugin
 xfce4-diskperf-plugin
 xfce4-genmon-plugin
-#redundant with verve plugin
-#xfce4-minicmd-plugin
 xfce4-mount-plugin
 xfce4-netload-plugin
 xfce4-notes-plugin
@@ -101,7 +94,6 @@ xfce4-systemload-plugin
 xfce4-taskmanager
 xfce4-volstatus-icon
 xfce4-verve-plugin
-# We use NetworkManager-gnome. So this is redundant
 xfce4-weather-plugin
 xfce4-websearch-plugin
 # this one a compatibility layer for GNOME applets and depends on it
