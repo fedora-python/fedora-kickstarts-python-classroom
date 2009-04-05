@@ -39,11 +39,11 @@ bitstream-vera-*
 -lklug-fonts
 -abyssinica-fonts
 -jomolhari-fonts
--lohit-fonts-*
+-lohit-*
 -kacst-fonts
 -paktype-fonts
 -baekmuk-*
--VLGothic-fonts-*
+-vlgothic-fonts-*
 -padauk-fonts
 -un-*
 -samyak-fonts-*
@@ -52,6 +52,7 @@ bitstream-vera-*
 -cjkuni-*
 -hanazono-fonts
 -thai-*
+-smc-meera-fonts
 
 # remove input methods
 -@input-methods
