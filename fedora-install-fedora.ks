@@ -10,7 +10,7 @@
 #part iso --size=4998
 
 # Add the repos you wish to use to compose here.  At least one of them needs group data.
-repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
+repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch --exclude kernel*debug* --exclude kernel-kdump* --exclude syslog-ng
 repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide-source&arch=$basearch
 
 # Package manifest for the compose.  Uses repo group metadata to translate groups.
@@ -20,9 +20,6 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 # core
 tcsh
 kernel*
--kernel*debug*
--kernel-kdump*
--syslog-ng
 # Desktop Packages
 @kde-desktop
 echo-icon-theme
