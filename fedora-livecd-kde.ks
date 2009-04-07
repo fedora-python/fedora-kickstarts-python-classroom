@@ -56,8 +56,12 @@ alsa-utils
 -kaffeine*
 ### the removal of kdegames will free ~35 megs
 #-kdegames
-### kdeartwork is not really needed
--kdeartwork
+### only include some parts of kdeartwork
+kdeartwork
+kdeartwork-kxs
+kdeartwork-sounds
+-kdeartwork-screensavers
+
 
 # some more
 -kipi-plugins
