@@ -50,7 +50,6 @@ maniadrive-music
 nethack-vultures
 netpanzer
 neverball
-nexuiz
 nogravity
 # openarena (cut because of size, may be restored later if larger iso's allowed)
 pinball
