@@ -18,8 +18,6 @@ abiword
 #gnumeric
 #planner
 #inkscape
-# xguest to add a guest account
-xguest
 
 # avoid weird case where we pull in more festival stuff than we need
 festival
