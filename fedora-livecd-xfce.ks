@@ -18,6 +18,8 @@ NetworkManager-openvpn
 NetworkManager-gnome
 NetworkManager-pptp
 
+cheese
+
 # we don't include @office so that we don't get OOo.  but some nice bits
 abiword
 gnumeric
