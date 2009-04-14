@@ -30,6 +30,7 @@ nspluginwrapper
 liferea
 esc
 thunderbird
+@dial-up
 # apps
 @authoring-and-publishing
 @eclipse
