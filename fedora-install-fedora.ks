@@ -10,7 +10,7 @@
 #part iso --size=4998
 
 # Add the repos you wish to use to compose here.  At least one of them needs group data.
-repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch --exclude kernel*debug* --exclude kernel-kdump* --exclude syslog-ng
+repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch --exclude kernel*debug* --exclude kernel-kdump* --exclude syslog-ng --exclude java-1.5.0-gcj-devel
 repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide-source&arch=$basearch
 
 # Package manifest for the compose.  Uses repo group metadata to translate groups.
@@ -45,7 +45,6 @@ wireshark-gnome
 @development-tools
 @fedora-packager
 @gnome-software-development
-@java-development
 @kde-software-development
 @web-development
 @x-software-development
@@ -177,4 +176,6 @@ jfsutils
 -java-1.5.0-gcj-devel
 -libgcj-src
 -*javadoc*
+-frysk
+-*gcj*
 %end
