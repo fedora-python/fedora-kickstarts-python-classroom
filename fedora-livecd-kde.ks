@@ -41,7 +41,7 @@ alsa-utils
 # don't include these for now to fit on a cd
 
 ### amarok has duplicate functionality with juk (~13 megs)
-#-amarok
+-amarok
 ### digikam has duplicate functionality with gwenview (~11 megs)
 -digikam
 ### kdeedu is too big for the live images, but include kdeedu-kstars
@@ -51,22 +51,20 @@ alsa-utils
 ### kget has also basic torrent features (~3 megs)
 -ktorrent
 ### konqueror is also able to browse ftp shares (~1 megs)
--kftpgrabber*
+#-kftpgrabber*
 ### kaffeine has duplicate functionality with dragonplayer (~3 megs)
 -kaffeine*
 ### the removal of kdegames will free ~35 megs
 #-kdegames
 ### only include some parts of kdeartwork
 kdeartwork
-kdeartwork-kxs
-kdeartwork-sounds
 -kdeartwork-screensavers
 
 
 # some more
 -kipi-plugins
 #-konq-plugins
--kdeplasma-addons
+#-kdeplasma-addons
 
 
 # koffice
