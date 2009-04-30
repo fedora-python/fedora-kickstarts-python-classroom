@@ -120,6 +120,15 @@ notifyLongTasks=2
 notifyUpdates=0
 KPACKAGEKIT_EOF
 
+# Disable nepomuk
+cat > /home/liveuser/.kde/share/config/nepomukserverrc << NEPOMUK_EOF
+[Basic Settings]
+Start Nepomuk=false
+
+[Service-nepomukstrigiservice]
+autostart=false
+NEPOMUK_EOF
+
 # make sure to set the right permissions
 chown -R liveuser:liveuser /home/liveuser/.kde/
 
