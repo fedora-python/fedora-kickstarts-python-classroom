@@ -99,8 +99,6 @@ solarwolf
 sopwith
 stormbaancoureur
 ularn
-urbanterror
-worldofpadman
 xblast
 
 # arcade classics(ish) (big)
