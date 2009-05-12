@@ -22,7 +22,7 @@
 -kdeedu*			# kdeedu is too big for the live images, but include kdeedu-kstars
 -scribus			# scribus is too big for the live images
 -ktorrent			# kget has also basic torrent features (~3 megs)
-#-kftpgrabber*			# konqueror is also able to browse ftp shares (~1 megs)
+-kftpgrabber*			# konqueror is also able to browse ftp shares (~1 megs)
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 #-kdegames			# the removal of kdegames will free ~35 megs
 -kdeartwork-screensavers	# screensavers are not needed on live images
