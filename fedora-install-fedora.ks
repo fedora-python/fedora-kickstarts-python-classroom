@@ -126,7 +126,6 @@ jfsutils
 @marathi-support
 @mongolian-support
 @nepali-support
-@northern-sami-support
 @northern-sotho-support
 @norwegian-support
 @oriya-support
