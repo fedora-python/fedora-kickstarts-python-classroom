@@ -26,9 +26,6 @@ NetworkManager-openvpn
 # we don't include @office so that we don't get OOo.  but some nice bits
 abiword
 cheese
-google-droid-sans-fonts
-google-droid-sans-mono-fonts
-google-droid-serif-fonts
 
 # avoid weird case where we pull in more festival stuff than we need
 festival
