@@ -161,7 +161,7 @@ mountPersistentHome() {
   fi
 
   # if it's encrypted, we need to unlock it
-  if [ "\$(/lib/udev/vol_id -t \$homedev 2>/dev/null)" = "crypto_LUKS" ]; then
+  if [ "\$(/sbin/blkid -s TYPE -o value \$homedev 2>/dev/null)" = "crypto_LUKS" ]; then
     echo
     echo "Setting up encrypted /home device"
     plymouth ask-for-password --command="cryptsetup luksOpen \$homedev EncHome"
