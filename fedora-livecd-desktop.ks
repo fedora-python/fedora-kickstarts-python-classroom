@@ -36,7 +36,8 @@ festvox-slt-arctic-hts
 -evolution-help
 -gnome-games
 -gnome-games-help
-totem-gstreamer
+# gone from rawhide
+#totem-gstreamer
 -totem-xine
 -nss_db
 -vino
