@@ -36,8 +36,6 @@ festvox-slt-arctic-hts
 -evolution-help
 -gnome-games
 -gnome-games-help
-totem-gstreamer
--totem-xine
 -nss_db
 -vino
 -isdn4k-utils
