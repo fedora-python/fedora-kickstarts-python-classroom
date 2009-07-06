@@ -44,6 +44,7 @@ festvox-slt-arctic-hts
 -evince-djvu
 # not needed for gnome
 -acpid
+-wget
 
 # these pull in excessive dependencies
 -ekiga
