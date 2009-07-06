@@ -26,7 +26,7 @@ festvox-slt-arctic-hts
 # dictionaries are big
 -aspell-*
 -hunspell-*
--man-pages-*
+-man-pages*
 -words
 
 # save some space
