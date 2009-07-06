@@ -47,7 +47,6 @@ festvox-slt-arctic-hts
 
 # these pull in excessive dependencies
 -ekiga
--tomboy
 -f-spot
 %end
 
