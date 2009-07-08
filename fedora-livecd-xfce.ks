@@ -18,6 +18,9 @@ NetworkManager-openvpn
 NetworkManager-gnome
 NetworkManager-pptp
 
+# Add the midori browser as a lighter alternative
+midori
+
 cheese
 
 # we don't include @office so that we don't get OOo.  but some nice bits
@@ -46,8 +49,8 @@ totem
 totem-mozplugin
 pidgin
 claws-mail
-# brasero has more dependencies
 gnomebaker
+xfburn
 liferea
 quodlibet
 gftp
@@ -57,6 +60,7 @@ tracker-search-tool
 
 xfce4-power-manager
 seahorse
+rtorrent
 transmission
 cups-pdf
 bluez-gnome
