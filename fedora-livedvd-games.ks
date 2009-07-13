@@ -75,6 +75,7 @@ blobwars
 bombardier
 cdogs-sdl
 clanbomber
+colossus
 foobillard
 glaxium
 gnubg
