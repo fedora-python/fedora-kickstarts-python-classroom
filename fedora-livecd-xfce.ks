@@ -7,6 +7,7 @@
 # - Rahul Sundaram    <sundaram@fedoraproject.org>
 # - Christoph Wickert <chris@christoph-wickert.de>
 # - Kevin Fenzi       <kevin@tummy.com>
+# - Adam Miller       <maxamillion@gmail.com>
 
 %include fedora-live-base.ks
 
