@@ -37,7 +37,6 @@ koffice-kpresenter		# ~3 megs
 koffice-filters
 kdeartwork			# only include some parts of kdeartwork
 k3b
-filelight			# ~400kb
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
@@ -45,10 +44,6 @@ liveusb-creator
 
 
 ### fixes and space issues
-
-# make kpackagekit the default on the kde live images
-kpackagekit
--gnome-packagekit
 
 # use system-config-printer-kde instead of system-config-printer
 -system-config-printer
