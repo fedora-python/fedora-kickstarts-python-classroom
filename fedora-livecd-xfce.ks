@@ -63,7 +63,7 @@ seahorse
 rtorrent
 transmission
 cups-pdf
-bluez-gnome
+gnome-bluetooth
 alsa-plugins-pulseaudio
 pavucontrol
 
