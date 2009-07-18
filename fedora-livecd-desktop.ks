@@ -33,6 +33,7 @@ festvox-slt-arctic-hts
 -gnome-user-docs
 -gimp-help
 -gimp-help-browser
+-gimp-data-extras
 -evolution-help
 -gnome-games
 -gnome-games-help
