@@ -51,6 +51,15 @@ festvox-slt-arctic-hts
 -ekiga
 -tomboy
 -f-spot
+
+# drop some system-config things
+-system-config-boot
+-system-config-language
+-system-config-lvm
+-system-config-network
+-system-config-rootpassword
+-system-config-selinux
+-system-config-services
 %end
 
 %post
