@@ -19,6 +19,8 @@ NetworkManager-openvpn
 NetworkManager-gnome
 NetworkManager-pptp
 
+gparted
+
 # Add the midori browser as a lighter alternative
 midori
 
@@ -35,7 +37,7 @@ evince
 gimp
 inkscape
 
-galculator
+gcalctool
 desktop-backgrounds-compat
 gnome-screensaver
 setroubleshoot
