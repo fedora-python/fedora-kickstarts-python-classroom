@@ -53,6 +53,7 @@ totem-mozplugin
 pidgin
 claws-mail
 xfburn
+liferea
 quodlibet
 gftp
 ristretto
