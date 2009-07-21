@@ -11,6 +11,9 @@
 
 %include fedora-live-base.ks
 
+# we need more space now
+part / --size=8192
+
 %packages
 
 # desktop environments
