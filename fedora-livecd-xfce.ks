@@ -50,7 +50,6 @@ totem
 totem-mozplugin
 pidgin
 claws-mail
-gnomebaker
 xfburn
 liferea
 quodlibet
@@ -78,33 +77,47 @@ yum-utils
 
 # xfce packages
 @xfce-desktop
+Terminal
 gtk-xfce-engine
 orage
 thunar-volman
+thunar-media-tags-plugin
 gigolo
 xarchiver
 xfce4-battery-plugin
+# we already have thunar-volman
+#xfce4-cddrive-plugin
+xfce4-cellmodem-plugin
 xfce4-clipman-plugin
 xfce4-cpugraph-plugin
 xfce4-datetime-plugin
 xfce4-dict-plugin
 xfce4-diskperf-plugin
+xfce4-eyes-plugin
+xfce4-fsguard-plugin
 xfce4-genmon-plugin
+xfce4-mailwatch-plugin
 xfce4-mount-plugin
 xfce4-netload-plugin
 xfce4-notes-plugin
 xfce4-places-plugin
 xfce4-quicklauncher-plugin
+xfce4-smartbookmark-plugin
 xfce4-screenshooter-plugin
 xfce4-sensors-plugin
 xfce4-systemload-plugin
 xfce4-taskmanager
-xfce4-volstatus-icon
+xfce4-time-out-plugin
+xfce4-timer-plugin
 xfce4-verve-plugin
+xfce4-volstatus-icon
+# we already have nm-applet
+#xfce4-wavelan-plugin
 xfce4-weather-plugin
 xfce4-websearch-plugin
 # this one a compatibility layer for GNOME applets and depends on it
 #xfce4-xfapplet-plugin
+xfce4-xkb-plugin
 xfwm4-themes
 
 # dictionaries are big
