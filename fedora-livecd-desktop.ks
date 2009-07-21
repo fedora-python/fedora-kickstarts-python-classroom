@@ -43,6 +43,7 @@ festvox-slt-arctic-hts
 -dasher
 -evince-dvi
 -evince-djvu
+-krb5-auth-dialog
 # not needed for gnome
 -acpid
 -wget
@@ -60,6 +61,7 @@ festvox-slt-arctic-hts
 -system-config-rootpassword
 -system-config-services
 -policycoreutils-gui
+
 %end
 
 %post
