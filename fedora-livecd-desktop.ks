@@ -26,13 +26,14 @@ festvox-slt-arctic-hts
 # dictionaries are big
 -aspell-*
 -hunspell-*
--man-pages-*
+-man-pages*
 -words
 
 # save some space
 -gnome-user-docs
 -gimp-help
 -gimp-help-browser
+-gimp-data-extras
 -evolution-help
 -gnome-games
 -gnome-games-help
@@ -44,11 +45,21 @@ festvox-slt-arctic-hts
 -evince-djvu
 # not needed for gnome
 -acpid
+-wget
 
 # these pull in excessive dependencies
 -ekiga
 -tomboy
 -f-spot
+
+# drop some system-config things
+-system-config-boot
+-system-config-language
+-system-config-lvm
+-system-config-network
+-system-config-rootpassword
+-system-config-services
+-policycoreutils-gui
 %end
 
 %post
