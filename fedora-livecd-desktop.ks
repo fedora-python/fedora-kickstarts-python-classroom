@@ -58,8 +58,8 @@ festvox-slt-arctic-hts
 -system-config-lvm
 -system-config-network
 -system-config-rootpassword
--system-config-selinux
 -system-config-services
+-policycoreutils-gui
 %end
 
 %post
