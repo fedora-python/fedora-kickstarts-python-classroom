@@ -65,6 +65,10 @@ festvox-slt-arctic-hts
 # use the PackageKit helper for bash
 PackageKit-command-not-found
 
+# debrand test spins. Remove this for official releases !
+-fedora-logos
+generic-logos
+
 %end
 
 %post
