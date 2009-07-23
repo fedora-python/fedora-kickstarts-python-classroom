@@ -62,6 +62,9 @@ festvox-slt-arctic-hts
 -system-config-services
 -policycoreutils-gui
 
+# use the PackageKit helper for bash
+PackageKit-command-not-found
+
 %end
 
 %post
