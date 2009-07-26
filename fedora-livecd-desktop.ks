@@ -2,6 +2,12 @@
 # http://fedoraproject.org/wiki/SIGs/Desktop
 # mailto:fedora-desktop-list@redhat.com
 
+# NOTE!
+#
+# This kickstart file is non-branded to facilitate doing test spins
+# without trademark complications. You NEED to remove the debranding
+# lines below when doing official spins.
+
 %include fedora-live-base.ks
 
 %packages
