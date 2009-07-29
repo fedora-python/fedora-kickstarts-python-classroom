@@ -50,6 +50,7 @@ festvox-slt-arctic-hts
 -evince-dvi
 -evince-djvu
 -krb5-auth-dialog
+-alacarte
 # not needed for gnome
 -acpid
 -wget
