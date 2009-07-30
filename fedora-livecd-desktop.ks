@@ -49,16 +49,17 @@ festvox-slt-arctic-hts
 -dasher
 -evince-dvi
 -evince-djvu
--krb5-auth-dialog
--alacarte
-# not needed for gnome
--acpid
--wget
 
 # these pull in excessive dependencies
 -ekiga
 -tomboy
 -f-spot
+
+# things we don't need here
+-krb5-auth-dialog
+-seahorse
+-alacarte
+-acpid
 
 # drop some system-config things
 -system-config-boot
