@@ -41,7 +41,6 @@ festvox-slt-arctic-hts
 -gimp-help-browser
 -gimp-data-extras
 -evolution-help
--gnome-games
 -gnome-games-help
 -nss_db
 -vino
@@ -57,6 +56,7 @@ festvox-slt-arctic-hts
 
 # things we don't need here
 -krb5-auth-dialog
+-krb5-workstation
 -seahorse
 -alacarte
 -acpid
