@@ -23,11 +23,13 @@ services --enabled=NetworkManager --disabled=network,sshd
 #repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f11&arch=$basearch
 
 # To compose against rawhide, use the following "repo" (disabled by default)
-repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
+repo --name=rawhide --cost=10 --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
+
+repo --name=koji --cost=100 --baseurl=http://koji.fedoraproject.org/static-repos/dist-f12-build-current/$basearch
 
 # To compose against local trees, (edit and) use:
 #repo --name=f11 --baseurl=http://localrepo/fedora/releases/11/Everything/$basearch/os/
-#repo --name=f11-updates --baseurl=http://localrepo/fedora/updates/11/$basearch/
+repo --name=local --baseurl=file:///tmp/local
 
 %packages
 @base-x
@@ -374,10 +376,6 @@ if [ -n "\$xdriver" ]; then
 fi
 
 EOF
-
-# workaround avahi segfault (#279301)
-touch /etc/resolv.conf
-/sbin/restorecon /etc/resolv.conf
 
 chmod 755 /etc/rc.d/init.d/livesys
 /sbin/restorecon /etc/rc.d/init.d/livesys
