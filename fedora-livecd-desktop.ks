@@ -57,6 +57,7 @@ festvox-slt-arctic-hts
 # things we don't need here
 -krb5-auth-dialog
 -krb5-workstation
+-quota
 -seahorse
 -alacarte
 -acpid
