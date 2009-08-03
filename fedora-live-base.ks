@@ -18,18 +18,15 @@ part / --size 3072 --fstype ext4
 services --enabled=NetworkManager --disabled=network,sshd
 
 # To compose against the current release tree, use the following "repo" (enabled by default)
-#repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-11&arch=$basearch
+repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-11&arch=$basearch
 # To include updates, use the following "repo" (enabled by default)
-#repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f11&arch=$basearch
+repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f11&arch=$basearch
 
 # To compose against rawhide, use the following "repo" (disabled by default)
-repo --name=rawhide --cost=10 --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
-
-repo --name=koji --cost=100 --baseurl=http://koji.fedoraproject.org/static-repos/dist-f12-build-current/$basearch
+#repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
 
 # To compose against local trees, (edit and) use:
 #repo --name=f11 --baseurl=http://localrepo/fedora/releases/11/Everything/$basearch/os/
-repo --name=local --baseurl=file:///tmp/local
 
 %packages
 @base-x
