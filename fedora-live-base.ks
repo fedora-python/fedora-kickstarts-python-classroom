@@ -18,9 +18,9 @@ part / --size 3072 --fstype ext4
 services --enabled=NetworkManager --disabled=network,sshd
 
 # To compose against the current release tree, use the following "repo" (enabled by default)
-repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-11&arch=$basearch
+#repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-11&arch=$basearch
 # To include updates, use the following "repo" (enabled by default)
-repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f11&arch=$basearch
+#repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f11&arch=$basearch
 
 # To compose against rawhide, use the following "repo" (disabled by default)
 repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
