@@ -65,6 +65,7 @@ festvox-slt-arctic-hts
 -acpid
 -nano
 -smartmontools
+-minicom
 
 # drop some system-config things
 -system-config-boot
