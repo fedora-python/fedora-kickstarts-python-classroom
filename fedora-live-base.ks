@@ -23,7 +23,7 @@ repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?re
 repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f11&arch=$basearch
 
 # To compose against rawhide, use the following "repo" (disabled by default)
-#repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
+repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
 
 # To compose against local trees, (edit and) use:
 #repo --name=f11 --baseurl=http://localrepo/fedora/releases/11/Everything/$basearch/os/
