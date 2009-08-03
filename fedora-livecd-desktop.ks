@@ -48,6 +48,7 @@ festvox-slt-arctic-hts
 -dasher
 -evince-dvi
 -evince-djvu
+-desktop-backgrounds-basic
 
 # these pull in excessive dependencies
 -ekiga
@@ -55,12 +56,14 @@ festvox-slt-arctic-hts
 -f-spot
 
 # things we don't need here
--krb5-auth-dialog
--krb5-workstation
--quota
 -seahorse
 -alacarte
+-krb5-auth-dialog
+-krb5-workstation
+-pam_krb5
+-quota
 -acpid
+-nano
 
 # drop some system-config things
 -system-config-boot
@@ -73,6 +76,10 @@ festvox-slt-arctic-hts
 
 # use the PackageKit helper for bash
 PackageKit-command-not-found
+
+# why does the obsoletes not work ?!
+-lzma
+xz-lzma-compat
 
 # debrand test spins. Remove this for official releases !
 -fedora-logos
