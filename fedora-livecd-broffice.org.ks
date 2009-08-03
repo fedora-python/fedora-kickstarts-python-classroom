@@ -28,7 +28,6 @@ broffice.org-*
 
 # Include some desktop packages
 @java
-totem-xine
 vino
 gnome-games
 system-config-display
@@ -40,8 +39,6 @@ bitstream-vera-*
 -abyssinica-fonts
 -jomolhari-fonts
 -lohit-*
--kacst-fonts
--paktype-fonts
 -baekmuk-*
 -vlgothic-fonts-*
 -padauk-fonts

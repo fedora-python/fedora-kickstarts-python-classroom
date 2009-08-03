@@ -19,6 +19,8 @@ NetworkManager-openvpn
 NetworkManager-gnome
 NetworkManager-pptp
 
+gparted
+
 # Add the midori browser as a lighter alternative
 midori
 
@@ -35,7 +37,7 @@ evince
 gimp
 inkscape
 
-galculator
+gcalctool
 desktop-backgrounds-compat
 gnome-screensaver
 setroubleshoot
@@ -50,6 +52,21 @@ totem
 totem-mozplugin
 pidgin
 claws-mail
+claws-mail-plugins-archive
+claws-mail-plugins-att-remover
+claws-mail-plugins-attachwarner
+claws-mail-plugins-bogofilter
+claws-mail-plugins-cachesaver
+claws-mail-plugins-fetchinfo
+claws-mail-plugins-mailmbox
+claws-mail-plugins-newmail
+claws-mail-plugins-notification
+claws-mail-plugins-pgp
+claws-mail-plugins-rssyl
+claws-mail-plugins-smime
+claws-mail-plugins-spam-report
+claws-mail-plugins-tnef
+claws-mail-plugins-vcalendar
 xfburn
 liferea
 quodlibet

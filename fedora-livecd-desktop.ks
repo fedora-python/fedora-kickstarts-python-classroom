@@ -2,6 +2,12 @@
 # http://fedoraproject.org/wiki/SIGs/Desktop
 # mailto:fedora-desktop-list@redhat.com
 
+# NOTE!
+#
+# This kickstart file is non-branded to facilitate doing test spins
+# without trademark complications. You NEED to remove the debranding
+# lines below when doing official spins.
+
 %include fedora-live-base.ks
 
 %packages
@@ -35,7 +41,6 @@ festvox-slt-arctic-hts
 -gimp-help-browser
 -gimp-data-extras
 -evolution-help
--gnome-games
 -gnome-games-help
 -nss_db
 -vino
@@ -43,14 +48,24 @@ festvox-slt-arctic-hts
 -dasher
 -evince-dvi
 -evince-djvu
-# not needed for gnome
--acpid
--wget
+-desktop-backgrounds-basic
 
 # these pull in excessive dependencies
 -ekiga
 -tomboy
 -f-spot
+
+# things we don't need here
+-seahorse
+-alacarte
+-krb5-auth-dialog
+-krb5-workstation
+-pam_krb5
+-quota
+-acpid
+-nano
+-smartmontools
+-minicom
 
 # drop some system-config things
 -system-config-boot
@@ -60,6 +75,18 @@ festvox-slt-arctic-hts
 -system-config-rootpassword
 -system-config-services
 -policycoreutils-gui
+
+# use the PackageKit helper for bash
+PackageKit-command-not-found
+
+# why does the obsoletes not work ?!
+-lzma
+xz-lzma-compat
+
+# debrand test spins. Remove this for official releases !
+-fedora-logos
+generic-logos
+
 %end
 
 %post
