@@ -7,9 +7,9 @@ fedora_DATA = \
     fedora-live-base.ks \
     fedora-livecd-broffice.org.ks \
     fedora-livecd-desktop.ks \
-    fedora-livecd-education.ks \
     fedora-livecd-kde.ks \
     fedora-livecd-xfce.ks \
+    fedora-livedvd-education.ks \
     fedora-livedvd-electronic-lab.ks \
     fedora-livedvd-games.ks
 
