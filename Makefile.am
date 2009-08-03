@@ -1,39 +1,52 @@
 # Automake Automagic
 
-kickstartdir = $(pkgdatadir)/
-kickstart_DATA = \
+fedoradir = $(pkgdatadir)/
+fedora_DATA = \
     fedora-aos.ks \
     fedora-install-fedora.ks \
     fedora-live-base.ks \
     fedora-livecd-broffice.org.ks \
     fedora-livecd-desktop.ks \
-    fedora-livecd-desktop-de_CH.ks \
-    fedora-livecd-desktop-de_DE.ks \
-    fedora-livecd-desktop-en_US.ks \
-    fedora-livecd-desktop-nl_NL.ks \
-    fedora-livecd-desktop-pt_BR.ks \
-    fedora-livecd-desktop-pt_PT.ks \
     fedora-livecd-education.ks \
     fedora-livecd-kde.ks \
-    fedora-livecd-kde-de_CH.ks \
-    fedora-livecd-kde-de_DE.ks \
-    fedora-livecd-kde-nl_NL.ks \
-    fedora-livecd-kde-pt_PT.ks \
     fedora-livecd-xfce.ks \
-    fedora-livecd-xfce-de_CH.ks \
-    fedora-livecd-xfce-nl_NL.ks \
-    fedora-livecd-xfce-pt_PT.ks \
     fedora-livedvd-electronic-lab.ks \
-    fedora-livedvd-electronic-lab-de_CH.ks \
-    fedora-livedvd-electronic-lab-nl_NL.ks \
-    fedora-livedvd-electronic-lab-pt_PT.ks \
-    fedora-livedvd-games.ks \
-    fedora-livedvd-games-de_CH.ks \
-    fedora-livedvd-games-nl_NL.ks \
-    fedora-livedvd-games-pt_PT.ks
+    fedora-livedvd-games.ks
+
+customdir = ${pkgdatadir}/custom/
+custom_DATA = \
+	custom/README \
+    fedora-live-base.ks \
+    fedora-livecd-desktop.ks \
+    fedora-livecd-kde.ks \
+	custom/fedora-livecd-lxde.ks
+
+l10ndir = ${pkgdatadir}/l10n/
+l10n_DATA = \
+	l10n/README \
+    l10n/fedora-livecd-desktop-de_CH.ks \
+    l10n/fedora-livecd-desktop-de_DE.ks \
+    l10n/fedora-livecd-desktop-nl_NL.ks \
+    l10n/fedora-livecd-desktop-pt_BR.ks \
+    l10n/fedora-livecd-desktop-pt_PT.ks \
+    l10n/fedora-livecd-kde-de_CH.ks \
+    l10n/fedora-livecd-kde-de_DE.ks \
+    l10n/fedora-livecd-kde-nl_NL.ks \
+    l10n/fedora-livecd-kde-pt_PT.ks \
+    l10n/fedora-livecd-xfce-de_CH.ks \
+    l10n/fedora-livecd-xfce-nl_NL.ks \
+    l10n/fedora-livecd-xfce-pt_PT.ks \
+    l10n/fedora-livedvd-electronic-lab-de_CH.ks \
+    l10n/fedora-livedvd-electronic-lab-nl_NL.ks \
+    l10n/fedora-livedvd-electronic-lab-pt_PT.ks \
+    l10n/fedora-livedvd-games-de_CH.ks \
+    l10n/fedora-livedvd-games-nl_NL.ks \
+    l10n/fedora-livedvd-games-pt_PT.ks
 
 EXTRA_DIST =               \
-    $(kickstart_DATA)      \
+    $(fedora_DATA) \
+	$(custom_DATA) \
+	$(l10n_DATA) \
     spin-kickstarts.spec.in\
     spin-kickstarts.spec   \
     ChangeLog              \

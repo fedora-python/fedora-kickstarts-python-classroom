@@ -8,9 +8,36 @@ URL:        http://fedorahosted.org/spin-kickstarts
 Source0:    http://fedorahosted.org/releases/s/p/%{name}/%{name}-%{version}.tar.gz
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch:  noarch
+Requires:   fedora-kickstarts
 
 %description
 A number of kickstarts you can use to create customized (Fedora) Spins
+
+%package -n fedora-kickstarts
+Summary:    Official Fedora Spins
+Group:      Applications/System
+Requires:   spin-kickstarts = %{version}-%{release}
+
+%description -n fedora-kickstarts
+Kickstarts used to compose the official Fedora Spins (see
+http://spins.fedoraproject.org/ for a full list)
+
+%package -n custom-kickstarts
+Summary:    Kickstart files for Custom Spins (not official)
+Group:      Applications/System
+Requires:   spin-kickstarts = %{version}-%{release}
+
+%description -n custom-kickstarts
+Unofficial spins (remixes) brought to us by several contributors
+
+%package -n l10n-kickstarts
+Summary:    Localized kickstarts for localized spins
+Group:      Applications/System
+Requires:   fedora-kickstarts = %{version}-%{release}
+Requires:   custom-kickstarts = %{version}-%{release}
+
+%description -n l10n-kickstarts
+Localized versions of kickstarts for localized spins
 
 %prep
 %setup -q
@@ -30,10 +57,30 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc COPYING README AUTHORS NEWS
 %dir %{_datadir}/%{name}/
-%{_datadir}/%{name}/*
+
+%files -n fedora-kickstarts
+%defattr(-,root,root,-)
+%doc COPYING README AUTHORS NEWS
+%{_datadir}/%{name}/*.ks
+
+%files -n custom-kickstarts
+%defattr(-,root,root,-)
+%doc COPYING README AUTHORS NEWS
+%{_datadir}/%{name}/custom/
+
+%files -n l10n-kickstarts
+%defattr(-,root,root,-)
+%doc COPYING README AUTHORS NEWS
+%{_datadir}/%{name}/l10n/
 
 %changelog
 * @DATESTAMP@ Jeroen van Meeuwen <kanarip a fedoraunity.org> @VERSION@-@RELEASE@
+- New release
+
+* Sun Jul 05 2009 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.11.4-1
+- Fix repos in fedora-install-fedora.ks (#505262)
+
+* Sun May 31 2009 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.11.3-1
 - New release
 - Removed developer spin from the mix
 
