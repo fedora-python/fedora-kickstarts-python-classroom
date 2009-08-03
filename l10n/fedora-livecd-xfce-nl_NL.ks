@@ -1,9 +1,9 @@
-# fedora-livecd-kde-nl_NL.ks
+# fedora-livecd-xfce-nl_NL.ks
 #
 # Maintainer(s):
 # - Jeroen van Meeuwen <kanarip a fedoraunity.org>
 
-%include fedora-livecd-kde.ks
+%include ../fedora-livecd-xfce.ks
 
 lang nl_NL
 keyboard us

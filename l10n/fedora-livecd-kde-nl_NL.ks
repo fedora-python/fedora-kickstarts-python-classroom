@@ -1,9 +1,9 @@
-# fedora-livedvd-games-nl_NL.ks
+# fedora-livecd-kde-nl_NL.ks
 #
 # Maintainer(s):
 # - Jeroen van Meeuwen <kanarip a fedoraunity.org>
 
-%include fedora-livedvd-games.ks
+%include ../fedora-livecd-kde.ks
 
 lang nl_NL
 keyboard us

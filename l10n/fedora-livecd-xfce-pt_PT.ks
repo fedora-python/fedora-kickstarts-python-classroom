@@ -3,7 +3,7 @@
 # Maintainer(s):
 # - Pedro Silva <pedrofsilva a netcabo.pt>
 
-%include fedora-livecd-xfce.ks
+%include ../fedora-livecd-xfce.ks
 
 lang pt_PT.UTF-8
 keyboard pt-latin1

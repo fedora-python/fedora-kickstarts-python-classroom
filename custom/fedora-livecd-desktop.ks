@@ -1,0 +1,1 @@
+../fedora-livecd-desktop.ks

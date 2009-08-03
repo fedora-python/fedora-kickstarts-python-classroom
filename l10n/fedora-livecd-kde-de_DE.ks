@@ -3,7 +3,7 @@
 # Maintainer(s):
 # - Sebastian Vahl <fedora@deadbabylon.de>
 
-%include fedora-livecd-kde.ks
+%include ../fedora-livecd-kde.ks
 
 lang de_DE.UTF-8
 keyboard de-latin1-nodeadkeys

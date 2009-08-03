@@ -1,9 +1,9 @@
-# fedora-livecd-electronic-lab-pt_PT.ks
+# fedora-livedvd-games-pt_PT.ks
 #
 # Maintainer(s):
 # - Pedro Silva <pedrofsilva a netcabo.pt>
 
-%include fedora-livedvd-electronic-lab.ks
+%include ../fedora-livedvd-games.ks
 
 lang pt_PT.UTF-8
 keyboard pt-latin1

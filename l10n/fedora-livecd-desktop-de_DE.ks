@@ -3,7 +3,7 @@
 # Maintainer(s):
 # - Jeroen van Meeuwen <kanarip a fedoraunity.org>
 
-%include fedora-livecd-desktop.ks
+%include ../fedora-livecd-desktop.ks
 
 lang de_DE.UTF-8
 keyboard de-latin1-nodeadkeys

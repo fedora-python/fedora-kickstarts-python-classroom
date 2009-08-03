@@ -3,7 +3,7 @@
 # Maintainer(s):
 # - Fabian Affolter <fab at fedoraproject.org>
 
-%include fedora-livecd-xfce.ks
+%include ../fedora-livecd-xfce.ks
 
 lang de_DE
 keyboard sg-latin1-nodeadkeys
