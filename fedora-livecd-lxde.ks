@@ -9,14 +9,6 @@
 %include fedora-live-base.ks
 
 %packages
-# rebranding
--fedora-release
--fedora-logos
--fedora-release-notes
-generic-logos
-generic-release
-generic-release-notes
-
 # LXDE desktop
 @lxde-desktop
 lxlauncher
