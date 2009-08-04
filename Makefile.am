@@ -8,6 +8,7 @@ fedora_DATA = \
     fedora-livecd-broffice.org.ks \
     fedora-livecd-desktop.ks \
     fedora-livecd-kde.ks \
+    fedora-livecd-lxde.ks \
     fedora-livecd-xfce.ks \
     fedora-livedvd-education.ks \
     fedora-livedvd-electronic-lab.ks \
@@ -18,8 +19,7 @@ custom_DATA = \
 	custom/README \
     fedora-live-base.ks \
     fedora-livecd-desktop.ks \
-    fedora-livecd-kde.ks \
-	custom/fedora-livecd-lxde.ks
+    fedora-livecd-kde.ks
 
 l10ndir = ${pkgdatadir}/l10n/
 l10n_DATA = \
