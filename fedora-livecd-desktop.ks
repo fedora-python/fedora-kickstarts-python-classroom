@@ -13,7 +13,6 @@
 %packages
 @games
 @graphical-internet
-@graphics
 @sound-and-video
 @gnome-desktop
 nss-mdns
@@ -21,9 +20,10 @@ NetworkManager-vpnc
 NetworkManager-openvpn
 # we don't include @office so that we don't get OOo.  but some nice bits
 abiword
-#gnumeric
-#planner
-#inkscape
+cheese
+google-droid-sans-fonts
+google-droid-sans-mono-fonts
+google-droid-serif-fonts
 
 # avoid weird case where we pull in more festival stuff than we need
 festival
@@ -37,13 +37,9 @@ festvox-slt-arctic-hts
 
 # save some space
 -gnome-user-docs
--gimp-help
--gimp-help-browser
--gimp-data-extras
 -evolution-help
 -gnome-games-help
 -nss_db
--vino
 -isdn4k-utils
 -dasher
 -evince-dvi
@@ -53,7 +49,6 @@ festvox-slt-arctic-hts
 # these pull in excessive dependencies
 -ekiga
 -tomboy
--f-spot
 
 # things we don't need here
 -seahorse
