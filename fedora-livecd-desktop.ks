@@ -61,6 +61,15 @@ festvox-slt-arctic-hts
 -nano
 -smartmontools
 -minicom
+-dos2unix
+-finger
+-ftp
+-jwhois
+-mtr
+-pinfo
+-rsh
+-telnet
+-unix2dos
 
 # drop some system-config things
 -system-config-boot
