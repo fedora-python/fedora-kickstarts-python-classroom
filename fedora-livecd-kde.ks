@@ -52,6 +52,10 @@ system-config-printer-kde
 # make sure alsaunmute is there
 alsa-utils
 
+# make sure gnome-packagekit doesn't end up the KDE live images
+-gnome-packagekit*
+
+
 # remove input methods to free space
 -scim*
 -m17n*
