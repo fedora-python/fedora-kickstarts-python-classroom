@@ -37,8 +37,8 @@ mtpaint
 pavucontrol
 lxmusic
 asunder
-totem
-totem-mozplugin
+gxine
+gxine-mozplugin
 
 # I'm looking for something smaller than
 gnomebaker
