@@ -55,6 +55,10 @@ galculator
 xpad
 cups-pdf
 
+# make sure kpackagekit doesn't end up the LXDE live images
+gnome-packagekit*
+-kpackagekit
+
 # use yumex instead of gnome-packagekit
 #-gnome-packagekit
 #yumex
