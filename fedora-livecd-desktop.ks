@@ -45,6 +45,7 @@ festvox-slt-arctic-hts
 -evince-dvi
 -evince-djvu
 -desktop-backgrounds-basic
+-constantine-backgrounds-extras
 
 # these pull in excessive dependencies
 -ekiga
