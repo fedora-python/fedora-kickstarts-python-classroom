@@ -27,15 +27,15 @@
 #-kdegames			# the removal of kdegames will free ~35 megs
 -kdeartwork-screensavers	# screensavers are not needed on live images
 -kipi-plugins			# ~8 megs
-#-konq-plugins			# ~2 megs
+-konq-plugins			# ~2 megs
 -kdeplasma-addons		# ~5 megs
 
 # Additional packages that are not default in kde-desktop but useful
 koffice-kword
 koffice-kspread			# ~1 megs
-koffice-kpresenter		# ~3 megs
+#koffice-kpresenter		# ~3 megs
 koffice-filters
-kdeartwork			# only include some parts of kdeartwork
+#kdeartwork			# only include some parts of kdeartwork
 k3b
 #twinkle			# (~10 megs)
 fuse
