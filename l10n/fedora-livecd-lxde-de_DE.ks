@@ -6,7 +6,7 @@
 # Maintainer(s):
 # - Christoph Wickert <cwickert@fedoraproject.org>
 
-%include fedora-livecd-lxde.ks
+%include ../fedora-livecd-lxde.ks
 
 lang de_DE.UTF-8
 keyboard de-latin1-nodeadkeys
