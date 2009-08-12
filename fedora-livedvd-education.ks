@@ -60,7 +60,6 @@ libffi-devel
 libgsf-devel
 librsvg2-devel
 loudmouth-devel
-olpcsound-devel
 poppler-glib-devel
 python-distutils-extra
 redhat-lsb
