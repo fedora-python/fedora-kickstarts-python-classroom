@@ -20,6 +20,7 @@ part / --size=8192
 @gnome-desktop
 @sugar-desktop
 sugar-emulator
+-sugar-pippy
 
 # education
 gnuplot
