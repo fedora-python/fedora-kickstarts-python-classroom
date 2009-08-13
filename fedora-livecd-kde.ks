@@ -55,6 +55,8 @@ alsa-utils
 # make sure gnome-packagekit doesn't end up the KDE live images
 -gnome-packagekit*
 
+# omit prelink for now (#515539)
+-prelink
 
 # remove input methods to free space
 -scim*
