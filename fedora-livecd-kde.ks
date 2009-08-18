@@ -42,6 +42,9 @@ fuse
 liveusb-creator
 #pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
 
+# use yum-presto by default
+yum-presto
+
 
 ### fixes and space issues
 
