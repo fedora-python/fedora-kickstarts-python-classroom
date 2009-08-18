@@ -74,7 +74,6 @@ gftp
 ristretto
 asunder
 catfish
-catfish-engines
 xfce4-power-manager
 seahorse
 rtorrent
@@ -165,12 +164,6 @@ cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startxfce4
 EOF
 
-mkdir -p /home/liveuser/.config/xfce4
-
-cat > /home/liveuser/.config/xfce4/helpers.rc <<EOF
-MailReader=sylpheed-claws
-EOF
-
 mkdir -p /root/.config/xfce4
 
 cat > /root/.config/xfce4/helpers.rc <<EOF
@@ -180,6 +173,12 @@ EOF
 cat >> /etc/rc.d/init.d/livesys << EOF
 chown -R liveuser:liveuser /home/liveuser
 restorecon -R /home/liveuser
+
+mkdir -p /home/liveuser/.config/xfce4
+
+cat > /home/liveuser/.config/xfce4/helpers.rc <<EOF
+MailReader=sylpheed-claws
+EOF
 
 # disable screensaver locking
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null
