@@ -73,8 +73,8 @@ quodlibet
 gftp
 ristretto
 asunder
-tracker-search-tool
-
+catfish
+catfish-engines
 xfce4-power-manager
 seahorse
 rtorrent
@@ -175,21 +175,6 @@ mkdir -p /root/.config/xfce4
 
 cat > /root/.config/xfce4/helpers.rc <<EOF
 MailReader=sylpheed-claws
-EOF
-
-mkdir -p /home/liveuser/.config/tracker
-
-cat > /home/liveuser/.config/tracker/tracker.cfg <<EOF
-[Indexing]
-EnableIndexing=false
-Language=en
-EOF
-
-mkdir -p /root/.config/tracker
-cat > /root/.config/tracker/tracker.cfg <<EOF
-[Indexing]
-EnableIndexing=false
-Language=en
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
