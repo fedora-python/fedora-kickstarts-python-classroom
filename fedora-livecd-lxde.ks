@@ -59,6 +59,15 @@ cups-pdf
 gnome-packagekit*
 -kpackagekit
 
+# make sure polkit-qt doesn't end up the LXDE live images
+# this is not yet in rawide
+#polkit-gnome
+#-polkit-qt
+
+# same for Fedora <= 11, but commented out
+PolicyKit-gnome
+-PolicyKit-kde
+
 # use yumex instead of gnome-packagekit
 #-gnome-packagekit
 #yumex
@@ -67,6 +76,7 @@ gnome-packagekit*
 powertop
 wget
 yum-utils
+yum-presto
 
 # dictionaries are big
 -aspell-*
