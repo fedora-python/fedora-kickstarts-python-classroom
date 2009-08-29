@@ -30,9 +30,9 @@ broffice.org-*
 @java
 vino
 gnome-games
-system-config-display
 brasero
 bitstream-vera-*
+gimp
 
 # We won't use these Asian fonts
 -lklug-fonts
@@ -41,7 +41,6 @@ bitstream-vera-*
 -lohit-*
 -baekmuk-*
 -vlgothic-fonts-*
--padauk-fonts
 -un-*
 -samyak-fonts-*
 -sarai-fonts
@@ -50,6 +49,10 @@ bitstream-vera-*
 -hanazono-fonts
 -thai-*
 -smc-meera-fonts
+-ipa-pgothic-fonts
+-kacst-*
+-khmeros-base-fonts
+-paktype-*
 
 # remove input methods
 -@input-methods
