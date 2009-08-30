@@ -107,14 +107,14 @@ chown -R liveuser:liveuser /home/liveuser
 restorecon -R /home/liveuser
 
 # set up timed auto-login for after 60 seconds
+# partititial fix for bug # 518068
 cat >> /etc/slim.conf << FOE
 auto_login	yes
 default_user	liveuser
+authfile		/var/run/slim/slim.auth
 FOE
 
 EOF
-
-%post
 
 %end
 
