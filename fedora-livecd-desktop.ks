@@ -88,6 +88,11 @@ PackageKit-command-not-found
 -lzma
 xz-lzma-compat
 
+# replace bug-buddy by abrt
+-bug-buddy
+-kerneloops
+abrt-desktop
+
 # debrand test spins. Remove this for official releases !
 -fedora-logos
 generic-logos
