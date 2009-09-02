@@ -106,6 +106,11 @@ TimedLogin=liveuser
 TimedLoginDelay=60
 FOE
 
+# Show harddisk install on the desktop
+sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
+cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
+chmod a+x /home/liveuser/Desktop/liveinst.desktop
+
 EOF
 
 %end
