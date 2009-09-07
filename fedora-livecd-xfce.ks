@@ -171,13 +171,14 @@ MailReader=sylpheed-claws
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
-chown -R liveuser:liveuser /home/liveuser
-restorecon -R /home/liveuser
 
 mkdir -p /home/liveuser/.config/xfce4
 
 cat > /home/liveuser/.config/xfce4/helpers.rc <<EOF
 MailReader=sylpheed-claws
+
+chown -R liveuser:liveuser /home/liveuser
+restorecon -R /home/liveuser
 EOF
 
 # disable screensaver locking
