@@ -8,6 +8,11 @@
 # without trademark complications. You NEED to remove the debranding
 # lines below when doing official spins.
 
+## NOTE 2:
+# This file should in general be *subtraction* from the gnome-desktop
+# comps group to fit within a CD-sized image.  If you want to add
+# a package to the desktop, add them to the comps group.
+
 %include fedora-live-base.ks
 
 %packages
