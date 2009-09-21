@@ -14,7 +14,7 @@ keyboard br-abnt2
 timezone America/Sao_Paulo
 
 
-%packages --instLangs en_US:pt_BR
+%packages --instLangs en_US:es:pt_BR
 
 # L10n packages
 @brazilian-support
@@ -26,13 +26,14 @@ hunspell-pt
 -planner
 broffice.org-*
 
-# Include some desktop packages
+# Include some additional packages
 @java
 vino
 gnome-games
 brasero
 bitstream-vera-*
 gimp
+inkscape
 
 # We won't use these Asian fonts
 -lklug-fonts
@@ -53,16 +54,6 @@ gimp
 -kacst-*
 -khmeros-base-fonts
 -paktype-*
-
-# remove input methods
--@input-methods
--m17n*
--scim*
--iok
--anthy
--kasumi
--libchewing
--ibus-*
 
 %end
 
