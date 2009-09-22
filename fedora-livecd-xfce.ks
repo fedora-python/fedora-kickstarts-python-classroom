@@ -147,8 +147,6 @@ xfwm4-themes
 # save some space
 -autofs
 -nss_db
--sendmail
-ssmtp
 -acpid
 # system-config-printer does printer management better
 # xfprint has now been made as optional in comps.
@@ -174,12 +172,9 @@ cat >> /etc/rc.d/init.d/livesys << EOF
 
 mkdir -p /home/liveuser/.config/xfce4
 
-cat > /home/liveuser/.config/xfce4/helpers.rc <<EOF
+cat > /home/liveuser/.config/xfce4/helpers.rc << FOE
 MailReader=sylpheed-claws
-
-chown -R liveuser:liveuser /home/liveuser
-restorecon -R /home/liveuser
-EOF
+FOE
 
 # disable screensaver locking
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null
@@ -190,6 +185,17 @@ TimedLoginEnable=true
 TimedLogin=liveuser
 TimedLoginDelay=60
 FOE
+
+# Show harddisk install on the desktop
+sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
+mkdir /home/liveuser/Desktop
+cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
+chmod a+x /home/liveuser/Desktop/liveinst.desktop
+
+# this goes at the end after all other changes. 
+
+chown -R liveuser:liveuser /home/liveuser
+restorecon -R /home/liveuser
 
 EOF
 
