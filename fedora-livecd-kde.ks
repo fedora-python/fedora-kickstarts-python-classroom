@@ -40,7 +40,7 @@ k3b
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
-#pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
 
 # use yum-presto by default
 yum-presto
@@ -70,6 +70,10 @@ alsa-utils
 -make
 -nss_db
 -autofs
+
+# use pinentry-gtk to avoid qt3 on the live images
+-pinentry-qt*
+pinentry-gtk
 
 %end
 
