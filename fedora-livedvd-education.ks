@@ -20,7 +20,6 @@ part / --size=8192
 @gnome-desktop
 @sugar-desktop
 sugar-emulator
--sugar-pippy
 
 # education
 gnuplot
@@ -36,6 +35,7 @@ xchat-gnome
 
 # office
 evince
+openoffice.org-base
 openoffice.org-calc
 openoffice.org-impress
 openoffice.org-math
@@ -50,8 +50,10 @@ totem
 totem-mozplugin
 
 # stuff to make sugar-jhbuild work out of the box
+at-spi-python
 avahi-gobject-devel
 avahi-tools
+csound-devel
 enchant-devel
 fribidi-devel
 icon-naming-utils
@@ -76,14 +78,14 @@ xulrunner-python-devel
 giggle
 numpy
 pygame
+python-gasp
+python-sphinx
+scipy
 
 # eclipse environment
 @eclipse
 eclipse-eclox
-# eclipse-texlipse
-
-# virtualization
-@virtualization
+eclipse-texlipse
 
 # additional removals from gnome
 -evolution
@@ -92,12 +94,6 @@ eclipse-eclox
 -nautilus-sendto
 -orca
 -tomboy
-
-# remove some sugar packages
--sugar-finance
--sugar-help
--sugar-xoirc
--sugar-xomail
 
 # dictionaries are big
 -aspell-*
@@ -115,7 +111,6 @@ eclipse-eclox
 -vino
 -isdn4k-utils
 -dasher
--tomboy
 # not needed for gnome
 -acpid
 
@@ -157,4 +152,3 @@ chown liveuser:liveuser /home/liveuser/.xchat-gnome/servlist_.conf
 EOF
 
 %end
-
