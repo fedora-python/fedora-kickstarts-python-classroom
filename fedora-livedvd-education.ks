@@ -75,7 +75,7 @@ xulrunner-python-devel
 @development-tools
 @fedora-packager
 @gnome-software-development
-diveintopython-pdf
+diveintopython
 giggle
 numpy
 pygame
