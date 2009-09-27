@@ -22,6 +22,7 @@ part / --size=8192
 sugar-emulator
 
 # education
+avogadro
 gnuplot
 kdeedu
 moodle
