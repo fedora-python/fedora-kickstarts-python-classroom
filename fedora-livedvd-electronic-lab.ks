@@ -14,23 +14,10 @@ part / --size=8192
 @electronic-lab
 
 
-# Embedded design
-make
-eclipse-cdt-sdk
-#eclipse-eclox
-eclipse-egit
-eclipse-epic
-eclipse-subclipse
-#eclipse-texlipse
-splint
-
-
 # Office
 dia
 vym
 openoffice.org-writer
-openoffice.org-math
-openoffice.org-writer2latex
 openoffice.org-calc
 openoffice.org-impress
 openoffice.org-extendedPDF
@@ -39,6 +26,7 @@ graphviz
 
 
 # debugging tools
+make
 gdb
 valgrind
 kdbg
