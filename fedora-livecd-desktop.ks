@@ -2,13 +2,7 @@
 # http://fedoraproject.org/wiki/SIGs/Desktop
 # mailto:fedora-desktop-list@redhat.com
 
-# NOTE!
-#
-# This kickstart file is non-branded to facilitate doing test spins
-# without trademark complications. You NEED to remove the debranding
-# lines below when doing official spins.
-
-## NOTE 2:
+## NOTE:
 # This file should in general be *subtraction* from the gnome-desktop
 # comps group to fit within a CD-sized image.  If you want to add
 # a package to the desktop, add them to the comps group.
@@ -91,13 +85,8 @@ PackageKit-command-not-found
 xz-lzma-compat
 
 # replace bug-buddy by abrt
--bug-buddy
 -kerneloops
 abrt-desktop
-
-# debrand test spins. Remove this for official releases !
--fedora-logos
-generic-logos
 
 %end
 
