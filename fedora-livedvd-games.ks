@@ -80,13 +80,13 @@ foobillard
 glaxium
 gnubg
 gnugo
+haxima
 hedgewars
 lbrickbuster2
 liquidwar
 londonlaw
 lure
 machineball
-nazghul-haxima
 nethack
 openlierox
 pachi
