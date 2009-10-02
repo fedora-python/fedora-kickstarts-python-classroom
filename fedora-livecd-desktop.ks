@@ -67,6 +67,10 @@ festvox-slt-arctic-hts
 -rsh
 -telnet
 -unix2dos
+-nfs-utils
+-ypbind
+-yp-tools
+-rpcbind
 
 # drop some system-config things
 -system-config-boot
