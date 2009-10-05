@@ -55,5 +55,15 @@ inkscape
 -khmeros-base-fonts
 -paktype-*
 
+# remove input methods
+-@input-methods
+-m17n*
+-scim*
+-iok
+-anthy
+-kasumi
+-libchewing
+-ibus-*
+
 %end
 
