@@ -34,7 +34,7 @@ epdfview
 mtpaint
 
 # audio & video
-pavucontrol
+gmixer
 lxmusic
 asunder
 gxine
@@ -67,6 +67,10 @@ gnome-packagekit*
 # same for Fedora <= 11, but commented out
 PolicyKit-gnome
 -PolicyKit-kde
+
+# make sure xfce4-notifyd is not pulled in
+-xfce4-notifyd
+notification-daemon
 
 # use yumex instead of gnome-packagekit
 #-gnome-packagekit
@@ -109,10 +113,20 @@ restorecon -R /home/liveuser
 # set up timed auto-login for after 60 seconds
 # partititial fix for bug # 518068
 cat >> /etc/slim.conf << FOE
-auto_login	yes
+auto_login		yes
 default_user	liveuser
-authfile		/var/run/slim/slim.auth
+authfile		/var/run/slim.auth
 FOE
+
+# Show harddisk install on the desktop
+sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
+mkdir /home/liveuser/Desktop
+cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
+chmod a+x /home/liveuser/Desktop/liveinst.desktop
+
+# this goes at the end after all other changes.
+chown -R liveuser:liveuser /home/liveuser
+restorecon -R /home/liveuser
 
 EOF
 
