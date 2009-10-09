@@ -5,7 +5,7 @@
 #
 # Maintainer(s):
 # - Rahul Sundaram    <sundaram@fedoraproject.org>
-# - Christoph Wickert <chris@christoph-wickert.de>
+# - Christoph Wickert <cwickert@fedoraproject.org>
 # - Kevin Fenzi       <kevin@tummy.com>
 # - Adam Miller       <maxamillion@gmail.com>
 
@@ -133,6 +133,7 @@ xfce4-weather-plugin
 xfce4-websearch-plugin
 # this one a compatibility layer for GNOME applets and depends on it
 #xfce4-xfapplet-plugin
+xfce4-xfswitch-plugin
 xfce4-xkb-plugin
 xfwm4-themes
 
