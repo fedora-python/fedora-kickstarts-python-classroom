@@ -17,7 +17,7 @@
 
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
-#-amarok 			# amarok has duplicate functionality with juk (~13 megs)
+-amarok 			# amarok has duplicate functionality with juk (~13 megs)
 -digikam			# digikam has duplicate functionality with gwenview (~11 megs)
 -kdeedu*			# kdeedu is too big for the live images
 -scribus			# scribus is too big for the live images
@@ -26,8 +26,8 @@
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 #-kdegames			# the removal of kdegames will free ~35 megs
 -kdeartwork-screensavers	# screensavers are not needed on live images
--kipi-plugins			# ~8 megs
--konq-plugins			# ~2 megs
+#-kipi-plugins			# ~8 megs
+#-konq-plugins			# ~2 megs
 -kdeplasma-addons		# ~5 megs
 
 # Additional packages that are not default in kde-desktop but useful
@@ -35,12 +35,12 @@ koffice-kword
 koffice-kspread			# ~1 megs
 koffice-kpresenter		# ~3 megs
 koffice-filters
-#kdeartwork			# only include some parts of kdeartwork
+kdeartwork			# only include some parts of kdeartwork
 k3b
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
-#pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
 
 # use yum-presto by default
 yum-presto
@@ -57,9 +57,6 @@ alsa-utils
 
 # make sure gnome-packagekit doesn't end up the KDE live images
 -gnome-packagekit*
-
-# omit prelink for now (#515539)
--prelink
 
 # remove input methods to free space
 -scim*
@@ -144,9 +141,12 @@ Start Nepomuk=false
 autostart=false
 NEPOMUK_EOF
 
-# make sure to set the right permissions
-chown -R liveuser:liveuser /home/liveuser/.kde/
+# make sure to set the right permissions and selinux contexts
+chown -R liveuser:liveuser /home/liveuser/
+restorecon -R /home/liveuser/
 
+# don't use prelink on a running KDE live image
+sed -i 's/PRELINKING=yes/PRELINKING=no/' /etc/sysconfig/prelink
 
 EOF
 
