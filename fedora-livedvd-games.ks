@@ -27,7 +27,7 @@ asc
 asc-music
 astromenace
 beneath-a-steel-sky-cd
-blobAndConquer
+# blobAndConquer # nonfree textures issue - may return later
 boswars
 bzflag
 crossfire-client
