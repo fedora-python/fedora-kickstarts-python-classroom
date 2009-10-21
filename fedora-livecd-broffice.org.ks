@@ -33,7 +33,6 @@ gnome-games
 brasero
 bitstream-vera-*
 gimp
-inkscape
 
 # We won't use these Asian fonts
 -lklug-fonts
@@ -55,15 +54,11 @@ inkscape
 -khmeros-base-fonts
 -paktype-*
 
-# remove input methods
--@input-methods
--m17n*
--scim*
+# remove some input method tools
 -iok
 -anthy
 -kasumi
 -libchewing
--ibus-*
 
 %end
 
