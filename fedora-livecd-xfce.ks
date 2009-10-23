@@ -76,7 +76,6 @@ asunder
 catfish
 xfce4-power-manager
 seahorse
-rtorrent
 transmission
 cups-pdf
 gnome-bluetooth
@@ -86,6 +85,7 @@ pavucontrol
 # Command line
 ntfs-3g
 powertop
+rtorrent
 wget
 irssi
 mutt
@@ -118,9 +118,10 @@ xfce4-netload-plugin
 xfce4-notes-plugin
 xfce4-places-plugin
 xfce4-quicklauncher-plugin
-xfce4-smartbookmark-plugin
 xfce4-screenshooter-plugin
 xfce4-sensors-plugin
+xfce4-smartbookmark-plugin
+xfce4-stopwatch-plugin
 xfce4-systemload-plugin
 xfce4-taskmanager
 xfce4-time-out-plugin
