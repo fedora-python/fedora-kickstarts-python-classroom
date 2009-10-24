@@ -54,6 +54,7 @@ NetworkManager-gnome
 galculator
 xpad
 cups-pdf
+xcompmgr
 
 # make sure kpackagekit doesn't end up the LXDE live images
 gnome-packagekit*
@@ -115,14 +116,12 @@ restorecon -R /home/liveuser
 cat >> /etc/slim.conf << FOE
 auto_login		yes
 default_user	liveuser
-authfile		/var/run/slim.auth
 FOE
 
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
 mkdir /home/liveuser/Desktop
 cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
-chmod a+x /home/liveuser/Desktop/liveinst.desktop
 
 # this goes at the end after all other changes.
 chown -R liveuser:liveuser /home/liveuser
