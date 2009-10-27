@@ -53,7 +53,6 @@ alsa-plugins-pulseaudio
 NetworkManager-gnome
 galculator
 xpad
-cups-pdf
 xcompmgr
 
 # make sure kpackagekit doesn't end up the LXDE live images
@@ -95,6 +94,15 @@ yum-presto
 ssmtp
 -acpid
 
+# drop some system-config things
+-system-config-boot
+#-system-config-language
+-system-config-lvm
+-system-config-network
+-system-config-rootpassword
+-system-config-services
+-policycoreutils-gui
+
 %end
 
 %post
@@ -108,11 +116,16 @@ DISPLAYMANAGER=/usr/bin/slim-dynwm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
-chown -R liveuser:liveuser /home/liveuser
-restorecon -R /home/liveuser
+# disable screensaver locking
+mkdir /home/liveuser/.config/lxsession/LXDE
+cat >> /home/liveuser/.config/lxsession/LXDE/autostart << FOE
+@lxde-settings-daemon
+@pulseaudio -D
+@lxpanel --profile LXDE
+@pcmanfm -d
+FOE
 
-# set up timed auto-login for after 60 seconds
-# partititial fix for bug # 518068
+# set up auto-login for liveuser
 cat >> /etc/slim.conf << FOE
 auto_login		yes
 default_user	liveuser
@@ -122,6 +135,9 @@ FOE
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
 mkdir /home/liveuser/Desktop
 cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
+
+# Add autostart for parcellite
+cp /usr/share/applications/fedora-parcellite.desktop /etc/xdg/autostart
 
 # this goes at the end after all other changes.
 chown -R liveuser:liveuser /home/liveuser
