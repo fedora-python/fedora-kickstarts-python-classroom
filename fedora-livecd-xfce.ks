@@ -158,7 +158,7 @@ xfwm4-themes
 -system-config-lvm
 -system-config-network
 -system-config-rootpassword
--system-config-services
+#-system-config-services
 -policycoreutils-gui
 
 %end
