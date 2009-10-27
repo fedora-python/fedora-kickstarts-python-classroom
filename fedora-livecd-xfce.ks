@@ -77,7 +77,6 @@ catfish
 xfce4-power-manager
 seahorse
 transmission
-cups-pdf
 gnome-bluetooth
 alsa-plugins-pulseaudio
 pavucontrol
@@ -136,6 +135,8 @@ xfce4-websearch-plugin
 #xfce4-xfapplet-plugin
 xfce4-xfswitch-plugin
 xfce4-xkb-plugin
+# system-config-printer does printer management better
+#xfprint
 xfwm4-themes
 
 # dictionaries are big
@@ -150,9 +151,16 @@ xfwm4-themes
 -autofs
 -nss_db
 -acpid
-# system-config-printer does printer management better
-# xfprint has now been made as optional in comps.
-system-config-printer
+
+# drop some system-config things
+-system-config-boot
+-system-config-language
+-system-config-lvm
+-system-config-network
+-system-config-rootpassword
+-system-config-services
+-policycoreutils-gui
+
 %end
 
 %post
@@ -192,10 +200,8 @@ FOE
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
 mkdir /home/liveuser/Desktop
 cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
-chmod a+x /home/liveuser/Desktop/liveinst.desktop
 
 # this goes at the end after all other changes. 
-
 chown -R liveuser:liveuser /home/liveuser
 restorecon -R /home/liveuser
 
