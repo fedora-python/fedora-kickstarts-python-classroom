@@ -98,6 +98,7 @@ abrt-desktop
 cat >> /etc/rc.d/init.d/livesys << EOF
 # disable screensaver locking
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null
+
 # set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
@@ -112,6 +113,10 @@ mkdir /home/liveuser/Desktop
 cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
 chown -R liveuser.liveuser /home/liveuser/Desktop
 chmod a+x /home/liveuser/Desktop/liveinst.desktop
+
+# But not trash and home
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/nautilus/desktop/trash_icon_visible false >/dev/null
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/nautilus/desktop/home_icon_visible false >/dev/null
 
 EOF
 
