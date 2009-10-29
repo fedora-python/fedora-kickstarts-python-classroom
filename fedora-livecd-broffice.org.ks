@@ -58,7 +58,6 @@ inkscape
 # remove unnecessary input methods
 -@input-methods
 -m17n*
--ibus-*
 -scim*
 -iok
 -anthy
