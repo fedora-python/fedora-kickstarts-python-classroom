@@ -13,44 +13,24 @@
 
 %packages
 
-firefox
-NetworkManager-vpnc
-NetworkManager-openvpn
-NetworkManager-gnome
-NetworkManager-pptp
-
-gparted
-
-# Add the midori browser as a lighter alternative
-midori
-
-cheese
-
-# we don't include @office so that we don't get OOo.  but some nice bits
+# Office
 abiword
 gnumeric
 
+# Graphics
 evince
 -evince-dvi
 -evince-djvu
-
 gimp
 inkscape
-
-gcalctool
-desktop-backgrounds-compat
-gnome-screensaver
-setroubleshoot
 
 # development
 geany
 
-# More Desktop stuff
-xdg-user-dirs
-@java
-totem
-totem-mozplugin
-pidgin
+# Internet
+firefox
+# Add the midori browser as a lighter alternative
+midori
 claws-mail
 claws-mail-plugins-archive
 claws-mail-plugins-att-remover
@@ -67,19 +47,41 @@ claws-mail-plugins-smime
 claws-mail-plugins-spam-report
 claws-mail-plugins-tnef
 claws-mail-plugins-vcalendar
-xfburn
-liferea
-quodlibet
 gftp
-ristretto
-asunder
-catfish
-xfce4-power-manager
-seahorse
+liferea
+pidgin
+tigervnc
 transmission
-gnome-bluetooth
+
+# multimedia
 alsa-plugins-pulseaudio
+asunder
+cheese
+quodlibet
 pavucontrol
+totem
+totem-mozplugin
+# add parole as a lighter alternative to totem
+parole
+xfburn
+
+# More Desktop stuff
+@java
+NetworkManager-vpnc
+NetworkManager-openvpn
+NetworkManager-gnome
+NetworkManager-pptp
+catfish
+desktop-backgrounds-compat
+gcalctool
+gparted
+gnome-bluetooth
+gnome-screensaver
+seahorse
+setroubleshoot
+xdg-user-dirs
+# needed as long as we patch xfce4-settings to use Nodoka
+gtk-nodoka-engine
 
 # Command line
 ntfs-3g
@@ -95,6 +97,7 @@ yum-utils
 Terminal
 gtk-xfce-engine
 orage
+ristretto
 thunar-volman
 thunar-media-tags-plugin
 gigolo
@@ -116,6 +119,7 @@ xfce4-mount-plugin
 xfce4-netload-plugin
 xfce4-notes-plugin
 xfce4-places-plugin
+xfce4-power-manager
 xfce4-quicklauncher-plugin
 xfce4-screenshooter-plugin
 xfce4-sensors-plugin
@@ -145,7 +149,8 @@ xfwm4-themes
 
 # more fun with space saving
 -gimp-help
-
+# not needed, but as long as there is space left, we leave this in
+#-desktop-backgrounds-basic
 
 # save some space
 -autofs
