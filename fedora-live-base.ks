@@ -254,13 +254,16 @@ sed -i -e 's/hwclock/no-such-hwclock/g' /etc/rc.d/init.d/halt
 if strstr "\`cat /proc/cmdline\`" CDLABEL= ; then
   cat >> /sbin/halt.local << FOE
 #!/bin/bash
+# XXX: This often gets stuck during shutdown because /etc/init.d/halt
+#      (or something else still running) wants to read files from the block\
+#      device that was ejected.  Disable for now.  Bug #531924
 # we want to eject the cd on halt, but let's also try to avoid
 # io errors due to not being able to get files...
-cat /sbin/halt > /dev/null
-cat /sbin/reboot > /dev/null
-/usr/sbin/eject -p -m \$(readlink -f /dev/live) >/dev/null 2>&1
-echo "Please remove the CD from your drive and press Enter to finish restarting"
-read -t 30 < /dev/console
+#cat /sbin/halt > /dev/null
+#cat /sbin/reboot > /dev/null
+#/usr/sbin/eject -p -m \$(readlink -f /dev/live) >/dev/null 2>&1
+#echo "Please remove the CD from your drive and press Enter to finish restarting"
+#read -t 30 < /dev/console
 FOE
 chmod +x /sbin/halt.local
 fi
