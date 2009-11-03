@@ -89,7 +89,6 @@ PackageKit-command-not-found
 xz-lzma-compat
 
 # replace bug-buddy by abrt
--kerneloops
 abrt-desktop
 
 %end
