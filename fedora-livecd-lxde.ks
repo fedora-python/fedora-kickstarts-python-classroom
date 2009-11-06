@@ -47,8 +47,8 @@ gnomebaker
 #geany
 
 # More Desktop stuff
-xdg-user-dirs
-@java
+xdg-user-dirs-gtk
+#@java
 alsa-plugins-pulseaudio
 NetworkManager-gnome
 galculator
@@ -117,7 +117,7 @@ EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
 # disable screensaver locking
-mkdir /home/liveuser/.config/lxsession/LXDE
+mkdir -p /home/liveuser/.config/lxsession/LXDE
 cat >> /home/liveuser/.config/lxsession/LXDE/autostart << FOE
 @lxde-settings-daemon
 @pulseaudio -D
