@@ -20,6 +20,7 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 # core
 tcsh
 kernel*
+dracut-*
 # Desktop Packages
 @kde-desktop
 echo-icon-theme
