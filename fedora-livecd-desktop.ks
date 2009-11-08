@@ -81,6 +81,9 @@ festvox-slt-arctic-hts
 -system-config-services
 -policycoreutils-gui
 
+# use the PackageKit helper for bash
+PackageKit-command-not-found
+
 # why does the obsoletes not work ?!
 -lzma
 xz-lzma-compat
