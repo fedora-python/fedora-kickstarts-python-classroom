@@ -10,16 +10,12 @@
 %include fedora-live-base.ks
 
 %packages
-@games
 @graphical-internet
 @sound-and-video
 @gnome-desktop
-nss-mdns
-NetworkManager-vpnc
-NetworkManager-openvpn
-# we don't include @office so that we don't get OOo.  but some nice bits
 abiword
-cheese
+gnome-games
+nss-mdns
 
 # avoid weird case where we pull in more festival stuff than we need
 festival
@@ -45,7 +41,6 @@ festvox-slt-arctic-hts
 
 # these pull in excessive dependencies
 -ekiga
--tomboy
 
 # things we don't need here
 -seahorse
@@ -87,9 +82,6 @@ PackageKit-command-not-found
 # why does the obsoletes not work ?!
 -lzma
 xz-lzma-compat
-
-# replace bug-buddy by abrt
-abrt-desktop
 
 %end
 
