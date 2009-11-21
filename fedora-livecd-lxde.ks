@@ -116,9 +116,10 @@ DISPLAYMANAGER=/usr/bin/slim-dynwm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
-# disable screensaver locking
-mkdir -p /home/liveuser/.config/lxsession/LXDE
-cat >> /home/liveuser/.config/lxsession/LXDE/autostart << FOE
+# disable screensaver locking and make sure gamin gets started
+rm -f /etc/xdg/lxsession/LXDE/autostart
+cat >> /etc/xdg/lxsession/LXDE/autostart << FOE
+/usr/libexec/gam_server
 @lxde-settings-daemon
 @pulseaudio -D
 @lxpanel --profile LXDE
