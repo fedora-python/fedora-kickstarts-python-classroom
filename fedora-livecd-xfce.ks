@@ -26,6 +26,7 @@ inkscape
 
 # development
 geany
+vim-enhanced
 
 # Internet
 firefox
