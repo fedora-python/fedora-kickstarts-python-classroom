@@ -180,4 +180,14 @@ taxipilot
 
 games-menus
 
+# Note some stuff I don't want pulled into the games spin.
+
+# No compilations of games as I want to only include games that at least
+# someone thought were good within a genre.
+-kdegames
+-gnome-games
+
+# Nothing should be downloading data to play.
+-autodownloader
+
 %end
