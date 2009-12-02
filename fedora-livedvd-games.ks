@@ -121,7 +121,7 @@ CriticalMass
 dd2
 KoboDeluxe
 lacewing
-Maelstrom
+# Maelstrom License issue that might get fixed
 methane
 njam
 seahorse-adventures
