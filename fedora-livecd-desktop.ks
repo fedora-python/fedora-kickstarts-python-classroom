@@ -14,7 +14,6 @@
 @sound-and-video
 @gnome-desktop
 abiword
-gnome-games
 nss-mdns
 
 # avoid weird case where we pull in more festival stuff than we need
@@ -33,14 +32,8 @@ festvox-slt-arctic-hts
 -gnome-games-help
 -nss_db
 -isdn4k-utils
--dasher
--evince-dvi
--evince-djvu
 -desktop-backgrounds-basic
 -constantine-backgrounds-extras
-
-# these pull in excessive dependencies
--ekiga
 
 # things we don't need here
 -seahorse
@@ -78,10 +71,6 @@ festvox-slt-arctic-hts
 
 # use the PackageKit helper for bash
 PackageKit-command-not-found
-
-# why does the obsoletes not work ?!
--lzma
-xz-lzma-compat
 
 %end
 
