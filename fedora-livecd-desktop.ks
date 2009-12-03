@@ -13,7 +13,7 @@
 @graphical-internet
 @sound-and-video
 @gnome-desktop
-abiword
+@office
 nss-mdns
 
 # avoid weird case where we pull in more festival stuff than we need
