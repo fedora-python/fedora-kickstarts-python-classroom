@@ -12,7 +12,7 @@ keyboard us
 timezone US/Eastern
 auth --useshadow --enablemd5
 selinux --enforcing
-firewall --enabled --service=mdns
+firewall --enabled
 xconfig --startxonboot
 part / --size 3072 --fstype ext4
 services --enabled=NetworkManager --disabled=network,sshd
@@ -296,7 +296,7 @@ touch /.liveimg-late-configured
 for o in \`cat /proc/cmdline\` ; do
     case \$o in
     ks=*)
-        ks="\${o#ks=}"
+        ks="--kickstart=\${o#ks=}"
         ;;
     xdriver=*)
         xdriver="--set-driver=\${o#xdriver=}"
