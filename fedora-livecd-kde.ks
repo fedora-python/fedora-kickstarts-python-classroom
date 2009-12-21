@@ -26,8 +26,8 @@
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 #-kdegames			# the removal of kdegames will free ~35 megs
 -kdeartwork-screensavers	# screensavers are not needed on live images
-#-kipi-plugins			# ~8 megs
-#-konq-plugins			# ~2 megs
+-kipi-plugins			# ~8 megs
+-konq-plugins			# ~2 megs
 -kdeplasma-addons		# ~5 megs
 
 # Additional packages that are not default in kde-desktop but useful
@@ -40,7 +40,7 @@ k3b
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
-pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+#pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
 
 # use yum-presto by default
 yum-presto
