@@ -296,7 +296,7 @@ touch /.liveimg-late-configured
 for o in \`cat /proc/cmdline\` ; do
     case \$o in
     ks=*)
-        ks="\${o#ks=}"
+        ks="--kickstart=\${o#ks=}"
         ;;
     xdriver=*)
         xdriver="--set-driver=\${o#xdriver=}"
@@ -388,6 +388,8 @@ chmod 755 /etc/rc.d/init.d/livesys-late
 # work around for poor key import UI in PackageKit
 rm -f /var/lib/rpm/__db*
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora
+echo "Packages within this LiveCD"
+rpm -qa
 
 # go ahead and pre-make the man -k cache (#455968)
 /usr/sbin/makewhatis -w
