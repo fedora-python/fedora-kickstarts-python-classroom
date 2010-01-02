@@ -26,21 +26,22 @@
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 #-kdegames			# the removal of kdegames will free ~35 megs
 -kdeartwork-screensavers	# screensavers are not needed on live images
-#-kipi-plugins			# ~8 megs
-#-konq-plugins			# ~2 megs
+-kipi-plugins			# ~8 megs
+-konq-plugins			# ~2 megs
 -kdeplasma-addons		# ~5 megs
 
 # Additional packages that are not default in kde-desktop but useful
+-koffice-suite			# don't include whole koffice-suite, just parts of it
 koffice-kword
-koffice-kspread			# ~1 megs
-koffice-kpresenter		# ~3 megs
-koffice-filters
+#koffice-kspread		# ~1 megs
+#koffice-kpresenter		# ~3 megs
+#koffice-filters
 kdeartwork			# only include some parts of kdeartwork
 k3b
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
-pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+#pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
 
 # use yum-presto by default
 yum-presto
@@ -147,6 +148,12 @@ restorecon -R /home/liveuser/
 
 # don't use prelink on a running KDE live image
 sed -i 's/PRELINKING=yes/PRELINKING=no/' /etc/sysconfig/prelink
+
+# small hack to enable plasma-netbook workspace on boot
+if strstr "\`cat /proc/cmdline\`" netbook ; then
+   mv /usr/share/autostart/plasma-desktop.desktop /usr/share/autostart/plasma-netbook.desktop
+   sed -i 's/desktop/netbook/g' /usr/share/autostart/plasma-netbook.desktop
+fi
 
 EOF
 

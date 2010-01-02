@@ -68,8 +68,6 @@ poppler-glib-devel
 python-distutils-extra
 redhat-lsb
 wv-devel
-xulrunner-devel-unstable
-xulrunner-python-devel
 
 # development
 @development-libs
