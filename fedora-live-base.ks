@@ -395,7 +395,7 @@ rpm -qa
 /usr/sbin/makewhatis -w
 
 # save a little bit of space at least...
-rm -f /boot/initrd*
+rm -f /boot/initramfs*
 # make sure there aren't core files lying around
 rm -f /core*
 
