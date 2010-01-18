@@ -74,6 +74,7 @@ ballz
 blobwars
 bombardier
 cdogs-sdl
+chess
 clanbomber
 colossus
 foobillard
