@@ -83,6 +83,7 @@ gnubg
 gnugo
 haxima
 hedgewars
+kcheckers
 lbrickbuster2
 liquidwar
 londonlaw
