@@ -29,6 +29,7 @@ astromenace
 beneath-a-steel-sky-cd
 # blobAndConquer # nonfree textures issue - may return later
 boswars
+btanks
 bzflag
 crossfire-client
 egoboo
