@@ -16,6 +16,11 @@ part / --size 10240
 
 -wine
 
+# The @office group was added to the desktop spin, replacing abiword.
+# This brings in openoffice.org which is just too big.
+-openoffice.org*
+abiword
+
 # games
 
 # traditional (big)
