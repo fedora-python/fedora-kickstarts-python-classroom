@@ -17,41 +17,45 @@
 
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
--amarok 			# amarok has duplicate functionality with juk (~13 megs)
+#-amarok 			# amarok has duplicate functionality with juk (~13 megs)
 -digikam			# digikam has duplicate functionality with gwenview (~11 megs)
 -kdeedu*			# kdeedu is too big for the live images
 -scribus			# scribus is too big for the live images
 -ktorrent			# kget has also basic torrent features (~3 megs)
 -kftpgrabber*			# konqueror is also able to browse ftp shares, requires kdelibs3
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
-#-kdegames			# the removal of kdegames will free ~35 megs
 -kdeartwork-screensavers	# screensavers are not needed on live images
 -kipi-plugins			# ~8 megs
--konq-plugins			# ~2 megs
--kdeplasma-addons		# ~5 megs
+#-konq-plugins			# ~2 megs
+-kdeplasma-addons		# ~16 megs
 
 # Additional packages that are not default in kde-desktop but useful
 -koffice-suite			# don't include whole koffice-suite, just parts of it
 koffice-kword
-#koffice-kspread		# ~1 megs
-#koffice-kpresenter		# ~3 megs
-#koffice-filters
-kdeartwork			# only include some parts of kdeartwork
+koffice-kspread			# ~1 megs
+koffice-kpresenter		# ~3 megs
+koffice-filters
+#kdeartwork			# only include some parts of kdeartwork
 k3b
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
 #pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+fpaste				# user request and pretty small
+
+# only include kdegames-minimal
+-kdegames
+kdegames-minimal
+
+# only include kdegames-minimal
+-kdegames
+kdegames-minimal
 
 # use yum-presto by default
 yum-presto
 
 
 ### fixes and space issues
-
-# use system-config-printer-kde instead of system-config-printer
--system-config-printer
-system-config-printer-kde
 
 # make sure alsaunmute is there
 alsa-utils
