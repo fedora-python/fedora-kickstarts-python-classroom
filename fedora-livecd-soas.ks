@@ -7,7 +7,7 @@
 # - Sebastian Dziallas <sdz AT fedoraproject DOT org>
 # - Peter Robinson <pbrobinson AT gmail DOT com>
 
-%include fedora-mini-base.ks
+%include fedora-live-base.ks
 
 %packages
 
