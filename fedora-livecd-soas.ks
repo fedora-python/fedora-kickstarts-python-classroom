@@ -14,9 +14,6 @@
 # core sugar platform
 @sugar-desktop
 
-# remove until #545039 is closed
--sugar-browse
-
 # sugar activities
 sugar-analyze
 sugar-clock
