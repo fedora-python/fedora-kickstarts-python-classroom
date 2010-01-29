@@ -20,10 +20,8 @@ timezone America/Sao_Paulo
 @brazilian-support
 hunspell-pt
 
-# To avoid double functionality we will drop abiword and gnumeric and include BrOffice.org
--abiword
--gnumeric
--planner
+# Drop OpenOffice.org in favor of BrOffice.org
+-openoffice.org-*
 broffice.org-*
 
 # Include some additional packages
