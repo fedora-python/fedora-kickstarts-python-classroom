@@ -26,6 +26,7 @@ sugar-implode
 sugar-infoslicer
 sugar-memorize
 sugar-moon
+sugar-physics
 sugar-playgo
 sugar-record
 sugar-speak
