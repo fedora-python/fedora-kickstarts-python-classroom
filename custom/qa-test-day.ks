@@ -14,15 +14,21 @@ xorg-x11-apps
 gtk-recordmydesktop
 gconf-editor
 gimp
+nautilus-open-terminal
+abiword
 # save some space
 -empathy
--@games
+-gnome-games
 -brasero*
 -sound-juicer
 -gthumb
 -gnome-backgrounds
 -desktop-backgrounds*
 -evolution
+-shotwell
+-planner
+-openoffice*
+-java*
 # brand as fedora test spin
 fedora-logos
 -generic-logos
