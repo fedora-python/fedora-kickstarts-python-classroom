@@ -68,6 +68,11 @@ google-droid-sans-fonts
 google-droid-sans-mono-fonts
 google-droid-serif-fonts
 
+# remove input methods to free space
+-scim*
+-m17n*
+-ibus*
+
 %end
 
 %post

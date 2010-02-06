@@ -67,6 +67,11 @@ tracker-search-tool
 vinagre
 vino
 
+# remove input methods to free space
+-scim*
+-m17n*
+-ibus*
+
 %end
 
 %post
