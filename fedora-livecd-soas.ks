@@ -90,9 +90,8 @@ gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults
 # set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
-TimedLoginEnable=true
-TimedLogin=liveuser
-TimedLoginDelay=60
+AutomaticLoginEnable=true
+AutomaticLogin=liveuser
 FOE
 
 EOF
