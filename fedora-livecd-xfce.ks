@@ -48,7 +48,6 @@ claws-mail-plugins-smime
 claws-mail-plugins-spam-report
 claws-mail-plugins-tnef
 claws-mail-plugins-vcalendar
-gftp
 liferea
 pidgin
 tigervnc
@@ -60,10 +59,8 @@ asunder
 cheese
 quodlibet
 pavucontrol
-totem
-totem-mozplugin
-# add parole as a lighter alternative to totem
 parole
+parole-mozplugin
 xfburn
 
 # More Desktop stuff
