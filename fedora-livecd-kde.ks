@@ -47,9 +47,9 @@ fpaste				# user request and pretty small
 -kdegames
 kdegames-minimal
 
-# only include kdegames-minimal
--kdegames
-kdegames-minimal
+# use system-config-printer-kde instead of system-config-printer
+-system-config-printer
+system-config-printer-kde
 
 # use yum-presto by default
 yum-presto
