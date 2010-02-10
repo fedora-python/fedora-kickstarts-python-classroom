@@ -38,6 +38,7 @@ sugar-visualmatch
 alpine
 
 # multimedia
+csound-python
 evince-djvu
 gnash-plugin
 gtk-recordmydesktop
@@ -49,6 +50,7 @@ gnome-power-manager
 gnugo
 gparted
 livecd-tools
+xulrunner-python
 zyx-liveinstaller
 
 # hardware
