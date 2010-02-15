@@ -26,9 +26,9 @@ cinepaint
 fontmatrix
 gimp
 gimp-*-plugin
-gthumb
+# gthumb
 inkscape
-koffice-krita
+# koffice-krita
 mypaint
 nautilus-image-converter
 optipng
@@ -44,8 +44,8 @@ xournal
 dia
 gnote
 hamster-applet
-openoffice.org-impress
-openoffice.org-extendedPDF
+# openoffice.org-impress
+# openoffice.org-extendedPDF
 # pdfmod
 
 # internet
@@ -66,11 +66,6 @@ gnome-utils
 tracker-search-tool
 vinagre
 vino
-
-# remove input methods to free space
--scim*
--m17n*
--ibus*
 
 %end
 
