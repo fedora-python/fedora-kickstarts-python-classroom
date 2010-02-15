@@ -27,11 +27,9 @@ broffice.org-*
 # Include some additional packages
 @java
 vino
-gnome-games
 brasero
 bitstream-vera-*
 gimp
-inkscape
 
 # We won't use these Asian fonts
 -lklug-fonts
