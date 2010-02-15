@@ -6,7 +6,7 @@
 # Maintainer:
 # - Sebastian Dziallas <sdz AT fedoraproject DOT org>
 
-%include fedora-live-base.ks
+%include fedora-mini-base.ks
 
 %packages
 

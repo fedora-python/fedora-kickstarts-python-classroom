@@ -10,10 +10,11 @@ fedora_DATA = \
     fedora-livecd-desktop.ks \
     fedora-livecd-kde.ks \
     fedora-livecd-lxde.ks \
-	fedora-livecd-soas.ks \
+    fedora-livecd-soas.ks \
     fedora-livecd-xfce.ks \
     fedora-livedvd-electronic-lab.ks \
-    fedora-livedvd-games.ks
+    fedora-livedvd-games.ks \
+    fedora-mini-base.ks
 
 customdir = ${pkgdatadir}/custom/
 custom_DATA = \
