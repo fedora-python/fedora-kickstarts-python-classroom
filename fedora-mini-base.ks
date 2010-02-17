@@ -13,18 +13,15 @@ part / --size 4096 --fstype ext4
 services --enabled=NetworkManager,messagebus --disabled=network,sshd
 
 # To compose against the current release tree, use the following "repo" (enabled by default)
-#repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-12&arch=$basearch
+repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-13&arch=$basearch
 # To include updates, use the following "repo" (enabled by default)
-#repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f12&arch=$basearch
-#repo --name=updates-testing --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-testing-f12&arch=$basearch
+#repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f13&arch=$basearch
 
 # To compose against rawhide, use the following "repo" (disabled by default)
-repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
+#repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
 
 # To compose against local trees, (edit and) use:
 #repo --name=f11 --baseurl=http://localrepo/fedora/releases/11/Everything/$basearch/os/
-#repo --name=f11-updates --baseurl=http://localrepo/fedora/updates/11/$basearch/
-#repo --name=fedora-mini --baseurl=http://localhost/
 
 %packages
 @base-x
