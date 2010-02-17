@@ -1,7 +1,7 @@
 # Maintained by the Fedora Mini SIG:
 # https://fedoraproject.org/wiki/SIGs/FedoraMini
 
-%include fedora-mini-base.ks
+%include fedora-live-mini.ks
 
 %packages
 

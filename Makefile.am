@@ -5,22 +5,23 @@ fedora_DATA = \
     fedora-aos.ks \
     fedora-install-fedora.ks \
     fedora-live-base.ks \
+    fedora-live-mini.ks \
     fedora-livecd-broffice.org.ks \
     fedora-livecd-design-suite.ks \
     fedora-livecd-desktop.ks \
     fedora-livecd-kde.ks \
     fedora-livecd-lxde.ks \
+    fedora-livecd-moblin.ks \
     fedora-livecd-soas.ks \
     fedora-livecd-xfce.ks \
     fedora-livedvd-electronic-lab.ks \
-    fedora-livedvd-games.ks \
-    fedora-mini-base.ks \
-    fedora-mini-moblin.ks
+    fedora-livedvd-games.ks
 
 customdir = ${pkgdatadir}/custom/
 custom_DATA = \
 	custom/README \
     fedora-live-base.ks \
+    fedora-live-mini.ks \
     fedora-livecd-desktop.ks \
     fedora-livecd-kde.ks
 

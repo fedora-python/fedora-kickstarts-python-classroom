@@ -1,4 +1,4 @@
-# fedora-mini-base.ks
+# fedora-live-mini.ks
 #
 # Defines the basics for all kickstarts in the fedora-mini branch
 
