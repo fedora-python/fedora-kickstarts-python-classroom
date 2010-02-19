@@ -85,7 +85,10 @@ nbtscan
 tcpxtract
 firewalk
 hunt
-halberd
+
+## Apparently missing from the repositories and fails the build
+#halberd
+
 argus
 nbtscan
 ettercap
