@@ -15,13 +15,6 @@
 %include fedora-live-base.ks
 
 %packages
--fedora-logos
--fedora-release
--fedora-release-notes
-generic-release-notes
-generic-release
-generic-logos
-
 security-menus
 
 firefox
