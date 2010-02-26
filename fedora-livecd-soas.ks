@@ -49,6 +49,7 @@ gdm
 gnome-power-manager
 gnugo
 gparted
+gvfs
 livecd-tools
 xulrunner-python
 zyx-liveinstaller
