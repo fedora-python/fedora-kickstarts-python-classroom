@@ -31,6 +31,7 @@ sugar-playgo
 sugar-record
 sugar-speak
 sugar-stopwatch
+sugar-typing-turtle
 sugar-xoirc
 sugar-visualmatch
 
