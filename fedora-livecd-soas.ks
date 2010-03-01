@@ -31,6 +31,10 @@ sugar-playgo
 sugar-record
 sugar-speak
 sugar-stopwatch
+sugar-tamtam-edit
+sugar-tamtam-jam
+sugar-tamtam-mini
+sugar-tamtam-synthlab
 sugar-typing-turtle
 sugar-xoirc
 sugar-visualmatch
