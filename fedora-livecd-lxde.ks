@@ -13,8 +13,7 @@
 @lxde-desktop
 lxlauncher
 obconf
-parcellite
-slim
+lxdm
 
 # internet
 midori
@@ -52,6 +51,7 @@ xdg-user-dirs-gtk
 alsa-plugins-pulseaudio
 NetworkManager-gnome
 galculator
+parcellite
 xpad
 xcompmgr
 
@@ -112,7 +112,7 @@ ssmtp
 
 cat >> /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startlxde
-DISPLAYMANAGER=/usr/bin/slim-dynwm
+DISPLAYMANAGER=/usr/sbin/lxdm --retain-splash
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
@@ -127,10 +127,10 @@ cat >> /etc/xdg/lxsession/LXDE/autostart << FOE
 FOE
 
 # set up auto-login for liveuser
-cat >> /etc/slim.conf << FOE
-auto_login		yes
-default_user	liveuser
+cat >> /etc/lxdm/lxdm.conf << FOE
+autologin=liveuser
 FOE
+
 
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
