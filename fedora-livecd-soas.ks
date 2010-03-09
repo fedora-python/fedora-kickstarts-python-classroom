@@ -24,6 +24,7 @@ sugar-flipsticks
 sugar-getiabooks
 sugar-implode
 sugar-infoslicer
+sugar-maze
 sugar-memorize
 sugar-moon
 sugar-physics
