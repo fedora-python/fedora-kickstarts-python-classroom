@@ -50,7 +50,7 @@ claws-mail-plugins-tnef
 claws-mail-plugins-vcalendar
 liferea
 pidgin
-tigervnc
+remmina
 transmission
 
 # multimedia
@@ -74,7 +74,7 @@ desktop-backgrounds-compat
 gcalctool
 gparted
 gnome-bluetooth
-gnome-screensaver
+xscreensaver
 seahorse
 setroubleshoot
 xdg-user-dirs
@@ -119,6 +119,7 @@ xfce4-notes-plugin
 xfce4-places-plugin
 xfce4-power-manager
 xfce4-quicklauncher-plugin
+xfce4-remmina-plugin
 xfce4-screenshooter-plugin
 xfce4-sensors-plugin
 xfce4-smartbookmark-plugin
@@ -190,7 +191,9 @@ MailReader=sylpheed-claws
 FOE
 
 # disable screensaver locking
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null
+cat >> /home/liveuser/.xscreensaver << FOE
+lock:	False
+FOE
 # set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
