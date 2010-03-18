@@ -69,6 +69,7 @@ alsa-plugins-pulseaudio
 alsa-utils
 gstreamer-plugins-good
 gstreamer-plugins-espeak
+gstreamer-plugins-bad-free
 pulseaudio
 
 # fonts
