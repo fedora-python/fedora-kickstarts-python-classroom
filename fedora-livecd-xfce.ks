@@ -77,9 +77,7 @@ gnome-bluetooth
 xscreensaver
 seahorse
 setroubleshoot
-xdg-user-dirs
-# needed as long as we patch xfce4-settings to use Nodoka
-gtk-nodoka-engine
+xdg-user-dirs-gtk
 
 # Command line
 ntfs-3g
