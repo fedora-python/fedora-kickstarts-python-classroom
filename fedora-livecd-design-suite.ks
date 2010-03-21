@@ -34,6 +34,7 @@ nautilus-image-converter
 optipng
 pngcrush
 postr
+rawtherapee
 scribus
 shotwell
 synfigstudio
@@ -41,8 +42,10 @@ ufraw
 xournal
 
 # office
+abiword
 dia
 gnote
+gnumeric
 hamster-applet
 # openoffice.org-impress
 # openoffice.org-extendedPDF
