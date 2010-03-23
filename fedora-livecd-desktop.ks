@@ -28,17 +28,13 @@
 -isdn4k-utils
 -desktop-backgrounds-basic
 -constantine-backgrounds-extras
-
-# things we don't need here
 -seahorse
 -alacarte
 -krb5-auth-dialog
 -krb5-workstation
 -pam_krb5
 -quota
--acpid
 -nano
--smartmontools
 -minicom
 -dos2unix
 -finger
@@ -57,7 +53,6 @@
 # drop some system-config things
 -system-config-boot
 -system-config-language
--system-config-lvm
 -system-config-network
 -system-config-rootpassword
 -system-config-services

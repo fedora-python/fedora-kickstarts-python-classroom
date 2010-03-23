@@ -14,9 +14,8 @@
 # desktop image at some point.  We won't touch this one for now.
 nss-mdns
 
-# avoid weird case where we pull in more festival stuff than we need
-festival
-festvox-slt-arctic-hts
+# This one needs to be kicked out of @base
+-smartmontools
 
 %end
 
