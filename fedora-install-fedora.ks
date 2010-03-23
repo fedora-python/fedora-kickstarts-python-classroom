@@ -63,9 +63,7 @@ wireshark-gnome
 # Virt group
 @virtualization --optional
 # filesystem stuff
-reiserfs-utils
-xfsprogs
-jfsutils
+@filesystems
 # Languages
 @afrikaans-support
 @albanian-support
