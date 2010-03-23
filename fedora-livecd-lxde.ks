@@ -7,6 +7,7 @@
 # - Christoph Wickert <cwickert@fedoraproject.org>
 
 %include fedora-live-base.ks
+%include fedora-live-minimization.ks
 
 %packages
 # LXDE desktop

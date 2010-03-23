@@ -40,54 +40,16 @@ repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?re
 @dial-up
 @hardware-support
 @printing
+
+# Explicitly specified here:
+# <notting> walters: because otherwise dependency loops cause yum issues.
 kernel
+
+# This was added a while ago, I think it falls into the category of
+# "Diagnosis/recovery tool useful from a Live OS image".  Leaving this untouched
+# for now.
 memtest86+
 
-#firstaidkit-plugin-all
-
-# save some space
--specspo
--esc
--samba-client
--a2ps
--mpage
--redhat-lsb
--sox
--hplip
--hpijs
-sendmail
-#ssmtp
--numactl
--isdn4k-utils
--autofs
-# smartcards won't really work on the livecd.
--coolkey
--ccid
-# duplicate functionality
--pinfo
--vorbis-tools
--wget
-# lose the compat stuff
--compat*
-
-# qlogic firmwares
--ql2100-firmware
--ql2200-firmware
--ql23xx-firmware
--ql2400-firmware
-
-# scanning takes quite a bit of space :/
--xsane
--xsane-gimp
--sane-backends
-
-# livecd bits to set up the livecd and be able to install
-anaconda
-isomd5sum
-
-# commented out to avoid warning
-# # make sure debuginfo doesn't end up on the live image
-#-*debuginfo
 %end
 
 %post

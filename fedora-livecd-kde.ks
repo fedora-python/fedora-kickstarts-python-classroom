@@ -8,6 +8,7 @@
 # - Fedora KDE SIG
 
 %include fedora-live-base.ks
+%include fedora-live-minimization.ks
 
 %packages
 

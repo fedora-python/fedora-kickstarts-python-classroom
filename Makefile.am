@@ -5,9 +5,12 @@ fedora_DATA = \
     fedora-aos.ks \
     fedora-install-fedora.ks \
     fedora-live-base.ks \
+    fedora-live-minimization.ks \
     fedora-live-mini.ks \
     fedora-livecd-broffice.org.ks \
     fedora-livecd-design-suite.ks \
+    fedora-live-desktop.ks \
+    fedora-live-desktop-minimization.ks \
     fedora-livecd-desktop.ks \
     fedora-livecd-kde.ks \
     fedora-livecd-lxde.ks \

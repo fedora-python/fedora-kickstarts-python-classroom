@@ -10,6 +10,7 @@
 # - Adam Miller       <maxamillion@gmail.com>
 
 %include fedora-live-base.ks
+%include fedora-live-minimization.ks
 
 %packages
 
