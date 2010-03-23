@@ -20,7 +20,6 @@ midori
 sylpheed
 lostirc
 transmission
-gftp
 
 # office
 abiword
@@ -42,18 +41,21 @@ gxine-mozplugin
 # I'm looking for something smaller than
 gnomebaker
 
-# development
-#geany
-
-# More Desktop stuff
-xdg-user-dirs-gtk
-#@java
-alsa-plugins-pulseaudio
-NetworkManager-gnome
+# utils
 galculator
 parcellite
 xpad
+
+# system
+gigolo
+
+# more Desktop stuff
+alsa-plugins-pulseaudio
+NetworkManager-gnome
+#java-1.6.0-openjdk-plugin
 xcompmgr
+xdg-user-dirs-gtk
+
 
 # make sure kpackagekit doesn't end up the LXDE live images
 gnome-packagekit*
@@ -110,27 +112,31 @@ ssmtp
 
 # create /etc/sysconfig/desktop (needed for installation)
 
-cat >> /etc/sysconfig/desktop <<EOF
+cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startlxde
-DISPLAYMANAGER=/usr/sbin/lxdm --retain-splash
+DISPLAYMANAGER=/usr/sbin/lxdm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
 # disable screensaver locking and make sure gamin gets started
-rm -f /etc/xdg/lxsession/LXDE/autostart
-cat >> /etc/xdg/lxsession/LXDE/autostart << FOE
+cat > /etc/xdg/lxsession/LXDE/autostart << FOE
 /usr/libexec/gam_server
-@lxde-settings-daemon
-@pulseaudio -D
 @lxpanel --profile LXDE
 @pcmanfm -d
+@pulseaudio -D
+FOE
+
+# set up preferred apps 
+cat > /etc/xdg/libfm/pref-apps.conf << FOE 
+[Preferred Applications]
+WebBrowser=mozilla-firefox.desktop
+MailClient=redhat-sylpheed.desktop
 FOE
 
 # set up auto-login for liveuser
 cat >> /etc/lxdm/lxdm.conf << FOE
 autologin=liveuser
 FOE
-
 
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
