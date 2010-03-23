@@ -64,7 +64,8 @@ parole-mozplugin
 xfburn
 
 # More Desktop stuff
-@java
+# java plugin
+java-1.6.0-openjdk-plugin
 NetworkManager-vpnc
 NetworkManager-openvpn
 NetworkManager-gnome
