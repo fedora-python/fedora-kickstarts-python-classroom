@@ -10,10 +10,9 @@
 @gnome-desktop
 @office
 
-# FIXME - these two need to go in comps
+# FIXME; apparently the glibc maintainers dislike this, but it got put into the
+# desktop image at some point.  We won't touch this one for now.
 nss-mdns
-# use the PackageKit helper for bash
-PackageKit-command-not-found
 
 # avoid weird case where we pull in more festival stuff than we need
 festival
