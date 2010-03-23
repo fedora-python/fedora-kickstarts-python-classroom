@@ -108,10 +108,9 @@ ssmtp
 %end
 
 %post
-# LXDE and SLiM configuration
+# LXDE and LXDM configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
-
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startlxde
 DISPLAYMANAGER=/usr/sbin/lxdm
@@ -134,9 +133,7 @@ MailClient=redhat-sylpheed.desktop
 FOE
 
 # set up auto-login for liveuser
-cat >> /etc/lxdm/lxdm.conf << FOE
-autologin=liveuser
-FOE
+sed -i 's|# autologin=dgod|autologin=liveuser|g' /etc/lxdm/lxdm.conf
 
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
