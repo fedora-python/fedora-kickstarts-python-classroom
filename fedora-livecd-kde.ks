@@ -17,7 +17,7 @@
 
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
-#-amarok 			# amarok has duplicate functionality with juk (~13 megs)
+-amarok 			# amarok has duplicate functionality with juk (~13 megs)
 -digikam			# digikam has duplicate functionality with gwenview (~11 megs)
 -kdeedu*			# kdeedu is too big for the live images
 -scribus			# scribus is too big for the live images
@@ -27,7 +27,7 @@
 -kdeartwork-screensavers	# screensavers are not needed on live images
 -kipi-plugins			# ~8 megs
 #-konq-plugins			# ~2 megs
--kdeplasma-addons		# ~16 megs
+#-kdeplasma-addons		# ~16 megs
 
 # Additional packages that are not default in kde-desktop but useful
 -koffice-suite			# don't include whole koffice-suite, just parts of it
