@@ -170,29 +170,25 @@ PolicyKit-gnome
 %end
 
 %post
-
-# set up auto-login for liveuser
-cat >> /etc/slim.conf << FOE
-auto_login              yes
-default_user    liveuser
-FOE
+# LXDE and LXDM configuration
 
 # create /etc/sysconfig/desktop (needed for installation)
-cat >> /etc/sysconfig/desktop <<EOF
+cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startlxde
-DISPLAYMANAGER=/usr/bin/slim-dynwm
+DISPLAYMANAGER=/usr/sbin/lxdm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
 # disable screensaver locking and make sure gamin gets started
-rm -f /etc/xdg/lxsession/LXDE/autostart
-cat >> /etc/xdg/lxsession/LXDE/autostart << FOE
+cat > /etc/xdg/lxsession/LXDE/autostart << FOE
 /usr/libexec/gam_server
-@lxde-settings-daemon
-@pulseaudio -D
 @lxpanel --profile LXDE
 @pcmanfm -d
+@pulseaudio -D
 FOE
+
+# set up auto-login for liveuser
+sed -i 's|# autologin=dgod|autologin=liveuser|g' /etc/lxdm/lxdm.conf
 
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
@@ -202,9 +198,10 @@ cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
 # Add autostart for parcellite
 cp /usr/share/applications/fedora-parcellite.desktop /etc/xdg/autostart
 
-#last thing to do
+# this goes at the end after all other changes.
 chown -R liveuser:liveuser /home/liveuser
 restorecon -R /home/liveuser
+
 EOF
 
 %end
