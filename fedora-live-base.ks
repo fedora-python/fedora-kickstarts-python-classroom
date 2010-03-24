@@ -50,6 +50,10 @@ kernel
 # for now.
 memtest86+
 
+# The point of a live image is to install
+anaconda
+isomd5sum
+
 %end
 
 %post
