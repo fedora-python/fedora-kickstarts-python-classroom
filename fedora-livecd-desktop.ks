@@ -14,6 +14,10 @@
 -specspo
 -xsane
 
+# No printing/scanning
+-foomatic-db-ppds
+-simple-scan
+
 # dictionaries are big
 -aspell-*
 -hunspell-*
