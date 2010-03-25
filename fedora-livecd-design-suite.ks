@@ -55,7 +55,7 @@ hamster-applet
 empathy
 evolution
 firefox
-gnash-plugin
+# gnash-plugin
 gwibber
 
 # audio & video
@@ -66,9 +66,9 @@ totem
 
 # system
 gnome-utils
-tracker-search-tool
+# tracker-search-tool
 vinagre
-vino
+# vino
 
 %end
 
@@ -99,6 +99,19 @@ gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults
 
 # Turn off PackageKit-command-not-found while uninstalled
 sed -i -e 's/^SoftwareSourceSearch=true/SoftwareSourceSearch=false/' /etc/PackageKit/CommandNotFound.conf
+
+# Add link to the Inkscape Course
+cat >> /home/liveuser/Desktop/inkscape-course.desktop << FOE
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Introduction To Inkscape
+GenericName=Inkscape Course
+Comment=Materials from Máirín Duffy's Inkscape Class
+Exec=/usr/bin/firefox http://linuxgrrl.com/learn/Introduction_To_Inkscape
+Type=Application
+Icon=fedora-logo-icon
+FOE
+chmod a+x /home/liveuser/Desktop/inkscape-course.desktop
 
 EOF
 
