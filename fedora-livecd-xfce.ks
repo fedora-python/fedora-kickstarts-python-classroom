@@ -23,7 +23,6 @@ evince
 -evince-dvi
 -evince-djvu
 gimp
-inkscape
 
 # development
 geany
