@@ -11,6 +11,7 @@
 %packages
 
 # gnome desktop
+gdm
 gnome-python2-gconf
 gnome-desktop
 gnome-panel
