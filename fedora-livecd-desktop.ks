@@ -14,9 +14,12 @@
 -specspo
 -xsane
 
-# No printing/scanning
+# Drop the Java plugin
+-java-1.6.0-openjdk-plugin
+-java-1.6.0-openjdk
+
+# No printing
 -foomatic-db-ppds
--simple-scan
 
 # dictionaries are big
 -aspell-*
