@@ -30,6 +30,7 @@ pulseaudio
 # == sugar activities ==
 sugar-browse # Because they need this to install activities.
 sugar-log # Because they need this for debugging.
+sugar-physics # Because this is a great demo example (quick demo).
 sugar-terminal # Because this makes debugging easier.
 sugar-turtleart # Because this is a great demo example (extended demo).
 sugar-xoirc # Because this helps us help them.
