@@ -12,6 +12,7 @@
 
 # gnome desktop
 gdm
+gedit
 gnome-python2-gconf
 gnome-desktop
 gnome-panel
@@ -57,7 +58,7 @@ empathy
 evolution
 firefox
 # gnash-plugin
-gwibber
+# gwibber
 
 # audio & video
 audacity
