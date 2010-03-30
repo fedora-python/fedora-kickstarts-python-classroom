@@ -67,6 +67,7 @@ rhythmbox
 totem
 
 # system
+@printing
 gedit
 gnome-utils
 gtk-recordmydesktop
