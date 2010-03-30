@@ -35,6 +35,13 @@ sugar-terminal # Because this makes debugging easier.
 sugar-turtleart # Because this is a great demo example (extended demo).
 sugar-xoirc # Because this helps us help them.
 
+# Add these temporarily to the release while we test and finalise the release
+# They are NOT guaranteed for the final release
+sugar-read
+sugar-write
+sugar-chat
+etoys-sugar
+
 # == Activities from ASLO ==
 # These are activities we're going to polish to the same level
 # as the ones included in the SoaS image, but encourage people
@@ -105,6 +112,9 @@ org.laptop.WebActivity
 org.laptop.Log
 org.laptop.physics
 org.laptop.Terminal
+org.laptop.Read
+org.laptop.Write
+org.laptop.Chat
 org.laptop.TurtleArtActivity
 org.sugarlabs.IRC
 FOE
