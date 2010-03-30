@@ -28,7 +28,7 @@
 -kdeartwork-screensavers	# screensavers are not needed on live images
 -kipi-plugins			# ~8 megs
 #-konq-plugins			# ~2 megs
-#-kdeplasma-addons		# ~16 megs
+-kdeplasma-addons		# ~16 megs
 
 # Additional packages that are not default in kde-desktop but useful
 -koffice-suite			# don't include whole koffice-suite, just parts of it
