@@ -12,7 +12,6 @@
 
 # gnome desktop
 gdm
-gedit
 gnome-python2-gconf
 gnome-desktop
 gnome-panel
@@ -24,17 +23,20 @@ nautilus
 # graphics
 agave
 blender
+# capa
 cinepaint
+fontforge
 fontmatrix
+fyre
 gimp
 gimp-*-plugin
-# gthumb
+GREYCstoration-gimp 
+hugin
 inkscape
-# koffice-krita
 mypaint
 nautilus-image-converter
 optipng
-pngcrush
+# pinta
 postr
 rawtherapee
 scribus
@@ -46,31 +48,28 @@ xournal
 # office
 abiword
 dia
+evince
+evince-*
 gnote
 gnumeric
 hamster-applet
-# openoffice.org-impress
-# openoffice.org-extendedPDF
 # pdfmod
 
 # internet
 empathy
 evolution
 firefox
-# gnash-plugin
-# gwibber
 
 # audio & video
-audacity
+jokosher
 pitivi
 rhythmbox
 totem
 
 # system
+gedit
 gnome-utils
-# tracker-search-tool
-vinagre
-# vino
+gtk-recordmydesktop
 
 %end
 
