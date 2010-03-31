@@ -1,0 +1,1 @@
+../fedora-live-minimization.ks
