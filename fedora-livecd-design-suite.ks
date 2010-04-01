@@ -27,7 +27,7 @@ blender
 cinepaint
 fontforge
 fontmatrix
-fyre
+# fyre
 gimp
 gimp-*-plugin
 GREYCstoration-gimp 
