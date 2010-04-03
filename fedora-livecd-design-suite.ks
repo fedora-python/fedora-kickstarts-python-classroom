@@ -31,7 +31,7 @@ fontmatrix
 gimp
 gimp-*-plugin
 GREYCstoration-gimp 
-hugin
+# hugin
 inkscape
 mypaint
 nautilus-image-converter
@@ -67,10 +67,13 @@ rhythmbox
 totem
 
 # system
-@printing
 gedit
 gnome-utils
 gtk-recordmydesktop
+
+# lets save space
+-wqy-zenhei-fonts
+-ibus-pinyin-open-phrase
 
 %end
 
