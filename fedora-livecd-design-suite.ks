@@ -49,7 +49,6 @@ xournal
 abiword
 dia
 evince
-evince-*
 gnote
 gnumeric
 hamster-applet
