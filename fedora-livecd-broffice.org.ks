@@ -30,10 +30,11 @@ vino
 brasero
 bitstream-vera-*
 gimp
+inkscape
 
 # We won't use these Asian fonts
 -lklug-fonts
--abyssinica-fonts
+-sil-abyssinica-fonts
 -jomolhari-fonts
 -lohit-*
 -baekmuk-*
@@ -50,6 +51,8 @@ gimp
 -kacst-*
 -khmeros-base-fonts
 -paktype-*
+-paratype-pt-sans-fonts
+-wqy-zenhei-fonts
 
 # remove unnecessary input methods
 -@input-methods
