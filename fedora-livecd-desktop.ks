@@ -7,7 +7,7 @@
 %include fedora-live-minimization.ks
 
 %packages
-# First, no office.
+# First, no office
 -openoffice.org-*
 
 # Temporary list of things removed from comps but not synced yet
@@ -21,22 +21,22 @@
 # No printing
 -foomatic-db-ppds
 
-# dictionaries are big
+# Dictionaries are big
 -aspell-*
 -hunspell-*
 -man-pages*
 -words
 
-# save some space
+# Help and art can be big, too
 -gnome-user-docs
 -evolution-help
 -gnome-games-help
--nss_db
--isdn4k-utils
 -desktop-backgrounds-basic
 -constantine-backgrounds-extras
--seahorse
--alacarte
+
+# Legacy cmdline things we don't want
+-isdn4k-utils
+-nss_db
 -krb5-auth-dialog
 -krb5-workstation
 -pam_krb5
@@ -57,7 +57,7 @@
 -yp-tools
 -rpcbind
 
-# drop some system-config things
+# Drop some system-config things
 -system-config-boot
 -system-config-language
 -system-config-network
