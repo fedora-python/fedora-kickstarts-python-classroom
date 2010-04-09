@@ -64,17 +64,12 @@ gnome-packagekit*
 -kpackagekit
 
 # make sure polkit-qt doesn't end up the LXDE live images
-# this is not yet in rawide
-#polkit-gnome
-#-polkit-qt
-
-# same for Fedora <= 11, but commented out
-PolicyKit-gnome
--PolicyKit-kde
+polkit-gnome
+-polkit-kde
 
 # make sure xfce4-notifyd is not pulled in
--xfce4-notifyd
 notification-daemon
+-xfce4-notifyd
 
 # use yumex instead of gnome-packagekit
 #-gnome-packagekit
