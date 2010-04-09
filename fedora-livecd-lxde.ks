@@ -17,7 +17,7 @@ obconf
 lxdm
 
 # internet
-midori
+firefox
 sylpheed
 lostirc
 transmission
@@ -53,10 +53,11 @@ gigolo
 # more Desktop stuff
 alsa-plugins-pulseaudio
 NetworkManager-gnome
-#java-1.6.0-openjdk-plugin
+java-1.6.0-openjdk-plugin
 xcompmgr
 xdg-user-dirs-gtk
-
+# needed for xdg-open to support LXDE
+perl-File-MimeInfo
 
 # make sure kpackagekit doesn't end up the LXDE live images
 gnome-packagekit*
@@ -122,7 +123,7 @@ cat >> /etc/rc.d/init.d/livesys << EOF
 cat > /etc/xdg/lxsession/LXDE/autostart << FOE
 /usr/libexec/gam_server
 @lxpanel --profile LXDE
-@pcmanfm -d
+@pcmanfm2 --desktop --profile lxde
 @pulseaudio -D
 FOE
 
