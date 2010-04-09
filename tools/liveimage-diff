@@ -65,16 +65,24 @@ def main():
     read_rpmdata(original_rpmdata, original_rpms)
     read_rpmdata(new_rpmdata, new_rpms)
 
-    for rpm in original_rpms:
-        if rpm in new_rpms:
-            sizedelta = new_rpms[rpm] - original_rpms[rpm]
-            print '= %s: %d' % (rpm, sizedelta)
-        else:
-            print "- %s %d" % (rpm, original_rpms[rpm])
-    for rpm in new_rpms:
-        if rpm in original_rpms:
-            continue
-        print "+ %s %d" % (rpm, new_rpms[rpm])
+    original_set = set(original_rpms)
+    new_set = set(new_rpms)
+    intersection = original_set.intersection(new_set)
+    intersection_deltas = {}
+    for rpm in intersection:
+        delta = new_rpms[rpm] - original_rpms[rpm]
+        if delta != 0:
+            intersection_deltas[rpm] = delta
+    
+    added_set = new_set - original_set
+    removed_set = original_set - new_set
+    for rpm in sorted(added_set, lambda a,b: cmp(new_rpms[a], new_rpms[b])):
+        print '+ %s %d' % (rpm, new_rpms[rpm])
+    for rpm in sorted(removed_set, lambda a,b: cmp(original_rpms[a], original_rpms[b])):
+        print '- %s %d' % (rpm, original_rpms[rpm])
+        
+    for rpm in sorted(intersection_deltas, lambda a,b: cmp(intersection_deltas[a], intersection_deltas[b])):
+        print '= %s %d' % (rpm, intersection_deltas[rpm])
  
     sys.exit(0)
 
