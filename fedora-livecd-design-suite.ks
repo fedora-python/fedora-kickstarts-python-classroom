@@ -25,6 +25,7 @@ agave
 blender
 # capa
 cinepaint
+entangle
 fontforge
 fontmatrix
 # fyre
