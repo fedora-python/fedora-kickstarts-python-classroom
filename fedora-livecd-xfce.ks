@@ -95,6 +95,7 @@ Terminal
 gtk-xfce-engine
 orage
 ristretto
+hal-storage-addon
 thunar-volman
 thunar-media-tags-plugin
 gigolo
