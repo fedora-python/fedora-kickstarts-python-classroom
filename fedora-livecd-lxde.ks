@@ -51,6 +51,7 @@ xpad
 gigolo
 
 # more Desktop stuff
+hal-storage-addon
 alsa-plugins-pulseaudio
 NetworkManager-gnome
 java-1.6.0-openjdk-plugin
