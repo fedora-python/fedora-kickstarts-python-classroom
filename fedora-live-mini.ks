@@ -56,7 +56,6 @@ memtest86+
 -pcmciautils
 -perf
 -pm-utils
--prctl
 -rdate
 -rdist
 -rsh
@@ -75,7 +74,6 @@ memtest86+
 -ypbind
 
 # Remove default base-x packages we don't want
--bitmap-fonts
 -cups-pk-helper
 -glx-utils
 -system-config-date
@@ -85,22 +83,9 @@ memtest86+
 -system-config-services
 -system-config-users
 
-# Remove default core packages we don't want
--ppc64-utils
--s390utils
--sendmail
--silo
--yaboot
-
 # Remove default unwanted hardware firmware and support we don't want
 -b43-fwcutter
--foo2hiperc
--foo2hp
--foo2lava
--foo2qpdl
--foo2slx
--foo2xqx
--foo2zjs
+-foomatic*
 -ivtv-firmware
 -printer-filters
 -ql2100-firmware
@@ -120,7 +105,6 @@ memtest86+
 -khmeros-base-fonts
 -lklug-fonts
 -lohit*
--padauk-fonts
 -paktype*
 -smc-meera-fonts
 -stix-fonts
@@ -147,7 +131,9 @@ gnome-packagekit
 powertop
 gnupg2
 yum-presto
-# Add this so we don't pull in sendmail/exim
+
+# Remove sendmail, replace with smaller smtp equiv
+-sendmail
 ssmtp
 
 %end
