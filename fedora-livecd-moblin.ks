@@ -19,6 +19,9 @@ firefox
 cheese
 nautilus
 
+# Remove until deps are fixed
+-hornsey
+
 # display managers
 gdm
 #uxlaunch
