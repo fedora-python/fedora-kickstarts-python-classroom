@@ -17,8 +17,6 @@ firefox
 
 # Some useful gnome tools
 cheese
-syncevolution-moblin
-evolution-couchdb
 nautilus
 
 # display managers
