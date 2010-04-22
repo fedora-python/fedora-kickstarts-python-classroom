@@ -16,38 +16,40 @@
 %include fedora-live-minimization.ks
 
 %packages
-security-menus
 
+# internet
 firefox
-yum-presto
-midori
-cups-pdf
-gnome-bluetooth
-alsa-plugins-pulseaudio
-pavucontrol
+claws-mail
+
 
 # Command line
+cnetworkmanager
+irssi
+mutt
 ntfs-3g
 powertop
 wget
-irssi
-mutt
 yum-utils
-cnetworkmanager
-Thunar 
-gtk-xfce-engine
-thunar-volman
-xarchiver
+yum-presto
 
 # dictionaries are big
 #-aspell-*
+#-hunspell-*
 #-man-pages-*
+#-words
 
 # more fun with space saving
 -gimp-help
 
 #GUI Stuff
 @lxde
+Thunar 
+thunar-volman
+xarchiver
+gnome-bluetooth
+alsa-plugins-pulseaudio
+pavucontrol
+system-config-printer
 
 # save some space
 -autofs
@@ -55,11 +57,10 @@ xarchiver
 -sendmail
 ssmtp
 -acpid
-# system-config-printer does printer management better
-# xfprint has now been made as optional in comps.
-system-config-printer
 
 ###################### Security Stuffs ############################
+security-menus
+
 # Reconnaissance
 dsniff
 hping3
@@ -184,8 +185,15 @@ cat >> /etc/rc.d/init.d/livesys << EOF
 cat > /etc/xdg/lxsession/LXDE/autostart << FOE
 /usr/libexec/gam_server
 @lxpanel --profile LXDE
-@pcmanfm -d
+@pcmanfm2 --desktop --profile lxde
 @pulseaudio -D
+FOE
+
+# set up preferred apps 
+cat > /etc/xdg/libfm/pref-apps.conf << FOE 
+[Preferred Applications]
+WebBrowser=mozilla-firefox.desktop
+MailClient=fedora-claws-mail.desktop
 FOE
 
 # set up auto-login for liveuser
