@@ -12,10 +12,10 @@
 
 %packages
 
-# == core sugar platform ==
+# == Core Sugar Platform ==
 sugar
 
-# == platform components ==
+# == Platform Components ==
 # from http://wiki.sugarlabs.org/go/0.88/Platform_Components
 alsa-plugins-pulseaudio
 alsa-utils
@@ -27,7 +27,7 @@ gstreamer-plugins-espeak
 gstreamer-plugins-bad-free
 pulseaudio
 
-# == sugar activities ==
+# == Sugar Activities ==
 sugar-browse # Because they need this to install activities.
 sugar-log # Because they need this for debugging.
 sugar-physics # Because this is a great demo example (quick demo).
@@ -35,12 +35,15 @@ sugar-terminal # Because this makes debugging easier.
 sugar-turtleart # Because this is a great demo example (extended demo).
 sugar-xoirc # Because this helps us help them.
 
-# Add these temporarily to the release while we test and finalise the release
-# They are NOT guaranteed for the final release
+# Add these temporarily to the release while we test and finalise the release.
+# They are NOT guaranteed for the final release!
 sugar-read
 sugar-write
 sugar-chat
 etoys-sugar
+
+# Write breaks unless we do this (we don't need it anyways)
+-@input-methods
 
 # == Activities from ASLO ==
 # These are activities we're going to polish to the same level
@@ -48,7 +51,6 @@ etoys-sugar
 # to download from ASLO as part of the SoaS experience of exploring
 # other Activities in there.
 
-# etoys-sugar
 # sugar-maze
 # sugar-speak
 # sugar-tamtam-*
@@ -57,35 +59,33 @@ etoys-sugar
 # These are Activities that aren't quite there, but are important,
 # so we're going to encourage people to test them.
 
-# sugar-write
 # sugar-record
 # sugar-pippy
-# sugar-read
 
-# == system ==
-# automatically logs in the liveuser
-# replace this with nodm for v4
+# == System ==
+# Automatically logs in the liveuser
+# We're going to replace this with nodm
 # http://bugs.sugarlabs.org/ticket/1849
 gdm
 
-# needed to show external hard drives
+# Needed to show external hard drives
 gvfs
 
-# needed for battery monitoring and power management in sugar
+# Needed for battery monitoring and power management
 gnome-power-manager
 
-# we can haz sugar boot screen
+# Get the Sugar boot screen
 -plymouth-system-theme
 -plymouth-theme-charge
 sugar-logos
 
-# == hardware ==
-# lets support broadcom and xo wifi hardware
+# == Hardware ==
+# Lets support Broadcom and XO wifi hardware
 b43-openfwwf
 libertas-usb8388-firmware
 
-# == fonts ==
-# more font support
+# == Fonts ==
+# More font support according to:
 # http://bugs.sugarlabs.org/ticket/1119
 google-droid-fonts-common
 google-droid-sans-fonts
@@ -95,31 +95,38 @@ google-droid-serif-fonts
 %end
 
 %post
+
+# Rebuild initrd for Sugar boot screen
+KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
+/usr/sbin/plymouth-set-default-theme sugar
+/sbin/dracut -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
+
 cat >> /etc/rc.d/init.d/livesys << EOF
 
-# don't use the default system user (in soas liveuser) as nick name
+# Don't use the default system user (in SoaS liveuser) as nick name
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /desktop/sugar/user/default_nick disabled >/dev/null
 
-# disable the logout menu item in Sugar
+# Disable the logout menu item in Sugar
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/show_logout false >/dev/null
 
-# set sugar power management on
+# Enable Sugar power management
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/power/automatic True >/dev/null
 
-# add our activities to the favorites
+# Add our activities to the favorites
 cat > /usr/share/sugar/data/activities.defaults << FOE
-org.laptop.WebActivity
+org.laptop.AbiWordActivity
+org.laptop.Chat
 org.laptop.Log
 org.laptop.physics
 org.laptop.Terminal
-org.laptop.Read
-org.laptop.Write
-org.laptop.Chat
 org.laptop.TurtleArtActivity
+org.laptop.WebActivity
+org.laptop.sugar.ReadActivity
 org.sugarlabs.IRC
+org.vpri.EtoysActivity
 FOE
 
-# set up auto-login for for liveuser
+# Set up auto-login for for liveuser
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
 AutomaticLoginEnable=true
