@@ -34,17 +34,13 @@ sugar-physics # Because this is a great demo example (quick demo).
 sugar-terminal # Because this makes debugging easier.
 sugar-turtleart # Because this is a great demo example (extended demo).
 sugar-xoirc # Because this helps us help them.
-
-# Add these temporarily to the release while we test and finalise the release.
-# They are NOT guaranteed for the final release!
-
-etoys-sugar
 sugar-chat
 sugar-read
 sugar-record
 sugar-write
+etoys-sugar
 
-# Write breaks unless we do this (we don't need it anyways)
+# Write breaks unless we do this (we don't need it anyway)
 -@input-methods
 
 # == Activities from ASLO ==
