@@ -37,10 +37,12 @@ sugar-xoirc # Because this helps us help them.
 
 # Add these temporarily to the release while we test and finalise the release.
 # They are NOT guaranteed for the final release!
-sugar-read
-sugar-write
-sugar-chat
+
 etoys-sugar
+sugar-chat
+sugar-read
+sugar-record
+sugar-write
 
 # Write breaks unless we do this (we don't need it anyways)
 -@input-methods
@@ -59,7 +61,6 @@ etoys-sugar
 # These are Activities that aren't quite there, but are important,
 # so we're going to encourage people to test them.
 
-# sugar-record
 # sugar-pippy
 
 # == System ==
@@ -118,6 +119,7 @@ org.laptop.AbiWordActivity
 org.laptop.Chat
 org.laptop.Log
 org.laptop.physics
+org.laptop.RecordActivity
 org.laptop.Terminal
 org.laptop.TurtleArtActivity
 org.laptop.WebActivity
