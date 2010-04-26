@@ -26,6 +26,7 @@ gstreamer-plugins-good
 gstreamer-plugins-espeak
 gstreamer-plugins-bad-free
 pulseaudio
+pulseaudio-utils
 
 # == Sugar Activities ==
 sugar-browse # Because they need this to install activities.
@@ -74,6 +75,8 @@ gnome-power-manager
 # Usefulness for DSL connections as per:
 # http://bugs.sugarlabs.org/ticket/1951
 rp-pppoe
+# Useful for SoaS duplication
+livecd-tools
 
 # Get the Sugar boot screen
 -plymouth-system-theme
