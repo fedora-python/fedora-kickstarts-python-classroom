@@ -29,7 +29,6 @@ repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?re
 @core
 @hardware-support
 @fonts
-@input-methods
 kernel
 memtest86+
 
