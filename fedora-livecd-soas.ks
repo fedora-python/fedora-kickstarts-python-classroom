@@ -75,6 +75,10 @@ gvfs
 # Needed for battery monitoring and power management
 gnome-power-manager
 
+# Usefulness for DSL connections as per:
+# http://bugs.sugarlabs.org/ticket/1951
+rp-pppoe
+
 # Get the Sugar boot screen
 -plymouth-system-theme
 -plymouth-theme-charge
