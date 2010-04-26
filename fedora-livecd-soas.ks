@@ -102,6 +102,12 @@ KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
 /usr/sbin/plymouth-set-default-theme sugar
 /sbin/dracut -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
 
+# Get proper release naming in the control panel
+cat >> /boot/olpc_build << EOF
+Sugar on a Stick 3 (Mirabelle)
+Fedora 13 (Goddard)
+EOF
+
 cat >> /etc/rc.d/init.d/livesys << EOF
 
 # Don't use the default system user (in SoaS liveuser) as nick name
