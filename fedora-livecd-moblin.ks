@@ -15,6 +15,13 @@ gypsy
 geoclue-gypsy
 firefox
 
+# telepathy IM protocols
+telepathy-salut
+telepathy-sofiasip
+telepathy-gabble
+telepathy-farsight
+telepathy-butterfly
+
 # Some useful gnome tools
 cheese
 nautilus
