@@ -111,10 +111,6 @@ memtest86+
 -un-core-dotum-fonts
 -vlgothic-fonts
 
-# Remove default input-methods we don't want
--ibus*
--m17n*
-
 # dictionaries are big
 -aspell-*
 -hunspell-*
@@ -130,6 +126,7 @@ gnome-packagekit
 powertop
 gnupg2
 yum-presto
+avahi
 
 # Remove sendmail, replace with smaller smtp equiv
 -sendmail
