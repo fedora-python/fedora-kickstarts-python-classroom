@@ -35,7 +35,6 @@ memtest86+
 # Remove default base packages we don't want
 -ccid
 -coolkey
--device-mapper-multipath
 -dos2unix
 -dump
 -finger
