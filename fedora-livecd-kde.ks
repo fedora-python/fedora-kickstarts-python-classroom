@@ -139,6 +139,12 @@ notifyLongTasks=2
 notifyUpdates=0
 KPACKAGEKIT_EOF
 
+# Disable kres-migrator
+cat > /home/liveuser/.kde/share/config/kres-migratorrc << KRES_EOF
+[Migration]
+Enabled=false
+KRES_EOF
+
 # Disable nepomuk
 cat > /home/liveuser/.kde/share/config/nepomukserverrc << NEPOMUK_EOF
 [Basic Settings]
