@@ -109,6 +109,7 @@ memtest86+
 -thai-scalable-waree-fonts
 -un-core-dotum-fonts
 -vlgothic-fonts
+-wqy-zenhei-fonts
 
 # dictionaries are big
 -aspell-*
