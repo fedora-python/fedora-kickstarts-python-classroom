@@ -55,6 +55,12 @@ system-config-printer-kde
 # use yum-presto by default
 yum-presto
 
+# fonts (we make no bones about admitting we're english-only)
+# CJK, use compact wqy-microhei-fonts , omit bigger stuff
+wqy-microhei-fonts
+-un-core-dotum-fonts
+-vlgothic-fonts
+-wqy-zenhei-fonts
 
 ### fixes and space issues
 
