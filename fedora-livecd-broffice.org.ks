@@ -26,7 +26,6 @@ broffice.org-*
 
 # Include some additional packages
 @java
-vino
 brasero
 bitstream-vera-*
 gimp
@@ -35,6 +34,7 @@ inkscape
 # We won't use these Asian fonts
 -lklug-fonts
 -sil-abyssinica-fonts
+-sil-padauk-fonts
 -jomolhari-fonts
 -lohit-*
 -baekmuk-*
