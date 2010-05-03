@@ -84,6 +84,7 @@ memtest86+
 # Remove default unwanted hardware firmware and support we don't want
 -b43-fwcutter
 -foomatic*
+-ghostscript*
 -ivtv-firmware
 -printer-filters
 -ql2100-firmware
@@ -109,6 +110,8 @@ memtest86+
 -thai-scalable-waree-fonts
 -un-core-dotum-fonts
 -vlgothic-fonts
+-paratype-pt-sans-fonts
+-sil-abyssinica-fonts
 -wqy-zenhei-fonts
 
 # dictionaries are big
