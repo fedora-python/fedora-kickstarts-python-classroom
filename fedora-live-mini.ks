@@ -383,6 +383,10 @@ rm -f /boot/initrd*
 # make sure there aren't core files lying around
 rm -f /core*
 
+# convince readahead not to collect
+rm -f /.readahead_collect
+touch /var/lib/readahead/early.sorted
+
 %end
 
 
