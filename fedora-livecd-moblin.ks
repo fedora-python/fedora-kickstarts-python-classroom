@@ -14,6 +14,7 @@ empathy
 gypsy
 geoclue-gypsy
 firefox
+dates
 
 # telepathy IM protocols
 telepathy-salut
