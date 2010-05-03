@@ -16,6 +16,7 @@ geoclue-gypsy
 firefox
 dates
 contacts
+tasks
 
 # telepathy IM protocols
 telepathy-salut
