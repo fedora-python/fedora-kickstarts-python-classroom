@@ -39,16 +39,22 @@ gdm
 cat >> /etc/rc.d/init.d/livesys << EOF
 # disable screensaver locking
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null
-# make sure the fonts are not too big
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t int /desktop/gnome/font_rendering/dpi 120 >/dev/null
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/gnome/lockdown/disable_lock_screen true >/dev/null
 
-# set up timed auto-login for after 60 seconds
+# Set up auto-login for for liveuser
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
-TimedLoginEnable=true
-TimedLogin=liveuser
-TimedLoginDelay=60
+AutomaticLoginEnable=true
+AutomaticLogin=liveuser
 FOE
+
+# Add favourite apps to MyZone
+cat > /home/liveuser/.local/share/favourite-apps << FOE
+file:///usr/share/applications/moblin-app-installer.desktop file:///usr/share/applications/anjal.desktop file:///usr/share/applications/mozilla-firefox.desktop file:///usr/share/applications/fedora-empathy.desktop file:///usr/share/applications/hornsey.desktop file:///usr/share/applications/fedora-dates.desktop file:///usr/share/applications/fedora-contacts.desktop file:///usr/share/applications/fedora-tasks.desktop
+FOE
+
+# Turn off PackageKit-command-not-found while uninstalled
+sed -i -e 's/^SoftwareSourceSearch=true/SoftwareSourceSearch=false/' /etc/PackageKit/CommandNotFound.conf
 
 EOF
 
