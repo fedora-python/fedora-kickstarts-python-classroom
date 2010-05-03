@@ -23,7 +23,6 @@ nautilus
 # graphics
 agave
 blender
-# capa
 cinepaint
 entangle
 fontforge
@@ -38,7 +37,7 @@ mypaint
 nautilus-image-converter
 optipng
 # pinta
-postr
+# postr
 rawtherapee
 scribus
 shotwell
@@ -70,10 +69,6 @@ totem
 gedit
 gnome-utils
 gtk-recordmydesktop
-
-# lets save space
--wqy-zenhei-fonts
--ibus-pinyin-open-phrase
 
 %end
 
