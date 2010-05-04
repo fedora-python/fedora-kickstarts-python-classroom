@@ -28,9 +28,14 @@ repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?re
 @base
 @core
 @hardware-support
-@fonts
 kernel
 memtest86+
+
+# implicitly include the fonts we want
+liberation*
+google-droid*
+dejavu-sans*
+dejavu-serif
 
 # Remove default base packages we don't want
 -ccid
@@ -95,24 +100,6 @@ memtest86+
 # These are listed somewhere other than hardware support!
 -irda-utils
 -fprintd*
-
-# Remove unwanted default fonts we don't want
--cjkuni-uming-fonts
--jomolhari-fonts
--kacst*
--khmeros-base-fonts
--lklug-fonts
--lohit*
--paktype*
--smc-meera-fonts
--stix-fonts
--thai-scalable-waree-fonts
--un-core-dotum-fonts
--vlgothic-fonts
--paratype-pt-sans-fonts
--sil-abyssinica-fonts
--sil-padauk-fonts
--wqy-zenhei-fonts
 
 # dictionaries are big
 -aspell-*

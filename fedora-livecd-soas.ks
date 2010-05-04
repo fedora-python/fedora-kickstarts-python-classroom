@@ -91,10 +91,7 @@ libertas-usb8388-firmware
 # == Fonts ==
 # More font support according to:
 # http://bugs.sugarlabs.org/ticket/1119
-google-droid-fonts-common
-google-droid-sans-fonts
-google-droid-sans-mono-fonts
-google-droid-serif-fonts
+# Moved to mini.ks
 
 %end
 
