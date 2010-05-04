@@ -17,7 +17,8 @@ firefox
 dates
 contacts
 tasks
-gnome-bluetooth-moblin
+# remove while it crashes X
+# gnome-bluetooth-moblin
 
 # telepathy IM protocols
 telepathy-salut
