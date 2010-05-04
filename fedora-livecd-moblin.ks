@@ -17,6 +17,7 @@ firefox
 dates
 contacts
 tasks
+gnome-bluetooth-moblin
 
 # telepathy IM protocols
 telepathy-salut

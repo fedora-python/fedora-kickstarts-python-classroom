@@ -97,7 +97,6 @@ memtest86+
 -fprintd*
 
 # Remove unwanted default fonts we don't want
--abyssinica-fonts
 -cjkuni-uming-fonts
 -jomolhari-fonts
 -kacst*
@@ -112,6 +111,7 @@ memtest86+
 -vlgothic-fonts
 -paratype-pt-sans-fonts
 -sil-abyssinica-fonts
+-sil-padauk-fonts
 -wqy-zenhei-fonts
 
 # dictionaries are big
