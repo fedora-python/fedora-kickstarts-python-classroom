@@ -50,6 +50,15 @@ AutomaticLoginEnable=true
 AutomaticLogin=liveuser
 FOE
 
+# Set the Moblin icon/cursor/gtk theme
+cat > /etc/gtk-2.0/gtkrc << FOE
+gtk-theme-name = "Moblin-Netbook"
+gtk-icon-theme-name = "moblin"
+gtk-cursor-theme-name = "moblin"
+gtk-button-images = 0
+gtk-menu-images = 0
+FOE
+
 # Add favourite apps to MyZone
 cat > /home/liveuser/.local/share/favourite-apps << FOE
 file:///usr/share/applications/moblin-app-installer.desktop file:///usr/share/applications/anjal.desktop file:///usr/share/applications/mozilla-firefox.desktop file:///usr/share/applications/fedora-empathy.desktop file:///usr/share/applications/hornsey.desktop file:///usr/share/applications/fedora-dates.desktop file:///usr/share/applications/fedora-contacts.desktop file:///usr/share/applications/fedora-tasks.desktop
