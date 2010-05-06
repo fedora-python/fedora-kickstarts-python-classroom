@@ -32,10 +32,15 @@ kernel
 memtest86+
 
 # implicitly include the fonts we want
-liberation*
-google-droid*
-dejavu-sans*
-dejavu-serif
+liberation-mono-fonts
+liberation-sans-fonts
+liberation-serif-fonts
+google-droid-sans-fonts
+google-droid-sans-mono-fonts
+google-droid-serif-fonts
+dejavu-sans-fonts
+dejavu-sans-mono-fonts
+dejavu-serif-fonts
 
 # Remove default base packages we don't want
 -ccid
