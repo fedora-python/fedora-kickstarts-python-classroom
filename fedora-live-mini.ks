@@ -53,7 +53,6 @@ dejavu-serif-fonts
 -irda-utils
 -jwhois
 -lftp
--mcelog
 -mlocate
 -nano
 -nc
