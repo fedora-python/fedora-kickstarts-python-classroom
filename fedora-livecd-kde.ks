@@ -19,6 +19,7 @@
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
 -amarok 			# amarok has duplicate functionality with juk (~13 megs)
+-desktop-backgrounds-basic
 -digikam			# digikam has duplicate functionality with gwenview (~11 megs)
 -kdeedu*			# kdeedu is too big for the live images
 -scribus			# scribus is too big for the live images
@@ -55,14 +56,14 @@ system-config-printer-kde
 # use yum-presto by default
 yum-presto
 
+### fixes and space issues
+
 # fonts (we make no bones about admitting we're english-only)
-# CJK, use compact wqy-microhei-fonts , omit bigger stuff
-wqy-microhei-fonts
+wqy-microhei-fonts	# a compact CJK font
 -un-core-dotum-fonts
 -vlgothic-fonts
 -wqy-zenhei-fonts
-
-### fixes and space issues
+#-kacst*fonts*		# arabic
 
 # make sure alsaunmute is there
 alsa-utils
