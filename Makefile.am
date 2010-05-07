@@ -10,7 +10,6 @@ fedora_DATA = \
     fedora-livecd-broffice.org.ks \
     fedora-livecd-design-suite.ks \
     fedora-live-desktop.ks \
-    fedora-live-desktop-minimization.ks \
     fedora-livecd-desktop.ks \
     fedora-livecd-kde.ks \
     fedora-livecd-lxde.ks \
