@@ -29,7 +29,7 @@ broffice.org-*
 brasero
 bitstream-vera-*
 gimp
-inkscape
+vino
 
 # We won't use these Asian fonts
 -lklug-fonts
