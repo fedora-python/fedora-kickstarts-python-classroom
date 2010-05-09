@@ -59,6 +59,8 @@ xcompmgr
 xdg-user-dirs-gtk
 # needed for xdg-open to support LXDE
 perl-File-MimeInfo
+# pam-fprint causes a segfault in LXDM when enabled
+-fprintd-pam
 
 # make sure kpackagekit doesn't end up the LXDE live images
 gnome-packagekit*
