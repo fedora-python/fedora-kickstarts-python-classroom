@@ -51,6 +51,9 @@ alsa-plugins-pulseaudio
 pavucontrol
 system-config-printer
 
+# pam-fprint causes a segfault in LXDM when enabled
+-fprintd-pam
+
 # save some space
 -autofs
 -nss_db
