@@ -36,7 +36,6 @@ sugar-terminal # Because this makes debugging easier.
 sugar-turtleart # Because this is a great demo example (extended demo).
 sugar-xoirc # Because this helps us help them.
 sugar-chat
-sugar-read
 sugar-record
 sugar-write
 etoys-sugar
@@ -59,6 +58,7 @@ etoys-sugar
 # so we're going to encourage people to test them.
 
 # sugar-pippy
+# sugar-read
 
 # == System ==
 # Automatically logs in the liveuser
@@ -75,7 +75,8 @@ gnome-power-manager
 # Usefulness for DSL connections as per:
 # http://bugs.sugarlabs.org/ticket/1951
 rp-pppoe
-# Useful for SoaS duplication
+# Useful for SoaS duplication from:
+# http://bugs.sugarlabs.org/ticket/74
 livecd-tools
 
 # Get the Sugar boot screen
@@ -129,7 +130,6 @@ org.laptop.RecordActivity
 org.laptop.Terminal
 org.laptop.TurtleArtActivity
 org.laptop.WebActivity
-org.laptop.sugar.ReadActivity
 org.sugarlabs.IRC
 org.vpri.EtoysActivity
 FOE
