@@ -60,8 +60,18 @@ gtk-menu-images = 0
 FOE
 
 # Add favourite apps to MyZone
-cat > /home/liveuser/.local/share/favourite-apps << FOE
-file:///usr/share/applications/moblin-app-installer.desktop file:///usr/share/applications/anjal.desktop file:///usr/share/applications/mozilla-firefox.desktop file:///usr/share/applications/fedora-empathy.desktop file:///usr/share/applications/hornsey.desktop file:///usr/share/applications/fedora-dates.desktop file:///usr/share/applications/fedora-contacts.desktop file:///usr/share/applications/fedora-tasks.desktop
+mkdir -p /etc/skel/.local/share/
+cat > /etc/skel/.local/share/favourite-apps << FOE
+file:///usr/share/applications/moblin-app-installer.desktop file:///usr/share/applications/anjal.desktop file:///usr/share/applications/mozilla-firefox.desktop file:///usr/share
+/applications/fedora-empathy.desktop file:///usr/share/applications/hornsey.desktop file:///usr/share/applications/fedora-dates.desktop file:///usr/share/applications/fedora-con
+tacts.desktop file:///usr/share/applications/fedora-tasks.desktop
+FOE
+
+cat >> /etc/init.d/livesys << FOE
+
+# Add the moblin favourite icons
+mkdir -p /home/liveuser/.local/share/
+cp /etc/skel/.local/share/favourite-apps /home/liveuser/.local/share/
 FOE
 
 # Turn off PackageKit-command-not-found while uninstalled
