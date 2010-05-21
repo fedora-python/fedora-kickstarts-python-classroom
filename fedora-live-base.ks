@@ -34,8 +34,9 @@ repo --name=released --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?re
 @core
 @fonts
 @input-methods
-# Exclude ibus-pinyin-open-phrase as it's large and somewhat optional
--ibus-pinyin-open-phrase
+# use a small pinyin db for live
+-ibus-pinyin-db-open-phrase
+ibus-pinyin-db-android
 @admin-tools
 @dial-up
 @hardware-support
