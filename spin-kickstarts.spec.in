@@ -26,6 +26,7 @@ http://spins.fedoraproject.org/ for a full list)
 Summary:    Kickstart files for Custom Spins (not official)
 Group:      Applications/System
 Requires:   spin-kickstarts = %{version}-%{release}
+Requires:   fedora-kickstarts = %{version}-%{release}
 
 %description -n custom-kickstarts
 Unofficial spins (remixes) brought to us by several contributors
