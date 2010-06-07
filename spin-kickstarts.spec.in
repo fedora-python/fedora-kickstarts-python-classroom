@@ -60,17 +60,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n fedora-kickstarts
 %defattr(-,root,root,-)
-%doc COPYING README AUTHORS NEWS
 %{_datadir}/%{name}/*.ks
 
 %files -n custom-kickstarts
 %defattr(-,root,root,-)
-%doc COPYING README AUTHORS NEWS
 %{_datadir}/%{name}/custom/
 
 %files -n l10n-kickstarts
 %defattr(-,root,root,-)
-%doc COPYING README AUTHORS NEWS
 %{_datadir}/%{name}/l10n/
 
 %changelog
