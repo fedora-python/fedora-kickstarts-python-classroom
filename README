@@ -37,5 +37,6 @@ git clean
 #   Make sure the branch is current (cvs up)
 #   Copy over the new spec file
 #   In each branch run make new-sources FILES=/pathto/spin-kickstarts-*.tar.gz
+#   Commit the changes with cvs commit
 #   Make a new tag with make tag
 #   Do the build with make build
