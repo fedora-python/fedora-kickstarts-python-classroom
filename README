@@ -28,7 +28,7 @@ make dist
 install -D spin-kickstarts-*.tar.gz ~/rpmbuild/SOURCES
 # Edit spin-kickstarts.spec if some changelog history needs to be included
 install -D spin-kickstarts.spec ~/rpmbuild/SPECS
-rpmbuild -ba ~/rpmbuild/SPECS
+rpmbuild -ba ~/rpmbuild/SPECS/spin-kickstarts.spec
 # If the sprm gets published then publish the tar.gz file on fedorahosted
 scp spin-kickstarts-*.tar.gz fedorahosted.org:spin-kickstarts
 # Clean up the generated files:
