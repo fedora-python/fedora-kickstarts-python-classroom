@@ -33,3 +33,9 @@ rpmbuild -ba ~/rpmbuild/SPECS/spin-kickstarts.spec
 scp spin-kickstarts-*.tar.gz fedorahosted.org:spin-kickstarts
 # Clean up the generated files:
 git clean
+# To update a branch of spin-kickstarts
+#   Make sure the branch is current (cvs up)
+#   Copy over the new spec file
+#   In each branch run make new-sources FILES=/pathto/spin-kickstarts-*.tar.gz
+#   Make a new tag with make tag
+#   Do the build with make build
