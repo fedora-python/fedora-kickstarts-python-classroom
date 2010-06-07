@@ -23,7 +23,7 @@ customdir = ${pkgdatadir}/custom/
 custom_DATA = \
     custom/README \
     custom/fedora-livedvd-haskell.ks \
-    custom/qa-test-day.ks \
+    custom/qa-test-day.ks
 
 l10ndir = ${pkgdatadir}/l10n/
 l10n_DATA = \
