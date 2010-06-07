@@ -64,11 +64,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n custom-kickstarts
 %defattr(-,root,root,-)
-%{_datadir}/%{name}/custom/
+%dir %{_datadir}/%{name}/custom/
+%{_datadir}/%{name}/custom/*.ks
+%doc %{_datadir}/%{name}/custom/README
 
 %files -n l10n-kickstarts
 %defattr(-,root,root,-)
-%{_datadir}/%{name}/l10n/
+%dir %{_datadir}/%{name}/l10n/
+%{_datadir}/%{name}/l10n/*.ks
+%doc %{_datadir}/%{name}/l10n/README
 
 %changelog
 * @DATESTAMP@ Jeroen van Meeuwen <kanarip a fedoraunity.org> @VERSION@-@RELEASE@
