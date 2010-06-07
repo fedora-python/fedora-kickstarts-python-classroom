@@ -23,6 +23,7 @@ git checkout BRANCHNAME
 aclocal
 automake
 autoconf
+./configure
 make dist
 install -D spin-kickstarts-*.tar.gz ~/rpmbuild/SOURCES
 # Edit spin-kickstarts.spec if some changelog history needs to be included
