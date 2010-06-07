@@ -1,4 +1,4 @@
-%include fedora-livecd-desktop.ks
+%include ../fedora-livecd-desktop.ks
 
 %packages
 gdb

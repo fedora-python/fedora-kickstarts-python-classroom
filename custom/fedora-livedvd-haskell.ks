@@ -1,4 +1,4 @@
-%include fedora-live-base.ks
+%include ../fedora-live-base.ks
 
 part / --size 6000
 

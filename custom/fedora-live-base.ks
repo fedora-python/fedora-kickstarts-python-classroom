@@ -1,1 +1,0 @@
-../fedora-live-base.ks
