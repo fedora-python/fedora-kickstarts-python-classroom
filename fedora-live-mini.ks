@@ -42,6 +42,13 @@ dejavu-sans-fonts
 dejavu-sans-mono-fonts
 dejavu-serif-fonts
 
+# We like noise
+alsa-plugins-pulseaudio
+alsa-utils
+pulseaudio
+pulseaudio-module-x11
+pulseaudio-utils
+
 # Remove default base packages we don't want
 -ccid
 -coolkey
