@@ -20,6 +20,8 @@
 
 # No printing
 -foomatic-db-ppds
+-foomatic
++foomatic-filters
 
 # Dictionaries are big
 -aspell-*
