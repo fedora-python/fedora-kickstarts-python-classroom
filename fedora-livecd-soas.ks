@@ -10,6 +10,8 @@
 
 %include fedora-live-mini.ks
 
+part / --size=2048
+
 %packages
 
 # == Core Sugar Platform ==
@@ -25,6 +27,7 @@ evince-djvu
 gstreamer-plugins-good
 gstreamer-plugins-espeak
 gstreamer-plugins-bad-free
+pygame
 pulseaudio
 pulseaudio-utils
 
