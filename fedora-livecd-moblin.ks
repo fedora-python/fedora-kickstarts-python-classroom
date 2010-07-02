@@ -14,9 +14,11 @@ empathy
 gypsy
 geoclue-gypsy
 firefox
-dates
-contacts
-tasks
+# Remove these while they're broken
+#dates
+#contacts
+#tasks
+
 # remove while it crashes X
 # gnome-bluetooth-moblin
 
