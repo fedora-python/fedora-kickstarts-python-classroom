@@ -69,6 +69,7 @@ totem
 gedit
 gnome-utils
 gtk-recordmydesktop
+NetworkManager-gnome
 
 %end
 
