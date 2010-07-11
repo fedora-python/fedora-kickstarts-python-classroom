@@ -5,8 +5,8 @@
 
 %packages
 
-# moblin desktop
-@moblin-desktop
+# MeeGo NetBook UX
+@meego-netbook
 mesa-dri-drivers-experimental
 notification-daemon
 gnome-terminal
