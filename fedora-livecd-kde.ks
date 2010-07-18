@@ -49,6 +49,9 @@ fpaste				# user request and pretty small
 -kdegames
 kdegames-minimal
 
+# provide nm-applet as fallback in cases where knm/nm-plasmoid fails
+NetworkManager-gnome
+
 # use system-config-printer-kde instead of system-config-printer
 -system-config-printer
 system-config-printer-kde
