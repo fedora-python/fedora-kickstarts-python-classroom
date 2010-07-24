@@ -69,5 +69,4 @@
 %end
 
 %post
-yum -C -y remove perl perl-libs perl-version perl-Crypt-PasswdMD5 perl-Pod-Escapes perl-Module-Pluggable perl-Digest-SHA1 perl-Pod-Simple syslinux
 %end
