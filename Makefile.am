@@ -13,7 +13,7 @@ fedora_DATA = \
     fedora-livecd-desktop.ks \
     fedora-livecd-kde.ks \
     fedora-livecd-lxde.ks \
-    fedora-livecd-moblin.ks \
+    fedora-livecd-meego.ks \
     fedora-livecd-soas.ks \
     fedora-livecd-xfce.ks \
     fedora-livedvd-electronic-lab.ks \

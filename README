@@ -20,6 +20,8 @@ cd spin-kickstarts
 git checkout BRANCHNAME
 # Edit configure.ac to update the version or release
 # Edit spin-kickstarts.spec.in to update the change log
+git commit -a
+git push
 aclocal
 automake
 autoconf

@@ -76,8 +76,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
-* @DATESTAMP@ Jeroen van Meeuwen <kanarip a fedoraunity.org> @VERSION@-@RELEASE@
-- New release
+* @DATESTAMP@ Bruno Wolff III <bruno@wolff.to> @VERSION@-@RELEASE@
+- Get a snapshot of kickstarts just prior to f14 branch
+
+* Mon Jun 07 2010 Bruno Wolff III <bruno@wolff.to> 0.14.0-1
+- New release for F14
+- Add some documentation about how rebuild package from git repo
+- Change custom kickstarts to use ../ to refer to included kickstarts
 
 * Sun Jul 05 2009 Jeroen van Meeuwen <kanarip a fedoraunity.org> 0.11.4-1
 - Fix repos in fedora-install-fedora.ks (#505262)
