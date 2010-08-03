@@ -89,7 +89,7 @@ wireshark-gnome
 @esperanto-support
 @estonian-support
 @ethiopic-support
-@faeroese-support
+@faroese-support
 @filipino-support
 @finnish-support
 @french-support
