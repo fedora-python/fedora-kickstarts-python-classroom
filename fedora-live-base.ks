@@ -361,7 +361,7 @@ echo "Packages within this LiveCD"
 rpm -qa
 
 # go ahead and pre-make the man -k cache (#455968)
-/usr/sbin/makewhatis -w
+/usr/bin/mandb
 
 # save a little bit of space at least...
 rm -f /boot/initramfs*

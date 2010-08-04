@@ -377,7 +377,7 @@ rm -f /var/lib/rpm/__db*
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora
 
 # go ahead and pre-make the man -k cache (#455968)
-/usr/sbin/makewhatis -w
+/usr/bin/mandb
 
 # save a little bit of space at least...
 rm -f /boot/initrd*
