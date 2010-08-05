@@ -108,8 +108,8 @@ KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
 
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
-Sugar on a Stick 3 (Mirabelle)
-Fedora 13 (Goddard)
+Sugar on a Stick 4 (Mango Lassi)
+Fedora 14 (Laughlin)
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
