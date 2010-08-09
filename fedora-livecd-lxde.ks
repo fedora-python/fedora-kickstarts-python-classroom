@@ -66,8 +66,8 @@ perl-File-MimeInfo
 gnome-packagekit*
 -kpackagekit
 
-# make sure polkit-qt doesn't end up the LXDE live images
-polkit-gnome
+# LXDE has lxpolkit. Make sure no other authentication agents end up in the spin.
+-polkit-gnome
 -polkit-kde
 
 # make sure xfce4-notifyd is not pulled in
