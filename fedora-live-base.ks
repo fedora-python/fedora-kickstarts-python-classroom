@@ -182,6 +182,13 @@ passwd -d liveuser > /dev/null
 
 # turn off firstboot for livecd boots
 chkconfig --level 345 firstboot off 2>/dev/null
+# We made firstboot a native systemd service, so it can no longer be turned
+# off with chkconfig. It should be possible to turn it off with systemctl, but
+# that doesn't work right either. For now, this is good enough: the firstboot
+# service will start up, but this tells it not to run firstboot. I suspect the
+# other services 'disabled' below are not actually getting disabled properly,
+# with systemd, but we can look into that later. - AdamW 2010/08 F14Alpha
+echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 
 # don't start yum-updatesd for livecd boots
 chkconfig --level 345 yum-updatesd off 2>/dev/null
