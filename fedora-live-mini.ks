@@ -342,7 +342,7 @@ for o in \`cat /proc/cmdline\` ; do
         ks="\${o#ks=}"
         ;;
     xdriver=*)
-        xdriver="--set-driver=\${o#xdriver=}"
+        xdriver="\${o#xdriver=}"
         ;;
     esac
 done
@@ -359,7 +359,12 @@ fi
 
 # configure X, allowing user to override xdriver
 if [ -n "\$xdriver" ]; then
-   exists system-config-display --noui --reconfig --set-depth=24 \$xdriver
+   cat > /etc/X11/xorg.conf.d/00-xdriver.conf <<FOE
+Section "Device"
+	Identifier	"Videocard0"
+	Driver	"\$xdriver"
+EndSection
+FOE
 fi
 
 EOF
