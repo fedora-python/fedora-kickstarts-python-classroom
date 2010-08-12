@@ -121,7 +121,7 @@ cat >> /etc/rc.d/init.d/livesys << EOF
 cat > /etc/xdg/lxsession/LXDE/autostart << FOE
 /usr/libexec/gam_server
 @lxpanel --profile LXDE
-@pcmanfm2 --desktop --profile lxde
+@pcmanfm --desktop --profile lxde
 @pulseaudio -D
 FOE
 
