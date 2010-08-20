@@ -18,6 +18,10 @@
 -java-1.6.0-openjdk-plugin
 -java-1.6.0-openjdk
 
+# Drop things that pull in perl
+-linux-atm
+-perf
+
 # No printing
 -foomatic-db-ppds
 -foomatic
@@ -33,7 +37,7 @@
 -evolution-help
 -gnome-games-help
 -desktop-backgrounds-basic
--constantine-backgrounds-extras
+-*backgrounds-extras
 
 # Legacy cmdline things we don't want
 -isdn4k-utils
