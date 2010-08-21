@@ -56,7 +56,6 @@
 -pinfo
 -rsh
 -telnet
--unix2dos
 -nfs-utils
 -ypbind
 -yp-tools
