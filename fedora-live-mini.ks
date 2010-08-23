@@ -83,7 +83,6 @@ pulseaudio-utils
 -talk
 -time
 -tree
--unix2dos
 -words
 -ypbind
 
