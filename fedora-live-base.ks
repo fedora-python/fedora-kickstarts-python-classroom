@@ -280,62 +280,6 @@ for o in \`cat /proc/cmdline\` ; do
     esac
 done
 
-# this is a bad hack to work around #460581 for the geode
-# purely to help move testing along for now
-if [ \`grep -c Geode /proc/cpuinfo\` -ne 0 ]; then
-  cat > /etc/X11/xorg.conf <<FOE
-Section "ServerLayout"
-	Identifier     "Default Layout"
-	Screen      0  "Screen0" 0 0
-	InputDevice    "Keyboard0" "CoreKeyboard"
-EndSection
-
-Section "InputDevice"
-# keyboard added by rhpxl
-	Identifier  "Keyboard0"
-	Driver      "kbd"
-	Option	    "XkbModel" "pc105"
-	Option	    "XkbLayout" "us"
-EndSection
-
-Section "Monitor"
-	Identifier  "Monitor0"
-	HorizSync   30-67
-	VertRefresh 48-52
-	DisplaySize 152 114
-	Mode "1200x900"
-		DotClock 57.275
-		HTimings 1200 1208 1216 1240
-		VTimings 900 905 908 912
-		Flags    "-HSync" "-VSync"
-	EndMode
-EndSection
-
-Section "Device"
-	Identifier  "Videocard0"
-	Driver      "amd"
-	VendorName  "Advanced Micro Devices, Inc."
-	BoardName   "AMD Geode GX/LX"
-
-	Option     "AccelMethod" "EXA"
-	Option     "NoCompression" "true"
-        Option     "MigrationHeuristic" "greedy"
-	Option     "PanelGeometry" "1200x900"
-EndSection
-
-Section "Screen"
-	Identifier "Screen0"
-	Device     "Videocard0"
-	Monitor    "Monitor0"
-	DefaultDepth 16
-	SubSection "Display"
-		Depth   16
-		Modes   "1200x900"
-	EndSubSection
-EndSection
-FOE
-fi
-
 # if liveinst or textinst is given, start anaconda
 if strstr "\`cat /proc/cmdline\`" liveinst ; then
    plymouth --quit
