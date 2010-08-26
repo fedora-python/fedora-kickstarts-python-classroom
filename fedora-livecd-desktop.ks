@@ -12,7 +12,6 @@
 
 # Temporary list of things removed from comps but not synced yet
 -specspo
--xsane
 
 # Drop the Java plugin
 -java-1.6.0-openjdk-plugin
@@ -40,7 +39,6 @@
 -*backgrounds-extras
 
 # Legacy cmdline things we don't want
--isdn4k-utils
 -nss_db
 -krb5-auth-dialog
 -krb5-workstation
