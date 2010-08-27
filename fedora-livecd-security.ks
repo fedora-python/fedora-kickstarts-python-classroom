@@ -3,13 +3,19 @@
 # Description:
 #   A fully functional live OS based on Fedora for use in security auditing, forensics research, and penetration testing.
 # Maintainers:
-#  Hiemanshu Sharma <hiemanshu [AT] fedoraproject <dot> org>
 #  Christoph Wickert <cwickert [AT] fedoraproject <dot> org>
+#  Hiemanshu Sharma <hiemanshu [AT] fedoraproject <dot> org>
 #  Joerg Simon  <jsimon [AT] fedoraproject <dot> org>
 # Acknowledgements:
 #   Fedora LiveCD Xfce Spin team - some work here was inherited, many thanks!
 #   Fedora LXDE Spin - Copied over stuff to make LXDE Default
 #   Luke Macken, Adam Miller for the original OpenBox Security ks and all the Security Applications! 
+# Important!!!!
+#   Beginning with Security Stuff - we use pattern to parse the kickstart-file for building the security menu - please use 
+#   # Category: Categoryname <- for new Categories
+#   # Command: Commandname <- for the given Command
+#   # rCommand: Commandname <- for a command as root
+#   # Entry: Menu-Entry <- for the MenuEntry Name (optional)
 
 
 %include fedora-live-base.ks
@@ -63,103 +69,210 @@ ssmtp
 
 ###################### Security Stuffs ############################
 security-menus
-
-# Reconnaissance
+##################################################################
+# Category: Reconnaissance
+# rCommand: dsniff -h
 dsniff
+# rCommand: hping -h
 hping3
 nc6
 nc
+# Command: ncrack -h
 ncrack
-nessus-client
-nessus-gui
-nessus-server
 ngrep
+# rCommand: nmap -h
 nmap
+# Command: zenmap-root
 nmap-frontend
+# Command: p0f -h
 p0f
+# rCommand: sing -h
 sing
+# Command: scanssh -h
 scanssh
+# rCommand: scapy -h
 scapy
+# Command: socat
+# Entry: Socket cat
 socat
+# rCommand: tcpdump -h
 tcpdump
+# Command: tiger -h
+# Entry: Tiger
 tiger
+# rCommand: unicornscan -h
 unicornscan
+# rCommand: wireshark
+# Entry: Wireshark
 wireshark-gnome
+# Command: xprobe2
 xprobe2
+# Command: nbtscan
 nbtscan
+# Command: tcpxtract
 tcpxtract
+# Command: firewalk
+# Entry: Firewalk
 firewalk
+# Command: hunt
+# Entry: Hunt
 hunt
-
-## Apparently missing from the repositories and fails the build
-#halberd
-
+# Command: dnsenum -h
+# Entry: DNS Enumeration
+dnsenum
+# rCommand: iftop
+iftop
+# Command: argus -h
 argus
-nbtscan
+# rCommand: ettercap -C
+# Entry: Ettercap
 ettercap
 ettercap-gtk
+# rCommand: packETH
+packETH
+# rCommand: iptraf
 iptraf
 pcapdiff
 picviz
+# rCommand: etherape
 etherape
+# Command: lynis
 lynis
+# rCommand: netsniff-ng
+netsniff-ng
+# Command: tcpjunk -h
+tcpjunk
+# rCommand: ssldump -h
+ssldump
+# rCommand: yersinia -G
+# Entry: Yersinia
+yersinia
+net-snmp
+# Command: openvas-client
+# Entry: OpenVAS Client
+openvas-client
+openvas-scanner
 
-# Forensics
-chkrootkit
-clamav
-dd_rescue
+#################################################################
+# Category: Forensics
+# Command: ddrescue -h
+ddrescue
+# Command: gparted
 gparted
 hexedit
 prelude-lml
+# rCommand: testdisk -h
 testdisk
+# Command: foremost -h
+# Entry: Foremost Filecarver
 foremost
-mhonarc
+# Command: sectool-gui
+# Entry: sectool
 sectool-gui
-rkhunter
 scanmem
 sleuthkit
+# Command: unhide
 unhide
+# Command: examiner
+# Entry: ELF Examiner
 examiner
 dc3dd
+afftools
+# Command: srm -h
+# Entry: Securely Remove Files
+srm
+# Command: firstaidkit -g gtk
+# Entry: First Aid Kit
+firstaidkit-plugin-all
+ntfs-3g
+ntfsprogs
 
-# Wireless
+#####################################################################
+# Category: WebApplicationTesting
+# Command: httping -h
+httping
+# Command: nikto -help
+# Entry: Nikto Websecurity Scanner
+nikto
+# Command: ratproxy -h
+ratproxy
+# Command: lbd
+# Entry: Load Balancing Detector
+lbd
+# Command: skipfish
+skipfish
+
+#######################################################################
+# Category: Wireless
+# Command: aircrack-ng
 aircrack-ng
+# Command: airsnort
 airsnort
+# rCommand: kismet
 kismet
+# Command: weplab
+# Entry: weplab - Wep Key Cracker
+weplab
+# Command: wavemon
+wavemon
 
-# Code analysis
+#######################################################################
+# Category: CodeAnalysis
+# Command: splint
 splint
+# Command: pscan
 pscan
+# Command: flawfinder
+# Entry: Flawfinder
 flawfinder
+# Command: rats
+# Entry: Rough Auditing Tool for Security
 rats
 
-# Intrusion detection
+######################################################################
+# Category: IntrusionDetection
+# rCommand: chkrootkit
+chkrootkit
+# Command: snort -h
+# Entry: Snort
 snort
+# Command: aide -h
 aide
+# Command: tripwire --help all
 tripwire
 labrea
+# Command: honeyd -h
+# Entry: Honeypot Daemon
 honeyd
+# Command: pads -h
+# Entry: Passive Asset Detection System
 pads
 prewikka
 prelude-notify
 prelude-manager
 nebula
+# Command: rkhunter
+# Entry: RootKitHunter
+rkhunter
 
-# Password cracking
+########################################################################
+# Category: PasswordTools
+# Command: john 
 john
+# Command: ophcrack 
+# Entry: Objectif Securite ophcrack
 ophcrack
+# Command: medusa -d
+# Entry: Medusa Brute Force
+medusa
 
-# Anonymity
-tor
-
-# under review (#461385)
-#hydra
 
 # Useful tools
 lsof
 ntop
 scrot
 mc
+epdfview
 
 # Other necessary components
 screen
