@@ -58,6 +58,7 @@ scorched3d
 supertux
 supertuxkart
 torcs
+tremulous
 ultimatestunts
 warzone2100
 wesnoth
