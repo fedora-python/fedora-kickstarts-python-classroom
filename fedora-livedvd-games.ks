@@ -160,7 +160,7 @@ vodovod
 
 # card games
 
-poker2d
+#poker2d - dropped from F14 for being orphaned
 PySolFC
 
 # educational/simulation
