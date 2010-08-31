@@ -91,11 +91,9 @@ pulseaudio-utils
 -system-config-users
 
 # Remove default unwanted hardware firmware and support we don't want
--b43-fwcutter
 -foomatic*
 -ghostscript*
 -ivtv-firmware
--printer-filters
 -ql2100-firmware
 -ql2200-firmware
 -ql23xx-firmware
@@ -122,9 +120,10 @@ gnupg2
 yum-presto
 avahi
 
-# Remove sendmail, replace with smaller smtp equiv
+# Remove sendmail: this needs to be explicit
 -sendmail
-ssmtp
+# But hopefully there shouldn't be deps so this shouldn't need to be there
+#ssmtp
 
 %end
 
@@ -253,6 +252,9 @@ passwd -d liveuser > /dev/null
 
 # turn off firstboot for livecd boots
 chkconfig --level 345 firstboot off 2>/dev/null
+
+# The above doesn't works so we need to do this... GRR systemctl
+echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 
 # don't start yum-updatesd for livecd boots
 chkconfig --level 345 yum-updatesd off 2>/dev/null
