@@ -77,6 +77,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * @DATESTAMP@ Bruno Wolff III <bruno@wolff.to> @VERSION@-@RELEASE@
+- Some significant changes since the alpha, so we want a new package for beta.
+
+* Tue Jul 27 2010 Bruno Wolff III <bruno@wolff.to> 0.14.1-1
 - Get a snapshot of kickstarts just prior to f14 branch
 
 * Mon Jun 07 2010 Bruno Wolff III <bruno@wolff.to> 0.14.0-1
