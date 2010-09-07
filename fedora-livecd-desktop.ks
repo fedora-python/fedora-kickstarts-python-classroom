@@ -58,6 +58,7 @@
 -ypbind
 -yp-tools
 -rpcbind
+-acpid
 
 # Drop some system-config things
 -system-config-boot
