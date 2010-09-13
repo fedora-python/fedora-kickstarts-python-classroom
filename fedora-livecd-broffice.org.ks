@@ -14,7 +14,7 @@ keyboard br-abnt2
 timezone America/Sao_Paulo
 
 
-%packages --instLangs en_US:es:pt_BR
+%packages --instLangs en_US:pt_BR
 
 # L10n packages
 @brazilian-support
@@ -25,11 +25,12 @@ hunspell-pt
 broffice.org-*
 
 # Include some additional packages
-@java
-brasero
-bitstream-vera-*
-gimp
+java-1.6.0-openjdk
+java-1.6.0-openjdk-plugin
 vino
+
+# Remove gnome-games
+-gnome-games-*
 
 # We won't use these Asian fonts
 -lklug-fonts
