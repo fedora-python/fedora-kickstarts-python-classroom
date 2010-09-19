@@ -80,7 +80,6 @@ alsa-utils
 # save some space (from @base)
 -make
 -nss_db
--autofs
 
 %end
 
