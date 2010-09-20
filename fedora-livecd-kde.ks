@@ -64,6 +64,7 @@ wqy-microhei-fonts	# a compact CJK font
 -un-core-dotum-fonts
 -vlgothic-fonts
 -wqy-zenhei-fonts
+-paratype-pt-sans-fonts
 #-kacst*fonts*		# arabic
 
 # make sure alsaunmute is there
@@ -73,9 +74,11 @@ alsa-utils
 -gnome-packagekit*
 
 # remove input methods to free space
+-@input-methods
 -scim*
 -m17n*
 -ibus*
+-iok
 
 # save some space (from @base)
 -make
