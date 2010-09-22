@@ -136,6 +136,9 @@ org.laptop.RecordActivity
 org.laptop.Terminal
 org.laptop.TurtleArtActivity
 org.laptop.WebActivity
+org.laptop.Pippy
+org.laptop.Calculator
+org.laptop.Speak
 org.sugarlabs.IRC
 org.vpri.EtoysActivity
 FOE
