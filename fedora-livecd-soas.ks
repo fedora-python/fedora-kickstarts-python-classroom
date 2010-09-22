@@ -42,6 +42,9 @@ sugar-chat
 sugar-record
 sugar-write
 etoys-sugar
+sugar-pippy
+sugar-calculator
+sugar-speak
 
 # Write breaks unless we do this (we don't need it anyway)
 -@input-methods
