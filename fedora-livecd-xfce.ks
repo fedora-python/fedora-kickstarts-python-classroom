@@ -16,13 +16,11 @@
 
 # Office
 abiword
-gnumeric
 
 # Graphics
 evince
 -evince-dvi
 -evince-djvu
-gimp
 
 # development
 geany
@@ -88,6 +86,7 @@ wget
 irssi
 mutt
 yum-utils
+fpaste
 
 # xfce packages
 @xfce-desktop
@@ -143,7 +142,7 @@ xfce4-xkb-plugin
 xfwm4-themes
 
 # dictionaries are big
-#-aspell-*
+-aspell-*
 #-man-pages-*
 
 # more fun with space saving
