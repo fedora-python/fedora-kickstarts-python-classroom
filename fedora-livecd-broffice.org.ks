@@ -28,9 +28,7 @@ broffice.org-*
 java-1.6.0-openjdk
 java-1.6.0-openjdk-plugin
 vino
-
-# Remove gnome-games
--gnome-games-*
+gimp
 
 # We won't use these Asian fonts
 -lklug-fonts
