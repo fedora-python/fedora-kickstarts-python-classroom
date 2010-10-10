@@ -1,4 +1,4 @@
-# Description : Live DVD image for Fedora Electronic Lab
+# Description : Live DVD image for Fedora/Free Electronic Lab
 #
 # Maintainer(s):
 # - Chitlesh Goorah <chitlesh a fedoraproject.org>
@@ -12,6 +12,9 @@ part / --size=8192
 %packages
 
 @electronic-lab
+
+# Support for the Milkymist hardware community
+@milkymist
 
 
 # Office
