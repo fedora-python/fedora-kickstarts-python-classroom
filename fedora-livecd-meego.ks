@@ -14,10 +14,9 @@ empathy
 gypsy
 geoclue-gypsy
 firefox
-# Remove these while they're broken
-#dates
-#contacts
-#tasks
+dates
+contacts
+tasks
 
 # remove while it crashes X
 # gnome-bluetooth-moblin
@@ -35,7 +34,6 @@ nautilus
 
 # display managers
 gdm
-#uxlaunch
 
 %end
 
