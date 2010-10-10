@@ -44,7 +44,6 @@ sugar-write
 etoys-sugar
 sugar-pippy
 sugar-calculator
-sugar-speak
 
 # Write breaks unless we do this (we don't need it anyway)
 -@input-methods
@@ -138,7 +137,6 @@ org.laptop.TurtleArtActivity
 org.laptop.WebActivity
 org.laptop.Pippy
 org.laptop.Calculator
-org.laptop.Speak
 org.sugarlabs.IRC
 org.vpri.EtoysActivity
 FOE
