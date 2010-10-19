@@ -74,6 +74,10 @@ gnome-packagekit*
 notification-daemon
 -xfce4-notifyd
 
+# make sure xfwm4 is not pulled in for firstboot
+# https://bugzilla.redhat.com/show_bug.cgi?id=643416
+metacity
+
 # use yumex instead of gnome-packagekit
 #-gnome-packagekit
 #yumex
