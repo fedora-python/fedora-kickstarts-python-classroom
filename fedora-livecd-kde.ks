@@ -85,6 +85,10 @@ alsa-utils
 -make
 -nss_db
 
+## avoid serious bugs by omitting broken stuff
+# fprintd-pam related crashes in kdm (http://bugzilla.redhat.com/605156) 
+-fprintd-pam
+
 %end
 
 %post
