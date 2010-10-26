@@ -61,6 +61,8 @@ xdg-user-dirs-gtk
 perl-File-MimeInfo
 # pam-fprint causes a segfault in LXDM when enabled
 -fprintd-pam
+# needed for automatic unlocking of keyring (#643435)
+gnome-keyring-pam
 
 # make sure kpackagekit doesn't end up the LXDE live images
 gnome-packagekit*
