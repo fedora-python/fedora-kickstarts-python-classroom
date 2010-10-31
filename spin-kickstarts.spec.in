@@ -76,8 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
-* @DATESTAMP@ Bruno Wolff III <bruno@wolff.to> @VERSION@-@RELEASE@
-- Some significant changes since the alpha, so we want a new package for beta.
+* Sun Oct 31 2010 Bruno Wolff III <bruno@wolff.to> 0.15.0-1
+- Now that F14 is gold, we want a separate rawhide package.
+- Includes most stuff from F14, minus some last minute space cutting changes.
 
 * Tue Jul 27 2010 Bruno Wolff III <bruno@wolff.to> 0.14.1-1
 - Get a snapshot of kickstarts just prior to f14 branch
