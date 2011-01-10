@@ -44,7 +44,6 @@ pulseaudio-module-x11
 pulseaudio-utils
 
 # Remove default base packages we don't want
--ccid
 -coolkey
 -dos2unix
 -dump
