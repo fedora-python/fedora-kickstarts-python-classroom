@@ -7,7 +7,7 @@
 # - Rahul Sundaram    <sundaram@fedoraproject.org>
 # - Christoph Wickert <cwickert@fedoraproject.org>
 # - Kevin Fenzi       <kevin@tummy.com>
-# - Adam Miller       <maxamillion@gmail.com>
+# - Adam Miller       <maxamillion@fedoraproject.org>
 
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
