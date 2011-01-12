@@ -8,10 +8,13 @@
 
 %packages
 # First, no office
--openoffice.org-*
+-libreoffice-*
 
 # Temporary list of things removed from comps but not synced yet
 -specspo
+
+# Temporary exclusions, dependency issues
+-rhythmbox
 
 # Drop the Java plugin
 -java-1.6.0-openjdk-plugin
