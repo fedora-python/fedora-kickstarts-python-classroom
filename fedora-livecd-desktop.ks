@@ -9,6 +9,7 @@
 %packages
 # First, no office
 -libreoffice-*
+-planner
 
 # Temporary list of things removed from comps but not synced yet
 -specspo
