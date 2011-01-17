@@ -60,6 +60,7 @@
 -yp-tools
 -rpcbind
 -acpid
+-ntsysv
 
 # Drop some system-config things
 -system-config-boot
