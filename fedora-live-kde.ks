@@ -1,4 +1,4 @@
-# fedora-livecd-kde.ks
+# fedora-live-kde.ks
 #
 # Description:
 # - Fedora Livecd Spin with the K Desktop Environment (KDE)
@@ -12,22 +12,6 @@
 
 
 %packages
-# unwanted packages from @kde-desktop
-# don't include these for now to fit on a cd
--amarok 			# amarok has duplicate functionality with juk (~13 megs)
--desktop-backgrounds-basic
--digikam			# digikam has duplicate functionality with gwenview (~11 megs)
--kdeaccessibility*
--kdeedu*			# kdeedu is too big for the live images
--scribus			# scribus is too big for the live images
--ktorrent			# kget has also basic torrent features (~3 megs)
--kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
--kdeartwork-screensavers	# screensavers are not needed on live images
--kipi-plugins			# ~8 megs
--konq-plugins			# ~2 megs
--kdeplasma-addons		# ~16 megs
--k3b*				# ~15 megs
-
 # Additional packages that are not default in kde-desktop but useful
 -koffice-suite			# don't include whole koffice-suite, just parts of it
 koffice-kword
