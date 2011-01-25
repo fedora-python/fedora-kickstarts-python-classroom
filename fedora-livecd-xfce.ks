@@ -49,6 +49,8 @@ claws-mail-plugins-vcalendar
 liferea
 pidgin
 remmina
+remmina-plugins-rdp
+remmina-plugins-vnc
 transmission
 
 # multimedia
@@ -118,8 +120,6 @@ xfce4-notes-plugin
 xfce4-places-plugin
 xfce4-power-manager
 xfce4-quicklauncher-plugin
-# disabled for now, doesn't work with 4.8 - kevin 2011-01-15
-#xfce4-remmina-plugin
 xfce4-screenshooter-plugin
 xfce4-sensors-plugin
 xfce4-smartbookmark-plugin
