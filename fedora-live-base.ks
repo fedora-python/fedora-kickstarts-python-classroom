@@ -309,6 +309,8 @@ rm -f /var/lib/rpm/__db*
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora
 echo "Packages within this LiveCD"
 rpm -qa
+# Note that running rpm recreates the rpm db files which aren't needed or wanted
+rm -f /var/lib/rpm/__db*
 
 # go ahead and pre-make the man -k cache (#455968)
 /usr/bin/mandb

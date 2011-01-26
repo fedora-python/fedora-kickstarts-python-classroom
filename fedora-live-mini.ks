@@ -374,6 +374,8 @@ chmod 755 /etc/rc.d/init.d/livesys-late
 # work around for poor key import UI in PackageKit
 rm -f /var/lib/rpm/__db*
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora
+# Note that running rpm recreates the rpm db files which aren't needed or wanted
+rm -f /var/lib/rpm/__db*
 
 # go ahead and pre-make the man -k cache (#455968)
 /usr/bin/mandb

@@ -107,6 +107,8 @@ libertas-usb8388-firmware
 KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
 /usr/sbin/plymouth-set-default-theme sugar
 /sbin/dracut -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
+# Note that running rpm recreates the rpm db files which aren't needed or wanted
+rm -f /var/lib/rpm/__db*
 
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
