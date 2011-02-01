@@ -24,9 +24,9 @@
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 -kdeartwork-screensavers	# screensavers are not needed on live images
 -kipi-plugins			# ~8 megs
--konq-plugins			# ~2 megs
--kdeplasma-addons		# ~16 megs
--k3b*				# ~15 megs
+#-konq-plugins			# ~2 megs
+#-kdeplasma-addons		# ~16 megs
+#-k3b*				# ~15 megs
 
 # Additional packages that are not default in kde-desktop but useful
 -koffice-suite			# don't include whole koffice-suite, just parts of it
