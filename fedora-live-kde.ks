@@ -1,7 +1,8 @@
 # fedora-live-kde.ks
 #
 # Description:
-# - Fedora Livecd Spin with the K Desktop Environment (KDE)
+# - Fedora Live Spin with the K Desktop Environment (KDE), 1 GiB version
+#   see fedora-livecd-kde.ks for the default CD-sized version
 #
 # Maintainer(s):
 # - Sebastian Vahl <fedora@deadbabylon.de>
@@ -12,6 +13,10 @@
 
 
 %packages
+# ship KDE wallpapers instead of GNOME ones
+-desktop-backgrounds-basic
+kdebase-workspace-wallpapers
+
 # Additional packages that are not default in kde-desktop but useful
 -koffice-suite			# don't include whole koffice-suite, just parts of it
 koffice-kword
