@@ -1,7 +1,7 @@
 # Desktop with customizationst to fit in a CD sized image (package removals, etc.)
 # Maintained by the Fedora Desktop SIG:
 # http://fedoraproject.org/wiki/SIGs/Desktop
-# mailto:fedora-desktop-list@fedoraproject.org
+# mailto:desktop@lists.fedoraproject.org
 
 %include fedora-live-desktop.ks
 %include fedora-live-minimization.ks

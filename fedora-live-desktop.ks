@@ -1,6 +1,6 @@
 # Maintained by the Fedora Desktop SIG:
 # http://fedoraproject.org/wiki/SIGs/Desktop
-# mailto:fedora-desktop-list@fedoraproject.org
+# mailto:desktop@lists.fedoraproject.org
 
 %include fedora-live-base.ks
 
