@@ -194,7 +194,9 @@ FOE
 
 # disable screensaver locking
 cat >> /home/liveuser/.xscreensaver << FOE
-lock:	False
+mode:           off
+lock:           False
+dpmsEnabled:    False
 FOE
 # set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
