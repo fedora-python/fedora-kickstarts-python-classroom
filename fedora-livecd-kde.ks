@@ -23,7 +23,7 @@
 -ktorrent			# kget has also basic torrent features (~3 megs)
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 -kdeartwork-screensavers	# screensavers are not needed on live images
--kipi-plugins			# ~8 megs
+#-kipi-plugins			# ~8 megs
 #-konq-plugins			# ~2 megs
 #-kdeplasma-addons		# ~16 megs
 
