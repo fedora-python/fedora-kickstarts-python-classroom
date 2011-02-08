@@ -24,6 +24,8 @@ kernel*
 dracut-*
 # Desktop Packages
 @kde-desktop
+@xfce-desktop
+@lxde-desktop
 echo-icon-theme
 tracker
 swfdec
