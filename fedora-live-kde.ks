@@ -29,7 +29,6 @@ koffice-filters
 fuse
 liveusb-creator
 #pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
-fpaste				# user request and pretty small
 
 # only include kdegames-minimal
 -kdegames

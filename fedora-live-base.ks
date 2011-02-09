@@ -49,6 +49,9 @@ memtest86+
 anaconda
 isomd5sum
 
+# fpaste is very useful for debugging and very small
+fpaste
+
 %end
 
 %post

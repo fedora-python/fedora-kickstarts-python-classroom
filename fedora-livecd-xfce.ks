@@ -88,7 +88,6 @@ wget
 irssi
 mutt
 yum-utils
-fpaste
 
 # xfce packages
 @xfce-desktop
