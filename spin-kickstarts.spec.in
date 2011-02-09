@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
+* Mon Feb 08 2011 Bruno Wolff III <bruno@wolff.to> 0.15.1-1
+- Pre-alpha release rebuild
+
 * Sun Oct 31 2010 Bruno Wolff III <bruno@wolff.to> 0.15.0-1
 - Now that F14 is gold, we want a separate rawhide package.
 - Includes most stuff from F14, minus some last minute space cutting changes.
