@@ -79,6 +79,10 @@ xscreensaver
 seahorse
 setroubleshoot
 xdg-user-dirs-gtk
+# no longer required, but default theme in Xfce - cwickert 2011-02-11
+gtk-theme-engine-clearlooks
+# no longer required, but needed for compatibility - cwickert 2011-02-11
+fedora-icon-theme
 
 # Command line
 ntfs-3g
