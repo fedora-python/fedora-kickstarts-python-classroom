@@ -76,7 +76,7 @@ ballz
 blobwars
 bombardier
 cdogs-sdl
-chess
+#chess (Currently broken)
 clanbomber
 colossus
 foobillard
