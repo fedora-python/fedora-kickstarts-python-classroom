@@ -60,6 +60,7 @@ supertuxkart
 torcs
 tremulous
 ultimatestunts
+vdrift
 warzone2100
 wesnoth
 widelands
