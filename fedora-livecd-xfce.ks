@@ -14,6 +14,11 @@
 
 %packages
 
+# login
+-gdm
+-pulseaudio-gdm-hooks
+lxdm
+
 # Office
 abiword
 
@@ -141,7 +146,8 @@ xfce4-weather-plugin
 xfce4-websearch-plugin
 # this one a compatibility layer for GNOME applets and depends on it
 #xfce4-xfapplet-plugin
-xfce4-xfswitch-plugin
+# requires gdm which we're not using in this build
+#xfce4-xfswitch-plugin
 xfce4-xkb-plugin
 # system-config-printer does printer management better
 #xfprint
@@ -179,7 +185,11 @@ xfwm4-themes
 
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startxfce4
+DISPLAYMANAGER=/usr/sbin/lxdm
 EOF
+
+# set up auto-login for liveuser
+sed -i 's|# autologin=dgod|autologin=liveuser|g' /etc/lxdm/lxdm.conf
 
 mkdir -p /root/.config/xfce4
 
