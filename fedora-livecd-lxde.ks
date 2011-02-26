@@ -33,7 +33,8 @@ epdfview
 mtpaint
 
 # audio & video
-gmixer
+#gmixer
+pavucontrol
 lxmusic
 asunder
 gxine
