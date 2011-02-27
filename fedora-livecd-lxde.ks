@@ -111,6 +111,7 @@ ssmtp
 -system-config-rootpassword
 #-system-config-services
 -policycoreutils-gui
+-gnome-disk-utility
 
 %end
 
