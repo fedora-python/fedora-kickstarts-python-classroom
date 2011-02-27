@@ -79,6 +79,7 @@ catfish
 desktop-backgrounds-compat
 gcalctool
 gparted
+-gnome-disk-utility
 gnome-bluetooth
 xscreensaver
 seahorse
