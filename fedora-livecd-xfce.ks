@@ -139,8 +139,6 @@ xfce4-taskmanager
 xfce4-time-out-plugin
 xfce4-timer-plugin
 xfce4-verve-plugin
-# disabled for now, doesn't work with 4.8 - kevin 2011-01-14
-#xfce4-volstatus-icon
 # we already have nm-applet
 #xfce4-wavelan-plugin
 xfce4-weather-plugin
