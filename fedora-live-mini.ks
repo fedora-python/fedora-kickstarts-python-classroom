@@ -281,8 +281,6 @@ gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults
 # disk intensive that are painful on a live image
 chkconfig --level 345 crond off 2>/dev/null
 chkconfig --level 345 atd off 2>/dev/null
-chkconfig --level 345 readahead_early off 2>/dev/null
-chkconfig --level 345 readahead_later off 2>/dev/null
 
 # Stopgap fix for RH #217966; should be fixed in HAL instead
 touch /media/.hal-mtab
@@ -386,8 +384,7 @@ rm -f /boot/initrd*
 rm -f /core*
 
 # convince readahead not to collect
-rm -f /.readahead_collect
-touch /var/lib/readahead/early.sorted
+# FIXME: for systemd
 
 %end
 
