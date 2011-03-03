@@ -14,7 +14,6 @@
 %packages
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
--amarok 			# amarok has duplicate functionality with juk (~13 megs)
 -desktop-backgrounds-basic
 -digikam			# digikam has duplicate functionality with gwenview (~11 megs)
 -kdeaccessibility*
@@ -23,6 +22,7 @@
 -ktorrent			# kget has also basic torrent features (~3 megs)
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 -kdeartwork-screensavers	# screensavers are not needed on live images
+#-amarok 			# amarok has duplicate functionality with juk (~13 megs)
 #-kipi-plugins			# ~8 megs
 #-konq-plugins			# ~2 megs
 #-kdeplasma-addons		# ~16 megs
