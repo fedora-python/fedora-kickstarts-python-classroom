@@ -19,7 +19,7 @@ lxdm
 ### internet
 firefox
 java-1.6.0-openjdk-plugin
-lostirc
+pidgin
 sylpheed
 transmission
 
