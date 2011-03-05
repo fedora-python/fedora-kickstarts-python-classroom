@@ -69,8 +69,9 @@ gnome-keyring-pam
 gtk-theme-engine-clearlooks
 fedora-icon-theme
 
-# make sure kpackagekit doesn't end up the LXDE live images
-gnome-packagekit*
+# use yumex instead of gnome-packagekit
+yumex
+-gnome-packagekit
 -kpackagekit
 
 # LXDE has lxpolkit. Make sure no other authentication agents end up in the spin.
@@ -84,10 +85,6 @@ notification-daemon
 # make sure xfwm4 is not pulled in for firstboot
 # https://bugzilla.redhat.com/show_bug.cgi?id=643416
 metacity
-
-# use yumex instead of gnome-packagekit
-#-gnome-packagekit
-#yumex
 
 # Command line
 powertop
