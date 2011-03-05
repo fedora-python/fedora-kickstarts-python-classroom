@@ -10,64 +10,65 @@
 %include fedora-live-minimization.ks
 
 %packages
-# LXDE desktop
+### LXDE desktop
 @lxde-desktop
 lxlauncher
 obconf
 lxdm
 
-# internet
+### internet
 firefox
-sylpheed
+java-1.6.0-openjdk-plugin
 lostirc
+sylpheed
 transmission
 
-# office
+### office
 abiword
 gnumeric
 osmo
-#glista
 
-# graphics
+### graphics
 epdfview
 mtpaint
 
-# audio & video
-#gmixer
-pavucontrol
-lxmusic
+### audio & video
+alsa-plugins-pulseaudio
 asunder
+lxmusic
 gxine
 gxine-mozplugin
-
+pavucontrol
 # I'm looking for something smaller than
 gnomebaker
 
-# utils
+### utils
 galculator
 parcellite
 xpad
 
-# system
+### system
 gigolo
 
-# more Desktop stuff
-hal-storage-addon
-alsa-plugins-pulseaudio
-NetworkManager-gnome
-java-1.6.0-openjdk-plugin
-xcompmgr
-xdg-user-dirs-gtk
-# needed for xdg-open to support LXDE
-perl-File-MimeInfo
-# pam-fprint causes a segfault in LXDM when enabled
--fprintd-pam
-# needed for automatic unlocking of keyring (#643435)
-gnome-keyring-pam
-
+### more desktop stuff
 # default artwork, subject to change - cwickert 2011-03-05
 gtk-theme-engine-clearlooks
 fedora-icon-theme
+
+# pam-fprint causes a segfault in LXDM when enabled
+-fprintd-pam
+
+# needed for automatic unlocking of keyring (#643435)
+gnome-keyring-pam
+
+hal-storage-addon
+NetworkManager-gnome
+
+# needed for xdg-open to support LXDE
+perl-File-MimeInfo
+
+xcompmgr
+xdg-user-dirs-gtk
 
 # use yumex instead of gnome-packagekit
 yumex
