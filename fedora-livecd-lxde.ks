@@ -65,6 +65,10 @@ perl-File-MimeInfo
 # needed for automatic unlocking of keyring (#643435)
 gnome-keyring-pam
 
+# default artwork, subject to change - cwickert 2011-03-05
+gtk-theme-engine-clearlooks
+fedora-icon-theme
+
 # make sure kpackagekit doesn't end up the LXDE live images
 gnome-packagekit*
 -kpackagekit
