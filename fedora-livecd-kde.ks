@@ -15,13 +15,13 @@
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
 -desktop-backgrounds-basic
--digikam			# digikam has duplicate functionality with gwenview (~11 megs)
 -kdeaccessibility*
 -kdeedu*			# kdeedu is too big for the live images
 -scribus			# scribus is too big for the live images
 -ktorrent			# kget has also basic torrent features (~3 megs)
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 -kdeartwork-screensavers	# screensavers are not needed on live images
+#-digikam			# digikam has duplicate functionality with gwenview (~11 megs)
 #-amarok 			# amarok has duplicate functionality with juk (~23 megs)
 #-kipi-plugins			# ~8 megs
 #-konq-plugins			# ~2 megs
