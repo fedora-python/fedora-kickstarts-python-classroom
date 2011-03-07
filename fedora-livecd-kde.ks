@@ -18,8 +18,8 @@
 -kdeaccessibility*
 -kdeedu*			# kdeedu is too big for the live images
 -scribus			# scribus is too big for the live images
--ktorrent			# kget has also basic torrent features (~3 megs)
 -kdeartwork-screensavers	# screensavers are not needed on live images
+#-ktorrent			# kget has also basic torrent features (~3 megs)
 #-digikam			# digikam has duplicate functionality with gwenview (~28 megs)
 #-amarok 			# amarok has duplicate functionality with juk (~23 megs)
 #-kipi-plugins			# ~8 megs
