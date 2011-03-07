@@ -54,11 +54,12 @@ yum-presto
 ### fixes and space issues
 
 # fonts (we make no bones about admitting we're english-only)
-wqy-microhei-fonts	# a compact CJK font
--un-core-dotum-fonts
--vlgothic-fonts
--wqy-zenhei-fonts
--paratype-pt-sans-fonts
+wqy-microhei-fonts	# a compact CJK font, to replace:
+-un-core-dotum-fonts	# Korean
+-vlgothic-fonts		# Japanese
+-wqy-zenhei-fonts	# Chinese
+
+-paratype-pt-sans-fonts	# Cyrillic (already supported by DejaVu), huge
 #-stix-fonts		# mathematical symbols
 
 # make sure alsaunmute is there
