@@ -21,7 +21,7 @@
 -ktorrent			# kget has also basic torrent features (~3 megs)
 -kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 -kdeartwork-screensavers	# screensavers are not needed on live images
-#-digikam			# digikam has duplicate functionality with gwenview (~11 megs)
+#-digikam			# digikam has duplicate functionality with gwenview (~28 megs)
 #-amarok 			# amarok has duplicate functionality with juk (~23 megs)
 #-kipi-plugins			# ~8 megs
 #-konq-plugins			# ~2 megs
