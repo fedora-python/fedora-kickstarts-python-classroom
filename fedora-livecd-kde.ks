@@ -37,7 +37,7 @@ koffice-filters
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
-#pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+#pavucontrol			# pavucontrol has duplicate functionality with kmix
 #kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 
 # only include kdegames-minimal
