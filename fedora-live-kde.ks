@@ -29,6 +29,7 @@ koffice-filters
 fuse
 liveusb-creator
 #pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+#kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 krusader			# file manager, more power-user-oriented than Dolphin (~4 megs)
 
 # only include kdegames-minimal

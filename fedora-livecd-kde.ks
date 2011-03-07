@@ -19,7 +19,6 @@
 -kdeedu*			# kdeedu is too big for the live images
 -scribus			# scribus is too big for the live images
 -ktorrent			# kget has also basic torrent features (~3 megs)
--kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 -kdeartwork-screensavers	# screensavers are not needed on live images
 #-digikam			# digikam has duplicate functionality with gwenview (~28 megs)
 #-amarok 			# amarok has duplicate functionality with juk (~23 megs)
@@ -39,6 +38,7 @@ koffice-filters
 fuse
 liveusb-creator
 #pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+#kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 
 # only include kdegames-minimal
 -kdegames
