@@ -60,7 +60,6 @@ wqy-microhei-fonts	# a compact CJK font
 -wqy-zenhei-fonts
 -paratype-pt-sans-fonts
 #-stix-fonts		# mathematical symbols
-#-kacst*fonts*		# arabic
 
 # make sure alsaunmute is there
 alsa-utils
