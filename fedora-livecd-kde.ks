@@ -14,15 +14,14 @@
 %packages
 # unwanted packages from @kde-desktop
 # don't include these for now to fit on a cd
--amarok 			# amarok has duplicate functionality with juk (~13 megs)
 -desktop-backgrounds-basic
--digikam			# digikam has duplicate functionality with gwenview (~11 megs)
 -kdeaccessibility*
 -kdeedu*			# kdeedu is too big for the live images
 -scribus			# scribus is too big for the live images
--ktorrent			# kget has also basic torrent features (~3 megs)
--kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 -kdeartwork-screensavers	# screensavers are not needed on live images
+#-ktorrent			# kget has also basic torrent features (~3 megs)
+#-digikam			# digikam has duplicate functionality with gwenview (~28 megs)
+#-amarok 			# amarok has duplicate functionality with juk (~23 megs)
 #-kipi-plugins			# ~8 megs
 #-konq-plugins			# ~2 megs
 #-kdeplasma-addons		# ~16 megs
@@ -38,7 +37,8 @@ koffice-filters
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
-#pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+#pavucontrol			# pavucontrol has duplicate functionality with kmix
+#kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 
 # only include kdegames-minimal
 -kdegames
@@ -54,13 +54,13 @@ yum-presto
 ### fixes and space issues
 
 # fonts (we make no bones about admitting we're english-only)
-wqy-microhei-fonts	# a compact CJK font
--un-core-dotum-fonts
--vlgothic-fonts
--wqy-zenhei-fonts
--paratype-pt-sans-fonts
+wqy-microhei-fonts	# a compact CJK font, to replace:
+-un-core-dotum-fonts	# Korean
+-vlgothic-fonts		# Japanese
+-wqy-zenhei-fonts	# Chinese
+
+-paratype-pt-sans-fonts	# Cyrillic (already supported by DejaVu), huge
 #-stix-fonts		# mathematical symbols
-#-kacst*fonts*		# arabic
 
 # make sure alsaunmute is there
 alsa-utils

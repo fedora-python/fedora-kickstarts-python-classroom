@@ -28,7 +28,9 @@ koffice-filters
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
-#pavucontrol			# nice to have but pulls in gstreamer (~3 megs)
+#pavucontrol			# pavucontrol has duplicate functionality with kmix
+#kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
+krusader			# file manager, more power-user-oriented than Dolphin (~4 megs)
 
 # only include kdegames-minimal
 -kdegames
@@ -44,13 +46,13 @@ yum-presto
 ### fixes and space issues
 
 # fonts (we make no bones about admitting we're english-only)
-wqy-microhei-fonts	# a compact CJK font
--un-core-dotum-fonts
--vlgothic-fonts
--wqy-zenhei-fonts
--paratype-pt-sans-fonts
+wqy-microhei-fonts	# a compact CJK font, to replace:
+-un-core-dotum-fonts	# Korean
+-vlgothic-fonts		# Japanese
+-wqy-zenhei-fonts	# Chinese
+
+-paratype-pt-sans-fonts	# Cyrillic (already supported by DejaVu), huge
 #-stix-fonts		# mathematical symbols
-#-kacst*fonts*		# arabic
 
 # make sure alsaunmute is there
 alsa-utils
