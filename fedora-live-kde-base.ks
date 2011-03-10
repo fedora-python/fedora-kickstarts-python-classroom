@@ -105,7 +105,7 @@ if strstr "\`cat /proc/cmdline\`" netbook ; then
 fi
 
 # hack around https://bugzilla.redhat.com/683855
-cat /root/.gtkrc-2.0 << GTKRC_EOF
+cat > /root/.gtkrc-2.0 << GTKRC_EOF
 include "/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc"
 include "/etc/gtk-2.0/gtkrc"
 gtk-theme-name="oxygen-gtk"
