@@ -104,6 +104,12 @@ if strstr "\`cat /proc/cmdline\`" netbook ; then
    sed -i 's/desktop/netbook/g' /usr/share/autostart/plasma-netbook.desktop
 fi
 
+# hack around https://bugzilla.redhat.com/683855
+cat /root/.gtkrc-2.0 << GTKRC_EOF
+include "/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc"
+include "/etc/gtk-2.0/gtkrc"
+gtk-theme-name="oxygen-gtk"
+GTKRC_EOF
 EOF
 
 %end
