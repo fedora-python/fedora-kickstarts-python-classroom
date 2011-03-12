@@ -1,7 +1,7 @@
 # fedora-live-kde.ks
 #
 # Description:
-# - Fedora Live Spin with the K Desktop Environment (KDE), 1 GiB version
+# - Fedora Live Spin with the K Desktop Environment (KDE), 2 GiB version
 #   see fedora-livecd-kde.ks for the default CD-sized version
 #
 # Maintainer(s):
