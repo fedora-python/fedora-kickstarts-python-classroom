@@ -32,6 +32,9 @@ liveusb-creator
 #kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 krusader			# file manager, more power-user-oriented than Dolphin (~4 megs)
 
+# KDE 4 translations
+kde-l10n-*
+
 # only include kdegames-minimal
 -kdegames
 kdegames-minimal
@@ -45,27 +48,11 @@ yum-presto
 
 ### fixes and space issues
 
-# fonts (we make no bones about admitting we're english-only)
-wqy-microhei-fonts	# a compact CJK font, to replace:
--un-core-dotum-fonts	# Korean
--vlgothic-fonts		# Japanese
--wqy-zenhei-fonts	# Chinese
-
--paratype-pt-sans-fonts	# Cyrillic (already supported by DejaVu), huge
-#-stix-fonts		# mathematical symbols
-
 # make sure alsaunmute is there
 alsa-utils
 
 # make sure gnome-packagekit doesn't end up the KDE live images
 -gnome-packagekit*
-
-# remove input methods to free space
--@input-methods
--scim*
--m17n*
--ibus*
--iok
 
 # save some space (from @base)
 -make
