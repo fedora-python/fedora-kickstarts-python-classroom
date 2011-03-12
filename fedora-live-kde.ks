@@ -42,12 +42,6 @@ kdegames-minimal
 # use yum-presto by default
 yum-presto
 
-### space issues
-
-# save some space (from @base)
--make
--nss_db
-
 ## avoid serious bugs by omitting broken stuff
 
 %end
