@@ -10,6 +10,18 @@
 
 @kde-desktop
 
+### fixes
+
+# use system-config-printer-kde instead of system-config-printer
+-system-config-printer
+system-config-printer-kde
+
+# make sure alsaunmute is there
+alsa-utils
+
+# make sure gnome-packagekit doesn't end up the KDE live images
+-gnome-packagekit*
+
 %end
 
 

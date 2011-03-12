@@ -39,20 +39,10 @@ kde-l10n-*
 -kdegames
 kdegames-minimal
 
-# use system-config-printer-kde instead of system-config-printer
--system-config-printer
-system-config-printer-kde
-
 # use yum-presto by default
 yum-presto
 
-### fixes and space issues
-
-# make sure alsaunmute is there
-alsa-utils
-
-# make sure gnome-packagekit doesn't end up the KDE live images
--gnome-packagekit*
+### space issues
 
 # save some space (from @base)
 -make

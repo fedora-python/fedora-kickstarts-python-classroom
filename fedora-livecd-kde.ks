@@ -44,14 +44,10 @@ liveusb-creator
 -kdegames
 kdegames-minimal
 
-# use system-config-printer-kde instead of system-config-printer
--system-config-printer
-system-config-printer-kde
-
 # use yum-presto by default
 yum-presto
 
-### fixes and space issues
+### space issues
 
 # fonts (we make no bones about admitting we're english-only)
 wqy-microhei-fonts	# a compact CJK font, to replace:
@@ -61,12 +57,6 @@ wqy-microhei-fonts	# a compact CJK font, to replace:
 
 -paratype-pt-sans-fonts	# Cyrillic (already supported by DejaVu), huge
 #-stix-fonts		# mathematical symbols
-
-# make sure alsaunmute is there
-alsa-utils
-
-# make sure gnome-packagekit doesn't end up the KDE live images
--gnome-packagekit*
 
 # remove input methods to free space
 -@input-methods
