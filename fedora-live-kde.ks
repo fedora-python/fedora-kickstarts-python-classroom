@@ -11,6 +11,9 @@
 %include fedora-live-kde-base.ks
 %include fedora-live-minimization.ks
 
+# DVD payload
+part / --size=8192
+
 
 %packages
 # ship KDE wallpapers instead of GNOME ones
