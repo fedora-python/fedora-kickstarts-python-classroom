@@ -22,8 +22,11 @@ nss-mdns
 %post
 cat >> /etc/rc.d/init.d/livesys << EOF
 # disable screensaver locking
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /apps/gnome-screensaver/lock_enabled false >/dev/null
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/gnome/lockdown/disable_lock_screen true >/dev/null
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.override << FOE
+[org.gnome.desktop.screensaver]
+lock-enabled=false
+FOE
+glib-compile-schemas /usr/share/glib-2.0/schemas
 
 # set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
