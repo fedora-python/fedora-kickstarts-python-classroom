@@ -85,9 +85,11 @@ gnugo
 haxima
 hedgewars
 kcheckers
+knights
 lbrickbuster2
 liquidwar
 londonlaw
+lordsawar
 lure
 machineball
 nethack
