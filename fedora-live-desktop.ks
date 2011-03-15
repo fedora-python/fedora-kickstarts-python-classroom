@@ -26,6 +26,13 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.overrid
 [org.gnome.desktop.screensaver]
 lock-enabled=false
 FOE
+
+# Show harddisk install in shell dash
+sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
+cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
+[org.gnome.shell]
+favorite-apps=['mozilla-firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'openoffice.org-writer.desktop', 'nautilus.desktop', 'liveinst.desktop']
+FOE
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
 # set up timed auto-login for after 60 seconds
@@ -34,13 +41,6 @@ cat >> /etc/gdm/custom.conf << FOE
 AutomaticLoginEnable=true
 AutomaticLogin=liveuser
 FOE
-
-# Show harddisk install on the desktop
-sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
-mkdir /home/liveuser/Desktop
-cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
-chown -R liveuser.liveuser /home/liveuser/Desktop
-chmod a+x /home/liveuser/Desktop/liveinst.desktop
 
 # Turn off PackageKit-command-not-found while uninstalled
 sed -i -e 's/^SoftwareSourceSearch=true/SoftwareSourceSearch=false/' /etc/PackageKit/CommandNotFound.conf
