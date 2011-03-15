@@ -35,6 +35,26 @@ favorite-apps=['mozilla-firefox.desktop', 'evolution.desktop', 'empathy.desktop'
 FOE
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
+# add installer to user menu
+mkdir -p ~liveuser/.local/share/gnome-shell/extensions/Installer@shell-extensions.fedoraproject.org
+cat >> ~liveuser/.local/share/gnome-shell/extensions/Installer@shell-extensions.fedoraproject.org/metadata.json << FOE
+{"shell-version": ["2.91.91"], "uuid": "Installer@shell-extensions.fedoraproject.org", "name": "Installer", "description": "Install OS from user menu"}
+FOE
+
+cat >> ~liveuser/.local/share/gnome-shell/extensions/Installer@shell-extensions.fedoraproject.org/extension.js << FOE
+const PopupMenu = imports.ui.popupMenu;
+const Shell = imports.gi.Shell;
+const Main = imports.ui.main;
+const Util = imports.misc.util;
+
+function main() {
+    let item = new PopupMenu.PopupMenuItem(Shell.AppSystem.get_default().get_app('liveinst.desktop').get_name());
+    item.connect('activate', function() { Util.spawnDesktop('liveinst'); });
+
+    Main.panel._statusmenu.menu.addMenuItem(item, Main.panel._statusmenu.menu._getMenuItems().length - 1);
+}
+FOE
+
 # set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
