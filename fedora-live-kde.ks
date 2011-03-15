@@ -35,6 +35,11 @@ kdeedu-marble
 kdeedu-math
 kdeedu-kstars
 
+# Cantor backends
+kdeedu-math-cantor-R	# Cantor R backend, built against R-core at compile time
+maxima			# runtime dependency of the Cantor Maxima backend
+octave			# runtime dependency of the Cantor Octave backend
+
 # KDE 4 translations
 kde-l10n-*
 koffice-langpack-*
