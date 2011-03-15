@@ -51,8 +51,8 @@ const Main = imports.ui.main;
 const Util = imports.misc.util;
 
 function main() {
-    let item = new PopupMenu.PopupMenuItem(Shell.AppSystem.get_default().get_app('liveinst.desktop').get_name());
-    item.connect('activate', function() { Util.spawnDesktop('liveinst'); });
+    let item = new PopupMenu.PopupMenuItem(Shell.AppSystem.get_default().get_app('anaconda.desktop').get_name());
+    item.connect('activate', function() { Util.spawnDesktop('anaconda'); });
 
     Main.panel._statusmenu.menu.addMenuItem(item, Main.panel._statusmenu.menu._getMenuItems().length - 1);
 }
