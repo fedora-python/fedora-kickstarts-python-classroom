@@ -33,6 +33,13 @@ DESKTOP="KDE"
 DISPLAYMANAGER="KDE"
 EOF
 
+# make oxygen-gtk the default GTK+ 2 theme for root (see #683855, #689070)
+cat > /root/.gtkrc-2.0 << EOF
+include "/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc"
+include "/etc/gtk-2.0/gtkrc"
+gtk-theme-name="oxygen-gtk"
+EOF
+
 # add initscript
 cat >> /etc/rc.d/init.d/livesys << EOF
 
@@ -115,13 +122,6 @@ if strstr "\`cat /proc/cmdline\`" netbook ; then
    mv /usr/share/autostart/plasma-desktop.desktop /usr/share/autostart/plasma-netbook.desktop
    sed -i 's/desktop/netbook/g' /usr/share/autostart/plasma-netbook.desktop
 fi
-
-# hack around https://bugzilla.redhat.com/683855
-cat > /root/.gtkrc-2.0 << GTKRC_EOF
-include "/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc"
-include "/etc/gtk-2.0/gtkrc"
-gtk-theme-name="oxygen-gtk"
-GTKRC_EOF
 EOF
 
 %end
