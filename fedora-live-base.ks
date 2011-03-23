@@ -188,21 +188,21 @@ chkconfig --level 345 firstboot off 2>/dev/null
 echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 
 # don't start yum-updatesd for livecd boots
-chkconfig --level 345 yum-updatesd off 2>/dev/null
+chkconfig --level 345 yum-updatesd off 2>/dev/null || :
 
 # turn off mdmonitor by default
-chkconfig --level 345 mdmonitor off 2>/dev/null
+chkconfig --level 345 mdmonitor off 2>/dev/null || :
 
 # turn off setroubleshoot on the live image to preserve resources
-chkconfig --level 345 setroubleshoot off 2>/dev/null
+chkconfig --level 345 setroubleshoot off 2>/dev/null || :
 
 # don't enable the gnome-settings-daemon packagekit plugin
-gsettings set org.gnome.settings-daemon.plugins.updates active 'false'
+gsettings set org.gnome.settings-daemon.plugins.updates active 'false' || :
 
 # don't start cron/at as they tend to spawn things which are
 # disk intensive that are painful on a live image
-chkconfig --level 345 crond off 2>/dev/null
-chkconfig --level 345 atd off 2>/dev/null
+chkconfig --level 345 crond off 2>/dev/null || :
+chkconfig --level 345 atd off 2>/dev/null || :
 
 # Stopgap fix for RH #217966; should be fixed in HAL instead
 touch /media/.hal-mtab
