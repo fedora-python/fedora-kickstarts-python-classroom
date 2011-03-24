@@ -27,6 +27,12 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.overrid
 lock-enabled=false
 FOE
 
+# disable updates plugin
+cat >> /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.updates.gschema.override << FOE
+[org.gnome.settings-daemon.plugins.updates]
+active=false
+FOE
+
 # make the installer show up
 if [ -f /usr/share/applications/liveinst.desktop ]; then
   # Show harddisk install in shell dash
