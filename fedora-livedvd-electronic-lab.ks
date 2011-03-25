@@ -20,10 +20,10 @@ part / --size=8192
 # Office
 dia
 vym
-openoffice.org-writer
-openoffice.org-calc
-openoffice.org-impress
-openoffice.org-extendedPDF
+libreoffice-writer
+libreoffice-calc
+libreoffice-impress
+#libreoffice-extendedPDF
 planner
 graphviz
 
