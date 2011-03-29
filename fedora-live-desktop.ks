@@ -74,7 +74,7 @@ glib-compile-schemas /usr/share/glib-2.0/schemas
 # set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
-AutomaticLoginEnable=true
+AutomaticLoginEnable=True
 AutomaticLogin=liveuser
 FOE
 
