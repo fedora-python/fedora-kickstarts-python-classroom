@@ -60,7 +60,7 @@ const Util = imports.misc.util;
 function main() {
     let app = Shell.AppSystem.get_default().get_app('anaconda.desktop');
     let item = new PopupMenu.PopupMenuItem(app.get_name());
-    item.connect('activate', function() { app.launch(); });
+    item.connect('activate', function() { app.activate(-1); });
 
     Main.panel._statusmenu.menu.addMenuItem(item, Main.panel._statusmenu.menu._getMenuItems().length - 1);
 }
