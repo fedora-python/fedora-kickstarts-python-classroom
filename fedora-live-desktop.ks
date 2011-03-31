@@ -4,6 +4,8 @@
 
 %include fedora-live-base.ks
 
+part / --size 4096
+
 %packages
 @graphical-internet
 @sound-and-video
