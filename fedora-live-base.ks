@@ -81,6 +81,9 @@ exists() {
 
 touch /.liveimg-configured
 
+# Make sure we don't mangle the hardware clock on shutdown
+ln -sf /dev/null /etc/systemd/system/hwclock-save.service
+
 # mount live image
 if [ -b \`readlink -f /dev/live\` ]; then
    mkdir -p /mnt/live
@@ -206,9 +209,6 @@ chkconfig --level 345 atd off 2>/dev/null || :
 
 # Stopgap fix for RH #217966; should be fixed in HAL instead
 touch /media/.hal-mtab
-
-# workaround clock syncing on shutdown that we don't want (#297421)
-sed -i -e 's/hwclock/no-such-hwclock/g' /etc/rc.d/init.d/halt
 
 # and hack so that we eject the cd on shutdown if we're using a CD...
 if strstr "\`cat /proc/cmdline\`" CDLABEL= ; then
