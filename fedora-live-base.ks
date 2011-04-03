@@ -190,6 +190,9 @@ chkconfig --level 345 firstboot off 2>/dev/null
 # with systemd, but we can look into that later. - AdamW 2010/08 F14Alpha
 echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 
+# don't use prelink on a running live image
+sed -i 's/PRELINKING=yes/PRELINKING=no/' /etc/sysconfig/prelink &>/dev/null || :
+
 # don't start yum-updatesd for livecd boots
 chkconfig --level 345 yum-updatesd off 2>/dev/null || :
 
@@ -308,9 +311,6 @@ rm -f /var/lib/rpm/__db*
 # run prelink to prelink everything installed. This should prevent prelink 
 # from causing massive changes on systems booted longer than a day. 
 /usr/sbin/prelink -am &>/dev/null || :
-
-# don't use prelink on a running live image
-sed -i 's/PRELINKING=yes/PRELINKING=no/' /etc/sysconfig/prelink &>/dev/null || :
 
 # save a little bit of space at least...
 rm -f /boot/initramfs*

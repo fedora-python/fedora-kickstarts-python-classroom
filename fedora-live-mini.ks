@@ -255,6 +255,9 @@ chkconfig --level 345 firstboot off 2>/dev/null
 # The above doesn't works so we need to do this... GRR systemctl
 echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 
+# don't use prelink on a running live image
+sed -i 's/PRELINKING=yes/PRELINKING=no/' /etc/sysconfig/prelink &>/dev/null || :
+
 # don't start yum-updatesd for livecd boots
 chkconfig --level 345 yum-updatesd off 2>/dev/null
 
