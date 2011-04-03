@@ -380,7 +380,7 @@ rm -f /var/lib/rpm/__db*
 
 # run prelink to prelink everything installed. This should prevent prelink 
 # from causing massive changes on systems booted longer than a day. 
-/usr/sbin/prelink -a
+/usr/sbin/prelink -am &>/dev/null || :
 
 # save a little bit of space at least...
 rm -f /boot/initrd*
