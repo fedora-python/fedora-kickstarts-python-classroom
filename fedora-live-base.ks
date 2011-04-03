@@ -305,6 +305,10 @@ rm -f /var/lib/rpm/__db*
 # go ahead and pre-make the man -k cache (#455968)
 /usr/bin/mandb
 
+# run prelink to prelink everything installed. This should prevent prelink 
+# from causing massive changes on systems booted longer than a day. 
+/usr/sbin/prelink -a
+
 # save a little bit of space at least...
 rm -f /boot/initramfs*
 # make sure there aren't core files lying around
