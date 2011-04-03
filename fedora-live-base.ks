@@ -309,6 +309,9 @@ rm -f /var/lib/rpm/__db*
 # from causing massive changes on systems booted longer than a day. 
 /usr/sbin/prelink -am &>/dev/null || :
 
+# don't use prelink on a running live image
+sed -i 's/PRELINKING=yes/PRELINKING=no/' /etc/sysconfig/prelink &>/dev/null || :
+
 # save a little bit of space at least...
 rm -f /boot/initramfs*
 # make sure there aren't core files lying around
