@@ -89,6 +89,11 @@ xdg-user-dirs-gtk
 gtk-theme-engine-clearlooks
 # no longer required, but needed for compatibility - cwickert 2011-02-11
 fedora-icon-theme
+# Adwaita is now default - cwickert 2011-04-04
+# https://bugzilla.redhat.com/show_bug.cgi?id=675509
+adwaita-cursor-theme
+adwaita-gtk2-theme
+adwaita-gtk3-theme
 
 # Command line
 ntfs-3g
