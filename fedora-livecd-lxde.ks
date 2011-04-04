@@ -51,9 +51,10 @@ xpad
 gigolo
 
 ### more desktop stuff
-# default artwork, subject to change - cwickert 2011-03-05
-gtk-theme-engine-clearlooks
 fedora-icon-theme
+adwaita-cursor-theme
+adwaita-gtk2-theme
+adwaita-gtk3-theme
 
 # pam-fprint causes a segfault in LXDM when enabled
 -fprintd-pam
