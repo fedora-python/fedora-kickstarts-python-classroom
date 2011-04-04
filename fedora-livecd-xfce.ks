@@ -210,12 +210,16 @@ MailReader=sylpheed-claws
 FileManager=Thunar
 FOE
 
-# disable screensaver locking
+# disable screensaver locking (#674410)
 cat >> /home/liveuser/.xscreensaver << FOE
 mode:           off
 lock:           False
 dpmsEnabled:    False
 FOE
+
+# deactivate xfconf-migration (#683161)
+rm -f /etc/xdg/autostart/xfconf-migration-4.6.desktop || :
+
 # set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
