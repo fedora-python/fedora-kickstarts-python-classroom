@@ -29,6 +29,12 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.overrid
 lock-enabled=false
 FOE
 
+# and hide the lock screen option
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.lockdown.gschema.override << FOE
+[org.gnome.desktop.lockdown]
+disable-lock-screen=true
+FOE
+
 # disable updates plugin
 cat >> /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.updates.gschema.override << FOE
 [org.gnome.settings-daemon.plugins.updates]
