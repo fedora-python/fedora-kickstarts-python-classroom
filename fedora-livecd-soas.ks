@@ -17,6 +17,9 @@ part / --size=2048
 # == Core Sugar Platform ==
 @sugar-desktop
 
+# explicitly remove sugar-read due to dep issues
+-sugar-read
+
 # == Platform Components ==
 # from http://wiki.sugarlabs.org/go/0.88/Platform_Components
 alsa-plugins-pulseaudio
