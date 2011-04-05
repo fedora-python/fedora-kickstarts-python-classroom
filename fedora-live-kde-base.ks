@@ -22,6 +22,9 @@ alsa-utils
 # make sure gnome-packagekit doesn't end up the KDE live images
 -gnome-packagekit*
 
+# pull in adwaita-gtk3-theme as long as we don't have native GTK+ 3 theming
+adwaita-gtk3-theme
+
 %end
 
 
