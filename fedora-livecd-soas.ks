@@ -15,7 +15,7 @@ part / --size=2048
 %packages
 
 # == Core Sugar Platform ==
-sugar
+@sugar-desktop
 
 # == Platform Components ==
 # from http://wiki.sugarlabs.org/go/0.88/Platform_Components
@@ -31,45 +31,11 @@ pygame
 pulseaudio
 pulseaudio-utils
 
-# == Sugar Activities ==
-sugar-browse # Because they need this to install activities.
-sugar-log # Because they need this for debugging.
-sugar-physics # Because this is a great demo example (quick demo).
-sugar-terminal # Because this makes debugging easier.
-sugar-turtleart # Because this is a great demo example (extended demo).
-sugar-xoirc # Because this helps us help them.
-sugar-chat
-sugar-record
-sugar-write
-etoys-sugar
-sugar-pippy
-sugar-calculator
-
 # Write breaks unless we do this (we don't need it anyway)
 -@input-methods
 
-# == Activities from ASLO ==
-# These are activities we're going to polish to the same level
-# as the ones included in the SoaS image, but encourage people
-# to download from ASLO as part of the SoaS experience of exploring
-# other Activities in there.
-
-# sugar-maze
-# sugar-speak
-# sugar-tamtam-*
-# sugar-visualmatch
-
-# These are Activities that aren't quite there, but are important,
-# so we're going to encourage people to test them.
-
-# sugar-pippy
-# sugar-read
-
-# == System ==
-# Automatically logs in the liveuser
-# We're going to replace this with nodm
-# http://bugs.sugarlabs.org/ticket/1849
-gdm
+# explicitly remove openbox (need to find how its getting in there).
+-openbox
 
 # Needed to show external hard drives
 gvfs
@@ -112,8 +78,8 @@ rm -f /var/lib/rpm/__db*
 
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
-Sugar on a Stick 4 (Mango Lassi)
-Fedora 14 (Laughlin)
+Sugar on a Stick 5
+Fedora release 15 (Lovelock)
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
@@ -126,6 +92,25 @@ gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults
 
 # Enable Sugar power management
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/power/automatic True >/dev/null
+
+cat >> /etc/rc.d/init.d/livesys << EOF
+# disable screensaver locking
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.override << FOE
+[org.gnome.desktop.screensaver]
+lock-enabled=false
+FOE
+
+# and hide the lock screen option
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.lockdown.gschema.override << FOE
+[org.gnome.desktop.lockdown]
+disable-lock-screen=true
+FOE
+
+# disable updates plugin
+cat >> /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.updates.gschema.override << FOE
+[org.gnome.settings-daemon.plugins.updates]
+active=false
+FOE
 
 # Add our activities to the favorites
 cat > /usr/share/sugar/data/activities.defaults << FOE
@@ -143,10 +128,13 @@ org.sugarlabs.IRC
 org.vpri.EtoysActivity
 FOE
 
-# Set up auto-login for for liveuser
+# rebuild schema cache with any overrides we installed
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
+# set up timed auto-login for after 60 seconds
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
-AutomaticLoginEnable=true
+AutomaticLoginEnable=True
 AutomaticLogin=liveuser
 FOE
 
