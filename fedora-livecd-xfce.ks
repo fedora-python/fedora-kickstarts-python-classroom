@@ -146,8 +146,6 @@ xfce4-verve-plugin
 #xfce4-wavelan-plugin
 xfce4-weather-plugin
 xfce4-websearch-plugin
-# this one a compatibility layer for GNOME applets and depends on it
-#xfce4-xfapplet-plugin
 # requires gdm which we're not using in this build
 #xfce4-xfswitch-plugin
 xfce4-xkb-plugin
