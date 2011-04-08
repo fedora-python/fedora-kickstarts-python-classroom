@@ -137,8 +137,6 @@ xfce4-quicklauncher-plugin
 xfce4-screenshooter-plugin
 xfce4-sensors-plugin
 xfce4-smartbookmark-plugin
-# disabled for now, doesn't work with 4.8 - kevin 2011-01-14
-#xfce4-stopwatch-plugin
 xfce4-systemload-plugin
 xfce4-taskmanager
 xfce4-time-out-plugin
