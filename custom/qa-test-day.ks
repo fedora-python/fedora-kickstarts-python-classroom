@@ -49,7 +49,7 @@ rm -rf /tmp/chrome
 
 # Create a .desktop link for Test Day wiki
 mkdir -p /etc/skel/Desktop
-cat << EOF > /etc/skel/Desktop/testday-wiki.desktop
+cat << EOF > /etc/skel/.local/share/applications/testday-wiki.desktop
 [Desktop Entry]
 Encoding=UTF-8
 Name=Participate in a Test Day
@@ -59,7 +59,7 @@ Icon=gnome-fs-bookmark
 EOF
 
 # Create a .desktop link for Test Day IRC chat
-cat << EOF > /etc/skel/Desktop/testday-irc.desktop
+cat << EOF > /etc/skel/.local/share/applications/testday-irc.desktop
 [Desktop Entry]
 Encoding=UTF-8
 Name=Connect to a Test Day chat
@@ -67,9 +67,6 @@ Type=Link
 URL=http://webchat.freenode.net/?channels=fedora-test-day
 Icon=gnome-fs-bookmark
 EOF
-
-# Add gnome-terminal shortcut to desktop
-cp /usr/share/applications/gnome-terminal.desktop /etc/skel/Desktop
 
 # Change the favorites using a vendor override. (Adding a profile would
 # be another way to do this.)
