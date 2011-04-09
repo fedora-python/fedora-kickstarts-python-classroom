@@ -16,11 +16,10 @@
 
 # Office
 abiword
+gnumeric
 
 # Graphics
-evince
--evince-dvi
--evince-djvu
+epdf
 
 # development
 geany
@@ -72,7 +71,7 @@ NetworkManager-gnome
 NetworkManager-pptp
 catfish
 desktop-backgrounds-compat
-gcalctool
+galculator
 gparted
 -gnome-disk-utility
 gnome-bluetooth
