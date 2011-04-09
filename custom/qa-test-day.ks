@@ -75,5 +75,5 @@ cat << EOF > /usr/share/glib-2.0/schemas/qa-testday.gschema.override
 [org/gnome/shell]
 favorite-apps=['mozilla-firefox.desktop', 'nautilus.desktop', 'testday-wiki.desktop', 'testday-irc.desktop', 'gnome-terminal.desktop']
 EOF
-glib-compile-schemas
+glib-compile-schemas /usr/share/glib-2.0/schemas/
 %end
