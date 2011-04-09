@@ -38,7 +38,7 @@ glib2
 
 %post
 # Set Test_Day:Current as default browser homepage
-unzip -c /usr/lib/firefox-*/omni.jar chrome/en-US/locale/browser/browser.properties -d /tmp
+unzip /usr/lib/firefox-*/omni.jar chrome/en-US/locale/browser/browser.properties -d /tmp
 cat << EOF > /tmp/chrome/en-US/locale/browser/browser.properties
 browser.startup.homepage=https://fedoraproject.org/wiki/Test_Day:Current
 EOF
