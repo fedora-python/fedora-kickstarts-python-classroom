@@ -49,6 +49,14 @@ rm -rf /tmp/chrome
 # Create a directory to store global custom favorites
 mkdir -p /etc/skel/.local/share/applications
 
+# Create a favorite for the current test day wiki page
+cat << EOF > /etc/skel/.local/share/applications/testday-wiki.desktop
+Name=Participate in a Test Day
+Type=Application
+Exec=firefox "https://fedoraproject.org/wiki/Test_Day:Current"
+Icon=firefox
+EOF
+
 # Create a .desktop link for Test Day IRC chat
 cat << EOF > /etc/skel/.local/share/applications/testday-irc.desktop
 [Desktop Entry]
@@ -63,7 +71,7 @@ EOF
 # be another way to do this.)
 cat << EOF > /usr/share/glib-2.0/schemas/org.gnome.shell.qa-testday.gschema.override
 [org.gnome.shell]
-favorite-apps=['mozilla-firefox.desktop', 'nautilus.desktop', 'testday-irc.desktop', 'gnome-terminal.desktop']
+favorite-apps=['testday-wiki.desktop', 'testday-irc.desktop', 'nautilus.desktop', 'gnome-terminal.desktop']
 EOF
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 %end
