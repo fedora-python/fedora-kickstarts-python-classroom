@@ -71,7 +71,7 @@ EOF
 # be another way to do this.)
 cat << EOF > /usr/share/glib-2.0/schemas/org.gnome.shell.qa-testday.gschema.override
 [org.gnome.shell]
-favorite-apps=['testday-wiki.desktop', 'testday-irc.desktop', 'nautilus.desktop', 'gnome-terminal.desktop']
+favorite-apps=['testday-wiki.desktop', 'testday-irc.desktop', 'liveinst.desktop', 'nautilus.desktop', 'gnome-terminal.desktop']
 EOF
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 %end
