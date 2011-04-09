@@ -14,11 +14,6 @@
 
 %packages
 
-# login
--gdm
--pulseaudio-gdm-hooks
-lxdm
-
 # Office
 abiword
 
@@ -146,8 +141,7 @@ xfce4-verve-plugin
 #xfce4-wavelan-plugin
 xfce4-weather-plugin
 xfce4-websearch-plugin
-# requires gdm which we're not using in this build
-#xfce4-xfswitch-plugin
+xfce4-xfswitch-plugin
 xfce4-xkb-plugin
 # system-config-printer does printer management better
 #xfprint
@@ -185,11 +179,7 @@ xfwm4-themes
 
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startxfce4
-DISPLAYMANAGER=/usr/sbin/lxdm
 EOF
-
-# set up auto-login for liveuser
-sed -i 's|# autologin=dgod|autologin=liveuser|g' /etc/lxdm/lxdm.conf
 
 cat >> /etc/rc.d/init.d/livesys << EOF
 
