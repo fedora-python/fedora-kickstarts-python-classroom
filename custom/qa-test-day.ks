@@ -32,6 +32,8 @@ abiword
 # brand as fedora test spin
 fedora-logos
 -generic-logos
+# glib2 is needed to set up favorites, though it probably gets pulled in anyway.
+glib2
 %end
 
 %post
@@ -63,4 +65,12 @@ EOF
 
 # Add gnome-terminal shortcut to desktop
 cp /usr/share/applications/gnome-terminal.desktop /etc/skel/Desktop
+
+# Change the favorites using a vendor override. (Adding a profile would
+# be another way to do this.)
+cat << EOF > /usr/share/glib-2.0/schemas/qa-testday.gschema.override
+[org/gnome/shell]
+favorite-apps=['mozilla-firefox.desktop', 'nautilus.desktop', 'testday-wiki.desktop', 'testday-irc.desktop', 'gnome-terminal.desktop']
+EOF
+glib-compile-schemas
 %end
