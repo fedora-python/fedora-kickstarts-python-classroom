@@ -48,7 +48,7 @@ EOF
 rm -rf /tmp/chrome
 
 # Create a directory to store global custom favorites
-mkdir -p /usr/skel/.local/share/applications
+mkdir -p /etc/skel/.local/share/applications
 
 # Create a .desktop link for Test Day IRC chat
 cat << EOF > /etc/skel/.local/share/applications/testday-irc.desktop
