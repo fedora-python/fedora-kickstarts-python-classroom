@@ -38,9 +38,12 @@ glib2
 
 %post
 # Set Test_Day:Current as default browser homepage
-cat << EOF > `ls -1 /usr/lib*/firefox*/browserconfig.properties`
+unzip -c /usr/lib/firefox-*/omni.jar chrome/en-US/locale/browser/browser.properties -d /tmp
+cat << EOF > /tmp/chrome/en-US/locale/browser/browser.properties
 browser.startup.homepage=https://fedoraproject.org/wiki/Test_Day:Current
 EOF
+(cd /tmp; zip /usr/lib/firefox-*/omni.jar chrome/en-US/locale/browser/browser.properties)
+rm -f /tmp/chrome/en-US/locale/browser/browser.properties
 
 # Create a .desktop link for Test Day wiki
 mkdir -p /etc/skel/Desktop
