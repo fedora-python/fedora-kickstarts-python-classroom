@@ -60,7 +60,6 @@ EOF
 # Create a favorite for Test Day IRC chat
 cat << EOF > /etc/skel/.local/share/applications/testday-irc.desktop
 [Desktop Entry]
-Encoding=UTF-8
 Name=Connect to a Test Day chat
 Type=Application
 Exec=firefox "http://webchat.freenode.net/?channels=fedora-test-day"
