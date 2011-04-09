@@ -62,9 +62,9 @@ cat << EOF > /etc/skel/.local/share/applications/testday-irc.desktop
 [Desktop Entry]
 Encoding=UTF-8
 Name=Connect to a Test Day chat
-Type=Link
-URL=http://webchat.freenode.net/?channels=fedora-test-day
-Icon=gnome-fs-bookmark
+Type=Application
+Exec=firefox "http://webchat.freenode.net/?channels=fedora-test-day"
+Icon=firefox
 EOF
 
 # Change the favorites using a vendor override. (Adding a profile would
