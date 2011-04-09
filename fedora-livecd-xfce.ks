@@ -19,7 +19,7 @@ abiword
 gnumeric
 
 # Graphics
-epdf
+epdfview
 
 # development
 geany
