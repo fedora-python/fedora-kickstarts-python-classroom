@@ -41,8 +41,8 @@ glib2
 mkdir -p /tmp/chrome/en-US/locale/branding
 cat << EOF > /tmp/chrome/en-US/locale/branding/browserconfig.properties
 browser.startup.homepage=https://fedoraproject.org/wiki/Test_Day:Current
-startup.homepage_override_url=
-startup.homepage_welcome_url=
+startup.homepage_override_url=''
+startup.homepage_welcome_url=''
 EOF
 (cd /tmp; zip /usr/lib/firefox-*/omni.jar chrome/en-US/locale/branding/browserconfig.properties)
 rm -rf /tmp/chrome
