@@ -191,12 +191,6 @@ EOF
 # set up auto-login for liveuser
 sed -i 's|# autologin=dgod|autologin=liveuser|g' /etc/lxdm/lxdm.conf
 
-mkdir -p /root/.config/xfce4
-
-cat > /root/.config/xfce4/helpers.rc <<EOF
-MailReader=sylpheed-claws
-EOF
-
 cat >> /etc/rc.d/init.d/livesys << EOF
 
 mkdir -p /home/liveuser/.config/xfce4
