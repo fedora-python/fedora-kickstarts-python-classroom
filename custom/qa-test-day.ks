@@ -47,6 +47,9 @@ EOF
 (cd /tmp; zip /usr/lib/firefox-*/omni.jar chrome/en-US/locale/branding/browserconfig.properties)
 rm -rf /tmp/chrome
 
+# Create a directory to store global custom favorites
+mkdir -p /usr/skel/.local/share/applications
+
 # Create a .desktop link for Test Day IRC chat
 cat << EOF > /etc/skel/.local/share/applications/testday-irc.desktop
 [Desktop Entry]
