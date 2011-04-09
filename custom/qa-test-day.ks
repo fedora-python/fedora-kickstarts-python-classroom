@@ -47,17 +47,6 @@ EOF
 (cd /tmp; zip /usr/lib/firefox-*/omni.jar chrome/en-US/locale/branding/browserconfig.properties)
 rm -rf /tmp/chrome
 
-# Create a .desktop link for Test Day wiki
-mkdir -p /etc/skel/Desktop
-cat << EOF > /etc/skel/.local/share/applications/testday-wiki.desktop
-[Desktop Entry]
-Encoding=UTF-8
-Name=Participate in a Test Day
-Type=Link
-URL=https://fedoraproject.org/wiki/Test_Day:Current
-Icon=gnome-fs-bookmark
-EOF
-
 # Create a .desktop link for Test Day IRC chat
 cat << EOF > /etc/skel/.local/share/applications/testday-irc.desktop
 [Desktop Entry]
