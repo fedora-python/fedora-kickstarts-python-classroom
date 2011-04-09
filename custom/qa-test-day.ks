@@ -57,7 +57,7 @@ Exec=firefox "https://fedoraproject.org/wiki/Test_Day:Current"
 Icon=firefox
 EOF
 
-# Create a .desktop link for Test Day IRC chat
+# Create a favorite for Test Day IRC chat
 cat << EOF > /etc/skel/.local/share/applications/testday-irc.desktop
 [Desktop Entry]
 Encoding=UTF-8
