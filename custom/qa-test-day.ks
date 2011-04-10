@@ -77,6 +77,15 @@ Exec=firefox "http://webchat.freenode.net/?channels=fedora-test-day"
 Icon=firefox
 EOF
 
+# Create a favorite for liveinst
+cat << EOF > /etc/skel/.local/share/applications/liveinst.desktop
+[Desktop Entry]
+Name=Install to hard drive
+Type=Application
+Exec=liveinst
+Icon=anaconda
+EOF
+
 # Change the favorites using a vendor override. (Adding a profile would
 # be another way to do this.)
 cat << EOF > /usr/share/glib-2.0/schemas/org.gnome.shell.qa-testday.gschema.override
