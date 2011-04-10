@@ -32,8 +32,11 @@ abiword
 # brand as fedora test spin
 fedora-logos
 -generic-logos
-# glib2 is needed to set up favorites, though it probably gets pulled in anyway.
+# glib2 is needed to set up favorites
 glib2
+# zip and unzip are needed to tweak firefox settings
+zip
+unzip
 %end
 
 %post
