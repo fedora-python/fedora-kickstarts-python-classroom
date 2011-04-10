@@ -61,6 +61,7 @@ mkdir -p /etc/skel/.local/share/applications
 
 # Create a favorite for the current test day wiki page
 cat << EOF > /etc/skel/.local/share/applications/testday-wiki.desktop
+[Desktop Entry]
 Name=Participate in a Test Day
 Type=Application
 Exec=firefox "https://fedoraproject.org/wiki/Test_Day:Current"
