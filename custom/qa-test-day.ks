@@ -88,7 +88,7 @@ EOF
 
 # Change the favorites using a vendor override. (Adding a profile would
 # be another way to do this.)
-cat << EOF > /usr/share/glib-2.0/schemas/org.gnome.shell.qa-testday.gschema.override
+cat << EOF >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override
 [org.gnome.shell]
 favorite-apps=['testday-wiki.desktop', 'testday-irc.desktop', 'liveinst.desktop', 'nautilus.desktop', 'gnome-terminal.desktop']
 EOF
