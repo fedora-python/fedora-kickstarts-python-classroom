@@ -32,35 +32,65 @@ abiword
 # brand as fedora test spin
 fedora-logos
 -generic-logos
+# glib2 is needed to set up favorites
+glib2
+# zip and unzip are needed to tweak firefox settings
+zip
+unzip
 %end
 
 %post
+# Turn off alternate pages on first firefox use or after updates
+unzip /usr/lib/firefox-*/omni.jar defaults/preferences/firefox-branding.js -d /tmp
+cat << EOF >> /tmp/defaults/preferences/firefox-branding.js
+pref("startup.homepage_welcome_url","");
+pref("startup.homepage_override_url","");
+EOF
+
 # Set Test_Day:Current as default browser homepage
-cat << EOF > `ls -1 /usr/lib*/firefox*/browserconfig.properties`
+mkdir -p /tmp/chrome/en-US/locale/branding
+cat << EOF > /tmp/chrome/en-US/locale/branding/browserconfig.properties
 browser.startup.homepage=https://fedoraproject.org/wiki/Test_Day:Current
 EOF
 
-# Create a .desktop link for Test Day wiki
-mkdir -p /etc/skel/Desktop
-cat << EOF > /etc/skel/Desktop/testday-wiki.desktop
+(cd /tmp; zip /usr/lib/firefox-*/omni.jar chrome/en-US/locale/branding/browserconfig.properties defaults/preferences/firefox-branding.js)
+rm -rf /tmp/chrome /tmp/defaults
+
+# Create a directory to store global custom favorites
+mkdir -p /etc/skel/.local/share/applications
+
+# Create a favorite for the current test day wiki page
+cat << EOF > /etc/skel/.local/share/applications/testday-wiki.desktop
 [Desktop Entry]
-Encoding=UTF-8
 Name=Participate in a Test Day
-Type=Link
-URL=https://fedoraproject.org/wiki/Test_Day:Current
-Icon=gnome-fs-bookmark
+Type=Application
+Exec=firefox "https://fedoraproject.org/wiki/Test_Day:Current"
+Icon=firefox
 EOF
 
-# Create a .desktop link for Test Day IRC chat
-cat << EOF > /etc/skel/Desktop/testday-irc.desktop
+# Create a favorite for Test Day IRC chat
+cat << EOF > /etc/skel/.local/share/applications/testday-irc.desktop
 [Desktop Entry]
-Encoding=UTF-8
 Name=Connect to a Test Day chat
-Type=Link
-URL=http://webchat.freenode.net/?channels=fedora-test-day
-Icon=gnome-fs-bookmark
+Type=Application
+Exec=firefox "http://webchat.freenode.net/?channels=fedora-test-day"
+Icon=firefox
 EOF
 
-# Add gnome-terminal shortcut to desktop
-cp /usr/share/applications/gnome-terminal.desktop /etc/skel/Desktop
+# Create a favorite for liveinst
+cat << EOF > /etc/skel/.local/share/applications/liveinst.desktop
+[Desktop Entry]
+Name=Install to hard drive
+Type=Application
+Exec=liveinst
+Icon=anaconda
+EOF
+
+# Change the favorites using a vendor override. (Adding a profile would
+# be another way to do this.)
+cat << EOF > /usr/share/glib-2.0/schemas/org.gnome.shell.qa-testday.gschema.override
+[org.gnome.shell]
+favorite-apps=['testday-wiki.desktop', 'testday-irc.desktop', 'liveinst.desktop', 'nautilus.desktop', 'gnome-terminal.desktop']
+EOF
+glib-compile-schemas /usr/share/glib-2.0/schemas/
 %end
