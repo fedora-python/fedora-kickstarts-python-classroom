@@ -40,6 +40,27 @@ unzip
 %end
 
 %post
+
+cat >> /etc/rc.d/init.d/livesys << EOF
+
+# Note the following needs to be done twice, once for the live environment
+# to override what live-desktop does (so it executes after it) and a second
+# time to make a persistant config, so that tests after install still
+# have the settings to faciliate testing.
+
+# Change the favorites using a vendor override. (Adding a profile would
+# be another way to do this.)
+cat << FOE >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override
+[org.gnome.shell]
+favorite-apps=['testday-wiki.desktop', 'testday-irc.desktop', 'liveinst.desktop', 'nautilus.desktop', 'gnome-terminal.desktop']
+FOE
+glib-compile-schemas /usr/share/glib-2.0/schemas/
+
+EOF
+
+# Note the following config setups persist after install. I think this is
+# good for qa-testday purposes, but is bad for most other purposes.
+
 # Turn off alternate pages on first firefox use or after updates
 unzip /usr/lib/firefox-*/omni.jar defaults/preferences/firefox-branding.js -d /tmp
 cat << EOF >> /tmp/defaults/preferences/firefox-branding.js
@@ -88,7 +109,7 @@ EOF
 
 # Change the favorites using a vendor override. (Adding a profile would
 # be another way to do this.)
-cat << EOF >> /usr/share/glib-2.0/schemas/org.gnome.shell.qa-testday.gschema.override
+cat << EOF >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override
 [org.gnome.shell]
 favorite-apps=['testday-wiki.desktop', 'testday-irc.desktop', 'liveinst.desktop', 'nautilus.desktop', 'gnome-terminal.desktop']
 EOF
