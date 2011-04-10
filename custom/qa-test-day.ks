@@ -37,14 +37,21 @@ glib2
 %end
 
 %post
+# Turn off alternate pages on first firefox use or after updates
+unzip /usr/lib/firefox-*/omni.jar defaults/preferences/firefox-branding.js -d /tmp
+cat << EOF >> /tmp/defaults/preferences/firefox-branding.js
+pref("startup.homepage_welcome_url","");
+pref("startup.homepage_override_url","");
+EOF
+
 # Set Test_Day:Current as default browser homepage
 mkdir -p /tmp/chrome/en-US/locale/branding
 cat << EOF > /tmp/chrome/en-US/locale/branding/browserconfig.properties
 browser.startup.homepage=https://fedoraproject.org/wiki/Test_Day:Current
-browser.startup.homepage_override.mstone=ignore
 EOF
-(cd /tmp; zip /usr/lib/firefox-*/omni.jar chrome/en-US/locale/branding/browserconfig.properties)
-rm -rf /tmp/chrome
+
+(cd /tmp; zip /usr/lib/firefox-*/omni.jar chrome/en-US/locale/branding/browserconfig.properties defaults/preferences/firefox-branding.js)
+rm -rf /tmp/chrome /tmp/defaults
 
 # Create a directory to store global custom favorites
 mkdir -p /etc/skel/.local/share/applications
