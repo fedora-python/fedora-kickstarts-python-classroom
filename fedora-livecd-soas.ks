@@ -115,6 +115,23 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.updates.gsc
 active=false
 FOE
 
+# Create a default gnome keyring - should fix RHBZ # 649013
+if [ ! -e /home/liveuser/.gnome2/keyrings/default.keyring ]; then
+  mkdir -p /home/liveuser/.gnome2/keyrings
+  echo 'default' > /home/liveuser/.gnome2/keyrings/default
+  TIME=$(/bin/date +%s)
+  cat >/home/liveuser/.gnome2/keyrings/default.keyring.tmp <<FOE
+[keyring]
+display-name=default
+ctime=$TIME
+mtime=$TIME
+lock-on-idle=false
+lock-timeout=0
+  FOE
+  mv /home/liveuser/.gnome2/keyrings/default.keyring{.tmp,}
+  chown -R liveuser:liveuser /home/liveuser/.gnome2/keyrings
+fi
+
 # Add our activities to the favorites
 cat > /usr/share/sugar/data/activities.defaults << FOE
 org.laptop.AbiWordActivity
