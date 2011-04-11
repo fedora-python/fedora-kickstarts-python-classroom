@@ -119,16 +119,19 @@ FOE
 cat > /usr/share/sugar/data/activities.defaults << FOE
 org.laptop.AbiWordActivity
 org.laptop.Chat
+org.laptop.Calculate
 org.laptop.Log
+org.laptop.Memorize
 org.laptop.physics
+org.laptop.Pippy
 org.laptop.RecordActivity
 org.laptop.Terminal
 org.laptop.TurtleArtActivity
 org.laptop.WebActivity
-org.laptop.Pippy
-org.laptop.Calculator
+org.sugarlabs.AbacusActivity
 org.sugarlabs.IRC
 org.vpri.EtoysActivity
+vu.lux.olpc.Speak
 FOE
 
 # rebuild schema cache with any overrides we installed
