@@ -37,8 +37,9 @@ pulseaudio-utils
 # Write breaks unless we do this (we don't need it anyway)
 -@input-methods
 
-# explicitly remove openbox (need to find how its getting in there).
+# explicitly remove openbox and add metacity to hopefully deal with what firstboot wants
 -openbox
+metacity
 
 # Needed to show external hard drives
 gvfs
