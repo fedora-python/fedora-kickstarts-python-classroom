@@ -20,6 +20,9 @@ part / --size=2048
 # explicitly remove sugar-read due to dep issues
 -sugar-read
 
+# Add accountservice for gdm lookup of names
+accountsservice
+
 # == Platform Components ==
 # from http://wiki.sugarlabs.org/go/0.88/Platform_Components
 alsa-plugins-pulseaudio
@@ -97,7 +100,6 @@ gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults
 # Enable Sugar power management
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/power/automatic True >/dev/null
 
-cat >> /etc/rc.d/init.d/livesys << EOF
 # disable screensaver locking
 cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.override << FOE
 [org.gnome.desktop.screensaver]
@@ -117,20 +119,17 @@ active=false
 FOE
 
 # Create a default gnome keyring - should fix RHBZ # 649013
-if [ ! -e /home/liveuser/.gnome2/keyrings/default.keyring ]; then
-  mkdir -p /home/liveuser/.gnome2/keyrings
-  echo 'default' > /home/liveuser/.gnome2/keyrings/default
-  TIME=$(/bin/date +%s)
-  cat >/home/liveuser/.gnome2/keyrings/default.keyring.tmp <<FOE
+if [ ! -e /home/liveuser/.gnome2/keyrings/login.keyring ]; then
+mkdir -p /home/liveuser/.gnome2/keyrings
+cat >> /home/liveuser/.gnome2/keyrings/login.keyring << FOE
 [keyring]
-display-name=default
-ctime=$TIME
-mtime=$TIME
+display-name=login
+ctime=1302886515
+mtime=1302886515
 lock-on-idle=false
 lock-timeout=0
-  FOE
-  mv /home/liveuser/.gnome2/keyrings/default.keyring{.tmp,}
-  chown -R liveuser:liveuser /home/liveuser/.gnome2/keyrings
+FOE
+chown -R liveuser:liveuser /home/liveuser/.gnome2/keyrings
 fi
 
 # Add our activities to the favorites
