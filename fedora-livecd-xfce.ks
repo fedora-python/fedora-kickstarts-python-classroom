@@ -79,8 +79,6 @@ xscreensaver
 seahorse
 setroubleshoot
 xdg-user-dirs-gtk
-# no longer required, but default theme in Xfce - cwickert 2011-02-11
-gtk-theme-engine-clearlooks
 # no longer required, but needed for compatibility - cwickert 2011-02-11
 fedora-icon-theme
 # Adwaita is now default - cwickert 2011-04-04
