@@ -64,7 +64,7 @@ xfburn
 
 # More Desktop stuff
 # java plugin
-java-1.6.0-openjdk-plugin
+icedtea-web
 NetworkManager-vpnc
 NetworkManager-openvpn
 NetworkManager-gnome
