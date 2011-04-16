@@ -21,9 +21,8 @@ gnumeric
 # Graphics
 epdfview
 
-# development
+# Development
 geany
-vim-enhanced
 
 # Internet
 firefox
@@ -52,7 +51,7 @@ remmina-plugins-rdp
 remmina-plugins-vnc
 transmission
 
-# multimedia
+# Sound & Video
 alsa-plugins-pulseaudio
 asunder
 cheese
@@ -62,6 +61,17 @@ parole
 parole-mozplugin
 xfburn
 
+# System
+gparted
+-gnome-disk-utility
+gigolo
+setroubleshoot
+
+# Accessories
+catfish
+galculator
+seahorse
+
 # More Desktop stuff
 # java plugin
 icedtea-web
@@ -69,34 +79,28 @@ NetworkManager-vpnc
 NetworkManager-openvpn
 NetworkManager-gnome
 NetworkManager-pptp
-catfish
 desktop-backgrounds-compat
-galculator
-gparted
--gnome-disk-utility
 gnome-bluetooth
 xscreensaver
-seahorse
-setroubleshoot
 xdg-user-dirs-gtk
-# no longer required, but needed for compatibility - cwickert 2011-02-11
+
+# default artwork
 fedora-icon-theme
-# Adwaita is now default - cwickert 2011-04-04
-# https://bugzilla.redhat.com/show_bug.cgi?id=675509
 adwaita-cursor-theme
 adwaita-gtk2-theme
 adwaita-gtk3-theme
 
-# Command line
+# command line
+irssi
+mutt
 ntfs-3g
 powertop
 rtorrent
+vim-enhanced
 wget
-irssi
-mutt
 yum-utils
 
-# xfce packages
+# Xfce packages
 @xfce-desktop
 Terminal
 gtk-xfce-engine
@@ -105,7 +109,6 @@ ristretto
 hal-storage-addon
 thunar-volman
 thunar-media-tags-plugin
-gigolo
 xarchiver
 xfce4-battery-plugin
 # we already have thunar-volman
