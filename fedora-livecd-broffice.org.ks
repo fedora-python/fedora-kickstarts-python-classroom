@@ -26,7 +26,7 @@ broffice.org-*
 
 # Include some additional packages
 java-1.6.0-openjdk
-java-1.6.0-openjdk-plugin
+icedtea-web
 vino
 gimp
 

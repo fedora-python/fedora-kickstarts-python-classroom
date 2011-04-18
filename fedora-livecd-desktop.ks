@@ -15,7 +15,7 @@
 -specspo
 
 # Drop the Java plugin
--java-1.6.0-openjdk-plugin
+-icedtea-web
 -java-1.6.0-openjdk
 
 # Drop things that pull in perl
