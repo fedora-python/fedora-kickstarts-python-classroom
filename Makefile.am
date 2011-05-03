@@ -7,7 +7,6 @@ fedora_DATA = \
     fedora-live-base.ks \
     fedora-live-minimization.ks \
     fedora-live-mini.ks \
-    fedora-livecd-broffice.org.ks \
     fedora-livecd-design-suite.ks \
     fedora-live-desktop.ks \
     fedora-livecd-desktop.ks \
