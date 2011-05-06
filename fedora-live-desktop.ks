@@ -79,7 +79,7 @@ fi
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
-# set up timed auto-login for after 60 seconds
+# set up auto-login
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
 AutomaticLoginEnable=True
