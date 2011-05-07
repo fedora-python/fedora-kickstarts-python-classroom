@@ -17,8 +17,9 @@ part / --size=2048
 # == Core Sugar Platform ==
 @sugar-desktop
 
-# explicitly remove sugar-read due to dep issues
+# explicitly remove these as they're broken
 -sugar-read
+-sugar-browse
 
 # Add accountservice for gdm lookup of names
 accountsservice
@@ -142,9 +143,9 @@ org.laptop.Memorize
 org.laptop.physics
 org.laptop.Pippy
 org.laptop.RecordActivity
+org.laptop.Surf
 org.laptop.Terminal
 org.laptop.TurtleArtActivity
-org.laptop.WebActivity
 org.sugarlabs.AbacusActivity
 org.sugarlabs.IRC
 org.vpri.EtoysActivity
