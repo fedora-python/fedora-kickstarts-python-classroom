@@ -18,7 +18,7 @@ lxdm
 
 ### internet
 firefox
-java-1.6.0-openjdk-plugin
+icedtea-web
 pidgin
 sylpheed
 transmission
