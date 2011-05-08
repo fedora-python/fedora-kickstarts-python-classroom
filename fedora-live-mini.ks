@@ -10,7 +10,7 @@ selinux --permissive
 firewall --enabled --service=mdns
 xconfig --startxonboot
 part / --size 4096 --fstype ext4
-services --enabled=NetworkManager,messagebus --disabled=network,sshd
+services --enabled=NetworkManager,messagebus --disabled=network,sshd,iscsi,iscsid,lldpad
 
 repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
 #repo --name=fedora --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch

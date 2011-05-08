@@ -86,11 +86,14 @@ rm -f /var/lib/rpm/__db*
 
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
-Sugar on a Stick 5
+Sugar on a Stick 5 (Coconut)
 Fedora release 15 (Lovelock)
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
+
+# run lokkit as firewall command doesn't seem to work
+lokkit --enabled --service=mdns
 
 # Don't use the default system user (in SoaS liveuser) as nick name
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /desktop/sugar/user/default_nick disabled >/dev/null
