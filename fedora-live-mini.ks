@@ -241,9 +241,10 @@ mount -t tmpfs tmp /tmp
 mount -t tmpfs vartmp /var/tmp
 [ -x /sbin/restorecon ] && /sbin/restorecon /var/cache/yum /tmp /var/tmp >/dev/null 2>&1
 
-if [ -n "\$configdone" ]; then
-  exit 0
-fi
+# comment to fix sugar startup
+#if [ -n "\$configdone" ]; then
+#  exit 0
+#fi
 
 # add fedora user with no passwd
 action "Adding live user" useradd \$USERADDARGS -c "Live System User" liveuser
