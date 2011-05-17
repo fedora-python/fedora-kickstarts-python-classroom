@@ -70,6 +70,7 @@ perl-File-MimeInfo
 
 xcompmgr
 xdg-user-dirs-gtk
+xscreensaver-extras
 
 # use yumex instead of gnome-packagekit
 yumex
