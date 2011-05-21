@@ -56,7 +56,6 @@ adwaita-gtk3-theme
 gnome-keyring-pam
 
 gnome-bluetooth
-hal-storage-addon
 
 # needed for xdg-open to support LXDE
 perl-File-MimeInfo
