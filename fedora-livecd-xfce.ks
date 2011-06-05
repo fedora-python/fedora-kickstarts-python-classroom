@@ -58,7 +58,6 @@ cheese
 quodlibet
 pavucontrol
 parole
-parole-mozplugin
 xfburn
 
 # System
