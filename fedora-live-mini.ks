@@ -10,7 +10,7 @@ selinux --permissive
 firewall --enabled --service=mdns
 xconfig --startxonboot
 part / --size 4096 --fstype ext4
-services --enabled=NetworkManager,messagebus --disabled=network,sshd,iscsi,iscsid,lldpad
+services --enabled=NetworkManager,messagebus,avahi-daemon --disabled=network,sshd,iscsi,iscsid,lldpad
 
 repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
 #repo --name=fedora --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch
@@ -392,8 +392,7 @@ rm -f /core*
 
 %end
 
-
-%post
+%post --nochroot
 cp $INSTALL_ROOT/usr/share/doc/*-release-*/GPL $LIVE_ROOT/GPL
 
 # only works on x86, x86_64
