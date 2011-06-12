@@ -329,8 +329,6 @@ exists() {
     \$*
 }
 
-touch /.liveimg-late-configured
-
 # read some variables out of /proc/cmdline
 for o in \`cat /proc/cmdline\` ; do
     case \$o in
@@ -362,6 +360,8 @@ Section "Device"
 EndSection
 FOE
 fi
+
+touch /.liveimg-late-configured
 
 EOF
 

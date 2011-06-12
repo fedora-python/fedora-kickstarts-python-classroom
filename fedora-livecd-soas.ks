@@ -90,7 +90,7 @@ Sugar on a Stick 5 (Coconut)
 Fedora release 15 (Lovelock)
 EOF
 
-cat >> /etc/rc.d/init.d/livesys << EOF
+cat >> /etc/rc.d/init.d/livesys-late << EOF
 
 # run lokkit as firewall command doesn't seem to work
 lokkit --enabled --service=mdns
@@ -133,6 +133,7 @@ mtime=1302886515
 lock-on-idle=false
 lock-timeout=0
 FOE
+
 chown -R liveuser:liveuser /home/liveuser/.gnome2/keyrings
 fi
 
@@ -166,5 +167,9 @@ AutomaticLogin=liveuser
 FOE
 
 EOF
+
+chmod 755 /etc/rc.d/init.d/livesys-late
+/sbin/restorecon /etc/rc.d/init.d/livesys-late
+/sbin/chkconfig --add livesys-late
 
 %end
