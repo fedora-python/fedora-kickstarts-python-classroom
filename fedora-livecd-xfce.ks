@@ -58,7 +58,6 @@ cheese
 quodlibet
 pavucontrol
 parole
-parole-mozplugin
 xfburn
 
 # System
@@ -110,8 +109,6 @@ thunar-volman
 thunar-media-tags-plugin
 xarchiver
 xfce4-battery-plugin
-# we already have thunar-volman
-#xfce4-cddrive-plugin
 xfce4-cellmodem-plugin
 xfce4-clipman-plugin
 xfce4-cpugraph-plugin

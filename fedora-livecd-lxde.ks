@@ -62,7 +62,6 @@ adwaita-gtk3-theme
 # needed for automatic unlocking of keyring (#643435)
 gnome-keyring-pam
 
-hal-storage-addon
 NetworkManager-gnome
 
 # needed for xdg-open to support LXDE
@@ -70,6 +69,7 @@ perl-File-MimeInfo
 
 xcompmgr
 xdg-user-dirs-gtk
+xscreensaver-extras
 
 # use yumex instead of gnome-packagekit
 yumex
