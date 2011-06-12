@@ -90,8 +90,8 @@ rm -f /var/lib/rpm/__db*
 
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
-Sugar on a Stick 5 (Coconut)
-Fedora release 15 (Lovelock)
+Sugar on a Stick 6
+Fedora release 16 (Rawhide)
 EOF
 
 cat >> /etc/rc.d/init.d/livesys-late << EOF
