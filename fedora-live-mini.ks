@@ -57,7 +57,6 @@ pulseaudio-utils
 -nano
 -nc
 -nfs-utils
--nss_db
 -nss_ldap
 -numactl
 -pcmciautils

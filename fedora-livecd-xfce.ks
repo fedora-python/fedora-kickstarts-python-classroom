@@ -154,7 +154,6 @@ xfwm4-themes
 
 # save some space
 -autofs
--nss_db
 -acpid
 
 # drop some system-config things

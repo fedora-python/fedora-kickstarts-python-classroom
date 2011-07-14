@@ -100,7 +100,6 @@ yum-presto
 
 # save some space
 -autofs
--nss_db
 -sendmail
 ssmtp
 -acpid

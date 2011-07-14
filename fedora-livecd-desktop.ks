@@ -40,7 +40,6 @@
 -*backgrounds-extras
 
 # Legacy cmdline things we don't want
--nss_db
 -krb5-auth-dialog
 -krb5-workstation
 -pam_krb5

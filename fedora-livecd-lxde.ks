@@ -101,7 +101,6 @@ yum-presto
 -words
 
 # save some space
--nss_db
 -sendmail
 ssmtp
 -acpid
