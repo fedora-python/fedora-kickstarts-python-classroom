@@ -78,7 +78,6 @@ notification-daemon
 metacity
 
 # Command line
-cnetworkmanager
 irssi
 powertop
 wget
