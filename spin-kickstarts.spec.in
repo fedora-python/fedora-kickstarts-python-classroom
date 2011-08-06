@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
+* Sat Aug 06 2011 Bruno Wolff III <bruno@wolff.to> 0.16.1-1
+- Update for F16 branch
+
 * Fri May 20 2011 Bruno Wolff III <bruno@wolff.to> 0.16.0-1
 - Initial F16 build
 
