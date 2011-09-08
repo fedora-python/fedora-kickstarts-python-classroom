@@ -1,4 +1,4 @@
-# Desktop with customizationst to fit in a CD sized image (package removals, etc.)
+# Desktop with customizations to fit in a CD (package removals, etc.)
 # Maintained by the Fedora Desktop SIG:
 # http://fedoraproject.org/wiki/SIGs/Desktop
 # mailto:desktop@lists.fedoraproject.org
@@ -20,7 +20,6 @@
 
 # Drop things that pull in perl
 -linux-atm
--perf
 
 # No printing
 -foomatic-db-ppds
