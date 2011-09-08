@@ -19,6 +19,10 @@ nss-mdns
 # This one needs to be kicked out of @base
 -smartmontools
 
+# The gnome-shell team does not want extensions in the default spin;
+# ibus support in gnome-shell will be integrated in GNOME 3.4
+-ibus-gnome3
+
 %end
 
 %post
@@ -51,27 +55,6 @@ if [ -f /usr/share/applications/liveinst.desktop ]; then
   cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
 favorite-apps=['mozilla-firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'openoffice.org-writer.desktop', 'nautilus.desktop', 'anaconda.desktop']
-FOE
-
-  # add installer to user menu
-  mkdir -p ~liveuser/.local/share/gnome-shell/extensions/Installer@shell-extensions.fedoraproject.org
-  cat >> ~liveuser/.local/share/gnome-shell/extensions/Installer@shell-extensions.fedoraproject.org/metadata.json << FOE
-{"shell-version": ["2.91.91"], "uuid": "Installer@shell-extensions.fedoraproject.org", "name": "Installer", "description": "Install OS from user menu"}
-FOE
-
-  cat >> ~liveuser/.local/share/gnome-shell/extensions/Installer@shell-extensions.fedoraproject.org/extension.js << FOE
-const PopupMenu = imports.ui.popupMenu;
-const Shell = imports.gi.Shell;
-const Main = imports.ui.main;
-const Util = imports.misc.util;
-
-function main() {
-    let app = Shell.AppSystem.get_default().get_app('anaconda.desktop');
-    let item = new PopupMenu.PopupMenuItem(app.get_name());
-    item.connect('activate', function() { app.activate(-1); });
-
-    Main.panel._statusmenu.menu.addMenuItem(item, Main.panel._statusmenu.menu._getMenuItems().length - 1);
-}
 FOE
 
 fi
