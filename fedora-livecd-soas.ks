@@ -16,10 +16,6 @@ part / --size=2048
 
 # == Core Sugar Platform ==
 @sugar-desktop
-sugar-clock
-
-# temp work around due to working networking in Sugar. GRR NetworkManager!
-NetworkManager-gnome
 
 # explicitly remove these as they're broken
 -sugar-read
@@ -90,7 +86,7 @@ rm -f /var/lib/rpm/__db*
 
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
-Sugar on a Stick 6
+Sugar on a Stick 6 (Pineapple)
 Fedora release 16 (Verne)
 EOF
 
@@ -146,6 +142,7 @@ cat > /usr/share/sugar/data/activities.defaults << FOE
 org.laptop.AbiWordActivity
 org.laptop.Chat
 org.laptop.Calculate
+org.laptop.Clock
 org.laptop.Log
 org.laptop.Memorize
 org.laptop.physics

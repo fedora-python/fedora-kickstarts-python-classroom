@@ -120,8 +120,6 @@ avahi
 
 # Remove sendmail: this needs to be explicit
 -sendmail
-# But hopefully there shouldn't be deps so this shouldn't need to be there
-#ssmtp
 
 %end
 
