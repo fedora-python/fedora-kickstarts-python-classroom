@@ -39,6 +39,7 @@ lxmusic
 gxine
 gxine-mozplugin
 pavucontrol
+pnmixer
 # I'm looking for something smaller than
 gnomebaker
 
