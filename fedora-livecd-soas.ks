@@ -153,6 +153,7 @@ org.laptop.Terminal
 org.laptop.TurtleArtActivity
 org.laptop.community.TypingTurtle
 org.laptop.sugar.jukebox
+com.laptop.Ruler
 org.sugarlabs.AbacusActivity
 org.sugarlabs.IRC
 org.sugarlabs.VisualMatchActivity
