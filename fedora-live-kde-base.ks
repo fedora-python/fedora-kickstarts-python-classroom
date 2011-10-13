@@ -87,6 +87,13 @@ cp /usr/share/icons/gnome/48x48/apps/system-software-install.png /usr/share/icon
 cp /usr/share/icons/gnome/256x256/apps/system-software-install.png /usr/share/icons/hicolor/256x256/apps/
 touch /usr/share/icons/hicolor/
 
+# Set akonadi backend
+mkdir -p /home/liveuser/.config/akonadi
+cat > /home/liveuser/.config/akonadi/akonadiserverrc << AKONADI_EOF
+[%General]
+Driver=QSQLITE3
+AKONADI_EOF
+
 # Disable the update notifications of kpackagekit
 cat > /home/liveuser/.kde/share/config/KPackageKit << KPACKAGEKIT_EOF
 [CheckUpdate]
