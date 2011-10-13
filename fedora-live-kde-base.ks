@@ -111,8 +111,11 @@ cat > /home/liveuser/.kde/share/config/kres-migratorrc << KRES_EOF
 Enabled=false
 KRES_EOF
 
-# Disable strigi
+# Disable nepomuk
 cat > /home/liveuser/.kde/share/config/nepomukserverrc << NEPOMUK_EOF
+[Basic Settings]
+Start Nepomuk=false
+
 [Service-nepomukstrigiservice]
 autostart=false
 NEPOMUK_EOF
