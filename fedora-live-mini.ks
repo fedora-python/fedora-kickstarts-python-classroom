@@ -25,6 +25,11 @@ repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 kernel
 memtest86+
 
+# grub-efi and grub2 and efibootmgr so anaconda can use the right one on install.
+grub-efi
+grub2
+efibootmgr
+
 # implicitly include the fonts we want
 liberation-mono-fonts
 liberation-sans-fonts
