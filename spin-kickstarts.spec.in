@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
+* Sat Oct 15 2011 Bruno Wolff III <bruno@wolff.to> 0.16.2-1
+- Get an up to date version now that we are near f16 final freeze
+
 * Sat Aug 06 2011 Bruno Wolff III <bruno@wolff.to> 0.16.1-1
 - Update for F16 branch
 
