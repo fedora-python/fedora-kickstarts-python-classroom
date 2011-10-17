@@ -235,7 +235,8 @@ afftools
 srm
 # Command: firstaidkit -g gtk
 # Entry: First Aid Kit
-firstaidkit-plugin-all
+#firstaidkit-plugin-all #temp removed - dependency to grub2
+
 ntfs-3g
 ntfsprogs
 
