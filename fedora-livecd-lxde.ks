@@ -74,8 +74,8 @@ xscreensaver-extras
 
 # use yumex instead of gnome-packagekit
 yumex
+-apper
 -gnome-packagekit
--kpackagekit
 
 # LXDE has lxpolkit. Make sure no other authentication agents end up in the spin.
 -polkit-gnome

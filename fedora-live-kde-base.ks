@@ -94,16 +94,12 @@ cat > /home/liveuser/.config/akonadi/akonadiserverrc << AKONADI_EOF
 Driver=QSQLITE3
 AKONADI_EOF
 
-# Disable the update notifications of kpackagekit
-cat > /home/liveuser/.kde/share/config/KPackageKit << KPACKAGEKIT_EOF
+# Disable the update notifications of apper 
+cat > /home/liveuser/.kde/share/config/apper << APPER_EOF
 [CheckUpdate]
 autoUpdate=0
 interval=0
-
-[Notify]
-notifyLongTasks=2
-notifyUpdates=0
-KPACKAGEKIT_EOF
+APPER_EOF
 
 # Disable kres-migrator
 cat > /home/liveuser/.kde/share/config/kres-migratorrc << KRES_EOF
