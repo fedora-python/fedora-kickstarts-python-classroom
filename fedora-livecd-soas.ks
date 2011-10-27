@@ -143,6 +143,7 @@ org.laptop.AbiWordActivity
 org.laptop.Chat
 org.laptop.Calculate
 org.laptop.Clock
+org.laptop.ImageViewerActivity
 org.laptop.Log
 org.laptop.Memorize
 org.laptop.physics
@@ -152,7 +153,7 @@ org.laptop.Surf
 org.laptop.Terminal
 org.laptop.TurtleArtActivity
 org.laptop.community.TypingTurtle
-org.laptop.sugar.jukebox
+org.laptop.sugar.Jukebox
 com.laptop.Ruler
 org.sugarlabs.AbacusActivity
 org.sugarlabs.IRC
