@@ -133,7 +133,6 @@ cat > /etc/xdg/lxsession/LXDE/autostart << FOE
 /usr/libexec/gam_server
 @lxpanel --profile LXDE
 @pcmanfm --desktop --profile LXDE
-@pulseaudio -D
 FOE
 
 # set up preferred apps 
