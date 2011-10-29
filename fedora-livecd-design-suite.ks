@@ -19,7 +19,6 @@ metacity
 nautilus
 
 # graphics
-agave
 blender
 cinepaint
 # entangle # does not work in a gtk+ 3 environment
