@@ -18,7 +18,7 @@ part / --size=8192
 %packages
 # ship KDE wallpapers instead of GNOME ones
 -desktop-backgrounds-basic
-kdebase-workspace-wallpapers
+kde-wallpapers
 
 # Additional packages that are not default in kde-desktop but useful
 k3b				# ~15 megs
