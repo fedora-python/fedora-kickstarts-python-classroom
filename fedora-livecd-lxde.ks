@@ -116,6 +116,9 @@ ssmtp
 -policycoreutils-gui
 -gnome-disk-utility
 
+# we need UPower for suspend and hibernate
+upower
+
 %end
 
 %post
@@ -133,6 +136,7 @@ cat > /etc/xdg/lxsession/LXDE/autostart << FOE
 /usr/libexec/gam_server
 @lxpanel --profile LXDE
 @pcmanfm --desktop --profile LXDE
+/usr/libexec/notification-daemon
 FOE
 
 # set up preferred apps 
