@@ -83,6 +83,9 @@ gnome-bluetooth
 xscreensaver
 xdg-user-dirs-gtk
 
+# FIXME: work around #746693
+metacity
+
 # default artwork
 fedora-icon-theme
 adwaita-cursor-theme
