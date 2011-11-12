@@ -11,11 +11,15 @@
 %include fedora-live-mini.ks
 
 part / --size=2048
+firewall --enabled --service=mdns
 
 %packages
 
 # == Core Sugar Platform ==
 @sugar-desktop
+# Write breaks unless we do this (we don't need it anyway)
+# enable for testing in the F17 dev cycle
+@input-methods
 
 # explicitly remove these as they're broken
 -sugar-read
@@ -25,7 +29,7 @@ part / --size=2048
 accountsservice
 
 # == Platform Components ==
-# from http://wiki.sugarlabs.org/go/0.88/Platform_Components
+# from http://wiki.sugarlabs.org/go/0.94/Platform_Components
 alsa-plugins-pulseaudio
 alsa-utils
 etoys
@@ -37,9 +41,6 @@ gstreamer-plugins-bad-free
 pygame
 pulseaudio
 pulseaudio-utils
-
-# Write breaks unless we do this (we don't need it anyway)
--@input-methods
 
 # explicitly remove openbox and add metacity to hopefully deal with what firstboot wants
 -openbox
@@ -68,11 +69,6 @@ sugar-logos
 b43-openfwwf
 libertas-usb8388-firmware
 
-# == Fonts ==
-# More font support according to:
-# http://bugs.sugarlabs.org/ticket/1119
-# Moved to mini.ks
-
 %end
 
 %post
@@ -81,6 +77,7 @@ libertas-usb8388-firmware
 KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
 /usr/sbin/plymouth-set-default-theme sugar
 /sbin/dracut -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
+
 # Note that running rpm recreates the rpm db files which aren't needed or wanted
 rm -f /var/lib/rpm/__db*
 
