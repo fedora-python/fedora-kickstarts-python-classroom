@@ -65,7 +65,6 @@ pulseaudio-utils
 -nss_ldap
 -numactl
 -pcmciautils
--perf
 -pm-utils
 -rdate
 -rdist
