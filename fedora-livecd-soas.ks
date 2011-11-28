@@ -4,8 +4,8 @@
 # - A Sugar environment that you can carry in your pocket
 #
 # Maintainers:
-# - Sebastian Dziallas <sdz AT fedoraproject DOT org>
 # - Peter Robinson <pbrobinson AT gmail DOT com>
+# - Sebastian Dziallas <sdz AT fedoraproject DOT org>
 # - Mel Chua <mchua AT fedoraproject DOT org>
 
 %include fedora-live-mini.ks
@@ -17,6 +17,7 @@ firewall --enabled --service=mdns
 
 # == Core Sugar Platform ==
 @sugar-desktop
+
 # Write breaks unless we do this (we don't need it anyway)
 # enable for testing in the F17 dev cycle
 @input-methods
@@ -25,32 +26,18 @@ firewall --enabled --service=mdns
 -sugar-read
 -sugar-browse
 
-# Add accountservice for gdm lookup of names
-accountsservice
-
 # == Platform Components ==
 # from http://wiki.sugarlabs.org/go/0.94/Platform_Components
 alsa-plugins-pulseaudio
 alsa-utils
-etoys
-csound-python
-evince-djvu
 gstreamer-plugins-good
 gstreamer-plugins-espeak
 gstreamer-plugins-bad-free
-pygame
 pulseaudio
 pulseaudio-utils
 
 # explicitly remove openbox and add metacity to hopefully deal with what firstboot wants
 -openbox
-metacity
-
-# Needed to show external hard drives
-gvfs
-
-# Needed for battery monitoring and power management
-gnome-power-manager
 
 # Usefulness for DSL connections as per:
 # http://bugs.sugarlabs.org/ticket/1951
