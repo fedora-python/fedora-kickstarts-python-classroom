@@ -33,7 +33,6 @@ claws-mail-plugins-archive
 claws-mail-plugins-att-remover
 claws-mail-plugins-attachwarner
 claws-mail-plugins-bogofilter
-claws-mail-plugins-cachesaver
 claws-mail-plugins-fetchinfo
 claws-mail-plugins-mailmbox
 claws-mail-plugins-newmail
