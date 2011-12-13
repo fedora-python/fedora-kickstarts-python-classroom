@@ -75,9 +75,7 @@ seahorse
 icedtea-web
 NetworkManager-vpnc
 NetworkManager-openvpn
-NetworkManager-gnome
 NetworkManager-pptp
-desktop-backgrounds-compat
 gnome-bluetooth
 xscreensaver
 xdg-user-dirs-gtk
@@ -103,13 +101,8 @@ yum-utils
 
 # Xfce packages
 @xfce-desktop
-Terminal
-gtk-xfce-engine
-orage
 ristretto
-thunar-volman
 thunar-media-tags-plugin
-xarchiver
 xfce4-battery-plugin
 xfce4-cellmodem-plugin
 xfce4-clipman-plugin
@@ -125,7 +118,6 @@ xfce4-mount-plugin
 xfce4-netload-plugin
 xfce4-notes-plugin
 xfce4-places-plugin
-xfce4-power-manager
 xfce4-quicklauncher-plugin
 xfce4-screenshooter-plugin
 xfce4-sensors-plugin
