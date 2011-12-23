@@ -22,10 +22,6 @@ firewall --enabled --service=mdns
 # enable for testing in the F17 dev cycle
 @input-methods
 
-# explicitly remove these as they're broken
--sugar-read
--sugar-browse
-
 # == Platform Components ==
 # from http://wiki.sugarlabs.org/go/0.94/Platform_Components
 alsa-plugins-pulseaudio
