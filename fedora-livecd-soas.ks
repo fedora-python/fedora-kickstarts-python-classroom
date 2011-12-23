@@ -11,7 +11,7 @@
 %include fedora-live-mini.ks
 
 part / --size=2048
-firewall --enabled --service=mdns
+firewall --enabled --service=mdns,presence
 
 %packages
 
@@ -71,9 +71,6 @@ Fedora release 17 (Beefy Miracle)
 EOF
 
 cat >> /etc/rc.d/init.d/livesys-late << EOF
-
-# run lokkit as firewall command doesn't seem to work
-lokkit --enabled --service=mdns
 
 # Don't use the default system user (in SoaS liveuser) as nick name
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /desktop/sugar/user/default_nick disabled >/dev/null
