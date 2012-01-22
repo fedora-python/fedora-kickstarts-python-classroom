@@ -22,7 +22,7 @@
 #-ktorrent			# kget has also basic torrent features (~3 megs)
 -digikam			# digikam has duplicate functionality with gwenview (~28 megs)
 #-amarok 			# amarok has duplicate functionality with juk (~23 megs)
-# This one currently drags in Digikam: https://bugzilla.redhat.com/show_bug.cgi?id=727570
+# This one now drags in Marble:
 -kipi-plugins			# ~8 megs
 #-konq-plugins			# ~2 megs
 #-kdeplasma-addons		# ~16 megs
