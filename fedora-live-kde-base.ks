@@ -22,8 +22,8 @@ alsa-utils
 # make sure gnome-packagekit doesn't end up the KDE live images
 -gnome-packagekit*
 
-# pull in adwaita-gtk3-theme as long as we don't have native GTK+ 3 theming
-adwaita-gtk3-theme
+# pull in oxygen-gtk3 manually until we have the metapackage set up
+oxygen-gtk3
 
 %end
 
@@ -36,11 +36,15 @@ DESKTOP="KDE"
 DISPLAYMANAGER="KDE"
 EOF
 
-# make oxygen-gtk the default GTK+ 2 theme for root (see #683855, #689070)
+# make oxygen-gtk the default GTK+ theme for root (see #683855, #689070)
 cat > /root/.gtkrc-2.0 << EOF
 include "/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc"
 include "/etc/gtk-2.0/gtkrc"
 gtk-theme-name="oxygen-gtk"
+EOF
+cat > /root/.config/gtk-3.0/settings.ini << EOF
+[Settings]
+gtk-theme-name = oxygen-gtk
 EOF
 
 # add initscript
