@@ -36,17 +36,6 @@ DESKTOP="KDE"
 DISPLAYMANAGER="KDE"
 EOF
 
-# make oxygen-gtk the default GTK+ theme for root (see #683855, #689070)
-cat > /root/.gtkrc-2.0 << EOF
-include "/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc"
-include "/etc/gtk-2.0/gtkrc"
-gtk-theme-name="oxygen-gtk"
-EOF
-cat > /root/.config/gtk-3.0/settings.ini << EOF
-[Settings]
-gtk-theme-name = oxygen-gtk
-EOF
-
 # add initscript
 cat >> /etc/rc.d/init.d/livesys << EOF
 
