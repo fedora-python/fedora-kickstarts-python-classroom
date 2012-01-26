@@ -22,9 +22,6 @@ alsa-utils
 # make sure gnome-packagekit doesn't end up the KDE live images
 -gnome-packagekit*
 
-# pull in oxygen-gtk3 manually until we have the metapackage set up
-oxygen-gtk3
-
 %end
 
 
