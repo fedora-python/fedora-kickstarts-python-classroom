@@ -34,15 +34,19 @@ l10n_DATA = \
 	l10n/README \
     l10n/fedora-livecd-desktop-de_CH.ks \
     l10n/fedora-livecd-desktop-de_DE.ks \
+    l10n/fedora-livecd-desktop-fr_FR.ks \
     l10n/fedora-livecd-desktop-nl_NL.ks \
     l10n/fedora-livecd-desktop-pt_BR.ks \
     l10n/fedora-livecd-desktop-pt_PT.ks \
     l10n/fedora-livecd-kde-de_CH.ks \
     l10n/fedora-livecd-kde-de_DE.ks \
+    l10n/fedora-livecd-kde-fr_FR.ks \
     l10n/fedora-livecd-kde-nl_NL.ks \
     l10n/fedora-livecd-kde-pt_PT.ks \
     l10n/fedora-livecd-lxde-de_DE.ks \
+    l10n/fedora-livecd-lxde-fr_FR.ks \
     l10n/fedora-livecd-xfce-de_CH.ks \
+    l10n/fedora-livecd-xfce-fr_FR.ks \
     l10n/fedora-livecd-xfce-nl_NL.ks \
     l10n/fedora-livecd-xfce-pt_PT.ks \
     l10n/fedora-livedvd-electronic-lab-de_CH.ks \
