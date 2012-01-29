@@ -46,6 +46,7 @@ l10n_DATA = \
     l10n/fedora-livecd-lxde-de_DE.ks \
     l10n/fedora-livecd-lxde-fr_FR.ks \
     l10n/fedora-livecd-xfce-de_CH.ks \
+    l10n/fedora-livecd-xfce-de_DE.ks \
     l10n/fedora-livecd-xfce-fr_FR.ks \
     l10n/fedora-livecd-xfce-nl_NL.ks \
     l10n/fedora-livecd-xfce-pt_PT.ks \
