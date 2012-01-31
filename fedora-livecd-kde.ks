@@ -26,6 +26,7 @@
 -kipi-plugins			# ~8 megs
 #-konq-plugins			# ~2 megs
 #-kdeplasma-addons		# ~16 megs
+-krusader			# ~4 megs
 
 # Additional packages that are not default in kde-desktop but useful
 k3b				# ~15 megs
