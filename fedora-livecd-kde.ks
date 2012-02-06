@@ -52,7 +52,7 @@ yum-presto
 
 # fonts (we make no bones about admitting we're english-only)
 wqy-microhei-fonts	# a compact CJK font, to replace:
--un-core-dotum-fonts	# Korean
+-nhn-nanum-gothic-fonts	# Korean
 -vlgothic-fonts		# Japanese
 -wqy-zenhei-fonts	# simplified Chinese
 -cjkuni-uming-fonts	# traditional Chinese
