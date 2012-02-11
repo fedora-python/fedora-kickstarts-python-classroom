@@ -54,10 +54,9 @@ transmission
 alsa-plugins-pulseaudio
 asunder
 cheese
-# Currently has dep issues, drop for now - 2012-02-10
-#quodlibet
 pavucontrol
 parole
+pragha
 xfburn
 
 # System
