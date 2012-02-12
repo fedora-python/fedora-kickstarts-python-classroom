@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
+* Sun Feb 12 2012 Bruno Wolff III <bruno@wolff.to> 0.17.1-1
+- Rebuild post branch to build from branch repos
+
 * Tue Oct 25 2011 Bruno Wolff III <bruno@wolff.to> 0.17.0-1
 - Initial build of f17 version
 - Use rawhide repo by default for live images
