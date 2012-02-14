@@ -21,11 +21,11 @@
 -kdeartwork-screensavers	# screensavers are not needed on live images
 #-ktorrent			# kget has also basic torrent features (~3 megs)
 -digikam			# digikam has duplicate functionality with gwenview (~28 megs)
-#-amarok 			# amarok has duplicate functionality with juk (~23 megs)
+-amarok 			# amarok has duplicate functionality with juk (~23 megs)
 -kipi-plugins			# ~8 megs + drags in Marble
 #-konq-plugins			# ~2 megs
 #-kdeplasma-addons		# ~16 megs
--krusader			# ~4 megs
+#-krusader			# ~4 megs
 
 # Additional packages that are not default in kde-desktop but useful
 k3b				# ~15 megs
