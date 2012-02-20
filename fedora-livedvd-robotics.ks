@@ -14,6 +14,7 @@ part / --size 10240
 
 # Add robotics development packages
 @robotics-suite
+pcl-devel
 player-devel
 stage-devel
 mrpt-devel
