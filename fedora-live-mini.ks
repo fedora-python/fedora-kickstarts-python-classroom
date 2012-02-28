@@ -72,7 +72,6 @@ pulseaudio-utils
 -rsync
 -sendmail
 -sos
--specspo
 -stunnel
 -system-config-firewall-tui
 -system-config-network-tui

@@ -11,9 +11,6 @@
 -libreoffice-*
 -planner
 
-# Temporary list of things removed from comps but not synced yet
--specspo
-
 # Drop the Java plugin
 -icedtea-web
 -java-1.6.0-openjdk
