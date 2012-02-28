@@ -34,7 +34,6 @@ bzflag
 crossfire-client
 egoboo
 extremetuxracer
-FlightGear
 flight-of-the-amazon-queen-cd
 freeciv
 freecol
