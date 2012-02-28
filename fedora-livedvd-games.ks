@@ -63,7 +63,7 @@ warzone2100
 wesnoth
 widelands
 worminator
-wormux
+warmux
 xmoto
 
 # traditional (small)
