@@ -22,7 +22,7 @@ kde-wallpapers
 
 # Additional packages that are not default in kde-desktop but useful
 k3b				# ~15 megs
-koffice-suite
+calligra
 #kdeartwork			# only include some parts of kdeartwork
 #twinkle			# (~10 megs)
 fuse
@@ -60,7 +60,7 @@ octave			# runtime dependency of the Cantor Octave backend
 
 # KDE 4 translations
 kde-l10n-*
-koffice-langpack-*
+calligra-l10n-*
 
 # use yum-presto by default
 yum-presto
