@@ -16,7 +16,6 @@
 # don't include these for now to fit on a cd
 -desktop-backgrounds-basic
 -kdeaccessibility*
--kdeedu*			# kdeedu is too big for the live images
 -scribus			# scribus is too big for the live images
 -kdeartwork-screensavers	# screensavers are not needed on live images
 #-ktorrent			# kget has also basic torrent features (~3 megs)
