@@ -5,11 +5,12 @@
 # Fedora-Scientific aims to create a Fedora which has the generic
 # toolset for the researcher
 # Web: https://fedoraproject.org/wiki/Scientific_Spin
+# Web: http://spins.fedoraproject.org/scientific-kde/
 
-# Maintainer: Amit Saha <droidery@gmail.com>
-# FAS username: amitksaha
+# Maintainer: Amit Saha <amitksaha@fedoraproject.org>
+#             https://fedoraproject.org/wiki/User:Amitksaha
 
-# Last modified: October 23, 2011.
+# Last modified: March 10, 2012.
 
 %include fedora-live-kde.ks
 
@@ -20,6 +21,11 @@ part / --size 10000
 
 # Installing the default/mandatory packages from engineering & scientific
 @engineering-and-scientific
+
+# scilab
+scilab
+scilab-devel
+scilab-doc
 
 #Devel tools
 
@@ -68,8 +74,11 @@ pdfshuffler
 # Parallel/Distributed computing libraries/tools
 openmpi
 valgrind-openmpi
+pvm
 pvm-gui #will install 'pvm' as well
 libgomp
+python-pp
+
 
 #Version control- a GUI for each as well
 
