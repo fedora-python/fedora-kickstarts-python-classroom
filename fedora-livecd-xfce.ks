@@ -69,6 +69,7 @@ setroubleshoot
 catfish
 galculator
 seahorse
+ConsoleKit
 
 # More Desktop stuff
 # java plugin
