@@ -4,7 +4,8 @@
 #   A fully functional live OS based on Fedora for use in security auditing, forensics research, and penetration testing.
 # Maintainers:
 #  Christoph Wickert <cwickert [AT] fedoraproject <dot> org>
-#  Joerg Simon  <jsimon [AT] fedoraproject <dot> org>
+#  Joerg Simon <jsimon [AT] fedoraproject <dot> org>
+#  Fabian Affolter <fab [AT] fedoraproject <dot> org>
 # Acknowledgements:
 #   Fedora LiveCD Xfce Spin team - some work here was inherited, many thanks!
 #   Fedora LXDE Spin - Copied over stuff to make LXDE Default
@@ -186,8 +187,8 @@ ettercap
 ettercap-gtk
 # rCommand: packETH
 packETH
-# rCommand: iptraf
-iptraf
+# rCommand: iptraf-ng
+iptraf-ng
 pcapdiff
 # rCommand: etherape
 etherape
@@ -235,6 +236,9 @@ afftools
 # Command: srm -h
 # Entry: Securely Remove Files
 srm
+# Command: nwipe
+# Entry: Securely erase disks
+nwipe
 # Command: firstaidkit -g gtk
 # Entry: First Aid Kit
 #firstaidkit-plugin-all #temp removed - dependency to grub2
