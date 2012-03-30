@@ -343,7 +343,7 @@ FOE
 # set up preferred apps 
 cat > /etc/xdg/libfm/pref-apps.conf << FOE 
 [Preferred Applications]
-WebBrowser=mozilla-firefox.desktop
+WebBrowser=firefox.desktop
 MailClient=redhat-sylpheed.desktop
 FOE
 

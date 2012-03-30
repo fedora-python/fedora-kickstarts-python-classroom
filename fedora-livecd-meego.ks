@@ -61,7 +61,7 @@ FOE
 # Add favourite apps to MyZone
 mkdir -p /etc/skel/.local/share/
 cat > /etc/skel/.local/share/favourite-apps << FOE
-file:///usr/share/applications/moblin-app-installer.desktop file:///usr/share/applications/anjal.desktop file:///usr/share/applications/mozilla-firefox.desktop file:///usr/share
+file:///usr/share/applications/moblin-app-installer.desktop file:///usr/share/applications/anjal.desktop file:///usr/share/applications/firefox.desktop file:///usr/share
 /applications/fedora-empathy.desktop file:///usr/share/applications/hornsey.desktop file:///usr/share/applications/fedora-dates.desktop file:///usr/share/applications/fedora-con
 tacts.desktop file:///usr/share/applications/fedora-tasks.desktop
 FOE

@@ -114,7 +114,7 @@ if [ -f /usr/share/applications/liveinst.desktop ]; then
 
   cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
-favorite-apps=['mozilla-firefox.desktop', 'eclipse.desktop', 'arduino.desktop', 'gnome-terminal.desktop','nautilus.desktop', 'anaconda.desktop']
+favorite-apps=['firefox.desktop', 'eclipse.desktop', 'arduino.desktop', 'gnome-terminal.desktop','nautilus.desktop', 'anaconda.desktop']
 FOE
 
 fi

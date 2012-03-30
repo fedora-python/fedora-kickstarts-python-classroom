@@ -100,7 +100,7 @@ if [ -f /usr/share/applications/liveinst.desktop ]; then
 
   cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
-favorite-apps=['mozilla-firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'openoffice.org-writer.desktop', 'nautilus.desktop', 'inkscape-course.desktop', 'anaconda.desktop']
+favorite-apps=['firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'openoffice.org-writer.desktop', 'nautilus.desktop', 'inkscape-course.desktop', 'anaconda.desktop']
 FOE
 
   # add installer to user menu
