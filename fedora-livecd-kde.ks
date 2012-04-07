@@ -29,7 +29,7 @@
 k3b				# ~15 megs
 -calligra			# don't include whole calligra, just parts of it
 calligra-words
-calligra-tables			# ~1 megs
+calligra-sheets			# ~1 megs
 calligra-stage			# ~3 megs
 #kdeartwork			# only include some parts of kdeartwork
 #twinkle			# (~10 megs)
