@@ -81,14 +81,13 @@ wireshark-gnome
 @belarusian-support
 @bengali-support
 @bhutanese-support
-@burmese-support
 @bosnian-support
 @brazilian-support
 @breton-support
 @british-support
 @bulgarian-support
+@burmese-support
 @catalan-support
-@chinese-support
 @croatian-support
 @czech-support
 @danish-support
@@ -143,6 +142,7 @@ wireshark-gnome
 @russian-support
 @samoan-support
 @serbian-support
+@simplified-chinese-support
 @sindhi-support
 @sinhala-support
 @slovak-support
@@ -159,6 +159,7 @@ wireshark-gnome
 @thai-support
 @tibetan-support
 @tonga-support
+@traditional-chinese-support
 @tsonga-support
 @tswana-support
 @turkish-support
