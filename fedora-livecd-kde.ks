@@ -66,6 +66,9 @@ wqy-microhei-fonts	# a compact CJK font, to replace:
 # save some space (from @base)
 -make
 
+# save space (it pulls in gdisk/udisks2/libicu)
+-gnome-disk-utility
+
 ## avoid serious bugs by omitting broken stuff
 
 %end
