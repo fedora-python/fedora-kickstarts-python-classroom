@@ -171,6 +171,17 @@ wireshark-gnome
 @welsh-support
 @xhosa-support
 @zulu-support
+# Langpacks
+aspell-*
+autocorr-*
+eclipse-nls-*
+hunspell-*
+hyphen-*
+kde-l10n-*
+kde-i18n-*
+libreoffice-langpack-*
+man-pages-*
+mythes-*
 # Size removals
 -gimp-help
 -java-1.6.0-openjdk-src
