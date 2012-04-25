@@ -30,6 +30,7 @@ efibootmgr
 @kde-desktop
 @xfce-desktop
 @lxde-desktop
+@sugar-desktop
 echo-icon-theme
 tracker
 swfdec
