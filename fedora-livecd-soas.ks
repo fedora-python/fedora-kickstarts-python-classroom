@@ -10,7 +10,7 @@
 
 %include fedora-live-mini.ks
 
-part / --size=2048
+part / --size=2560
 firewall --enabled --service=mdns,presence
 
 %packages
