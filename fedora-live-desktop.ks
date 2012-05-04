@@ -57,88 +57,13 @@ if [ -f /usr/share/applications/liveinst.desktop ]; then
 favorite-apps=['firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'openoffice.org-writer.desktop', 'nautilus.desktop', 'anaconda.desktop']
 FOE
 
-  cat > /usr/bin/anaconda-notification << FOE
-#!/usr/bin/env python
-
-from gi.repository import GLib
-from gi.repository import Gio
-from gi.repository import Notify
-import sys
-import os
-import time
-
-def install_cb(n, action, data):
-   assert action == "install"
-   n.close()
-   os.execlp("liveinst", "liveinst")
-
-def closed_cb(user_data):
-    sys.exit()
-
-def get_anaconda_desktop_file():
-    desktop_files = ['/usr/share/applications/anaconda.desktop',
-                     '/usr/share/applications/liveinst.desktop']
-
-    for f in desktop_files:
-        if os.path.isfile(f):
-            return f
-
-    return ""
-
-def show_notification(n):
-    # Spin 10 seconds, waiting for the notification service to start
-    retval = False
-    for i in range(1, 10):
-        try:
-            retval = n.show()
-            break
-        except:
-            time.sleep(1)
-
-    return retval
-
-if __name__ == '__main__':
-    appinfo = Gio.DesktopAppInfo()
-    try:
-       desktop = appinfo.new_from_filename(get_anaconda_desktop_file())
-    except:
-       sys.exit(1)
-    label = desktop.get_name()
-    actionlabel = desktop.get_generic_name()
-
-    if not Notify.init(label):
-        sys.exit(1)
-
-    n = Notify.Notification()
-    n.set_property("summary",label)
-    n.set_property("body",
-        "You are currently using an uninstalled live image.\n" +
-        "If you want to keep using Fedora, you can install " +
-        "it to your hard disk.")
-    n.set_property("icon-name","anaconda")
-    n.set_urgency(Notify.Urgency.CRITICAL)
-
-    n.connect("closed", closed_cb)
-    n.add_action("install", actionlabel, install_cb, None, None)
-
-    if not show_notification(n):
-        print "Failed to send notification"
-        sys.exit(1)
-
-    GLib.MainLoop().run()
-FOE
-  chmod +x /usr/bin/anaconda-notification
-
-  mkdir -p ~liveuser/.config/autostart
-  cat > ~liveuser/.config/autostart/anaconda-notification.desktop << FOE
-[Desktop Entry]
-Name=Fedora Install Notification
-Exec=anaconda-notification
-Type=Application
-X-GNOME-Autostart-enabled=true
-FOE
-
-  chown -R liveuser:liveuser /home/liveuser/.config/
+  # Make the welcome screen show up
+  if [ -f /usr/share/anaconda/gnome/fedora-welcome.desktop ]; then
+    mkdir -p ~liveuser/.config/autostart
+    cp /usr/share/anaconda/gnome/fedora-welcome.desktop /usr/share/applications/
+    cp /usr/share/anaconda/gnome/fedora-welcome.desktop ~liveuser/.config/autostart/
+    chown -R liveuser:liveuser /home/liveuser/.config/
+  fi
 fi
 
 # rebuild schema cache with any overrides we installed
