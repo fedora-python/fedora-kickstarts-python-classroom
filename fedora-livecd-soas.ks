@@ -99,39 +99,25 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.updates.gsc
 active=false
 FOE
 
-# Create a default gnome keyring - should fix RHBZ # 649013
-if [ ! -e /home/liveuser/.gnome2/keyrings/login.keyring ]; then
-mkdir -p /home/liveuser/.gnome2/keyrings
-cat >> /home/liveuser/.gnome2/keyrings/login.keyring << FOE
-[keyring]
-display-name=login
-ctime=1302886515
-mtime=1302886515
-lock-on-idle=false
-lock-timeout=0
-FOE
-
-chown -R liveuser:liveuser /home/liveuser/.gnome2/keyrings
-fi
-
 # Add our activities to the favorites
 cat > /usr/share/sugar/data/activities.defaults << FOE
-org.laptop.AbiWordActivity
+org.laptop.WebActivity
+org.laptop.HelpActivity
 org.laptop.Chat
+org.laptop.sugar.ReadActivity
+org.laptop.sugar.GetBooksActivity
+org.laptop.AbiWordActivity
+org.laptop.TurtleArtActivity
 org.laptop.Calculate
 org.laptop.Clock
 org.laptop.ImageViewerActivity
-org.laptop.Log
 org.laptop.Memorize
 org.laptop.physics
 org.laptop.Pippy
 org.laptop.RecordActivity
-org.laptop.Terminal
-org.laptop.TurtleArtActivity
-org.laptop.WebActivity
+org.laptop.Oficina
 org.laptop.community.TypingTurtle
 org.laptop.sugar.Jukebox
-org.laptop.sugar.ReadActivity
 org.gnome.Labyrinth
 com.laptop.Ruler
 org.sugarlabs.AbacusActivity
@@ -145,6 +131,9 @@ mulawa.Countries
 tv.alterna.Clock
 vu.lux.olpc.Maze
 vu.lux.olpc.Speak
+org.laptop.community.Finance
+org.laptop.Terminal
+org.laptop.Log
 FOE
 
 # rebuild schema cache with any overrides we installed
