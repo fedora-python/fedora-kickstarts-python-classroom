@@ -66,8 +66,8 @@ rm -f /var/lib/rpm/__db*
 
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
-Sugar on a Stick 7
-Fedora release 17 (Beefy Miracle)
+Sugar on a Stick 8
+Fedora release 18 (Spherical Cow)
 EOF
 
 cat >> /etc/rc.d/init.d/livesys-late << EOF
