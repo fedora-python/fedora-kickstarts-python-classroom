@@ -103,9 +103,8 @@ if ! strstr "\`cat /proc/cmdline\`" noswap && [ -n "\$swaps" ] ; then
     action "Enabling swap partition \$s" swapon \$s
   done
 fi
-if ! strstr "$(cat /proc/cmdline)" noswap &&
-    [[ -f /run/initramfs/live/${livedir}/swap.img ]] ; then
-  action "Enabling swap file" swapon /run/initramfs/live/${livedir}/swap.img
+if ! strstr "\`cat /proc/cmdline\`" noswap && [ -f /run/initramfs/live/\${livedir}/swap.img ] ; then
+  action "Enabling swap file" swapon /run/initramfs/live/\${livedir}/swap.img
 fi
 
 mountPersistentHome() {
@@ -120,7 +119,7 @@ mountPersistentHome() {
     mountopts="-t jffs2"
   elif [ ! -b "\$homedev" ]; then
     loopdev=\`losetup -f\`
-    if [[ ${homedev##/run/initramfs/live} != ${homedev} ]]; then
+    if [ "\${homedev##/run/initramfs/live}" != "\${homedev}" ]; then
       action "Remounting live store r/w" mount -o remount,rw /run/initramfs/live
     fi
     losetup \$loopdev \$homedev
@@ -155,8 +154,8 @@ findPersistentHome() {
 
 if strstr "\`cat /proc/cmdline\`" persistenthome= ; then
   findPersistentHome
-elif [[ -e /run/initramfs/live/${livedir}/home.img ]]; then
-  homedev=/run/initramfs/live/${livedir}/home.img
+elif [ -e /run/initramfs/live/\${livedir}/home.img ]; then
+  homedev=/run/initramfs/live/\${livedir}/home.img
 fi
 
 # if we have a persistent /home, then we want to go ahead and mount it
