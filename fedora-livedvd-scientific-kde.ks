@@ -127,7 +127,6 @@ screen
 rlwrap
 xchat
 shutter
-wine
 fig2ps
 bibtex2html
 hevea
