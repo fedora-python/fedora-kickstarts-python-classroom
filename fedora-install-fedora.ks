@@ -193,7 +193,8 @@ mythes-*
 -java-1.5.0-gcj-src
 -java-1.5.0-gcj-devel
 -libgcj-src
--*javadoc*
 -frysk
 -*gcj*
+-PackageKit-zif
+-zif
 %end
