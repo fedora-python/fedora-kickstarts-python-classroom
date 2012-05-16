@@ -14,11 +14,12 @@ timezone Europe/Paris
 
 %packages
 @french-support
+aspell-fr
+hunspell-fr
+libreoffice-langpack-fr
 # exclude input methods:
 -m17n*
 -scim*
 -ibus*
 -iok
-# fix a minor build error:
--claws-mail
 %end
