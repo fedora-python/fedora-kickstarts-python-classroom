@@ -72,8 +72,8 @@ wireshark-gnome
 -dap-server-cgi
 # Virt group
 @virtualization --optional
-# filesystem stuff
-@filesystems
+# Things needed for installation
+@anaconda-tools
 # Languages
 @afrikaans-support
 @albanian-support
