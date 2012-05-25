@@ -22,12 +22,6 @@ repo --name=fedora-source  --mirrorlist=http://mirrors.fedoraproject.org/mirrorl
 tcsh
 kernel*
 dracut-*
-# grub-efi and grub2 and efibootmgr so anaconda can use the right one on install. 
-grub-efi
-grub2
-efibootmgr
-# mactel-boot needs to be on the DVD for successful installation to intel macs.
-mactel-boot
 # Desktop Packages
 @kde-desktop
 @xfce-desktop
