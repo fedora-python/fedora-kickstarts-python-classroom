@@ -13,7 +13,7 @@
 
 # Drop the Java plugin
 -icedtea-web
--java-1.6.0-openjdk
+-java-1.7.0-openjdk
 
 # Drop things that pull in perl
 -linux-atm
@@ -60,7 +60,6 @@
 # Drop some system-config things
 -system-config-boot
 -system-config-language
--system-config-network
 -system-config-rootpassword
 -system-config-services
 -policycoreutils-gui
