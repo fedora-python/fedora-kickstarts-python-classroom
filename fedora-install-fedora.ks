@@ -57,7 +57,6 @@ wireshark-gnome
 @mail-server
 @mysql
 @network-server
-@news-server
 @server-cfg
 @smb-server
 @sql-server
