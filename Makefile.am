@@ -38,24 +38,30 @@ l10n_DATA = \
     l10n/fedora-livecd-desktop-nl_NL.ks \
     l10n/fedora-livecd-desktop-pt_BR.ks \
     l10n/fedora-livecd-desktop-pt_PT.ks \
+    l10n/fedora-livecd-desktop-ru_RU.ks \
     l10n/fedora-livecd-kde-de_CH.ks \
     l10n/fedora-livecd-kde-de_DE.ks \
     l10n/fedora-livecd-kde-fr_FR.ks \
     l10n/fedora-livecd-kde-nl_NL.ks \
     l10n/fedora-livecd-kde-pt_PT.ks \
+    l10n/fedora-livecd-kde-ru_RU.ks \
     l10n/fedora-livecd-lxde-de_DE.ks \
     l10n/fedora-livecd-lxde-fr_FR.ks \
+    l10n/fedora-livecd-lxde-ru_RU.ks
     l10n/fedora-livecd-xfce-de_CH.ks \
     l10n/fedora-livecd-xfce-de_DE.ks \
     l10n/fedora-livecd-xfce-fr_FR.ks \
     l10n/fedora-livecd-xfce-nl_NL.ks \
     l10n/fedora-livecd-xfce-pt_PT.ks \
+    l10n/fedora-livecd-xfce-ru_RU.ks \
     l10n/fedora-livedvd-electronic-lab-de_CH.ks \
     l10n/fedora-livedvd-electronic-lab-nl_NL.ks \
     l10n/fedora-livedvd-electronic-lab-pt_PT.ks \
+    l10n/fedora-livedvd-electronic-lab-ru_RU.ks
     l10n/fedora-livedvd-games-de_CH.ks \
     l10n/fedora-livedvd-games-nl_NL.ks \
-    l10n/fedora-livedvd-games-pt_PT.ks
+    l10n/fedora-livedvd-games-pt_PT.ks \
+    l10n/fedora-livedvd-games-ru_RU.ks
 
 EXTRA_DIST =               \
     $(fedora_DATA) \
