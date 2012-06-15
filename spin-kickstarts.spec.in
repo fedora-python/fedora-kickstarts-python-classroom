@@ -76,6 +76,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
+* Fri Jun 15 2012 Bruno Wolff III <bruno@wolff.to> 0.18.1-1
+- Initial package for f18 rawhide
+- Switch back to rawhide repos until branch
+- Include Russian localization ks files
+
 * Sun Feb 12 2012 Bruno Wolff III <bruno@wolff.to> 0.17.1-1
 - Rebuild post branch to build from branch repos
 
