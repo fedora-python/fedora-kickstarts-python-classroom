@@ -89,6 +89,10 @@ fedora-icon-theme
 adwaita-cursor-theme
 adwaita-gtk2-theme
 adwaita-gtk3-theme
+greybird-gtk2-theme
+greybird-gtk3-theme
+greybird-xfce4-notifyd-theme
+greybird-xfwm4-theme
 
 # command line
 irssi
