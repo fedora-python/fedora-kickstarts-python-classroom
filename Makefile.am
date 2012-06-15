@@ -57,7 +57,7 @@ l10n_DATA = \
     l10n/fedora-livedvd-electronic-lab-de_CH.ks \
     l10n/fedora-livedvd-electronic-lab-nl_NL.ks \
     l10n/fedora-livedvd-electronic-lab-pt_PT.ks \
-    l10n/fedora-livedvd-electronic-lab-ru_RU.ks
+    l10n/fedora-livedvd-electronic-lab-ru_RU.ks \
     l10n/fedora-livedvd-games-de_CH.ks \
     l10n/fedora-livedvd-games-nl_NL.ks \
     l10n/fedora-livedvd-games-pt_PT.ks \
