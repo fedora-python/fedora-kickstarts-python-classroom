@@ -44,8 +44,8 @@ pnmixer
 gnomebaker
 
 ### utils
+clipit
 galculator
-parcellite
 xpad
 
 ### system
