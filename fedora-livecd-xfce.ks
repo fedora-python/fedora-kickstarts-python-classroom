@@ -81,9 +81,6 @@ gnome-bluetooth
 xscreensaver
 xdg-user-dirs-gtk
 
-# FIXME: work around #746693
-metacity
-
 # default artwork
 fedora-icon-theme
 adwaita-cursor-theme
@@ -93,6 +90,12 @@ greybird-gtk2-theme
 greybird-gtk3-theme
 greybird-xfce4-notifyd-theme
 greybird-xfwm4-theme
+albatross-gtk2-theme
+albatross-gtk3-theme
+albatross-xfwm4-theme
+bluebird-gtk2-theme
+bluebird-gtk3-theme
+bluebird-xfwm4-theme
 
 # command line
 irssi
@@ -172,6 +175,7 @@ xfwm4-themes
 
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/startxfce4
+DISPLAYMANAGER=/usr/sbin/lightdm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
@@ -197,12 +201,9 @@ rm -f /etc/xdg/autostart/xfconf-migration-4.6.desktop || :
 mkdir -p /home/liveuser/.config/xfce4/xfconf/xfce-perchannel-xml
 cp /etc/xdg/xfce4/panel/default.xml /home/liveuser/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 
-# set up auto-login
-cat >> /etc/gdm/custom.conf << FOE
-[daemon]
-AutomaticLoginEnable=True
-AutomaticLogin=liveuser
-FOE
+# set up lightdm autologin
+sed -ei '|^#autologin-user=|autologin-user=liveuser|' /etc/lightdm/lightdm.conf 
+sed -ei '|^#autologin-user-timeout=0|autologin-user-timeout=10|' /etc/lightdm/lightdm.conf 
 
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
