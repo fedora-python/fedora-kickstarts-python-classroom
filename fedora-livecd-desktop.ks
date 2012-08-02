@@ -23,11 +23,10 @@
 -foomatic
 
 # Dictionaries are big
+# we're going to try keeping hunspell-* after notting, davidz, and ajax voiced
+# strong preference to giving it a go on #fedora-desktop.
 # also see http://bugzilla.gnome.org/681084
-# for a more long term solution.
 -aspell-*
--hunspell-*
-hunspell-en
 -man-pages*
 -words
 
