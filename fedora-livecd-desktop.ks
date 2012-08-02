@@ -23,8 +23,11 @@
 -foomatic
 
 # Dictionaries are big
+# also see http://bugzilla.gnome.org/681084
+# for a more long term solution.
 -aspell-*
 -hunspell-*
+hunspell-en
 -man-pages*
 -words
 
