@@ -35,7 +35,6 @@ boswars
 btanks
 bzflag
 crossfire-client
-egoboo
 extremetuxracer
 flight-of-the-amazon-queen-cd
 freeciv
