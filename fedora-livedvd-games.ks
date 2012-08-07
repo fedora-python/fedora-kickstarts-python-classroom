@@ -44,12 +44,12 @@ freedoom
 freedroidrpg
 frozen-bubble
 gl-117
-glest
 glob2
 lincity-ng
 manaworld
 maniadrive
 maniadrive-music
+megaglest
 nethack-vultures
 netpanzer
 neverball
