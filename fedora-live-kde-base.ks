@@ -30,8 +30,10 @@ alsa-utils
 # create /etc/sysconfig/desktop (needed for installation)
 cat > /etc/sysconfig/desktop <<EOF
 DESKTOP="KDE"
-DISPLAYMANAGER="KDE"
 EOF
+
+# enable kdm for https://fedoraproject.org/wiki/Features/DisplayManagerRework
+systemctl enable --force kdm.service 
 
 # make oxygen-gtk the default GTK+ theme for root (see #683855, #689070, #808062)
 cat > /root/.gtkrc-2.0 << EOF
