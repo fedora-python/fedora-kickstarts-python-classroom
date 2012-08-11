@@ -178,9 +178,6 @@ PREFERRED=/usr/bin/startxfce4
 DISPLAYMANAGER=/usr/sbin/lightdm
 EOF
 
-# enable lightdm for https://fedoraproject.org/wiki/Features/DisplayManagerRework
-systemctl enable --force lightdm.service
-
 cat >> /etc/rc.d/init.d/livesys << EOF
 
 mkdir -p /home/liveuser/.config/xfce4
