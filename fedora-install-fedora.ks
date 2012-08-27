@@ -19,172 +19,115 @@ repo --name=fedora-source  --mirrorlist=http://mirrors.fedoraproject.org/mirrorl
 # (default groups for the configured repos are added by --default)
 %packages --default
 # core
-tcsh
 kernel*
 dracut-*
-# Desktop Packages
-@kde-desktop
-@xfce-desktop
-@lxde-desktop
-@sugar-desktop
-echo-icon-theme
-tracker
-swfdec
-nspluginwrapper
-liferea
-esc
-thunderbird
+
+# Desktops
+
+## common stuff
+@x-server
+@base
+@core
 @dial-up
-# apps
+@fonts
+@input-methods
+@multimedia
+@hardware-support
+@printing
+
+## GNOME
+@firefox
+@gnome
+@gnome-apps
+@gnome-media
+@epiphany
+@libreoffice
+
+## KDE
+@kde
+@kde-apps
+@kde-education
+@kde-media
+@kde-office
+
+## XFCE
+@xfce
+@xfce-apps
+@xfce-extra-plugins
+@xfce-media
+@xfce-office
+
+## LXDE
+@lxde
+@lxde-apps
+@lxde-media
+@lxde-office
+
+## SUGAR
+@sugar-desktop
+@sugar-apps
+
+# Web server
+@web-server
+@haproxy
+@jbossas
+@mongodb
+@perl-web
+@python-web
+@php
+@rubyonrails
+@mysql
+@sql-server
+
+# Infrastructure server
+@dns-server
+@ftp-server
+@mail-server
+@network-server
+@smb-server
+
+# Workstation
 @eclipse
-joe
-emacs
-k3b
-@system-tools
-mc
-wireshark-gnome
-# Devel packages
 @development-libs
 @development-tools
 @fedora-packager
 @gnome-software-development
 @kde-software-development
-@web-development
 @x-software-development
-# Server packages
-@dns-server
-@ftp-server
-@mail-server
-@mysql
-@network-server
-@server-cfg
-@smb-server
-@sql-server
+@virtualization
 @web-server
-# Keep dap off the install media, makes Eng & Sci show up
--dap-server-cgi
-# Virt group
-@virtualization --optional
+@jbossas
+@mongodb
+@perl-web
+@php
+@rubyonrails
+@mysql
+@sql-server
+@design-suite
+## Not included yet due to space concerns
+#@milkymist
+#@mingw32
+#@ocaml
+#@robotics-suite
+#@electronic-lab
+
 # Things needed for installation
 @anaconda-tools
-# Languages
-@afrikaans-support
-@albanian-support
-@arabic-support
-@armenian-support
-@assamese-support
-@basque-support
-@belarusian-support
-@bengali-support
-@bhutanese-support
-@bosnian-support
-@brazilian-support
-@breton-support
-@british-support
-@bulgarian-support
-@burmese-support
-@catalan-support
-@croatian-support
-@czech-support
-@danish-support
-@dutch-support
-@esperanto-support
-@estonian-support
-@ethiopic-support
-@faroese-support
-@filipino-support
-@finnish-support
-@french-support
-@gaelic-support
-@galician-support
-@georgian-support
-@german-support
-@greek-support
-@gujarati-support
-@hebrew-support
-@hindi-support
-@hungarian-support
-@icelandic-support
-@indonesian-support
-@inuktitut-support
-@irish-support
-@italian-support
-@japanese-support
-@kannada-support
-@kashmiri-support
-@kashubian-support
-@khmer-support
-@konkani-support
-@korean-support
-@lao-support
-@latvian-support
-@lithuanian-support
-@low-saxon-support
-@macedonian-support
-@malay-support
-@malayalam-support
-@maori-support
-@marathi-support
-@mongolian-support
-@nepali-support
-@northern-sotho-support
-@norwegian-support
-@oriya-support
-@persian-support
-@polish-support
-@portuguese-support
-@punjabi-support
-@romanian-support
-@russian-support
-@samoan-support
-@serbian-support
-@simplified-chinese-support
-@sindhi-support
-@sinhala-support
-@slovak-support
-@slovenian-support
-@somali-support
-@southern-ndebele-support
-@southern-sotho-support
-@spanish-support
-@swati-support
-@swedish-support
-@tagalog-support
-@tamil-support
-@telugu-support
-@thai-support
-@tibetan-support
-@tonga-support
-@traditional-chinese-support
-@tsonga-support
-@tswana-support
-@turkish-support
-@ukrainian-support
-@urdu-support
-@venda-support
-@vietnamese-support
-@walloon-support
-@welsh-support
-@xhosa-support
-@zulu-support
+
 # Langpacks
 aspell-*
 autocorr-*
 eclipse-nls-*
 hunspell-*
 hyphen-*
+calligra-l10n-*
 kde-l10n-*
 kde-i18n-*
 libreoffice-langpack-*
 man-pages-*
 mythes-*
-# Size removals
--gimp-help
--xorg-x11-docs
--kernel-doc
--libgcj-src
--frysk
--*gcj*
+
+# Removals
 -PackageKit-zif
 -zif
 %end
