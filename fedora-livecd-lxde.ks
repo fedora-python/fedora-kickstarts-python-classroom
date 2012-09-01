@@ -63,7 +63,7 @@ adwaita-gtk3-theme
 # needed for automatic unlocking of keyring (#643435)
 gnome-keyring-pam
 
-NetworkManager-gnome
+network-manager-applet
 
 # needed for xdg-open to support LXDE
 perl-File-MimeInfo
