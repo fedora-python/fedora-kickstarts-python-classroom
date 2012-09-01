@@ -63,7 +63,7 @@ wqy-microhei-fonts	# a compact CJK font, to replace:
 -ibus*
 -iok
 
-# save some space (from @base)
+# save some space (from @standard)
 -make
 
 # save space (it pulls in gdisk/udisks2/libicu)

@@ -16,7 +16,7 @@ part / --size 4096
 # desktop image at some point.  We won't touch this one for now.
 nss-mdns
 
-# This one needs to be kicked out of @base
+# This one needs to be kicked out of @standard
 -smartmontools
 
 # The gnome-shell team does not want extensions in the default spin;

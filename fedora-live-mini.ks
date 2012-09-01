@@ -19,7 +19,7 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 
 %packages
 @base-x
-@base
+@standard
 @core
 @hardware-support
 kernel

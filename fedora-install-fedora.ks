@@ -15,7 +15,6 @@ repo --name=fedora-source  --mirrorlist=http://mirrors.fedoraproject.org/mirrorl
 
 
 # Package manifest for the compose.  Uses repo group metadata to translate groups.
-# (@base is added by default unless you add --nobase to %packages)
 # (default groups for the configured repos are added by --default)
 %packages --default
 # core
@@ -26,7 +25,7 @@ dracut-*
 
 ## common stuff
 @x-server
-@base
+@standard
 @core
 @dial-up
 @fonts

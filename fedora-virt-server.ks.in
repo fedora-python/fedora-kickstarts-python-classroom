@@ -46,7 +46,7 @@ part / --size=550 --grow --fstype=ext4
 part swap --recommended
 
 %packages
-@base
+@standard
 %end
 
 #
