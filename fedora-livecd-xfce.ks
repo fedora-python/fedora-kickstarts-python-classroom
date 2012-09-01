@@ -77,7 +77,7 @@ icedtea-web
 NetworkManager-vpnc
 NetworkManager-openvpn
 NetworkManager-pptp
-gnome-bluetooth
+blueman
 xscreensaver
 xdg-user-dirs-gtk
 
@@ -139,7 +139,8 @@ xfce4-verve-plugin
 #xfce4-wavelan-plugin
 xfce4-weather-plugin
 xfce4-websearch-plugin
-xfce4-xfswitch-plugin
+# drop for now since we don't want to pull in gdm.
+#xfce4-xfswitch-plugin
 xfce4-xkb-plugin
 # system-config-printer does printer management better
 #xfprint
