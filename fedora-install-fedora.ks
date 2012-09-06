@@ -24,7 +24,7 @@ dracut-*
 # Desktops
 
 ## common stuff
-@x-server
+@base-x
 @standard
 @core
 @dial-up
