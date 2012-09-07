@@ -17,6 +17,10 @@
 @lxde-office
 @firefox
 
+# pam-fprint causes a segfault in LXDM when enabled
+-fprintd-pam
+
+
 # LXDE has lxpolkit. Make sure no other authentication agents end up in the spin.
 -polkit-gnome
 -polkit-kde
