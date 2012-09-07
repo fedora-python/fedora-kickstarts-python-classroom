@@ -12,70 +12,10 @@
 %packages
 ### LXDE desktop
 @lxde-desktop
-lxlauncher
-obconf
-lxdm
-
-### internet
-firefox
-icedtea-web
-pidgin
-sylpheed
-transmission
-
-### office
-abiword
-gnumeric
-osmo
-
-### graphics
-epdfview
-mtpaint
-
-### audio & video
-alsa-plugins-pulseaudio
-asunder
-lxmusic
-gxine
-gxine-mozplugin
-pavucontrol
-pnmixer
-# I'm looking for something smaller than
-gnomebaker
-
-### utils
-clipit
-galculator
-xpad
-
-### system
-gigolo
-
-### more desktop stuff
-fedora-icon-theme
-adwaita-cursor-theme
-adwaita-gtk2-theme
-adwaita-gtk3-theme
-
-# pam-fprint causes a segfault in LXDM when enabled
--fprintd-pam
-
-# needed for automatic unlocking of keyring (#643435)
-gnome-keyring-pam
-
-network-manager-applet
-
-# needed for xdg-open to support LXDE
-perl-File-MimeInfo
-
-xcompmgr
-xdg-user-dirs-gtk
-xscreensaver-extras
-
-# use yumex instead of gnome-packagekit
-yumex
--apper
--gnome-packagekit
+@lxde-apps
+@lxde-media
+@lxde-office
+@firefox
 
 # LXDE has lxpolkit. Make sure no other authentication agents end up in the spin.
 -polkit-gnome
@@ -89,11 +29,6 @@ notification-daemon
 # https://bugzilla.redhat.com/show_bug.cgi?id=643416
 metacity
 
-# Command line
-powertop
-wget
-yum-utils
-yum-presto
 
 # dictionaries are big
 -aspell-*

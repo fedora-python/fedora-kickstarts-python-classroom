@@ -28,11 +28,8 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 @core
 @fonts
 @input-methods
-# use a small pinyin db for live
--ibus-pinyin-db-open-phrase
-ibus-pinyin-db-android
-@admin-tools
 @dial-up
+@multimedia
 @hardware-support
 @printing
 
@@ -47,11 +44,7 @@ memtest86+
 
 # The point of a live image is to install
 anaconda
-isomd5sum
-# grub-efi and grub2 and efibootmgr so anaconda can use the right one on install. 
-grub-efi
-grub2
-efibootmgr
+@anaconda-tools
 
 # fpaste is very useful for debugging and very small
 fpaste

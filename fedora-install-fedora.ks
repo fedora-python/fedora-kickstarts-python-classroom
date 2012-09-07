@@ -36,28 +36,28 @@ dracut-*
 
 ## GNOME
 @firefox
-@gnome
+@gnome-desktop
 @gnome-apps
 @gnome-media
 @epiphany
 @libreoffice
 
 ## KDE
-@kde
+@kde-desktop
 @kde-apps
 @kde-education
 @kde-media
 @kde-office
 
 ## XFCE
-@xfce
+@xfce-desktop
 @xfce-apps
 @xfce-extra-plugins
 @xfce-media
 @xfce-office
 
 ## LXDE
-@lxde
+@lxde-desktop
 @lxde-apps
 @lxde-media
 @lxde-office
