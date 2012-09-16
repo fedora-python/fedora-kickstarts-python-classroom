@@ -118,7 +118,6 @@ ssmtp
 -system-config-boot
 #-system-config-language
 -system-config-lvm
--system-config-network
 -system-config-rootpassword
 #-system-config-services
 -policycoreutils-gui
