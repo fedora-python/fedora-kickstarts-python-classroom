@@ -16,8 +16,8 @@ part / --size 10240
 
 -wine
 
-# Support for joysticks and game pads is now in kernel-modules-extra
-kernel-modules-extra
+# Allow joysticks and game pads to work
+joystick-support
 
 # games
 
@@ -194,16 +194,5 @@ games-menus
 
 # Nothing should be downloading data to play.
 -autodownloader
-
-%end
-
-%post
-# Load drivers needed for joysticks and game pads so they work out on 
-# the live image without futzing where possible.
-cat > /etc/modules-load.d/joystick.conf << EOF
-joydev
-analog
-EOF
-chmod 755 /etc/modules-load.d/joystick.conf
 
 %end
