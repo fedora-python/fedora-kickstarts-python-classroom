@@ -17,6 +17,8 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 #repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f$releasever&arch=$basearch
 #repo --name=updates-testing --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-testing-f$releasever&arch=$basearch
 
+%include fedora-live-minimization.ks
+
 %packages
 @base-x
 @standard
@@ -24,11 +26,6 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 @hardware-support
 kernel
 memtest86+
-
-# grub-efi and grub2 and efibootmgr so anaconda can use the right one on install.
-grub-efi
-grub2
-efibootmgr
 
 # implicitly include the fonts we want
 liberation-mono-fonts
@@ -42,27 +39,19 @@ dejavu-sans-mono-fonts
 dejavu-serif-fonts
 
 # We like noise
-alsa-plugins-pulseaudio
-alsa-utils
-pulseaudio
-pulseaudio-module-x11
-pulseaudio-utils
+@multimedia
 
 # Remove default base packages we don't want
--coolkey
 -dos2unix
 -dump
 -finger
 -fprintd-pam
 -hunspell
--irda-utils
 -jwhois
 -lftp
 -mlocate
 -nano
--nc
 -nfs-utils
--nss_ldap
 -numactl
 -pcmciautils
 -pm-utils
@@ -70,36 +59,17 @@ pulseaudio-utils
 -rdist
 -rsh
 -rsync
--sendmail
 -sos
 -stunnel
--system-config-firewall-tui
--system-config-network-tui
--talk
 -time
 -tree
 -words
 -ypbind
 
-# Remove default base-x packages we don't want
--cups-pk-helper
--glx-utils
--system-config-date
--system-config-firewall
--system-config-network
--system-config-printer
--system-config-services
--system-config-users
-
 # Remove default unwanted hardware firmware and support we don't want
 -foomatic*
 -ghostscript*
 -ivtv-firmware
--ql2100-firmware
--ql2200-firmware
--ql23xx-firmware
--ql2400-firmware
--ql2500-firmware
 # These are listed somewhere other than hardware support!
 -irda-utils
 -fprintd*
@@ -110,15 +80,14 @@ pulseaudio-utils
 -man-pages*
 -words
 
-# livecd bits to set up the livecd and be able to install
+# The point of a live image is to install
 anaconda
+@anaconda-tools
 
 # Add some useful utils
-system-config-firewall-base
+firewall-config
 gnome-packagekit
 powertop
-gnupg2
-yum-presto
 avahi
 
 # Remove sendmail: this needs to be explicit
