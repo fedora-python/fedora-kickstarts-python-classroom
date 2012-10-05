@@ -26,14 +26,19 @@ firewall --enabled --service=mdns,presence
 # from http://wiki.sugarlabs.org/go/0.94/Platform_Components
 alsa-plugins-pulseaudio
 alsa-utils
-gstreamer-plugins-good
+gstreamer1-plugins-base
+gstreamer1-plugins-good
+gstreamer1-plugins-bad-free
 gstreamer-plugins-espeak
-gstreamer-plugins-bad-free
 pulseaudio
 pulseaudio-utils
 
-# explicitly remove openbox and add metacity to hopefully deal with what firstboot wants
+# explicitly remove openbox and hopefully deal with what firstboot wants
 -openbox
+
+# remove deps that come from god knows where
+-sane-backends
+-sane-backends-drivers-scanners
 
 # Usefulness for DSL connections as per:
 # http://bugs.sugarlabs.org/ticket/1951
@@ -46,11 +51,6 @@ livecd-tools
 -plymouth-system-theme
 -plymouth-theme-charge
 sugar-logos
-
-# == Hardware ==
-# Lets support Broadcom and XO wifi hardware
-b43-openfwwf
-libertas-usb8388-firmware
 
 %end
 
