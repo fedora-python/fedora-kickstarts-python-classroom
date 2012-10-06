@@ -80,8 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 - Meego ks has been dropped
 - Initial package for f19
 
-* Sat Jul 21 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> -
- 0.18.1-2
+* Sat Jul 21 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.18.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
 
 * Fri Jun 15 2012 Bruno Wolff III <bruno@wolff.to> 0.18.1-1
