@@ -203,9 +203,8 @@ fi
 # make it so that we don't do writing to the overlay for things which
 # are just tmpdirs/caches
 mount -t tmpfs -o mode=0755 varcacheyum /var/cache/yum
-mount -t tmpfs tmp /tmp
 mount -t tmpfs vartmp /var/tmp
-[ -x /sbin/restorecon ] && /sbin/restorecon /var/cache/yum /tmp /var/tmp >/dev/null 2>&1
+[ -x /sbin/restorecon ] && /sbin/restorecon /var/cache/yum /var/tmp >/dev/null 2>&1
 
 # comment to fix sugar startup
 #if [ -n "\$configdone" ]; then
@@ -331,6 +330,9 @@ chmod 755 /etc/rc.d/init.d/livesys
 chmod 755 /etc/rc.d/init.d/livesys-late
 /sbin/restorecon /etc/rc.d/init.d/livesys-late
 /sbin/chkconfig --add livesys-late
+
+# enable tmpfs for /tmp
+systemctl enable tmp.mount
 
 # work around for poor key import UI in PackageKit
 rm -f /var/lib/rpm/__db*
