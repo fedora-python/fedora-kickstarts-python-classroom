@@ -21,18 +21,15 @@
 @xfce-office
 @firefox
 
-# dictionaries are big
--aspell-*
-#-man-pages-*
-
-# more fun with space saving
--gimp-help
-# not needed, but as long as there is space left, we leave this in
-#-desktop-backgrounds-basic
-
 # save some space
 -autofs
 -acpid
+-gimp-help
+-desktop-backgrounds-basic
+-realmd                     # only seems to be used in GNOME
+-PackageKit*                # we switched to yumex, so we don't need this
+-aspell-*                   # dictionaries are big
+#-man-pages-*
 
 # drop some system-config things
 -system-config-boot
