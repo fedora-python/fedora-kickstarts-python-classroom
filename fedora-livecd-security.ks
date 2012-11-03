@@ -60,7 +60,7 @@ xpad
 
 ### system
 gigolo
-gnome-terminal
+Terminal
 
 ### more desktop stuff
 fedora-icon-theme
