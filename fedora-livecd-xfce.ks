@@ -29,6 +29,7 @@
 -realmd                     # only seems to be used in GNOME
 -PackageKit*                # we switched to yumex, so we don't need this
 -aspell-*                   # dictionaries are big
+-gnumeric
 #-man-pages-*
 
 # drop some system-config things
