@@ -5,9 +5,10 @@
 %include fedora-live-base.ks
 
 %packages
+@kde-apps
 @kde-desktop
 @kde-media
-@kde-apps
+@kde-telepathy
 
 ### The KDE-Desktop
 
