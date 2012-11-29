@@ -110,7 +110,7 @@ cat > /home/liveuser/.kde/share/config/nepomukserverrc << NEPOMUK_EOF
 [Basic Settings]
 Start Nepomuk=false
 
-[Service-nepomukstrigiservice]
+[Service-nepomukfileindexer]
 autostart=false
 NEPOMUK_EOF
 
