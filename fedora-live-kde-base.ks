@@ -118,9 +118,6 @@ NEPOMUK_EOF
 chown -R liveuser:liveuser /home/liveuser/
 restorecon -R /home/liveuser/
 
-# don't use prelink on a running KDE live image
-sed -i 's/PRELINKING=yes/PRELINKING=no/' /etc/sysconfig/prelink
-
 # small hack to enable plasma-netbook workspace on boot
 if strstr "\`cat /proc/cmdline\`" netbook ; then
    mv /usr/share/autostart/plasma-desktop.desktop /usr/share/autostart/plasma-netbook.desktop
