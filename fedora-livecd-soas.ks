@@ -8,12 +8,20 @@
 # - Sebastian Dziallas <sdz AT fedoraproject DOT org>
 # - Mel Chua <mchua AT fedoraproject DOT org>
 
-%include fedora-live-mini.ks
+#%include fedora-live-mini.ks
+%include fedora-live-desktop.ks
+%include fedora-live-minimization.ks
 
-part / --size=3072
+part / --size=4096
 firewall --enabled --service=mdns,presence
 
 %packages
+-@fonts
+-@dial-up
+-@multimedia
+-@printing
+-foomatic
+-@gnome-desktop 
 
 # == Core Sugar Platform ==
 @sugar-desktop
@@ -56,6 +64,7 @@ sugar-logos
 
 %post
 
+
 # Rebuild initrd for Sugar boot screen
 KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
 /usr/sbin/plymouth-set-default-theme sugar
@@ -66,7 +75,7 @@ rm -f /var/lib/rpm/__db*
 
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
-Sugar on a Stick 8
+Sugar on a Stick 8 ('Ōhelo Berry)
 Fedora release 18 (Spherical Cow)
 EOF
 
@@ -91,12 +100,6 @@ FOE
 cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.lockdown.gschema.override << FOE
 [org.gnome.desktop.lockdown]
 disable-lock-screen=true
-FOE
-
-# disable updates plugin
-cat >> /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.updates.gschema.override << FOE
-[org.gnome.settings-daemon.plugins.updates]
-active=false
 FOE
 
 # Add our activities to the favorites
@@ -138,14 +141,12 @@ FOE
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
-# set up timed auto-login for after 60 seconds
+# set up auto-login
 cat >> /etc/gdm/custom.conf << FOE
 [daemon]
 AutomaticLoginEnable=True
 AutomaticLogin=liveuser
 FOE
-
-EOF
 
 chmod 755 /etc/rc.d/init.d/livesys-late
 /sbin/restorecon /etc/rc.d/init.d/livesys-late
