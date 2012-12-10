@@ -9,10 +9,9 @@
 # - Mel Chua <mchua AT fedoraproject DOT org>
 
 #%include fedora-live-mini.ks
-%include fedora-live-desktop.ks
+%include fedora-live-base.ks
 %include fedora-live-minimization.ks
 
-part / --size=4096
 firewall --enabled --service=mdns,presence
 
 %packages
@@ -22,6 +21,19 @@ firewall --enabled --service=mdns,presence
 -@printing
 -foomatic
 -@gnome-desktop 
+-yp-tools
+-ypbind
+-rdate
+-rdist
+-icedtea-web
+-sendmail
+-firefox
+-glx-utils
+-nmap-ncat
+-PackageKit
+-libfprint
+-realmd
+-eekboard-libs
 
 # == Core Sugar Platform ==
 @sugar-desktop
@@ -64,7 +76,6 @@ sugar-logos
 
 %post
 
-
 # Rebuild initrd for Sugar boot screen
 KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
 /usr/sbin/plymouth-set-default-theme sugar
@@ -79,31 +90,8 @@ Sugar on a Stick 8 ('Ōhelo Berry)
 Fedora release 18 (Spherical Cow)
 EOF
 
-cat >> /etc/rc.d/init.d/livesys-late << EOF
-
-# Don't use the default system user (in SoaS liveuser) as nick name
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /desktop/sugar/user/default_nick disabled >/dev/null
-
-# Disable the logout menu item in Sugar
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/show_logout false >/dev/null
-
-# Enable Sugar power management
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/power/automatic True >/dev/null
-
-# disable screensaver locking
-cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.override << FOE
-[org.gnome.desktop.screensaver]
-lock-enabled=false
-FOE
-
-# and hide the lock screen option
-cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.lockdown.gschema.override << FOE
-[org.gnome.desktop.lockdown]
-disable-lock-screen=true
-FOE
-
 # Add our activities to the favorites
-cat > /usr/share/sugar/data/activities.defaults << FOE
+cat > /usr/share/sugar/data/activities.defaults << EOF
 org.laptop.WebActivity
 org.laptop.HelpActivity
 org.laptop.Chat
@@ -119,13 +107,15 @@ org.laptop.physics
 org.laptop.Pippy
 org.laptop.RecordActivity
 org.laptop.Oficina
+org.laptop.StopWatchActivity
+org.laptop.community.Finance
 org.laptop.community.TypingTurtle
 org.laptop.sugar.Jukebox
 org.gnome.Labyrinth
 com.laptop.Ruler
 org.sugarlabs.AbacusActivity
 org.sugarlabs.IRC
-org.sugarlabs.Infoslicer
+org.sugarlabs.InfoSlicer
 org.sugarlabs.PortfolioActivity
 org.sugarlabs.VisualMatchActivity
 com.garycmartin.Moon
@@ -133,20 +123,42 @@ mulawa.Countries
 tv.alterna.Clock
 vu.lux.olpc.Maze
 vu.lux.olpc.Speak
-org.laptop.community.Finance
-org.laptop.Terminal
-org.laptop.Log
+EOF
+
+# set up auto-login
+cat >> /etc/gdm/custom.conf << EOF
+[daemon]
+AutomaticLoginEnable=True
+AutomaticLogin=liveuser
+EOF
+
+# Don't use the default system user (in SoaS liveuser) as nick name
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /desktop/sugar/user/default_nick disabled >/dev/null
+
+# Disable the logout menu item in Sugar
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/show_logout false >/dev/null
+
+# Enable Sugar power management
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/power/automatic True >/dev/null
+
+cat >> /etc/rc.d/init.d/livesys-late << EOF
+
+# disable screensaver locking
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.override << FOE
+[org.gnome.desktop.screensaver]
+lock-enabled=false
+FOE
+
+# and hide the lock screen option
+cat >> /usr/share/glib-2.0/schemas/org.gnome.desktop.lockdown.gschema.override << FOE
+[org.gnome.desktop.lockdown]
+disable-lock-screen=true
 FOE
 
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
-# set up auto-login
-cat >> /etc/gdm/custom.conf << FOE
-[daemon]
-AutomaticLoginEnable=True
-AutomaticLogin=liveuser
-FOE
+EOF
 
 chmod 755 /etc/rc.d/init.d/livesys-late
 /sbin/restorecon /etc/rc.d/init.d/livesys-late
