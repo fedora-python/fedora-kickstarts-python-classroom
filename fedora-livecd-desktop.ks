@@ -8,7 +8,6 @@
 
 %packages
 # First, no office
--libreoffice-*
 -planner
 
 # Drop the Java plugin
