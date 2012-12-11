@@ -118,6 +118,7 @@ dracut-*
 aspell-*
 autocorr-*
 eclipse-nls-*
+gimp-help-*
 hunspell-*
 hyphen-*
 calligra-l10n-*
