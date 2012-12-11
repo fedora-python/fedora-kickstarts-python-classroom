@@ -16,6 +16,10 @@ part / --size 10240
 
 -wine
 
+# Remove libreoffice since it just got added to livecd-desktop and
+# will likely put the games spin over size and it is freeze time.
+-libreoffice*
+
 # Allow joysticks and game pads to work
 joystick-support
 
