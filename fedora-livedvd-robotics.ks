@@ -19,6 +19,10 @@ player-devel
 stage-devel
 mrpt-devel
 
+# Add version control packages
+git
+mercurial
+
 # Remove extra gnome-y things
 -@graphical-internet
 -@games
