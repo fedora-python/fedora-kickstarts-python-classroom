@@ -9,19 +9,16 @@
 
 # Maintainer: Jørn Lomax <northlomax@gmail.com>
 #             https://fedoraproject.org/wiki/User:jvlomax
-
-# Last modified: Jun 28, 2012.
+#             Brendan Jones <brendan.jones.it@gmail.com>
+# Last modified: Dec 20, 2012.
 
 %include fedora-livecd-kde.ks
 
-# increase partition size
-part / --size 4096 --fstype ext4
+# DVD size partition
+part / --size 10240 --fstype ext4
 
 #enable threaded irqs
 bootloader --append="threadirqs"
-
-# DVD payload
-part / --size 10000
 
 %packages
 

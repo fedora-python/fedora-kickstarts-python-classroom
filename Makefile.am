@@ -20,7 +20,8 @@ fedora_DATA = \
     fedora-livedvd-games.ks \
     fedora-livedvd-robotics.ks \
     fedora-livedvd-scientific-kde.ks \
-    fedora-livecd-security.ks
+    fedora-livecd-security.ks \
+	fedora-live-jam-kde.ks
 
 customdir = ${pkgdatadir}/custom/
 custom_DATA = \
