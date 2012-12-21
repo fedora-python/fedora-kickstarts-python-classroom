@@ -22,13 +22,12 @@ timezone Europe/Paris
 %end
 
 %post
-# system-config-keyboard doesn't really work (missing xorg.conf etc)
-cat >>/etc/X11/xorg.conf << EOF
-Section "InputDevice"
-    Identifier "Keyboard0"
-    Driver "kbd"
-    Option "XkbLayout" "fr-latin9"
-EndSection
-EOF
+# set up localized keyboard since it is not used in /etc/X11/xorg.conf anymore and
+# KDE don't use /etc/sysconfig/keyboard.
+# Replace "fr-latin9" with the keyboard layout you have used above
+mkdir -p /home/liveuser/.kde/env
+echo "system-config-keyboard --noui fr-latin9" > /home/liveuser/.kde/env/keyboard.sh
+chmod +x /home/liveuser/.kde/env/keyboard.sh
+chown -R liveuser:liveuser /home/liveuser/.kde/env/
 %end
 
