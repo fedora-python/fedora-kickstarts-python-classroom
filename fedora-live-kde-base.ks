@@ -14,10 +14,6 @@
 
 ### fixes
 
-# use system-config-printer-kde instead of system-config-printer
--system-config-printer
-system-config-printer-kde
-
 %end
 
 
