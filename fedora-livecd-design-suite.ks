@@ -65,7 +65,7 @@ totem
 # system
 gedit
 gnome-terminal
-gtk-recordmydesktop
+# gtk-recordmydesktop # dropped for space (#887991)
 network-manager-applet
 
 %end
