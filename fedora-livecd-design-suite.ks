@@ -4,6 +4,7 @@
 # - A Spin targeted towards professional designers
 #
 # Maintainer:
+# - Luya Tshimbalanga <sdz AT fedoraproject DOT org>
 # - Sebastian Dziallas <sdz AT fedoraproject DOT org>
 
 %include fedora-live-mini.ks
@@ -20,10 +21,11 @@ nautilus
 
 # graphics
 blender
-cinepaint
+# cinepaint # dropped
+darktable # replaces rawtherapee as default
 # entangle # does not work in a gtk+ 3 environment
 fontforge
-fontmatrix
+font-manager # replaces fontmatrix
 # fyre
 gimp
 gimp-*-plugin
@@ -34,12 +36,12 @@ mypaint
 nautilus-image-converter
 optipng
 # pinta # is huge because it needs mono
-postr
-rawtherapee
+# postr # dropped because shotwell support flickr upload
 scribus
 shotwell
+simple-scan
 synfigstudio
-ufraw
+# ufraw # dropped as duplicate of darktable
 xournal
 
 # office
@@ -49,7 +51,7 @@ evince
 gnote
 gnumeric
 # hamster-applet # no more applets in gnome-shell
-# pdfmod
+pdfmod # reenabled 
 
 # internet
 empathy
@@ -58,6 +60,7 @@ firefox
 
 # audio & video
 # jokosher # no longer available
+audacity
 pitivi
 rhythmbox
 totem
@@ -67,6 +70,10 @@ gedit
 gnome-terminal
 # gtk-recordmydesktop # dropped for space (#887991)
 network-manager-applet
+
+# fonts
+aajohan-comfortaa-fonts
+google-droid-sans-s*-fonts
 
 %end
 
