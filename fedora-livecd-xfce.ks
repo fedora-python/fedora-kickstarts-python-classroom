@@ -83,6 +83,9 @@ sed -i 's/^#autologin-user=.*/autologin-user=liveuser/' /etc/lightdm/lightdm.con
 sed -i 's/^#autologin-user-timeout=.*/autologin-user-timeout=0/' /etc/lightdm/lightdm.conf
 #sed -i 's/^#show-language-selector=.*/show-language-selector=true/' /etc/lightdm/lightdm-gtk-greeter.conf
 
+# set Xfce as default session, otherwise login will fail
+sed -i 's/^#user-session=.*/user-session=xfce/' /etc/lightdm/lightdm.conf
+
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
 mkdir /home/liveuser/Desktop
