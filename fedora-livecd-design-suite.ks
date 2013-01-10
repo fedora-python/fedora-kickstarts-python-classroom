@@ -12,25 +12,24 @@
 %packages
 
 # gnome desktop
-gdm
-gnome-panel
-gnome-session
-gnome-shell
-metacity
-nautilus
+@GNOME Desktop Environment
+-aisleriot
+-eog
+-evolution-*
 
 # graphics
 blender
-# cinepaint # dropped
+bluefish
+cinepaint # dropped
+cmyktool
 darktable # replaces rawtherapee as default
-# entangle # does not work in a gtk+ 3 environment
+entangle
 fontforge
 font-manager # replaces fontmatrix
-# fyre
 gimp
 gimp-*-plugin
 GREYCstoration-gimp 
-# hugin # is huge
+hugin # is huge
 inkscape
 mypaint
 nautilus-image-converter
@@ -38,8 +37,7 @@ optipng
 # pinta # is huge because it needs mono
 # postr # dropped because shotwell support flickr upload
 scribus
-shotwell
-simple-scan
+shared-color-profiles-extra
 synfigstudio
 # ufraw # dropped as duplicate of darktable
 xournal
@@ -47,29 +45,22 @@ xournal
 # office
 abiword
 dia
-evince
 gnote
 gnumeric
-# hamster-applet # no more applets in gnome-shell
 pdfmod # reenabled 
 
 # internet
-empathy
-evolution
+filezilla
 firefox
+thunderbird
 
 # audio & video
-# jokosher # no longer available
 audacity
 pitivi
-rhythmbox
-totem
 
 # system
-gedit
-gnome-terminal
 # gtk-recordmydesktop # dropped for space (#887991)
-network-manager-applet
+# network-manager-applet #part of Gnome Desktop
 
 # fonts
 aajohan-comfortaa-fonts
