@@ -20,7 +20,7 @@
 # graphics
 blender
 bluefish
-cinepaint # dropped
+cinepaint # enabled for HDR pictures support
 cmyktool
 darktable # replaces rawtherapee as default
 entangle
@@ -47,7 +47,7 @@ abiword
 dia
 gnote
 gnumeric
-pdfmod # reenabled 
+pdfshuffle #replaces pdfmod which needs mono dependencies 
 
 # internet
 filezilla
