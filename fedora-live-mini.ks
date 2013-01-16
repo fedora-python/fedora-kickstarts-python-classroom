@@ -93,6 +93,9 @@ avahi
 # Remove sendmail: this needs to be explicit
 -sendmail
 
+# Make live images easy to shutdown and the like in libvirt
+qemu-guest-agent
+
 %end
 
 %post
