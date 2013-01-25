@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
+* Thu Jan 24 2013 Luya Tshimbalanga <luya@fedoraproject.org> 0.19.1-2
+- Design Suite ks switched to livedvd
+
 * Sat Oct 06 2012 Bruno Wolff III <bruno@wolff.to> 0.19.1-1
 - Meego ks has been dropped
 - Initial package for f19
