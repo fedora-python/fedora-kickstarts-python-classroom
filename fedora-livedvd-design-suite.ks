@@ -50,7 +50,7 @@ abiword
 dia
 gnote
 gnumeric
-pdfshuffle #replaces pdfmod which needs mono dependencies 
+pdfshuffler #replaces pdfmod which needs mono dependencies 
 
 # internet
 filezilla
