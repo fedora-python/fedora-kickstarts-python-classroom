@@ -11,39 +11,7 @@
 
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
-
-%packages
-
-@xfce-desktop
-@xfce-apps
-@xfce-extra-plugins
-@xfce-media
-@xfce-office
-@firefox
-
-# unlock default keyring. FIXME: Should probably be done in comps
-gnome-keyring-pam
-
-# save some space
--autofs
--acpid
--gimp-help
--desktop-backgrounds-basic
--realmd                     # only seems to be used in GNOME
--PackageKit*                # we switched to yumex, so we don't need this
--aspell-*                   # dictionaries are big
--gnumeric
-#-man-pages-*
-
-# drop some system-config things
--system-config-boot
--system-config-lvm
--system-config-network
--system-config-rootpassword
-#-system-config-services
--policycoreutils-gui
-
-%end
+%include fedora-xfce-packages.ks
 
 %post
 # xfce configuration
