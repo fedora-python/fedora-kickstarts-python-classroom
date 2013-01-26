@@ -4,7 +4,6 @@
 %packages
 
 # save some space
--samba-client
 -mpage
 -sox
 -hplip
