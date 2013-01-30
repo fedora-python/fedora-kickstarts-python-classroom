@@ -9,13 +9,13 @@ fedora_DATA = \
     fedora-live-mini.ks \
     fedora-live-desktop.ks \
     fedora-livecd-desktop.ks \
+    fedora-live-design-suite.ks \
     fedora-live-kde.ks \
     fedora-livecd-kde.ks \
     fedora-live-kde-base.ks \
     fedora-livecd-lxde.ks \
     fedora-livecd-soas.ks \
     fedora-livecd-xfce.ks \
-    fedora-livedvd-design-suite.ks \
     fedora-livedvd-electronic-lab.ks \
     fedora-livedvd-games.ks \
     fedora-livedvd-robotics.ks \
