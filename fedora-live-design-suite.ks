@@ -10,7 +10,7 @@
 %include fedora-live-desktop.ks
 
 #DVD size partition
-part / --size 4096
+part / --size 8192
 
 %packages
 
