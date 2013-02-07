@@ -61,6 +61,32 @@ adobe-source-sans-pro-fonts
 lato-fonts
 overpass-fonts
 
+# removal of duplicated and unneeded applications
+-gnome-boxes
+-eog
+
+
+# Legacy cmdline things we don't want
+-krb5-auth-dialog
+-krb5-workstation
+-pam_krb5
+-quota
+-minicom
+-dos2unix
+-finger
+-ftp
+-jwhois
+-mtr
+-pinfo
+-rsh
+-telnet
+-nfs-utils
+-ypbind
+-yp-tools
+-rpcbind
+-acpid
+-ntsysv
+
 %end
 
 %post
@@ -70,7 +96,6 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
 favorite-apps=['firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'gimp.desktop', 'inkscape.desktop', 'scribus.desktop', 'nautilus.desktop', 'anaconda.desktop']
 FOE
-
 
 # Add link to the Inkscape Course
 cat >> /usr/share/applications/inkscape-course.desktop << FOE
