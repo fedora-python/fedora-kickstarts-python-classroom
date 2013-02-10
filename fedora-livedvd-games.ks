@@ -48,7 +48,7 @@ frozen-bubble
 gl-117
 glob2
 lincity-ng
-manaworld
+tmw
 maniadrive
 maniadrive-music
 megaglest
