@@ -55,7 +55,7 @@ fi
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
 # set up auto-login
-cat >> /etc/gdm/custom.conf << FOE
+cat > /etc/gdm/custom.conf << FOE
 [daemon]
 AutomaticLoginEnable=True
 AutomaticLogin=liveuser

@@ -67,7 +67,7 @@ vu.lux.olpc.Speak
 EOF
 
 # set up auto-login
-cat >> /etc/gdm/custom.conf << EOF
+cat > /etc/gdm/custom.conf << EOF
 [daemon]
 AutomaticLoginEnable=True
 AutomaticLogin=liveuser
