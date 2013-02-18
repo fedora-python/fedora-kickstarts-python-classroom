@@ -64,7 +64,7 @@ overpass-fonts
 # removal of duplicated and unneeded applications
 -gnome-boxes
 -eog
-
+-@libreoffice #temporary disable for testing build
 
 # Legacy cmdline things we don't want
 -krb5-auth-dialog
