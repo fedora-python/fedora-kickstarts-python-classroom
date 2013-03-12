@@ -39,7 +39,6 @@ sylpheed
 transmission
 
 ### graphics
-epdfview
 #mtpaint
 
 ### audio & video
