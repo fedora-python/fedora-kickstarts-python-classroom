@@ -17,7 +17,9 @@
 # use kde-print-manager instead of system-config-printer
 -system-config-printer
 # make sure mariadb lands instead of MySQL (hopefully a temporary hack)
--MySQL*
+mariadb-embedded
+mariadb-libs
+mariadb-server
 
 %end
 
