@@ -90,6 +90,8 @@ dracut-*
 @eclipse
 @development-libs
 @development-tools
+@c-development
+@rpm-development-tools
 @fedora-packager
 @gnome-software-development
 @kde-software-development

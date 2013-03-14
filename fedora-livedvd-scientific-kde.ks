@@ -33,6 +33,8 @@ scilab-doc
 # C/C++ compiler, gdb, autotools, bison, flex, make, strace..
 @development-tools
 @development-libs
+@c-development
+@rpm-development-tools
 
 # Misc. related utils
 ddd
