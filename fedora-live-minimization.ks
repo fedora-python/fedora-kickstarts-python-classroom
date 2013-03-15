@@ -19,8 +19,6 @@
 -ql2100-firmware
 -ql2200-firmware
 -ql23xx-firmware
--ql2400-firmware
--ql2500-firmware
 
 # scanning takes quite a bit of space :/
 -xsane
