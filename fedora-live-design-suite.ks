@@ -27,7 +27,7 @@ font-manager # replaces fontmatrix
 gimp
 gimp-*-plugin
 GREYCstoration-gimp 
-hugin # reintroduced
+#hugin # reintroduced
 inkscape
 mypaint
 nautilus-image-converter
@@ -64,7 +64,7 @@ overpass-fonts
 # removal of duplicated and unneeded applications
 -gnome-boxes
 -eog
--@libreoffice #temporary disable for testing build
+
 
 # Legacy cmdline things we don't want
 -krb5-auth-dialog
