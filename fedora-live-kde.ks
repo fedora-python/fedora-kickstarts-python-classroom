@@ -62,9 +62,6 @@ octave			# runtime dependency of the Cantor Octave backend
 kde-l10n-*
 calligra-l10n-*
 
-# use yum-presto by default
-yum-presto
-
 ## avoid serious bugs by omitting broken stuff
 
 %end

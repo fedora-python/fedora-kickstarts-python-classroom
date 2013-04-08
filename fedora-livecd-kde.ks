@@ -41,9 +41,6 @@ liveusb-creator
 -kdegames
 kdegames-minimal
 
-# use yum-presto by default
-yum-presto
-
 ### space issues
 
 # fonts (we make no bones about admitting we're english-only)

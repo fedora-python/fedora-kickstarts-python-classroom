@@ -103,7 +103,6 @@ metacity
 powertop
 wget
 yum-utils
-yum-presto
 
 # dictionaries are big
 -aspell-*
