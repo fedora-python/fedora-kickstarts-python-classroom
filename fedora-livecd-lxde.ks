@@ -32,7 +32,7 @@ FOE
 cat > /etc/xdg/libfm/pref-apps.conf << FOE 
 [Preferred Applications]
 WebBrowser=firefox.desktop
-MailClient=redhat-sylpheed.desktop
+MailClient=sylpheed.desktop
 FOE
 
 # set up auto-login for liveuser
