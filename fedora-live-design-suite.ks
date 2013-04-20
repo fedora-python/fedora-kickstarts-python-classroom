@@ -26,6 +26,7 @@ fontforge
 font-manager # replaces fontmatrix
 gimp
 gimp-*-plugin
+gpick
 GREYCstoration-gimp 
 #hugin # reintroduced
 inkscape
