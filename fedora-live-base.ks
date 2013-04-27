@@ -46,9 +46,6 @@ memtest86+
 anaconda
 @anaconda-tools
 
-# fpaste is very useful for debugging and very small
-fpaste
-
 # Make live images easy to shutdown and the like in libvirt
 qemu-guest-agent
 
