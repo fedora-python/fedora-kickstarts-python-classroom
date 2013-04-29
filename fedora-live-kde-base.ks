@@ -103,8 +103,13 @@ distroUpgrade=0
 interval=0
 APPER_EOF
 
-# Disable some kded modules
-# apperd: http://bugzilla.redhat.com/948099
+# Disable (apper's) plasma-applet-updater (#948099)
+mkdir -p /home/liveuser/.kde/share/kde4/services/
+sed -e "s|^X-KDE-PluginInfo-EnabledByDefault=true|X-KDE-PluginInfo-EnabledByDefault=false|g" \
+   /usr/share/kde4/services/plasma-applet-updater.desktop > \
+   /home/liveuser/.kde/share/kde4/services/plasma-applet-updater.desktop
+
+# Disable apper kded module (#948099)
 cat > /home/liveuser/.kde/share/config/kdedrc << KDEDRC_EOF
 [Module-apperd]
 autoload=false
