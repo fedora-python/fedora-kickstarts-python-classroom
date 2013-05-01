@@ -76,6 +76,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
+* Wed May 01 2013 Bruno Wolff III <bruno@wolff.to> 0.20.2-1
+- New ks file for Mate desktop
+- Keep up with f19
+
 * Fri Mar 15 2013 Bruno Wolff III <bruno@wolff.to> 0.20.1-1
 - Initial package for f20
 
