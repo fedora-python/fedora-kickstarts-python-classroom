@@ -33,7 +33,6 @@ asc
 asc-music
 astromenace
 beneath-a-steel-sky-cd
-# blobAndConquer # nonfree textures issue - may return later
 boswars
 btanks
 bzflag
@@ -56,16 +55,13 @@ nethack-vultures
 netpanzer
 neverball
 nogravity
-# openarena (cut because of size, may be restored later if larger iso's allowed)
 pinball
 scorched3d
 supertux
 supertuxkart
-torcs
 ultimatestunts
 warzone2100
 wesnoth
-widelands
 worminator
 warmux
 xmoto
@@ -78,7 +74,6 @@ ballz
 blobwars
 bombardier
 cdogs-sdl
-#chess (Currently broken)
 clanbomber
 colossus
 foobillard
