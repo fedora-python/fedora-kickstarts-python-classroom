@@ -14,6 +14,7 @@ fedora_DATA = \
     fedora-livecd-kde.ks \
     fedora-live-kde-base.ks \
     fedora-livecd-lxde.ks \
+    fedora-livecd-mate-compiz.ks \
     fedora-livecd-soas.ks \
     fedora-livecd-xfce.ks \
     fedora-livedvd-electronic-lab.ks \
