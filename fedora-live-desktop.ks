@@ -30,6 +30,10 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.updates.gsc
 active=false
 FOE
 
+# don't run gnome-initial-setup
+mkdir ~liveuser/.config
+touch ~liveuser/.config/gnome-initial-setup-done
+
 # make the installer show up
 if [ -f /usr/share/applications/liveinst.desktop ]; then
   # Show harddisk install in shell dash
