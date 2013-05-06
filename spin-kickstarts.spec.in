@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_datadir}/%{name}/l10n/README
 
 %changelog
+* Mon May 06 2013 Bruno Wolff III <bruno@wolff.to> 0.20.3-1
+- Add missing ks files to Makefile.am - bz 959911
+
 * Wed May 01 2013 Bruno Wolff III <bruno@wolff.to> 0.20.2-1
 - New ks file for Mate desktop
 - Keep up with f19
