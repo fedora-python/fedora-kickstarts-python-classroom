@@ -14,15 +14,19 @@ fedora_DATA = \
     fedora-livecd-kde.ks \
     fedora-live-kde-base.ks \
     fedora-livecd-lxde.ks \
+    fedora-lxde-packages.ks \
     fedora-livecd-mate-compiz.ks \
+    fedora-live-mate-compiz.ks \
     fedora-livecd-soas.ks \
+    fedora-soas-packages.ks \
     fedora-livecd-xfce.ks \
+    fedora-xfce-packages.ks \
     fedora-livedvd-electronic-lab.ks \
     fedora-livedvd-games.ks \
     fedora-livedvd-robotics.ks \
     fedora-livedvd-scientific-kde.ks \
     fedora-livecd-security.ks \
-	fedora-live-jam-kde.ks
+    fedora-live-jam-kde.ks
 
 customdir = ${pkgdatadir}/custom/
 custom_DATA = \
@@ -46,6 +50,7 @@ l10n_DATA = \
     l10n/fedora-livecd-kde-nl_NL.ks \
     l10n/fedora-livecd-kde-pt_PT.ks \
     l10n/fedora-livecd-kde-ru_RU.ks \
+    l10n/fedora-livecd-lxde-de_CH.ks \
     l10n/fedora-livecd-lxde-de_DE.ks \
     l10n/fedora-livecd-lxde-fr_FR.ks \
     l10n/fedora-livecd-lxde-ru_RU.ks \
@@ -56,10 +61,12 @@ l10n_DATA = \
     l10n/fedora-livecd-xfce-pt_PT.ks \
     l10n/fedora-livecd-xfce-ru_RU.ks \
     l10n/fedora-livedvd-electronic-lab-de_CH.ks \
+    l10n/fedora-livedvd-electronic-lab-de_DE.ks \
     l10n/fedora-livedvd-electronic-lab-nl_NL.ks \
     l10n/fedora-livedvd-electronic-lab-pt_PT.ks \
     l10n/fedora-livedvd-electronic-lab-ru_RU.ks \
     l10n/fedora-livedvd-games-de_CH.ks \
+    l10n/fedora-livedvd-games-de_DE.ks \
     l10n/fedora-livedvd-games-nl_NL.ks \
     l10n/fedora-livedvd-games-pt_PT.ks \
     l10n/fedora-livedvd-games-ru_RU.ks
