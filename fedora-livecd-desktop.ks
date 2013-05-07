@@ -35,6 +35,8 @@
 -evolution-help
 -desktop-backgrounds-basic
 -*backgrounds-extras
+-stix-fonts
+-ibus-typing-booster
 
 # Legacy cmdline things we don't want
 -krb5-auth-dialog
