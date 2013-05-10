@@ -21,6 +21,7 @@ repo --name=fedora-source  --mirrorlist=http://mirrors.fedoraproject.org/mirrorl
 kernel*
 -kernel-tools*
 -kernel-debug*
+-kernel-PAEdebug*
 dracut-*
 
 # Desktops
