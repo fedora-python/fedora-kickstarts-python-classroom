@@ -31,6 +31,11 @@ gnome-keyring-pam
 -PackageKit*                # we switched to yumex, so we don't need this
 -aspell-*                   # dictionaries are big
 -gnumeric
+-foomatic-db-ppds
+-foomatic
+-stix-fonts
+-ibus-typing-booster
+-xfce4-sensors-plugin
 #-man-pages-*
 
 # drop some system-config things
@@ -40,6 +45,9 @@ gnome-keyring-pam
 -system-config-rootpassword
 #-system-config-services
 -policycoreutils-gui
+
+# This is a huge file and things work ok without it
+rm -f /usr/share/icons/HighContrast/icon-theme.cache
 
 %end
 
