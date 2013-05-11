@@ -46,9 +46,4 @@ gnome-keyring-pam
 #-system-config-services
 -policycoreutils-gui
 
-# This is a huge file and things work ok without it
-rm -f /usr/share/icons/HighContrast/icon-theme.cache
-
 %end
-
-
