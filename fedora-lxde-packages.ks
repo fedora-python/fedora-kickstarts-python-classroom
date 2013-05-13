@@ -37,10 +37,17 @@ metacity
 -man-pages-*
 -words
 
-# save some space
+# use ssmtp instead of sendmail
 -sendmail
 ssmtp
+
+# save some space
 -acpid
+-foomatic-db-ppds
+-foomatic
+-stix-fonts
+-ibus-typing-booster
+
 
 # drop some system-config things
 -system-config-boot
