@@ -17,7 +17,6 @@
 @xfce-extra-plugins
 @xfce-media
 @xfce-office
-@firefox
 
 # unlock default keyring. FIXME: Should probably be done in comps
 gnome-keyring-pam
