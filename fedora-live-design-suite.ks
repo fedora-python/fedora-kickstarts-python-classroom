@@ -5,7 +5,7 @@
 # Website: http://fedoraproject.org/wiki/Design_Suite
 # Maintainers:
 # - Luya Tshimbalanga <sdz AT fedoraproject DOT org>
-# - Sebastian Dziallas <sdz AT fedoraproject DOT org>
+# - Previous maintainer Sebastian Dziallas
 
 %include fedora-live-desktop.ks
 
@@ -66,7 +66,6 @@ overpass-fonts
 -gnome-boxes
 -eog
 
-
 # Legacy cmdline things we don't want
 -krb5-auth-dialog
 -krb5-workstation
@@ -91,12 +90,6 @@ overpass-fonts
 %end
 
 %post
-
-#Include favorite design applications
-cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
-[org.gnome.shell]
-favorite-apps=['firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'gimp.desktop', 'inkscape.desktop', 'scribus.desktop', 'nautilus.desktop', 'anaconda.desktop']
-FOE
 
 # Add link to the Inkscape Course
 cat >> /usr/share/applications/inkscape-course.desktop << FOE
