@@ -18,8 +18,9 @@ nss-mdns
 # This one needs to be kicked out of @standard
 -smartmontools
 
-# We use gnome-control-center's printer panel instead
+# We use gnome-control-center's printer and input sources panels instead
 -system-config-printer
+-im-chooser
 
 %end
 
