@@ -38,6 +38,9 @@
 -stix-fonts
 -ibus-typing-booster
 
+# Sadly, no space for games
+-aisleriot
+
 # Legacy cmdline things we don't want
 -krb5-auth-dialog
 -krb5-workstation
