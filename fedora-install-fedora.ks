@@ -68,17 +68,11 @@ dracut-*
 @sugar-desktop
 @sugar-apps
 
-# Web server
-@web-server
-@haproxy
-@jbossas
-@mongodb
-@perl-web
-@python-web
-@php
-@rubyonrails
-@mysql
-@sql-server
+## MATE
+@mate-desktop
+
+## CINNAMON
+@cinnamon-desktop
 
 # Workstation
 @eclipse
@@ -92,15 +86,16 @@ dracut-*
 @x-software-development
 @virtualization
 @web-server
-@jbossas
 @mongodb
 @perl-web
 @php
+@python-web
 @rubyonrails
 @mysql
 @sql-server
 @design-suite
 ## Not included yet due to space concerns
+#@jbossas
 #@milkymist
 #@mingw32
 #@ocaml
