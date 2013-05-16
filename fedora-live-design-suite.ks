@@ -16,19 +16,19 @@ part / --size 8192
 
 # graphics
 blender
-bluefish # designer can build website
-cinepaint # enabled for HDR pictures support
+bluefish 
+cinepaint
 cmyktool
-darktable # replaces rawtherapee as default
+darktable
 dia
 entangle
 fontforge
-font-manager # replaces fontmatrix
+font-manager 
 gimp
 gimp-*-plugin
 gpick
 GREYCstoration-gimp 
-#hugin # reintroduced
+hugin 
 inkscape
 mypaint
 nautilus-image-converter
@@ -43,7 +43,7 @@ xournal
 
 # office
 gnote
-pdfshuffler #replaces pdfmod which needs mono dependencies 
+pdfshuffler  
 
 # internet
 filezilla
