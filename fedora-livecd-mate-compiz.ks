@@ -10,9 +10,17 @@
 # First, no office
 -planner
 
+# Drop things for size
+-firefox
+-@libreoffice
+
+# A web browser would be nice for a live cd
+midori
+
 # Drop the Java plugin
 -icedtea-web
 -java-1.7.0-openjdk
+-java-1.8.0-openjdk
 
 # Drop things that pull in perl
 -linux-atm
@@ -67,5 +75,8 @@
 %end
 
 %post
+# This is a huge file and things work ok without it
+rm -f /usr/share/icons/HighContrast/icon-theme.cache
+
 %end
 

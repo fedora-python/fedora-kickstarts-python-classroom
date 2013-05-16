@@ -7,6 +7,8 @@
 part / --size 4096 
 
 %packages
+-realmd                     # only seems to be used in GNOME
+-PackageKit*                # we switched to yumex, so we don't need this
 firefox
 @mate
 compiz
