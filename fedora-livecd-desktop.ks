@@ -40,6 +40,8 @@
 
 # Sadly, no space for games
 -aisleriot
+# ... or xslt filters
+-libreoffice-xsltfilter
 
 # Legacy cmdline things we don't want
 -krb5-auth-dialog
