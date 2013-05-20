@@ -7,7 +7,7 @@
 # - Luya Tshimbalanga <sdz AT fedoraproject DOT org>
 # - Previous maintainer Sebastian Dziallas
 
-%include fedora-live-desktop.ks
+%include fedora-livecd-desktop.ks
 
 #DVD size partition
 part / --size 8192
