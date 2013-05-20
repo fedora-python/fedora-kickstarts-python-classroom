@@ -24,6 +24,7 @@ repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 
 %packages
 @base-x
+@guest-desktop-agents
 @standard
 @core
 @fonts
