@@ -8,7 +8,6 @@
 # - Sebastian Dziallas <sdz AT fedoraproject DOT org>
 # - Mel Chua <mchua AT fedoraproject DOT org>
 
-#%include fedora-live-mini.ks
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
 %include fedora-soas-packages.ks
