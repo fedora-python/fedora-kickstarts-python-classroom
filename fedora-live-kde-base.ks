@@ -16,8 +16,6 @@
 
 # use kde-print-manager instead of system-config-printer
 -system-config-printer
-# ensure ability to add/remove users, http://bugzilla.redhat.com/966086
-system-config-users
 # make sure mariadb lands instead of MySQL (hopefully a temporary hack)
 mariadb-embedded
 mariadb-libs
