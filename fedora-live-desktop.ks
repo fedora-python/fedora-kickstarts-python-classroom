@@ -37,6 +37,7 @@ FOE
 # don't run gnome-initial-setup
 mkdir ~liveuser/.config
 touch ~liveuser/.config/gnome-initial-setup-done
+chown -R liveuser:liveuser ~liveuser/.config
 
 # make the installer show up
 if [ -f /usr/share/applications/liveinst.desktop ]; then
