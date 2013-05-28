@@ -23,7 +23,6 @@ repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?rep
 
 kernel
 kernel-lpae
-kernel-tegra
 
 chrony
 arm-boot-config
