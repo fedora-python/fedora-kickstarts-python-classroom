@@ -3,6 +3,11 @@
 fedoradir = $(pkgdatadir)/
 fedora_DATA = \
     fedora-aos.ks \
+    fedora-arm-base.ks \
+    fedora-arm-minimal.ks \
+    fedora-arm-xfce.ks \
+    fedora-arm-lxde.ks \
+    fedora-arm-xbase.ks \
     fedora-install-fedora.ks \
     fedora-live-base.ks \
     fedora-live-minimization.ks \
