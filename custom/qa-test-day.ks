@@ -110,7 +110,9 @@ firefox
 # the installed system. This image is not intended for installation, but you
 # never know what your users might do.
 
-cat >> /etc/rc.d/init.d/livesys << EOF
+# "EOF" is quoted so that variables are not expanded. Search for "here-document"
+# in man bash.
+cat >> /etc/rc.d/init.d/livesys << "EOF"
 
 # Create Test Day welcome screen
 # Note that shebang must be written this way, else it is considered as comment
@@ -135,22 +137,27 @@ ln -s /usr/share/applications/test-day-welcome.desktop /etc/xdg/autostart/
 rm -f /home/liveuser/.config/autostart/fedora-welcome.desktop
 
 # Change Firefox start page to open Test Day wiki and IRC chat
-mkdir -p /tmp/chrome/en-US/locale/branding
-cat << FOE > /tmp/chrome/en-US/locale/branding/browserconfig.properties
+# (and a few more properties)
+mkdir /tmp/firefox
+unzip /usr/lib*/firefox/browser/omni.ja -d /tmp/firefox
+
+cat << FOE > /tmp/firefox/chrome/en-US/locale/branding/browserconfig.properties
 browser.startup.homepage=https://fedoraproject.org/wiki/Test_Day:Current | http://webchat.freenode.net/?channels=fedora-test-day
 FOE
 
-# Set up a few more properties
-unzip /usr/lib*/firefox/omni.ja defaults/preferences/firefox-branding.js -d /tmp
-cat << FOE >> /tmp/defaults/preferences/firefox-branding.js
+cat << FOE >> /tmp/firefox/defaults/preferences/firefox-branding.js
 pref("startup.homepage_welcome_url","");
 pref("startup.homepage_override_url","");
 pref("browser.rights.3.shown", true);
 FOE
 
-(cd /tmp; zip /usr/lib*/firefox/omni.ja chrome/en-US/locale/branding/browserconfig.properties \
-                                        defaults/preferences/firefox-branding.js)
-rm -rf /tmp/chrome /tmp/defaults
+# We need to re-zip the whole archive (instead of just updating files), because
+# the original archive is "Firefox optimized" and updating doesn't work
+# https://bugzilla.mozilla.org/show_bug.cgi?id=605524
+OMNIJA=`ls /usr/lib*/firefox/browser/omni.ja`
+rm -f $OMNIJA
+(cd /tmp/firefox; zip -r -0 $OMNIJA *)
+rm -rf /tmp/firefox
 
 # Adjust launchers in dash using a vendor override. (Adding a profile would
 # be another way to do this.)
