@@ -7,7 +7,7 @@
 # - Luya Tshimbalanga <sdz AT fedoraproject DOT org>
 # - Previous maintainer Sebastian Dziallas
 
-%include fedora-livecd-desktop.ks
+%include fedora-live-desktop.ks
 
 #DVD size partition
 part / --size 8192
@@ -89,22 +89,22 @@ overpass-fonts
 
 %end
 
-%post
+#%post
 
 # Add link to the Inkscape Course
-cat >> /usr/share/applications/inkscape-course.desktop << FOE
-[Desktop Entry]
-Name=Introduction To Inkscape
-GenericName=Inkscape Course
-Comment=Materials from Máirín Duffy's Inkscape Class
-Exec=xdg-open http://linuxgrrl.com/learn/Introduction_To_Inkscape
-Type=Application
-Icon=fedora-logo-icon
-Categories=Graphics;Documentation;
-FOE
-chmod a+x /usr/share/applications/inkscape-course.desktop
+#cat >> /usr/share/applications/inkscape-course.desktop << FOE
+#[Desktop Entry]
+#Name=Introduction To Inkscape
+#GenericName=Inkscape Course
+#Comment=Materials from Máirín Duffy's Inkscape Class
+#Exec=xdg-open http://linuxgrrl.com/learn/Introduction_To_Inkscape
+#Type=Application
+#Icon=fedora-logo-icon
+#Categories=Graphics;Documentation;
+#FOE
+#chmod a+x /usr/share/applications/inkscape-course.desktop
 
-EOF
+#EOF
 
-%end
+#%end
 
