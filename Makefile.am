@@ -4,10 +4,17 @@ fedoradir = $(pkgdatadir)/
 fedora_DATA = \
     fedora-aos.ks \
     fedora-arm-base.ks \
-    fedora-arm-minimal.ks \
-    fedora-arm-xfce.ks \
     fedora-arm-lxde.ks \
+    fedora-arm-lxde-vfat.ks \
+    fedora-arm-minimal.ks \
+    fedora-arm-minimal-vfat.ks \
+    fedora-arm-partitioning.ks \
+    fedora-arm-soas.ks \
+    fedora-arm-soas-vfat.ks \
+    fedora-arm-vfat-partitioning.ks \
     fedora-arm-xbase.ks \
+    fedora-arm-xfce.ks \
+    fedora-arm-xfce-vfat.ks \
     fedora-install-fedora.ks \
     fedora-live-base.ks \
     fedora-live-minimization.ks \

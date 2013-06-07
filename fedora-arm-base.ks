@@ -7,10 +7,6 @@ firewall --enabled --service=mdns,ssh
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
 
-bootloader --location=none
-part /boot --size=512 --fstype ext3
-part swap --size=512 --fstype swap
-part / --grow --size=6500 --fstype ext4
 services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd --disabled=network
 
 repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch

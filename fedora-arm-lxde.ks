@@ -1,6 +1,7 @@
 %include fedora-arm-base.ks
 %include fedora-arm-xbase.ks
 %include fedora-lxde-packages.ks
+%include fedora-arm-partitioning.ks
 
 %post
 echo -n "Enabling initial-setup gui mode on startup"
