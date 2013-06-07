@@ -40,8 +40,10 @@
 
 # Sadly, no space for games
 -aisleriot
-# ... or xslt filters
+# ... or xslt filters and other optional libreoffice functionality
 -libreoffice-xsltfilter
+-libreoffice-pyuno
+-libreoffice-emailmerge
 
 # Legacy cmdline things we don't want
 -krb5-auth-dialog
