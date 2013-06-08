@@ -26,6 +26,17 @@ kernel-lpae
 chrony
 arm-boot-config
 initial-setup
+
+# install uboot images
+uboot-beagle
+uboot-beaglebone
+uboot-origen
+uboot-panda
+uboot-smdkv310
+uboot-uevm
+uboot-wandboard_dl
+uboot-wandboard_solo
+
 %end
 
 %post
