@@ -4,6 +4,8 @@ fedoradir = $(pkgdatadir)/
 fedora_DATA = \
     fedora-aos.ks \
     fedora-arm-base.ks \
+    fedora-arm-kde.ks \
+    fedora-arm-kde-vfat.ks \
     fedora-arm-lxde.ks \
     fedora-arm-lxde-vfat.ks \
     fedora-arm-minimal.ks \
