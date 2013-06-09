@@ -1,3 +1,4 @@
+%packages
 imsettings-mate
 libmatekbd
 libmatekeyring
@@ -39,3 +40,4 @@ mate-themes
 mate-user-share
 mate-utils
 mate-window-manager
+%end
