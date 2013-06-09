@@ -8,6 +8,8 @@ fedora_DATA = \
     fedora-arm-kde-vfat.ks \
     fedora-arm-lxde.ks \
     fedora-arm-lxde-vfat.ks \
+    fedora-arm-mate.ks  \
+    fedora-arm-mate-vfat.ks \
     fedora-arm-minimal.ks \
     fedora-arm-minimal-vfat.ks \
     fedora-arm-partitioning.ks \
@@ -40,7 +42,8 @@ fedora_DATA = \
     fedora-livedvd-robotics.ks \
     fedora-livedvd-scientific-kde.ks \
     fedora-livecd-security.ks \
-    fedora-live-jam-kde.ks
+    fedora-live-jam-kde.ks \
+    fedora-mate-packages
 
 customdir = ${pkgdatadir}/custom/
 custom_DATA = \
