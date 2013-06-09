@@ -16,6 +16,7 @@ fedora_DATA = \
     fedora-arm-xfce.ks \
     fedora-arm-xfce-vfat.ks \
     fedora-install-fedora.ks \
+    fedora-kde-packages.ks \
     fedora-live-base.ks \
     fedora-live-minimization.ks \
     fedora-live-desktop.ks \
