@@ -7,7 +7,6 @@
 %include fedora-live-minimization.ks
 
 %packages
-# First, no office
 -planner
 
 # Drop the Java plugin
@@ -45,7 +44,7 @@
 -libreoffice-pyuno
 -libreoffice-emailmerge
 
-# Legacy cmdline things we don't want
+# Legacy and cmdline things we don't want
 -krb5-auth-dialog
 -krb5-workstation
 -pam_krb5
@@ -66,6 +65,10 @@
 -rpcbind
 -acpid
 -ntsysv
+-rmt
+-talk
+-lftp
+-tcpdump
 
 # Drop some system-config things
 -system-config-boot
