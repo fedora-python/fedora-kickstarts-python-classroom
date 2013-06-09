@@ -77,6 +77,11 @@
 -system-config-services
 -policycoreutils-gui
 
+# we have our own im config
+-imsettings
+-imsettings-gsettings
+
+
 %end
 
 %post
