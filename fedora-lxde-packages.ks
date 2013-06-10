@@ -48,6 +48,8 @@ ssmtp
 -stix-fonts
 -ibus-typing-booster
 
+# FIXME: can be removed once mtpaint is gone from lxde-apps in comps
+-mtpaint
 
 # drop some system-config things
 -system-config-boot
