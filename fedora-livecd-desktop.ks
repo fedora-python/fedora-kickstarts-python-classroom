@@ -43,6 +43,8 @@
 -libreoffice-xsltfilter
 -libreoffice-pyuno
 -libreoffice-emailmerge
+-brasero
+-bijiben
 
 # Legacy and cmdline things we don't want
 -krb5-auth-dialog
