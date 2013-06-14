@@ -8,7 +8,7 @@ mate-applets
 mate-backgrounds
 mate-bluetooth
 mate-control-center
-mate-charachter-map
+mate-character-map
 mate-desktop
 mate-dialogs
 mate-document-viewer
