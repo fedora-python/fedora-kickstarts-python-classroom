@@ -44,6 +44,7 @@
 -libreoffice-pyuno
 -libreoffice-emailmerge
 -brasero
+-brasero-nautilus
 -bijiben
 
 # Legacy and cmdline things we don't want
