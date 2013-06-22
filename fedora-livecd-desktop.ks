@@ -7,7 +7,17 @@
 %include fedora-live-minimization.ks
 
 %packages
+# reduce the office suite in size
 -planner
+-libreoffice-xsltfilter
+-libreoffice-pyuno
+-libreoffice-emailmerge
+-libreoffice-math
+
+# remove input method things we don't need
+-ibus-typing-booster
+-imsettings
+-imsettings-gsettings
 
 # Drop the Java plugin
 -icedtea-web
@@ -29,23 +39,11 @@
 -man-pages*
 -words
 
-# Help and art can be big, too
--gnome-user-docs
+# Help and art and fonts can be big, too
 -evolution-help
 -desktop-backgrounds-basic
 -*backgrounds-extras
 -stix-fonts
--ibus-typing-booster
-
-# Sadly, no space for games
--aisleriot
-# ... or xslt filters and other optional libreoffice functionality
--libreoffice-xsltfilter
--libreoffice-pyuno
--libreoffice-emailmerge
--brasero
--brasero-nautilus
--bijiben
 
 # Legacy and cmdline things we don't want
 -krb5-auth-dialog
@@ -72,6 +70,7 @@
 -talk
 -lftp
 -tcpdump
+-dump
 
 # Drop some system-config things
 -system-config-boot
@@ -80,9 +79,13 @@
 -system-config-services
 -policycoreutils-gui
 
-# we have our own im config
--imsettings
--imsettings-gsettings
+# These things are cut purely for space reasons
+-aisleriot
+-brasero
+-brasero-nautilus
+-bijiben
+-gnome-system-log
+-deja-dup
 
 
 %end
