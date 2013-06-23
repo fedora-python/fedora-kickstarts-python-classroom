@@ -86,7 +86,10 @@
 -bijiben
 -gnome-system-log
 -deja-dup
-
+-eog
+-gnu-free-mono-fonts
+-gnu-free-sans-fonts
+-gnu-free-serif-fonts
 
 %end
 
