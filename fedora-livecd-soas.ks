@@ -65,12 +65,14 @@ vu.lux.olpc.Maze
 vu.lux.olpc.Speak
 EOF
 
-# set up auto-login
-cat > /etc/gdm/custom.conf << EOF
-[daemon]
-AutomaticLoginEnable=True
-AutomaticLogin=liveuser
+cat > /etc/sysconfig/desktop <<EOF
+PREFERRED=/usr/bin/sugar
+DISPLAYMANAGER=/usr/sbin/lightdm
 EOF
+
+# set up lightdm autologin
+sed -i 's/^#autologin-user=.*/autologin-user=liveuser/' /etc/lightdm/lightdm.conf
+sed -i 's/^#autologin-user-timeout=.*/autologin-user-timeout=0/' /etc/lightdm/lightdm.conf
 
 # Don't use the default system user (in SoaS liveuser) as nick name
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /desktop/sugar/user/default_nick disabled >/dev/null
