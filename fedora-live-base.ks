@@ -205,6 +205,10 @@ systemctl stop atd.service 2> /dev/null || :
 # Mark things as configured
 touch /.liveimg-configured
 
+# add static hostname to work around xauth bug
+# https://bugzilla.redhat.com/show_bug.cgi?id=679486
+echo "localhost" > /etc/hostname
+
 EOF
 
 # bah, hal starts way too late
