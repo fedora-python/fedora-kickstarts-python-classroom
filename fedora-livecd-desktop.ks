@@ -91,6 +91,10 @@
 -gnu-free-sans-fonts
 -gnu-free-serif-fonts
 
+# Without gnu freefonts, the lack of Malayalam coverage is
+# a problem in anaconda (#977764)
+lohit-malayalam-fonts
+
 %end
 
 %post
