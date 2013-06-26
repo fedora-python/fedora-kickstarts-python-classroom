@@ -85,7 +85,6 @@ non-session-manager
 # audio-plugins
 calf
 dssi
-dssi-vst
 jack-rack
 ladspa
 
@@ -117,7 +116,7 @@ lv2-c++-tools
 lv2-samplv1
 lv2-synthv1
 lv2-drumkv1
-slv2 
+
 
 #dssi
 nekobee-dssi
