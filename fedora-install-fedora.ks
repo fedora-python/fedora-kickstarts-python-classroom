@@ -37,7 +37,6 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 -syslog-ng*
 -astronomy-bookmarks
 -generic*
--btanks*
 -GConf2-dbus*
 -bluez-gnome
 -java-1.8.0-openjdk
