@@ -9,17 +9,21 @@ DESTDIR := /usr
 
 DATADIR := $(DESTDIR)/share
 
-DOCDIR := $(DATADIR)/doc/
+DOCDIR := $(DATADIR)/doc
 
 name := spin-kickstarts
 
 all: dist
 
 install:
-	install *.ks* $(DATADIR)/$(name)
-	install custom/* $(DATADIR)/$(name)/custom
-	install l10n/* $(DATADIR)/$(name)/l10n
-	install AUTHORS COPYING README $(DOCDIR)/$(name)-$(version)
+	mkdir -p -m 755 $(DATADIR)/$(name)
+	install *.ks* -m 644 $(DATADIR)/$(name)
+	mkdir -p -m 755 $(DATADIR)/$(name)/custom
+	install -m 644 custom/* $(DATADIR)/$(name)/custom
+	mkdir -p -m 755 $(DATADIR)/$(name)/l10n
+	install -m 644 l10n/* $(DATADIR)/$(name)/l10n
+	mkdir -p -m 755 $(DOCDIR)/$(name)-$(version)
+	install -m 644 AUTHORS COPYING README $(DOCDIR)/$(name)-$(version)
 
 clean:
 	rm -f $(name)-*.tar.gz
