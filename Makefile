@@ -4,4 +4,4 @@ clean:
 	rm -f spin-kickstarts-*.tar.gz
 
 dist:
-	git archive --format=tar --prefix=spin-kickstarts-`git tag --points-at HEAD` HEAD | gzip > spin-kickstarts.tar-`git tag --points-at HEAD`.gz
+	git archive --format=tar --prefix=spin-kickstarts-`git tag --points-at HEAD`/ HEAD | gzip > spin-kickstarts.tar-`git tag --points-at HEAD`.gz
