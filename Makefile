@@ -1,2 +1,5 @@
-clean:	rm -f spin-kickstarts.tar.gz
-dist:	git archive --format=tar --prefix=spin-kickstarts | gzip > spin-kickstarts.tar.gz
+clean:
+	rm -f spin-kickstarts.tar.gz
+
+dist:
+	git archive --format=tar --prefix=spin-kickstarts HEAD | gzip > spin-kickstarts.tar.gz
