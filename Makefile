@@ -13,5 +13,8 @@ clean:
 dist:
 	git archive --format=tar --prefix=spin-kickstarts-$(version)/ HEAD | gzip > spin-kickstarts.tar-$(version).gz
 
+publish:
+	scp spin-kickstarts-$(version).tar.gz fedorahosted.org:spin-kickstarts
+
 dist-clean:
 	git clean -f -d
