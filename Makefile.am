@@ -43,7 +43,10 @@ fedora_DATA = \
     fedora-livedvd-scientific-kde.ks \
     fedora-livecd-security.ks \
     fedora-live-jam-kde.ks \
-    fedora-mate-packages.ks
+    fedora-mate-packages.ks \
+    fedoda-repo-rawhide.ks \
+    fedora-repo-not-rawhide.ks \
+    fedora-repo.ks
 
 customdir = ${pkgdatadir}/custom/
 custom_DATA = \
