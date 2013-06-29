@@ -15,7 +15,7 @@ cd spin-kickstarts
 git checkout BRANCHNAME
 # No tag has been added yet tag HEAD with
 git tag VERSION
-git push tag VERSION
+git push --tags
 make
 # Publish the released tar ball
 scp spin-kickstarts-*.tar.gz fedorahosted.org:spin-kickstarts
