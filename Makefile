@@ -19,7 +19,7 @@ install:
 	install *.ks* $(DATADIR)/$(name)
 	install custom/* $(DATADIR)/$(name)/custom
 	install l10n/* $(DATADIR)/$(name)/l10n
-	install AUTHORS COPYING README $(DOCDIR)/$(name)
+	install AUTHORS COPYING README $(DOCDIR)/$(name)-$(version)
 
 clean:
 	rm -f $(name)-*.tar.gz
