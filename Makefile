@@ -16,9 +16,9 @@ name := spin-kickstarts
 all: dist
 
 install:
-	install *{.ks,.ks.in} $(DATADIR)/$(name)
-	install custom/*{.ks,.ks.in} $(DATADIR)/$(name)/custom
-	install l10n/*{.ks,.ks.in} $(DATADIR)/$(name)/l10n
+	install *.ks* $(DATADIR)/$(name)
+	install custom/* $(DATADIR)/$(name)/custom
+	install l10n/* $(DATADIR)/$(name)/l10n
 	install AUTHORS COPYING README $(DOCDIR)/$(name)
 
 clean:
