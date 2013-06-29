@@ -13,8 +13,11 @@ git clone ssh://git.fedorahosted.org/git/spin-kickstarts.git spin-kickstarts
 cd spin-kickstarts
 # If you need a specific branch other than master:
 git checkout BRANCHNAME
-make dist
+# No tag has been added yet tag HEAD with
+git tag VERSION
+git push tag VERSION
+make
 # Publish the released tar ball
 scp spin-kickstarts-*.tar.gz fedorahosted.org:spin-kickstarts
 # Clean up the generated files:
-git clean -f -d
+make clean
