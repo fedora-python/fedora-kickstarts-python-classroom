@@ -5,19 +5,19 @@ ifeq ($(version),)
   version := $(shell git log -1 --abbrev=8 --pretty=git%h)
 endif
 
-prefix := /usr
+DESTDIR := /usr
 
-datadir := $(prefix)/share
+DATADIR := $(DESTDIR)/share
 
-docdir := $(datadir)/doc/
+DOCDIR := $(DATADIR)/doc/
 
 name := spin-kickstarts
 
 all: dist
 
 install:
-	install *.ks custom l10n $(datadir)/$(name)
-	install AUTHORS COPYING README $(docdir)/$(name)
+	install *.ks custom l10n $(DATADIR)/$(name)
+	install AUTHORS COPYING README $(DOCDIR)/$(name)
 
 clean:
 	rm -f $(name)-*.tar.gz
