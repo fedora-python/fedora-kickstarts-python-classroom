@@ -22,8 +22,6 @@ install:
 	install -m 644 custom/* $(DATADIR)/$(name)/custom
 	mkdir -p -m 755 $(DATADIR)/$(name)/l10n
 	install -m 644 l10n/* $(DATADIR)/$(name)/l10n
-	mkdir -p -m 755 $(DOCDIR)/$(name)-$(version)
-	install -m 644 AUTHORS COPYING README $(DOCDIR)/$(name)-$(version)
 
 clean:
 	rm -f $(name)-*.tar.gz
