@@ -10,18 +10,33 @@
 #part iso --size=4998
 
 # Add the repos you wish to use to compose here.  At least one of them needs group data.
-repo --name=fedora --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch --exclude kernel*debug* --exclude kernel-kdump* --exclude kernel-tools* --exclude syslog-ng* --exclude astronomy-bookmarks --exclude generic* --exclude btanks* --exclude GConf2-dbus* --exclude bluez-gnome --exclude java-1.8.0-openjdk --exclude community-mysql* --exclude jruby*
-repo --name=fedora-source  --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-source-$releasever&arch=$basearch --exclude kernel*debug* --exclude kernel-kdump* --exclude kernel-tools* --exclude syslog-ng* --exclude astronomy-bookmarks --exclude generic* --exclude btanks* --exclude GConf2-dbus* --exclude bluez-gnome --exclude java-1.8.0-openjdk --exclude community-mysql* --exclude jruby*
+repo --name=fedora --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch
+repo --name=fedora-source  --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-source-$releasever&arch=$basearch
 
 
 # Package manifest for the compose.  Uses repo group metadata to translate groups.
 # (default groups for the configured repos are added by --default)
 %packages --default
+
+# pungi is an inclusive depsolver so that multiple packages are brought 
+# in to satisify dependencies and we don't always want that. So we  use
+# an exclusion list to cut out things we don't want
+
+-kernel*debug*
+-kernel-kdump*
+-kernel-tools*
+-syslog-ng*
+-astronomy-bookmarks
+-generic*
+-btanks*
+-GConf2-dbus*
+-bluez-gnome
+-java-1.8.0-openjdk
+-community-mysql*
+-jruby*
+
 # core
 kernel*
--kernel-tools*
--kernel-debug*
--kernel-PAEdebug*
 dracut-*
 
 # Desktops
