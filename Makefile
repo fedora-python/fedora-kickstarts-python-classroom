@@ -1,5 +1,5 @@
 # Get the version name first by seeing if HEAD is tagged
-version := $(shell git tag --points-at HEAD)
+version := $(shell git tag --points-at HEAD -l '0.*.*' | head -1)
 # And if it wasn't use a git hash
 ifeq ($(version),)
   version := $(shell git log -1 --abbrev=8 --pretty=git%h)
