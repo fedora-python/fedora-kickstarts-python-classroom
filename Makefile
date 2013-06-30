@@ -26,7 +26,9 @@ install:
 clean:
 	rm -f $(name)-*.tar.gz
 
-dist:
+dist:	$(name)-$(version).tar.gz
+
+$(name)-$(version).tar.gz:
 	git archive --format=tar --prefix=$(name)-$(version)/ HEAD | gzip > $(name)-$(version).tar.gz
 
 publish:
