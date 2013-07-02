@@ -4,7 +4,7 @@
 # - A Spin targeted towards professional designers
 # Website: http://fedoraproject.org/wiki/Design_Suite
 # Maintainers:
-# - Luya Tshimbalanga <sdz AT fedoraproject DOT org>
+# - Luya Tshimbalanga <luya AT fedoraproject DOT org>
 # - Previous maintainer Sebastian Dziallas
 
 %include fedora-live-desktop.ks
@@ -17,7 +17,7 @@ part / --size 8192
 # graphics
 blender
 bluefish 
-cinepaint
+#cinepaint
 cmyktool
 darktable
 dia
@@ -33,8 +33,6 @@ inkscape
 mypaint
 nautilus-image-converter
 optipng
-# pinta # is huge because it needs mono
-# postr # dropped because shotwell support flickr upload
 scribus
 colord-extra-profiles 
 synfigstudio
@@ -42,7 +40,7 @@ synfigstudio
 xournal
 
 # office
-gnote
+bijiben	# replaces gnote
 pdfshuffler  
 
 # internet
@@ -53,8 +51,6 @@ audacity
 pitivi
 
 # system
-# gtk-recordmydesktop # dropped for space (#887991)
-# network-manager-applet #part of Gnome Desktop
 
 # fonts
 aajohan-comfortaa-fonts
@@ -89,22 +85,21 @@ overpass-fonts
 
 %end
 
-#%post
+%post
 
 # Add link to the Inkscape Course
-#cat >> /usr/share/applications/inkscape-course.desktop << FOE
-#[Desktop Entry]
-#Name=Introduction To Inkscape
-#GenericName=Inkscape Course
-#Comment=Materials from Máirín Duffy's Inkscape Class
-#Exec=xdg-open http://linuxgrrl.com/learn/Introduction_To_Inkscape
-#Type=Application
-#Icon=fedora-logo-icon
-#Categories=Graphics;Documentation;
-#FOE
-#chmod a+x /usr/share/applications/inkscape-course.desktop
+cat >> /usr/share/applications/inkscape-course.desktop << FOE
+[Desktop Entry]
+Name=Introduction To Inkscape
+GenericName=Inkscape Course
+Comment=Materials from Máirín Duffy's Inkscape Class
+Exec=xdg-open http://linuxgrrl.com/learn/Introduction_To_Inkscape
+Type=Application
+Icon=fedora-logo-icon
+Categories=Graphics;Documentation;
+FOE
+chmod a+x /usr/share/applications/inkscape-course.desktop
 
-#EOF
+EOF
 
-#%end
-
+%end
