@@ -31,7 +31,7 @@ dist:	$(name)-$(version).tar.gz
 $(name)-$(version).tar.gz:
 	git archive --format=tar --prefix=$(name)-$(version)/ HEAD | gzip > $(name)-$(version).tar.gz
 
-publish:
+publish:	$(name)-$(version).tar.gz
 	scp $(name)-$(version).tar.gz fedorahosted.org:$(name)
 
 dist-clean:
