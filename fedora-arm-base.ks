@@ -33,6 +33,7 @@ uboot-smdkv310
 uboot-uevm
 uboot-wandboard_dl
 uboot-wandboard_solo
+uboot-wandboard_quad
 
 %end
 
