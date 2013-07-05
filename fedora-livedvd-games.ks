@@ -91,7 +91,6 @@ lordsawar
 lure
 machineball
 nethack
-openlierox
 pachi
 pioneers
 quarry
