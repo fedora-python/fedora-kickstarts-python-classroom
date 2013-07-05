@@ -39,7 +39,6 @@ gnome-keyring-pam
 
 # drop some system-config things
 -system-config-boot
--system-config-lvm
 -system-config-network
 -system-config-rootpassword
 #-system-config-services
