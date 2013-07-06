@@ -25,7 +25,8 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 
 # Package manifest for the compose.  Uses repo group metadata to translate groups.
 # (default groups for the configured repos are added by --default)
-%packages --default
+# @base got renamed to @standard, but @base is still included by default by pungi.
+%packages --default --nobase
 
 # pungi is an inclusive depsolver so that multiple packages are brought 
 # in to satisify dependencies and we don't always want that. So we  use
