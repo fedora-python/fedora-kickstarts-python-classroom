@@ -17,7 +17,7 @@ part / --size 8192
 # graphics
 blender
 bluefish 
-#cinepaint
+#cinepaint will be orphaned soon
 cmyktool
 darktable
 dia
@@ -33,6 +33,7 @@ inkscape
 mypaint
 nautilus-image-converter
 optipng
+pencil
 scribus
 colord-extra-profiles 
 synfigstudio
@@ -40,7 +41,6 @@ synfigstudio
 xournal
 
 # office
-bijiben	# replaces gnote
 pdfshuffler  
 
 # internet
@@ -49,8 +49,6 @@ filezilla
 # audio & video
 audacity
 pitivi
-
-# system
 
 # fonts
 aajohan-comfortaa-fonts
@@ -86,6 +84,13 @@ overpass-fonts
 %end
 
 %post
+
+# Set favourite apps for Design Suite
+cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
+[org.gnome.shell]
+favorite-apps=['firefox.desktop', 'evolution.desktop', 'gimp.desktop', 'shotwell.desktop', 'inkscape.desktop', 'scribus.desktop', 'blender.desktop', 'nautilus.desktop', 'anaconda.desktop']
+FOE
+
 
 # Add link to the Inkscape Course
 cat >> /usr/share/applications/inkscape-course.desktop << FOE
