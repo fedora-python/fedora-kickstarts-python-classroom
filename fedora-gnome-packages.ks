@@ -14,4 +14,8 @@ nss-mdns
 -system-config-printer
 -im-chooser
 
+# There's been some debate about removing sendmail from @standard, but it's
+# being punted for now.  At least we can fix it in the desktop spin.
+# https://lists.fedoraproject.org/pipermail/devel/2013-July/186796.html
+-sendmail
 %end
