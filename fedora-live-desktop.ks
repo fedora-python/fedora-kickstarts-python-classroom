@@ -3,7 +3,7 @@
 # mailto:desktop@lists.fedoraproject.org
 
 %include fedora-live-base.ks
-%include fedora-gnome-packages.ks
+%include fedora-desktop-packages.ks
 
 part / --size 4096
 
