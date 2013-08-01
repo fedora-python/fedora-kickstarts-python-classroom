@@ -23,6 +23,8 @@ kernel-lpae
 chrony
 arm-boot-config
 initial-setup
+#lets resize / on first boot
+dracut-modules-growroot
 
 # install uboot images
 uboot-beagle
