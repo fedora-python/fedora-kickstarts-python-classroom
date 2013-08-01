@@ -1,5 +1,5 @@
 bootloader --location=none
 part /boot/uboot --size=20 --fstype vfat
 part swap --size=512 --fstype swap
-part / --grow --size=3400 --fstype ext4
+part / --size=3400 --fstype ext4
 
