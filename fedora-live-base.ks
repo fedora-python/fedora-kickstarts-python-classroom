@@ -77,8 +77,6 @@ exists() {
     \$*
 }
 
-touch /.liveimg-configured
-
 # Make sure we don't mangle the hardware clock on shutdown
 ln -sf /dev/null /etc/systemd/system/hwclock-save.service
 
@@ -288,6 +286,9 @@ rm -f /var/lib/rpm/__db*
 rm -f /boot/initramfs*
 # make sure there aren't core files lying around
 rm -f /core*
+
+# Mark things as configured
+touch /.liveimg-configured
 
 # convince readahead not to collect
 # FIXME: for systemd
