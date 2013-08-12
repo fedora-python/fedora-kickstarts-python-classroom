@@ -57,7 +57,6 @@ midori
 -mtr
 -pinfo
 -rsh
--telnet
 -nfs-utils
 -ypbind
 -yp-tools

@@ -17,10 +17,7 @@ xconfig --startxonboot
 part / --size 3072 --fstype ext4
 services --enabled=NetworkManager --disabled=network,sshd
 
-repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
-#repo --name=fedora --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch
-#repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f$releasever&arch=$basearch
-#repo --name=updates-testing --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-testing-f$releasever&arch=$basearch
+%include fedora-repo.ks
 
 %packages
 @base-x
@@ -79,8 +76,6 @@ exists() {
     which \$1 >/dev/null 2>&1 || return
     \$*
 }
-
-touch /.liveimg-configured
 
 # Make sure we don't mangle the hardware clock on shutdown
 ln -sf /dev/null /etc/systemd/system/hwclock-save.service
@@ -291,6 +286,9 @@ rm -f /var/lib/rpm/__db*
 rm -f /boot/initramfs*
 # make sure there aren't core files lying around
 rm -f /core*
+
+# Mark things as configured
+touch /.liveimg-configured
 
 # convince readahead not to collect
 # FIXME: for systemd

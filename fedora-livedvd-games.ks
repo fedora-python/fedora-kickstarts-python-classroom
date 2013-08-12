@@ -4,7 +4,7 @@
 # - Bruno Wolff III <bruno@wolff.to>
 # - Formerly maintained by Rahul Sundaram
 
-%include fedora-livecd-desktop.ks
+%include fedora-livecd-xfce.ks
 
 # The recommended part size for DVDs is too close to use for the games spin
 part / --size 10240
@@ -91,7 +91,6 @@ lordsawar
 lure
 machineball
 nethack
-openlierox
 pachi
 pioneers
 quarry
@@ -187,7 +186,6 @@ games-menus
 # No compilations of games as I want to only include games that at least
 # someone thought were good within a genre.
 -kdegames
--gnome-games
 
 # Nothing should be downloading data to play.
 -autodownloader

@@ -54,7 +54,6 @@ rkward
 qtoctave
 
 # IDEs for the IDE folks
-netbeans
 eclipse
 spyder
 
@@ -63,7 +62,7 @@ emacs
 emacs-color-theme
 vim
 scribus
-scite
+#scite
 lyx
 kile
 

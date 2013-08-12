@@ -118,7 +118,6 @@ ssmtp
 # drop some system-config things
 -system-config-boot
 #-system-config-language
--system-config-lvm
 -system-config-rootpassword
 #-system-config-services
 -policycoreutils-gui

@@ -4,16 +4,12 @@ auth --useshadow --enablemd5
 selinux --enforcing
 firewall --enabled --service=mdns,ssh
 
-bootloader --location=none
-part /boot --size=512 --fstype ext3
-part swap --size=512 --fstype swap
-part / --grow --size=6500 --fstype ext4
+# make sure that initial-setup runs and lets us do all the configuration bits
+firstboot --reconfig
+
 services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd --disabled=network
 
-repo --name=rawhide --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
-#repo --name=fedora --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch
-#repo --name=updates --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f$releasever&arch=$basearch
-#repo --name=updates-testing --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=updates-testing-f$releasever&arch=$basearch
+%include fedora-repo.ks
 
 %packages
 @core
@@ -27,6 +23,20 @@ kernel-lpae
 chrony
 arm-boot-config
 initial-setup
+#lets resize / on first boot
+dracut-modules-growroot
+
+# install uboot images
+uboot-beagle
+uboot-beaglebone
+uboot-origen
+uboot-panda
+uboot-smdkv310
+uboot-uevm
+uboot-wandboard_dl
+uboot-wandboard_solo
+uboot-wandboard_quad
+
 %end
 
 %post

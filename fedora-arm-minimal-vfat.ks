@@ -1,5 +1,5 @@
 %include fedora-arm-base.ks
-%include fedora-arm-partitioning.ks
+%include fedora-arm-vfat-partitioning.ks
 
 %post
 
