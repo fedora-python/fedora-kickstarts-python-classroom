@@ -4,7 +4,7 @@
 # - A Spin targeted towards professional designers
 # Website: http://fedoraproject.org/wiki/Design_Suite
 # Maintainers:
-# - Luya Tshimbalanga <luya AT fedoraproject DOT org>
+# - Luya Tshimbalanga <sdz AT fedoraproject DOT org>
 # - Previous maintainer Sebastian Dziallas
 
 %include fedora-live-desktop.ks
@@ -17,11 +17,7 @@ part / --size 8192
 # graphics
 blender
 bluefish 
-<<<<<<< HEAD
 #cinepaint
-=======
-#cinepaint will be orphaned soon
->>>>>>> a47186bb673789cb3ba6bae8af26bf0a86b7dcac
 cmyktool
 darktable
 dia
@@ -41,10 +37,6 @@ mypaint
 inkscape
 nautilus-image-converter
 optipng
-<<<<<<< HEAD
-=======
-pencil
->>>>>>> a47186bb673789cb3ba6bae8af26bf0a86b7dcac
 scribus
 colord-extra-profiles 
 synfigstudio
@@ -60,6 +52,10 @@ filezilla
 # audio & video
 audacity
 pitivi
+
+# system
+# gtk-recordmydesktop # dropped for space (#887991)
+# network-manager-applet #part of Gnome Desktop
 
 # fonts
 aajohan-comfortaa-fonts
@@ -96,7 +92,6 @@ overpass-fonts
 %end
 
 %post
-<<<<<<< HEAD
 #Override the favorite desktop application in Dash
 cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
@@ -104,15 +99,6 @@ favorite-apps=['firefox.desktop', 'evolution.desktop', 'shotwell.desktop', 'gimp
 #Enable categories in Gnome Shell
 app-folder-categories=['Utilities', 'Others', 'System Settings', 'Sundry', 'Graphics', 'Games', 'Office', 'Multimedia', 'Network', 'Internet']
 FOE
-=======
-
-# Set favourite apps for Design Suite
-cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
-[org.gnome.shell]
-favorite-apps=['firefox.desktop', 'evolution.desktop', 'gimp.desktop', 'shotwell.desktop', 'inkscape.desktop', 'scribus.desktop', 'blender.desktop', 'nautilus.desktop', 'anaconda.desktop']
-FOE
-
->>>>>>> a47186bb673789cb3ba6bae8af26bf0a86b7dcac
 
 # Add link to the Inkscape Course
 cat >> /usr/share/applications/inkscape-course.desktop << FOE
@@ -127,15 +113,10 @@ Categories=Graphics;Documentation;
 FOE
 chmod a+x /usr/share/applications/inkscape-course.desktop
 
-<<<<<<< HEAD
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
 EOF
 
 %end
-=======
-EOF
->>>>>>> a47186bb673789cb3ba6bae8af26bf0a86b7dcac
 
-%end
