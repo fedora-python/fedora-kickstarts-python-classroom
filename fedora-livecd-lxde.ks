@@ -36,7 +36,7 @@ MailClient=sylpheed.desktop
 FOE
 
 # set up auto-login for liveuser
-sed -i 's|# autologin=dgod|autologin=liveuser|g' /etc/lxdm/lxdm.conf
+sed -i 's/# autologin=.*/autologin=liveuser/g' /etc/lxdm/lxdm.conf
 
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
