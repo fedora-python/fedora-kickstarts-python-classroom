@@ -67,8 +67,5 @@ ssmtp
 -policycoreutils-gui
 -gnome-disk-utility
 
-# we need UPower for suspend and hibernate
-upower
-
 %end
 
