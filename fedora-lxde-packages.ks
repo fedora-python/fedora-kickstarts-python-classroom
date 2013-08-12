@@ -32,10 +32,8 @@ metacity
 
 
 # dictionaries are big
--aspell-*
--hunspell-*
--man-pages-*
--words
+#-man-pages-*
+#-words
 
 # use ssmtp instead of sendmail
 -sendmail
@@ -53,7 +51,7 @@ ssmtp
 -stix-fonts
 -ibus-typing-booster
 -xscreensaver-extras
--wqy-zenhei-fonts
+-wqy-zenhei-fonts           # FIXME: Workaround to save space, do this in comps
 
 # FIXME: can be removed once mtpaint is gone from lxde-apps in comps
 -mtpaint
