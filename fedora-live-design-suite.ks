@@ -17,7 +17,7 @@ part / --size 8192
 # graphics
 blender
 bluefish 
-cinepaint
+#cinepaint
 cmyktool
 darktable
 dia
@@ -26,15 +26,17 @@ fontforge
 font-manager 
 gimp
 gimp-*-plugin
+gimp-data-extras
+gimp-high-pass-filter
+gimp-normalmap
+gimp-resynthesizer
 gpick
 GREYCstoration-gimp 
 hugin 
-inkscape
 mypaint
+inkscape
 nautilus-image-converter
 optipng
-# pinta # is huge because it needs mono
-# postr # dropped because shotwell support flickr upload
 scribus
 colord-extra-profiles 
 synfigstudio
@@ -42,7 +44,6 @@ synfigstudio
 xournal
 
 # office
-gnote
 pdfshuffler  
 
 # internet
@@ -59,6 +60,7 @@ pitivi
 # fonts
 aajohan-comfortaa-fonts
 adobe-source-sans-pro-fonts
+campivisivi-titillium-fonts
 lato-fonts
 overpass-fonts
 
@@ -89,22 +91,32 @@ overpass-fonts
 
 %end
 
-#%post
+%post
+#Override the favorite desktop application in Dash
+cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
+[org.gnome.shell]
+favorite-apps=['firefox.desktop', 'evolution.desktop', 'shotwell.desktop', 'gimp.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop']
+#Enable categories in Gnome Shell
+app-folder-categories=['Utilities', 'Others', 'System Settings', 'Sundry', 'Graphics', 'Games', 'Office', 'Multimedia', 'Network', 'Internet']
+FOE
 
 # Add link to the Inkscape Course
-#cat >> /usr/share/applications/inkscape-course.desktop << FOE
-#[Desktop Entry]
-#Name=Introduction To Inkscape
-#GenericName=Inkscape Course
-#Comment=Materials from Máirín Duffy's Inkscape Class
-#Exec=xdg-open http://linuxgrrl.com/learn/Introduction_To_Inkscape
-#Type=Application
-#Icon=fedora-logo-icon
-#Categories=Graphics;Documentation;
-#FOE
-#chmod a+x /usr/share/applications/inkscape-course.desktop
+cat >> /usr/share/applications/inkscape-course.desktop << FOE
+[Desktop Entry]
+Name=Introduction To Inkscape
+GenericName=Inkscape Course
+Comment=Materials from Máirín Duffy's Inkscape Class
+Exec=xdg-open http://linuxgrrl.com/learn/Introduction_To_Inkscape
+Type=Application
+Icon=fedora-logo-icon
+Categories=Graphics;Documentation;
+FOE
+chmod a+x /usr/share/applications/inkscape-course.desktop
 
-#EOF
+# rebuild schema cache with any overrides we installed
+glib-compile-schemas /usr/share/glib-2.0/schemas
 
-#%end
+EOF
+
+%end
 
