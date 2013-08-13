@@ -4,364 +4,135 @@
 #   A fully functional live OS based on Fedora for use in security auditing, 
 #   forensics research, and penetration testing.
 # Maintainers:
-#  Christoph Wickert <cwickert [AT] fedoraproject <dot> org>
-#  Joerg Simon <jsimon [AT] fedoraproject <dot> org>
-#  Fabian Affolter <fab [AT] fedoraproject <dot> org>
+#   Fabian Affolter <fab [AT] fedoraproject <dot> org>
+#   Joerg Simon <jsimon [AT] fedoraproject <dot> org>
+#   Christoph Wickert <cwickert [AT] fedoraproject <dot> org>
 # Acknowledgements:
-#   Fedora LiveCD Xfce Spin team - some work here was inherited, many thanks!
+#   Fedora LiveCD Xfce Spin team - some work here was and will be inherited,
+#   many thanks!
 #   Fedora LXDE Spin - Copied over stuff to make LXDE Default
-#   Luke Macken, Adam Miller for the original OpenBox Security ks and all 
+#   Luke Macken and Adam Miller for the original OpenBox Security ks and all
 #   the Security Applications! 
 #   Hiemanshu Sharma <hiemanshu [AT] fedoraproject <dot> org>
-# Important!!!!
-#   Beginning with Security Stuff - we use pattern to parse the kickstart file 
-#   for building the security menu - please use 
-#   # Category: Categoryname <- for new Categories
-#   # Command: Commandname <- for the given Command
-#   # rCommand: Commandname <- for a command as root
-#   # Entry: Menu-Entry <- for the MenuEntry Name (optional)
 
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
 
 %packages
-### LXDE desktop
-@lxde-desktop
-lxlauncher
-obconf
-lxdm
+@xfce-desktop
+@xfce-apps
+#@xfce-extra-plugins
+#@xfce-media
+#@xfce-office
+#@firefox
 
-### internet
-firefox
-icedtea-web
-pidgin
-sylpheed
-transmission
-
-### graphics
-#mtpaint
-
-### audio & video
-alsa-plugins-pulseaudio
-asunder
-lxmusic
-gxine
-gxine-mozplugin
-pavucontrol
-pnmixer
-# I'm looking for something smaller than
-#gnomebaker
-
-### utils
-galculator
-parcellite
-xpad
-
-### system
-gigolo
-Terminal
-
-### more desktop stuff
-fedora-icon-theme
-adwaita-cursor-theme
-adwaita-gtk2-theme
-adwaita-gtk3-theme
-
-# pam-fprint causes a segfault in LXDM when enabled
--fprintd-pam
-
-# needed for automatic unlocking of keyring (#643435)
-gnome-keyring-pam
-
-network-manager-applet
-
-# needed for xdg-open to support LXDE
-perl-File-MimeInfo
-
-xcompmgr
-xdg-user-dirs-gtk
-xscreensaver-extras
-
-# use yumex instead of gnome-packagekit
-#yumex
--apper
--gnome-packagekit
-
-# LXDE has lxpolkit. Make sure no other authentication agents end up in the spin.
--polkit-gnome
--polkit-kde
-
-# make sure xfce4-notifyd is not pulled in
-notification-daemon
--xfce4-notifyd
-
-# make sure xfwm4 is not pulled in for firstboot
-# https://bugzilla.redhat.com/show_bug.cgi?id=643416
-metacity
-
-# Command line
-powertop
-wget
-yum-utils
-
-# dictionaries are big
--aspell-*
--hunspell-*
--man-pages-*
--words
+# Security tools (not ready at the moment)
+@security-lab
+security-menus
 
 # save some space
--sendmail
-ssmtp
+-autofs
 -acpid
+-gimp-help
+-desktop-backgrounds-basic
+-realmd                     # only seems to be used in GNOME
+-PackageKit*                # we switched to yumex, so we don't need this
+-aspell-*                   # dictionaries are big
+-man-pages-*
 
 # drop some system-config things
 -system-config-boot
-#-system-config-language
+#-system-config-network
 -system-config-rootpassword
 #-system-config-services
 -policycoreutils-gui
--gnome-disk-utility
 
-# we need UPower for suspend and hibernate
-upower
-
-###################### Security Stuffs ############################
-security-menus
-##################################################################
-# Category: Reconnaissance
-# rCommand: dsniff -h
-dsniff
-# rCommand: hping -h
-hping3
-nc6
-nc
-# Command: ncrack -h
-ncrack
-ngrep
-# rCommand: nmap -h
-nmap
-# Command: zenmap-root
-nmap-frontend
-# Command: p0f -h
-p0f
-# rCommand: sing -h
-sing
-# Command: scanssh -h
-#temp takout scanssh
-# rCommand: scapy -h
-scapy
-# Command: socat
-# Entry: Socket cat
-socat
-# rCommand: tcpdump -h
-tcpdump
-# rCommand: unicornscan -h
-unicornscan
-# rCommand: wireshark
-# Entry: Wireshark
-wireshark-gnome
-# Command: xprobe2
-xprobe2
-# Command: nbtscan
-nbtscan
-# Command: tcpxtract
-tcpxtract
-# Command: firewalk
-# Entry: Firewalk
-firewalk
-# Command: hunt
-# Entry: Hunt
-hunt
-# Command: dnsenum -h
-# Entry: DNS Enumeration
-dnsenum
-# rCommand: iftop
-iftop
-# Command: argus -h
-argus
-# rCommand: ettercap -C
-# Entry: Ettercap
-ettercap
-ettercap-gtk
-# rCommand: packETH
-packETH
-# rCommand: iptraf-ng
-iptraf-ng
-pcapdiff
-# rCommand: etherape
-etherape
-# Command: lynis
-lynis
-# rCommand: netsniff-ng
-netsniff-ng
-# Command: tcpjunk -x
-tcpjunk
-# rCommand: ssldump -h
-ssldump
-# rCommand: yersinia -G
-# Entry: Yersinia
-yersinia
-net-snmp
-# Command: openvas-client
-# Entry: OpenVAS Client
-openvas-client
-openvas-scanner
-
-#################################################################
-# Category: Forensics
-# Command: ddrescue -h
-ddrescue
-# Command: gparted
-gparted
-hexedit
-# rCommand: testdisk -h
-testdisk
-# Command: foremost -h
-# Entry: Foremost Filecarver
-foremost
-# Command: sectool-gui
-# Entry: sectool
-sectool-gui
-scanmem
-sleuthkit
-# Command: unhide
-unhide
-# Command: examiner
-# Entry: ELF Examiner
-examiner
-dc3dd
-afftools
-# Command: srm -h
-# Entry: Securely Remove Files
-srm
-# Command: nwipe
-# Entry: Securely erase disks
-nwipe
-# Command: firstaidkit -g gtk
-# Entry: First Aid Kit
-#firstaidkit-plugin-all #temp removed - dependency to grub2
-
-ntfs-3g
-ntfsprogs
-
-#####################################################################
-# Category: WebApplicationTesting
-# Command: httping -h
-httping
-# Command: nikto -help
-# Entry: Nikto Websecurity Scanner
-nikto
-# Command: ratproxy -h
-ratproxy
-# Command: lbd
-# Entry: Load Balancing Detector
-lbd
-# Command: skipfish
-skipfish
-# Command: sqlninja
-sqlninja
-
-#######################################################################
-# Category: Wireless
-# Command: aircrack-ng
-aircrack-ng
-# Command: airsnort
-airsnort
-# rCommand: kismet
-kismet
-# Command: weplab
-# Entry: Wep Key Cracker
-weplab
-# Command: wavemon
-wavemon
-
-#######################################################################
-# Category: CodeAnalysis
-# Command: splint
-splint
-# Command: pscan
-pscan
-# Command: flawfinder
-# Entry: Flawfinder
-flawfinder
-# Command: rats
-# Entry: Rough Auditing Tool for Security
-rats
-
-######################################################################
-# Category: IntrusionDetection
-# rCommand: chkrootkit
-chkrootkit
-# Command: aide -h
-aide
-labrea
-# Command: honeyd -h
-# Entry: Honeypot Daemon
-# temp removal
-#honeyd
-# Command: pads -h
-# Entry: Passive Asset Detection System
-pads
-nebula
-# Command: rkhunter
-# Entry: RootKitHunter
-rkhunter
-
-########################################################################
-# Category: PasswordTools
-# Command: john 
-john
-# Command: ophcrack 
-# Entry: Objectif Securite ophcrack
-ophcrack
-# Command: medusa -d
-# Entry: Medusa Brute Force
-medusa
+# exclude some packages to save some space
+# use './fsl-maintenance.py -l' in your security spin git folder to build
+-ArpON
+-bonesi
+-cmospwd
+-dnstop
+-hfsutils
+-honeyd
+-kismon
+-netsed
+-onesixtyone
+-pdfcrack
+-picviz-gui
+-prelude-lml
+-prelude-manager
+-prewikka
+-proxychains
+-pyrit
+-raddump
+-safecopy
+-scalpel
+-sslstrip
+-tcpreen
+-tcpreplay
+-tripwire
+-wipe
 
 %end
 
 %post
-# LXDE and LXDM configuration
+# xfce configuration
+
+# This is a huge file and things work ok without it
+rm -f /usr/share/icons/HighContrast/icon-theme.cache
 
 # create /etc/sysconfig/desktop (needed for installation)
+
 cat > /etc/sysconfig/desktop <<EOF
-PREFERRED=/usr/bin/startlxde
-DISPLAYMANAGER=/usr/sbin/lxdm
+PREFERRED=/usr/bin/startxfce4
+DISPLAYMANAGER=/usr/sbin/lightdm
 EOF
 
 cat >> /etc/rc.d/init.d/livesys << EOF
-# disable screensaver locking and make sure gamin gets started
-cat > /etc/xdg/lxsession/LXDE/autostart << FOE
-/usr/libexec/gam_server
-@lxpanel --profile LXDE
-@pcmanfm --desktop --profile LXDE
-/usr/libexec/notification-daemon
+
+mkdir -p /home/liveuser/.config/xfce4
+
+cat > /home/liveuser/.config/xfce4/helpers.rc << FOE
+MailReader=sylpheed-claws
+FileManager=Thunar
+WebBrowser=midori
 FOE
 
-# set up preferred apps 
-cat > /etc/xdg/libfm/pref-apps.conf << FOE 
-[Preferred Applications]
-WebBrowser=firefox.desktop
-MailClient=redhat-sylpheed.desktop
+# disable screensaver locking (#674410)
+cat >> /home/liveuser/.xscreensaver << FOE
+mode:           off
+lock:           False
+dpmsEnabled:    False
 FOE
 
-# set up auto-login for liveuser
-sed -i 's|# autologin=dgod|autologin=liveuser|g' /etc/lxdm/lxdm.conf
+# deactivate xfconf-migration (#683161)
+rm -f /etc/xdg/autostart/xfconf-migration-4.6.desktop || :
+
+# deactivate xfce4-panel first-run dialog (#693569)
+mkdir -p /home/liveuser/.config/xfce4/xfconf/xfce-perchannel-xml
+cp /etc/xdg/xfce4/panel/default.xml /home/liveuser/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+
+# set up lightdm autologin
+sed -i 's/^#autologin-user=.*/autologin-user=liveuser/' /etc/lightdm/lightdm.conf
+sed -i 's/^#autologin-user-timeout=.*/autologin-user-timeout=0/' /etc/lightdm/lightdm.conf
+#sed -i 's/^#show-language-selector=.*/show-language-selector=true/' /etc/lightdm/lightdm-gtk-greeter.conf
+
+# set Xfce as default session, otherwise login will fail
+sed -i 's/^#user-session=.*/user-session=xfce/' /etc/lightdm/lightdm.conf
 
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
 mkdir /home/liveuser/Desktop
 cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
 
-# Add autostart for parcellite
-cp /usr/share/applications/fedora-parcellite.desktop /etc/xdg/autostart
+# and mark it as executable (new Xfce security feature)
+chmod +x /home/liveuser/Desktop/liveinst.desktop
 
-# this goes at the end after all other changes.
+# this goes at the end after all other changes. 
 chown -R liveuser:liveuser /home/liveuser
 restorecon -R /home/liveuser
 
 EOF
 
 %end
-
