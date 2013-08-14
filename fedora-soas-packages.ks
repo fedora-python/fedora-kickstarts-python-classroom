@@ -21,7 +21,6 @@
 -rdate
 -rdist
 -icedtea-web
--sendmail
 -firefox
 -glx-utils
 -nmap-ncat

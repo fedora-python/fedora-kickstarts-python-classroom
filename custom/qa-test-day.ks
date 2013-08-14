@@ -66,7 +66,6 @@ selinux --permissive
 -realmd
 -rhythmbox
 -sane-backends*
--sendmail
 -shotwell
 -simple-scan
 -system-config-*
