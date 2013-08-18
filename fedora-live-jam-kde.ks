@@ -116,7 +116,8 @@ lv2-c++-tools
 lv2-samplv1
 lv2-synthv1
 lv2-drumkv1
-
+lv2-triceratops
+lv2-newtonator
 
 #dssi
 nekobee-dssi
@@ -140,6 +141,7 @@ nano
 mscore
 lilypond
 frescobaldi
+mup
 
 #audio utilities
 jamin
@@ -154,6 +156,7 @@ rtirq
 #patchage
 #ladish #not packaged yet
 japa
+radium-compressor
 
 #streaming
 idjc
