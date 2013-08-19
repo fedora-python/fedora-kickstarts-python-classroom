@@ -37,13 +37,15 @@ mypaint
 inkscape
 nautilus-image-converter
 optipng
+phatch
+screenruler
 scribus
 colord-extra-profiles 
 synfigstudio
-# ufraw # dropped as duplicate of darktable
 xournal
 
 # office
+vym
 pdfshuffler  
 
 # internet
@@ -66,7 +68,10 @@ overpass-fonts
 
 # removal of duplicated and unneeded applications
 -gnome-boxes
+-gthumb
 -eog
+-gnome-photos
+
 
 # Legacy cmdline things we don't want
 -krb5-auth-dialog
@@ -97,7 +102,7 @@ cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
 favorite-apps=['firefox.desktop', 'evolution.desktop', 'shotwell.desktop', 'gimp.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop']
 #Enable categories in Gnome Shell
-app-folder-categories=['Utilities', 'Others', 'System Settings', 'Sundry', 'Graphics', 'Games', 'Office', 'Multimedia', 'Network', 'Internet']
+app-folder-categories=['Utilities','Others','System Settings','Sundry','Graphics','Games','Office','Multimedia','Network','Internet']
 FOE
 
 # Add link to the Inkscape Course
