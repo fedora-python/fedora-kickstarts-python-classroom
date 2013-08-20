@@ -202,6 +202,9 @@ systemctl --no-reload disable atd.service 2> /dev/null || :
 systemctl stop crond.service 2> /dev/null || :
 systemctl stop atd.service 2> /dev/null || :
 
+# Mark things as configured
+touch /.liveimg-configured
+
 EOF
 
 # bah, hal starts way too late
@@ -286,9 +289,6 @@ rm -f /var/lib/rpm/__db*
 rm -f /boot/initramfs*
 # make sure there aren't core files lying around
 rm -f /core*
-
-# Mark things as configured
-touch /.liveimg-configured
 
 # convince readahead not to collect
 # FIXME: for systemd
