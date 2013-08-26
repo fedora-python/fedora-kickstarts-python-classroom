@@ -2,7 +2,7 @@
 #
 # Description:
 # - Fedora Live Spin with the K Desktop Environment (KDE), 2 GiB version
-#   see fedora-livecd-kde.ks for the default CD-sized version
+#   see fedora-livecd-kde.ks for the default 1 GiB version
 #
 # Maintainer(s):
 # - Sebastian Vahl <fedora@deadbabylon.de>

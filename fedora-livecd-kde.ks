@@ -1,7 +1,7 @@
 # fedora-livecd-kde.ks
 #
 # Description:
-# - Fedora Livecd Spin with the K Desktop Environment (KDE)
+# - Fedora Live Spin with the K Desktop Environment (KDE), default 1 GiB version
 #
 # Maintainer(s):
 # - Sebastian Vahl <fedora@deadbabylon.de>
@@ -9,6 +9,9 @@
 
 %include fedora-live-kde-base.ks
 %include fedora-live-minimization.ks
+
+# DVD payload
+part / --size=4096
 
 
 %packages
