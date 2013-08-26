@@ -1,7 +1,6 @@
 %packages
 -realmd                     # only seems to be used in GNOME
 -PackageKit*                # we switched to yumex, so we don't need this
--mate-icon-them-faenza      # large icon package not needed for spin
 firefox
 @mate
 compiz

@@ -13,6 +13,7 @@
 # Drop things for size
 -firefox
 -@libreoffice
+-mate-icon-theme-faenza
 
 # A web browser would be nice for a live cd
 midori
