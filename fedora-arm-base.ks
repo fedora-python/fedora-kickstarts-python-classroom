@@ -4,6 +4,9 @@ auth --useshadow --enablemd5
 selinux --enforcing
 firewall --enabled --service=mdns,ssh
 
+# configure extlinux bootloader
+bootloader extlinux
+
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
 
@@ -22,6 +25,7 @@ kernel-lpae
 
 chrony
 arm-boot-config
+extlinux-bootloader
 initial-setup
 #lets resize / on first boot
 dracut-modules-growroot
