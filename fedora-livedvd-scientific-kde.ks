@@ -10,8 +10,6 @@
 # Maintainer: Amit Saha <amitksaha@fedoraproject.org>
 #             https://fedoraproject.org/wiki/User:Amitksaha
 
-# Last modified: March 10, 2012.
-
 %include fedora-live-kde.ks
 
 # DVD payload
@@ -35,14 +33,39 @@ scilab-doc
 @development-libs
 @c-development
 @rpm-development-tools
+#others, not included
+# C++ libraries
+blitz-devel
+armadillo-devel
 
 # Misc. related utils
 ddd
 valgrind
-ipython
+
+#python 2 tools/libraries not included from the groups
+python-ipython
+python-ipython-console
+python-ipython-notebook
+sympy
+python-networkx
+
+#python 3 and tools/libraries not included from the groups
+# python3
+# python3-matplotlib
+# python3-scipy
+# python3-numpy
+# python3-ipython
+# python3-ipython-console
+# python3-ipython-notebook
+# python3-networkx
+
+#Cython
+# Cython
+# python3-Cython
 
 # Include Java development tools
 @java-development
+apache-commons-math
 
 #fortran compiler
 gcc-gfortran
@@ -54,7 +77,7 @@ rkward
 qtoctave
 
 # IDEs for the IDE folks
-eclipse
+@eclipse
 spyder
 
 #writing & publishing
@@ -74,18 +97,20 @@ pdfshuffler
 
 # Parallel/Distributed computing libraries/tools
 openmpi
+openmpi-devel
 valgrind-openmpi
 pvm
 pvm-gui #will install 'pvm' as well
 libgomp
 python-pp
-
+mpi4py-openmpi
+python3-mpi4py-openmpi
 
 #Version control- a GUI for each as well
 
 # Installing rapidsvn will also install subversion package
 rapidsvn 
-# Install git-gui, will also install git
+git
 git-gui
 # Mercurial
 mercurial
@@ -93,7 +118,6 @@ mercurial-hgk
 
 #Backup Utilities
 backintime-kde
-
 
 #needs to install this specifically because of some conflict between openmpi
 #and emacs (http://lists.fedoraproject.org/pipermail/devel/2011-July/153812.html)
@@ -125,15 +149,16 @@ Mayavi
 
 #Misc. Utils
 screen
+tmux
 rlwrap
-xchat
+hexchat
 shutter
 fig2ps
 bibtex2html
 hevea
 
 #Include Mozilla Firefox
-firefox
+#firefox
 
 %end
 
