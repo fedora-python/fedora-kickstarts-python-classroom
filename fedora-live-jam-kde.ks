@@ -81,6 +81,9 @@ seq24
 muse
 qtractor
 non-session-manager
+non-daw
+non-sequencer
+non-mixer
 
 # audio-plugins
 calf
