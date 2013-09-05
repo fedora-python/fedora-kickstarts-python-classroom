@@ -83,6 +83,16 @@ gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults
 # Enable Sugar power management
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/power/automatic True >/dev/null
 
+cat >> /etc/rc.d/init.d/livesys << EOF
+# set up lightdm autologin
+sed -i 's/^#autologin-user=.*/autologin-user=liveuser/' /etc/lightdm/lightdm.conf
+sed -i 's/^#autologin-user-timeout=.*/autologin-user-timeout=0/' /etc/lightdm/lightdm.conf
+#sed -i 's/^#show-language-selector=.*/show-language-selector=true/' /etc/lightdm/lightdm-gtk-greeter.conf
+
+# set Sugar as default session, otherwise login will fail
+sed -i 's/^#user-session=.*/user-session=sugar/' /etc/lightdm/lightdm.conf
+EOF
+
 cat >> /etc/rc.d/init.d/livesys-late << EOF
 
 # disable screensaver locking
