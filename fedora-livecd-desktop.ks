@@ -90,6 +90,8 @@
 -gnu-free-mono-fonts
 -gnu-free-sans-fonts
 -gnu-free-serif-fonts
+-uboot-tools
+-dtc
 
 # Without gnu freefonts, the lack of Malayalam coverage is
 # a problem in anaconda (#977764)
