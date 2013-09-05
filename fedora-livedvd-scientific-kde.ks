@@ -12,8 +12,8 @@
 
 %include fedora-live-kde.ks
 
-# DVD payload
-part / --size 10000
+# The recommended part size for DVDs is too close to use for the scientific spin
+part / --size 10240
 
 %packages
 
@@ -50,18 +50,22 @@ sympy
 python-networkx
 
 #python 3 and tools/libraries not included from the groups
-# python3
-# python3-matplotlib
-# python3-scipy
-# python3-numpy
-# python3-ipython
-# python3-ipython-console
-# python3-ipython-notebook
-# python3-networkx
+python3
+python3-matplotlib
+python3-scipy
+python3-numpy
+python3-ipython
+python3-ipython-console
+python3-ipython-notebook
+python3-networkx
 
-#Cython
-# Cython
-# python3-Cython
+# matplotlib backends
+python-matplotlib-qt4
+python-matplotlib-tk
+python-matplotlib-wx
+python3-matplotlib-qt4
+python3-matplotlib-tk
+python3-matplotlib-wx
 
 # Include Java development tools
 @java-development
@@ -93,7 +97,6 @@ kile
 #tools
 BibTool
 pdfshuffler
-
 
 # Parallel/Distributed computing libraries/tools
 openmpi
@@ -129,13 +132,13 @@ root-gui-fitpanel
 root-python
 
 #Multiple jobs/clustering system
-torque
-torque-server
-torque-scheduler
-torque-gui
-torque-libs
-torque-mom
-python-pbs
+# torque
+# torque-server
+# torque-scheduler
+# torque-gui
+# torque-libs
+# torque-mom
+# python-pbs
 
 #Drawing, Picture viewing tools, Visualization tools
 dia
