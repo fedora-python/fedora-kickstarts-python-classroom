@@ -26,6 +26,9 @@
 @security-lab
 security-menus
 
+# unlock default keyring. FIXME: Should probably be done in comps
+gnome-keyring-pam
+
 # save some space
 -autofs
 -acpid
