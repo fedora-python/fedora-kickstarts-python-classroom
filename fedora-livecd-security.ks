@@ -21,10 +21,6 @@
 %packages
 @xfce-desktop
 @xfce-apps
-#@xfce-extra-plugins
-#@xfce-media
-#@xfce-office
-#@firefox
 
 # Security tools (not ready at the moment)
 @security-lab
@@ -38,7 +34,13 @@ security-menus
 -realmd                     # only seems to be used in GNOME
 -PackageKit*                # we switched to yumex, so we don't need this
 -aspell-*                   # dictionaries are big
--man-pages-*
+-gnumeric
+-foomatic-db-ppds
+-foomatic
+-stix-fonts
+-ibus-typing-booster
+-xfce4-sensors-plugin
+#-man-pages-*
 
 # drop some system-config things
 -system-config-boot
