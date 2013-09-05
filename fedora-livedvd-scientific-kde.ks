@@ -62,10 +62,8 @@ python3-networkx
 # matplotlib backends
 python-matplotlib-qt4
 python-matplotlib-tk
-python-matplotlib-wx
 python3-matplotlib-qt4
 python3-matplotlib-tk
-python3-matplotlib-wx
 
 # Include Java development tools
 @java-development
