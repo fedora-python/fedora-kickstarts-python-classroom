@@ -159,7 +159,7 @@ bibtex2html
 hevea
 
 #Include Mozilla Firefox
-#firefox
+firefox
 
 %end
 
