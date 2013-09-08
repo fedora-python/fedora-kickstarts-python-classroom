@@ -25,6 +25,10 @@ scilab
 scilab-devel
 scilab-doc
 
+# sagemath
+sagemath
+sagemath-notebook
+
 #Devel tools
 
 #Install the mandatory packages from dev-tools and dev-libs
