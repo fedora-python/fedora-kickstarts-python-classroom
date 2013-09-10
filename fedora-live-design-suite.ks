@@ -39,6 +39,7 @@ nautilus-image-converter
 optipng
 phatch
 screenruler
+simple-scan
 scribus
 colord-extra-profiles 
 synfigstudio
@@ -71,7 +72,7 @@ overpass-fonts
 -gthumb
 -eog
 -gnome-photos
-
+-rdesktop
 
 # Legacy cmdline things we don't want
 -krb5-auth-dialog
