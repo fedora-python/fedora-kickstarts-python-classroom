@@ -49,7 +49,8 @@ perl-Test-Pod-Coverage
 -gimp-libs
 -gimp-data-extras
 -kdebluetooth
-
+-kbluetooth
+-rdesktop
 
 %end
 
