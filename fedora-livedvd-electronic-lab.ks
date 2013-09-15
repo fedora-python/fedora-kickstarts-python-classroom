@@ -7,7 +7,7 @@
 %include fedora-livecd-desktop.ks
 
 # DVD payload
-part / --size=8192
+part / --size 10240
 
 %packages
 
