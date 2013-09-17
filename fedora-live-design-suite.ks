@@ -27,6 +27,7 @@ font-manager
 gimp
 gimp-*-plugin
 gimp-data-extras
+gimp-paint-studio
 gimp-high-pass-filter
 gimp-normalmap
 gimp-resynthesizer
@@ -55,10 +56,6 @@ filezilla
 # audio & video
 audacity
 pitivi
-
-# system
-# gtk-recordmydesktop # dropped for space (#887991)
-# network-manager-applet #part of Gnome Desktop
 
 # fonts
 aajohan-comfortaa-fonts
@@ -118,6 +115,19 @@ Icon=fedora-logo-icon
 Categories=Graphics;Documentation;
 FOE
 chmod a+x /usr/share/applications/inkscape-course.desktop
+
+# Add link to the list of tutorials
+cat >> /usr/share/applications/list-design-tutorials.desktop << FOE
+[Desktop Entry]
+Name=List of design tutorials
+GenericName=Design tutorials
+Comment=List of websites using open source design software
+Exec=xdg-open http://linuxgrrl.com/learn/Introduction_To_Inkscape
+Type=Application
+Icon=applicatons-graphics
+Categories=Graphics;Documentation;
+FOE
+chmod a+x /usr/share/applications/list-design-tutorials.desktop
 
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
