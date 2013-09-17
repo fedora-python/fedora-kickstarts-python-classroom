@@ -116,7 +116,7 @@ Categories=Graphics;Documentation;
 FOE
 chmod a+x /usr/share/applications/inkscape-course.desktop
 
-# Add link to the list of tutorials
+# Add link to the list of design tutorials
 cat >> /usr/share/applications/list-design-tutorials.desktop << FOE
 [Desktop Entry]
 Name=List of design tutorials
