@@ -122,7 +122,7 @@ cat >> /usr/share/applications/list-design-tutorials.desktop << FOE
 Name=List of design tutorials
 GenericName=Design tutorials
 Comment=List of websites using open source design software
-Exec=xdg-open http://linuxgrrl.com/learn/Introduction_To_Inkscape
+Exec=xdg-open https://fedoraproject.org/wiki/Design_Suite/Tutorials
 Type=Application
 Icon=applicatons-graphics
 Categories=Graphics;Documentation;
