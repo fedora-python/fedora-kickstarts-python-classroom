@@ -34,6 +34,7 @@
 @sugar-desktop
 -sugar-ruler
 sugar-cp-updater
+lightdm
 lightdm-gtk
 
 # Write breaks unless we do this (we don't need it anyway)
