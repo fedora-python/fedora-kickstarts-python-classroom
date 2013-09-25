@@ -18,6 +18,9 @@
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
 
+#Spin was failing to compose due to lack of space, so bumping the size.
+part / --size 10240
+
 %packages
 @xfce-desktop
 @xfce-apps
