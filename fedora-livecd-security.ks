@@ -18,7 +18,7 @@
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
 
-#Spin was failing to compose due to lack of space, so bumping the size.
+# spin was failing to compose due to lack of space, so bumping the size.
 part / --size 10240
 
 %packages
@@ -46,7 +46,7 @@ gnome-keyring-pam
 -stix-fonts
 -ibus-typing-booster
 -xfce4-sensors-plugin
-#-man-pages-*
+-man-pages-*
 
 # drop some system-config things
 -system-config-boot
@@ -58,14 +58,25 @@ gnome-keyring-pam
 # exclude some packages to save some space
 # use './fsl-maintenance.py -l' in your security spin git folder to build
 -ArpON
+-aide
+-binwalk
+-bkhive
 -bonesi
+-bro
 -cmospwd
 -dnstop
+-etherape
 -hfsutils
--honeyd
+-httpie
+-httrack
+-hydra
 -kismon
+-labrea
+-nebula
 -netsed
 -onesixtyone
+-packETH
+-pads
 -pdfcrack
 -picviz-gui
 -prelude-lml
@@ -74,8 +85,11 @@ gnome-keyring-pam
 -proxychains
 -pyrit
 -raddump
+-rkhunter
 -safecopy
+-samdump2
 -scalpel
+-sshscan
 -sslstrip
 -tcpreen
 -tcpreplay
