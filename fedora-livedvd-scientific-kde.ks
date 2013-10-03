@@ -13,7 +13,7 @@
 %include fedora-live-kde.ks
 
 # The recommended part size for DVDs is too close to use for the scientific spin
-part / --size 11264
+part / --size 12288
 
 %packages
 
