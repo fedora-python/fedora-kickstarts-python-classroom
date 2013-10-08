@@ -35,6 +35,9 @@
 -foomatic-db-ppds
 -foomatic
 
+# we don't want prelink
+-prelink
+
 # Dictionaries are big
 # we're going to try keeping hunspell-* after notting, davidz, and ajax voiced
 # strong preference to giving it a go on #fedora-desktop.
