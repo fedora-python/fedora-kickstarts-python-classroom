@@ -5,7 +5,7 @@ selinux --enforcing
 firewall --enabled --service=mdns,ssh
 
 # configure extlinux bootloader
-bootloader extlinux
+bootloader --extlinux
 
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
@@ -22,6 +22,8 @@ services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd --disabled=ne
 
 kernel
 kernel-lpae
+
+dracut-config-generic
 
 chrony
 arm-boot-config
