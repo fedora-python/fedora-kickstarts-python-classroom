@@ -14,6 +14,10 @@
 -libreoffice-emailmerge
 -libreoffice-math
 
+# remove some other applications
+-gnome-boxes
+-gnome-dictionary
+
 # remove input method things we don't need
 -ibus-typing-booster
 -imsettings
