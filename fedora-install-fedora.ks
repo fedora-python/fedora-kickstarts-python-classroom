@@ -144,7 +144,6 @@ kde-l10n-*
 libreoffice-langpack-*
 man-pages-*
 mythes-*
--gimp-help-*
 
 # Removals
 -PackageKit-zif
