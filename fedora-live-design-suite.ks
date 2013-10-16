@@ -124,7 +124,7 @@ GenericName=Design tutorials
 Comment=List of websites using open source design software
 Exec=xdg-open https://fedoraproject.org/wiki/Design_Suite/Tutorials
 Type=Application
-Icon=applicatons-graphics
+Icon=applications-graphics
 Categories=Graphics;Documentation;
 FOE
 chmod a+x /usr/share/applications/list-design-tutorials.desktop
