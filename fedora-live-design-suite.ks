@@ -118,6 +118,19 @@ Categories=Graphics;Documentation;
 FOE
 chmod a+x /usr/share/applications/inkscape-course.desktop
 
+# Add link to lists of tutorials
+cat >> /usr/share/applications/list-design-tutorials.desktop << FOE
+[Desktop Entry]
+Name=List of design tutorials
+GenericName=List of design tutorials
+Comment=Reference of design related tutorials
+Exec=xdg-open http://fedoraproject.org/wiki/Design_Suite/Tutorials
+Type=Application
+Icon=applications-graphics
+Categories=Graphics;Documentation;
+FOE
+chmod a+x /usr/share/applications/list-design-tutorials.desktop
+
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
