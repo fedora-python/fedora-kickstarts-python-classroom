@@ -32,6 +32,9 @@ initial-setup
 #lets resize / on first boot
 dracut-modules-growroot
 
+# remove this in %post
+dracut-config-generic
+
 # install uboot images
 uboot-beagle
 uboot-beaglebone
@@ -53,5 +56,8 @@ echo "Disabling tmpfs for /tmp."
 systemctl mask tmp.mount
 
 /usr/sbin/a-b-c
+
+yum -y remove dracut-config-generic
+
 %end
 
