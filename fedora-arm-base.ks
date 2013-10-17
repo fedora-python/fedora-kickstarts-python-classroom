@@ -5,7 +5,7 @@ selinux --enforcing
 firewall --enabled --service=mdns,ssh
 
 # configure extlinux bootloader
-bootloader extlinux
+bootloader --extlinux
 
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
@@ -23,12 +23,17 @@ services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd --disabled=ne
 kernel
 kernel-lpae
 
+dracut-config-generic
+
 chrony
 arm-boot-config
 extlinux-bootloader
 initial-setup
 #lets resize / on first boot
 dracut-modules-growroot
+
+# remove this in %post
+dracut-config-generic
 
 # install uboot images
 uboot-beagle
@@ -51,5 +56,8 @@ echo "Disabling tmpfs for /tmp."
 systemctl mask tmp.mount
 
 /usr/sbin/a-b-c
+
+yum -y remove dracut-config-generic
+
 %end
 

@@ -18,17 +18,19 @@
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
 
+# spin was failing to compose due to lack of space, so bumping the size.
+part / --size 10240
+
 %packages
 @xfce-desktop
 @xfce-apps
-#@xfce-extra-plugins
-#@xfce-media
-#@xfce-office
-#@firefox
 
 # Security tools (not ready at the moment)
 @security-lab
 security-menus
+
+# unlock default keyring. FIXME: Should probably be done in comps
+gnome-keyring-pam
 
 # save some space
 -autofs
@@ -38,6 +40,12 @@ security-menus
 -realmd                     # only seems to be used in GNOME
 -PackageKit*                # we switched to yumex, so we don't need this
 -aspell-*                   # dictionaries are big
+-gnumeric
+-foomatic-db-ppds
+-foomatic
+-stix-fonts
+-ibus-typing-booster
+-xfce4-sensors-plugin
 -man-pages-*
 
 # drop some system-config things
@@ -50,14 +58,25 @@ security-menus
 # exclude some packages to save some space
 # use './fsl-maintenance.py -l' in your security spin git folder to build
 -ArpON
+-aide
+-binwalk
+-bkhive
 -bonesi
+-bro
 -cmospwd
 -dnstop
+-etherape
 -hfsutils
--honeyd
+-httpie
+-httrack
+-hydra
 -kismon
+-labrea
+-nebula
 -netsed
 -onesixtyone
+-packETH
+-pads
 -pdfcrack
 -picviz-gui
 -prelude-lml
@@ -66,8 +85,11 @@ security-menus
 -proxychains
 -pyrit
 -raddump
+-rkhunter
 -safecopy
+-samdump2
 -scalpel
+-sshscan
 -sslstrip
 -tcpreen
 -tcpreplay
