@@ -135,28 +135,13 @@ ln -s /usr/share/applications/test-day-welcome.desktop /etc/xdg/autostart/
 # Remove anaconda welcome screen (if it exists), it would display instead of ours
 rm -f /home/liveuser/.config/autostart/fedora-welcome.desktop
 
-# Change Firefox start page to open Test Day wiki and IRC chat
-# (and a few more properties)
-mkdir /tmp/firefox
-unzip /usr/lib*/firefox/browser/omni.ja -d /tmp/firefox
-
-cat << FOE > /tmp/firefox/chrome/en-US/locale/branding/browserconfig.properties
-browser.startup.homepage=https://fedoraproject.org/wiki/Test_Day:Current | http://webchat.freenode.net/?channels=fedora-test-day
-FOE
-
-cat << FOE >> /tmp/firefox/defaults/preferences/firefox-branding.js
+PREFDIR=`ls -d /usr/lib*/firefox/browser/defaults/preferences`
+cat << FOE >> $PREFDIR/test-day.js
 pref("startup.homepage_welcome_url","");
 pref("startup.homepage_override_url","");
 pref("browser.rights.3.shown", true);
+pref("browser.startup.homepage", "data:text/plain,browser.startup.homepage=https://fedoraproject.org/wiki/Test_Day:Current | http://webchat.freenode.net/?channels=fedora-test-day");
 FOE
-
-# We need to re-zip the whole archive (instead of just updating files), because
-# the original archive is "Firefox optimized" and updating doesn't work
-# https://bugzilla.mozilla.org/show_bug.cgi?id=605524
-OMNIJA=`ls /usr/lib*/firefox/browser/omni.ja`
-rm -f $OMNIJA
-(cd /tmp/firefox; zip -r -0 $OMNIJA *)
-rm -rf /tmp/firefox
 
 # Adjust launchers in dash using a vendor override. (Adding a profile would
 # be another way to do this.)
