@@ -51,6 +51,7 @@ org.laptop.StopWatchActivity
 org.laptop.community.Finance
 org.laptop.community.TypingTurtle
 org.laptop.sugar.Jukebox
+org.eq.FotoToon
 org.gnome.Labyrinth
 com.laptop.Ruler
 org.sugarlabs.AbacusActivity
