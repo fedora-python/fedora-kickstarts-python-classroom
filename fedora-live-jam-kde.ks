@@ -33,6 +33,7 @@ alsa-plugins-samplerate
 alsa-plugins-upmix
 alsa-plugins-vdownmix
 a2jmidid
+aj-snapshot
 
 #jack 
 jack-audio-connection-kit
@@ -121,6 +122,8 @@ lv2-synthv1
 lv2-drumkv1
 lv2-triceratops
 lv2-newtonator
+lv2-x42-plugins
+lv2-fomp-plugins
 
 #dssi
 nekobee-dssi
