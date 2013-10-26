@@ -28,7 +28,6 @@ calligra
 fuse
 liveusb-creator
 #pavucontrol			# pavucontrol has duplicate functionality with kmix
-#kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 krusader			# file manager, more power-user-oriented than Dolphin (~4 megs)
 
 # kdeedu apps

@@ -38,7 +38,6 @@ calligra-stage			# ~3 megs
 #twinkle			# (~10 megs)
 fuse
 liveusb-creator
-#kaffeine*			# kaffeine has duplicate functionality with dragonplayer (~3 megs)
 
 # only include kdegames-minimal
 -kdegames
