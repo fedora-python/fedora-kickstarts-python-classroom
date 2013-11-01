@@ -1,3 +1,5 @@
+%include fedora-cloud-base.ks
+
 %packages
 kernel
 %end
