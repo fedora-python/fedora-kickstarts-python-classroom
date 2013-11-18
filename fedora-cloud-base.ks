@@ -19,14 +19,12 @@ auth --useshadow --enablemd5
 selinux --enforcing
 rootpw --lock --iscrypted locked
 
-# this is actually not used, but a static firewall
-# matching these rules is generated below.
-firewall --service=ssh
+firewall --disabled
 
 bootloader --timeout=1 --append="console=ttyS0,115200n8 console=tty0" extlinux
 
 network --bootproto=dhcp --device=eth0 --onboot=on
-services --enabled=network,sshd,rsyslog,iptables,cloud-init,cloud-init-local,cloud-config,cloud-final
+services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 
 zerombr
@@ -62,10 +60,6 @@ syslinux-extlinux
 
 # Needed initially, but removed below.
 firewalld
-
-# Basic firewall. If you're going to rely on your cloud service's
-# security groups you can remove this.
-iptables-services
 
 # cherry-pick a few things from @standard
 tar
@@ -134,28 +128,6 @@ yum -C -y remove linux-firmware
 # be present for install/image building.
 echo "Removing firewalld."
 yum -C -y remove firewalld --setopt="clean_requirements_on_remove=1"
-
-# Non-firewalld-firewall
-echo -n "Writing static firewall"
-cat <<EOF > /etc/sysconfig/iptables
-# Simple static firewall loaded by iptables.service. Replace
-# this with your own custom rules, run lokkit, or switch to 
-# shorewall or firewalld as your needs dictate.
-*filter
-:INPUT ACCEPT [0:0]
-:FORWARD ACCEPT [0:0]
-:OUTPUT ACCEPT [0:0]
--A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
--A INPUT -p icmp -j ACCEPT
--A INPUT -i lo -j ACCEPT
--A INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 22 -j ACCEPT
-#-A INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 80 -j ACCEPT
-#-A INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 443 -j ACCEPT
--A INPUT -j REJECT --reject-with icmp-host-prohibited
--A FORWARD -j REJECT --reject-with icmp-host-prohibited
-COMMIT
-EOF
-echo .
 
 # Another one needed at install time but not after that, and it pulls
 # in some unneeded deps (like, newt and slang)
