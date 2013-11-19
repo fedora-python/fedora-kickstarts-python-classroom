@@ -124,6 +124,9 @@ lv2-triceratops
 lv2-newtonator
 lv2-x42-plugins
 lv2-fomp-plugins
+lv2-sorcer
+lv2-fabla
+lv2-artyfx-plugins
 
 #dssi
 nekobee-dssi
