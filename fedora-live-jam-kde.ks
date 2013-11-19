@@ -76,7 +76,7 @@ sooperlooper
 
 #recodring and DAW
 audacity
-ardour
+ardour3
 rosegarden4
 seq24
 muse
