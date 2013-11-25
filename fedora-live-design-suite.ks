@@ -133,7 +133,7 @@ chmod a+x /usr/share/applications/list-design-tutorials.desktop
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
-EOF
+#EOF
 
 %end
 
