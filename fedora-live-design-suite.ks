@@ -32,6 +32,7 @@ gimp-paint-studio
 gimp-high-pass-filter
 gimp-normalmap
 gimp-resynthesizer
+gimp-separate+
 gpick
 GREYCstoration-gimp 
 hugin 
