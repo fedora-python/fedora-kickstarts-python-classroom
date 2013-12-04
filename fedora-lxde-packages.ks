@@ -12,7 +12,9 @@
 @lxde-apps
 @lxde-media
 @lxde-office
-@firefox
+
+# FIXME: can be omitted once comps is updated
+midori
 
 # pam-fprint causes a segfault in LXDM when enabled
 -fprintd-pam
@@ -47,7 +49,7 @@ metacity
 -stix-fonts
 -ibus-typing-booster
 -xscreensaver-extras
--wqy-zenhei-fonts           # FIXME: Workaround to save space, do this in comps
+#-wqy-zenhei-fonts           # FIXME: Workaround to save space, do this in comps
 
 # FIXME: can be removed once mtpaint is gone from lxde-apps in comps
 -mtpaint
