@@ -35,9 +35,6 @@ metacity
 #-man-pages-*
 #-words
 
-# use ssmtp
-ssmtp
-
 # save some space
 -autofs
 -acpid
