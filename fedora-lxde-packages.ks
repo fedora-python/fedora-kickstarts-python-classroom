@@ -51,9 +51,6 @@ metacity
 -xscreensaver-extras
 #-wqy-zenhei-fonts           # FIXME: Workaround to save space, do this in comps
 
-# FIXME: can be removed once mtpaint is gone from lxde-apps in comps
--mtpaint
-
 # drop some system-config things
 -system-config-boot
 #-system-config-language
