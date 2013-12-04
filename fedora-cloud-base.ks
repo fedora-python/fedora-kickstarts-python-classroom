@@ -196,7 +196,12 @@ yum clean all
 truncate -c -s 0 /var/log/yum.log
 
 echo "Fixing SELinux contexts."
+touch /var/log/cron
+touch /var/log/boot.log
+mkdir -p /var/cache/yum
+chattr -i /boot/extlinux/ldlinux.sys
 /usr/sbin/fixfiles -R -a restore
+chattr +i /boot/extlinux/ldlinux.sys
 
 echo "Zeroing out empty space."
 # This forces the filesystem to reclaim space from deleted files
