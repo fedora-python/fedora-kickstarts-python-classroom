@@ -195,6 +195,19 @@ yum history new
 yum clean all
 truncate -c -s 0 /var/log/yum.log
 
+echo "Import RPM GPG key"
+releasever=$(rpm -q --qf '%{version}\n' fedora-release)
+basearch=$(uname -m)
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+
+echo "Packages within this cloud image:"
+echo "-----------------------------------------------------------------------"
+rpm -qa
+echo "-----------------------------------------------------------------------"
+# Note that running rpm recreates the rpm db files which aren't needed/wanted
+rm -f /var/lib/rpm/__db*
+
+
 echo "Fixing SELinux contexts."
 touch /var/log/cron
 touch /var/log/boot.log
