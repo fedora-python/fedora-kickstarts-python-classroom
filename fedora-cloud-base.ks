@@ -21,7 +21,7 @@ rootpw --lock --iscrypted locked
 
 firewall --disabled
 
-bootloader --timeout=1 --append="console=ttyS0,115200n8 console=tty0" extlinux
+bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8" extlinux
 
 network --bootproto=dhcp --device=eth0 --onboot=on
 services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
