@@ -66,53 +66,7 @@ dracut-*
 @admin-tools
 @basic-desktop
 
-## GNOME
-@firefox
-@gnome-desktop
-@epiphany
-@libreoffice
-@gnome-games
 
-## KDE
-@kde-desktop
-@kde-apps
-@kde-education
-@kde-media
-@kde-office
-
-## XFCE
-@xfce-desktop
-@xfce-apps
-@xfce-extra-plugins
-@xfce-media
-@xfce-office
-
-## LXDE
-@lxde-desktop
-@lxde-apps
-@lxde-media
-@lxde-office
-
-## SUGAR
-@sugar-desktop
-@sugar-apps
-
-## MATE
-@mate-desktop
-
-## CINNAMON
-@cinnamon-desktop
-
-# Workstation
-@eclipse
-@development-libs
-@development-tools
-@c-development
-@rpm-development-tools
-@fedora-packager
-@gnome-software-development
-@kde-software-development
-@x-software-development
 @virtualization
 @web-server
 @mongodb
@@ -122,14 +76,7 @@ dracut-*
 @rubyonrails
 @mysql
 @sql-server
-@design-suite
-## Not included yet due to space concerns
-#@jbossas
-#@milkymist
-#@mingw32
-#@ocaml
-#@robotics-suite
-#@electronic-lab
+@jbossas
 
 # Things needed for installation
 @anaconda-tools
