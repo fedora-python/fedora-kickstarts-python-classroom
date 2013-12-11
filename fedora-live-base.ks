@@ -303,7 +303,7 @@ rm -f /core*
 
 
 %post --nochroot
-cp $INSTALL_ROOT/usr/share/doc/*-release-*/GPL $LIVE_ROOT/GPL
+cp $INSTALL_ROOT/usr/share/doc/*-release/GPL $LIVE_ROOT/GPL
 
 # only works on x86, x86_64
 if [ "$(uname -i)" = "i386" -o "$(uname -i)" = "x86_64" ]; then
