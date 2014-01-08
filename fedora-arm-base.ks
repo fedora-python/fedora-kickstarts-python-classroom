@@ -29,6 +29,7 @@ chrony
 arm-boot-config
 extlinux-bootloader
 initial-setup
+initial-setup-gui
 #lets resize / on first boot
 dracut-modules-growroot
 
