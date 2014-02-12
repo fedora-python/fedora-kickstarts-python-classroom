@@ -21,7 +21,6 @@ services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd --disabled=ne
 @dial-up
 
 kernel
-kernel-lpae
 
 dracut-config-generic
 
