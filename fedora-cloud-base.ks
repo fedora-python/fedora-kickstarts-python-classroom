@@ -71,6 +71,7 @@ rsync
 -NetworkManager
 -iprutils
 -kbd
+-uboot-tools
 
 %end
 
