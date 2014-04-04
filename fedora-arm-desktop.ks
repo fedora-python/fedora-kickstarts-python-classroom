@@ -3,7 +3,7 @@
 %include fedora-desktop-packages.ks
 %include fedora-arm-partitioning.ks
 
-part / --size=4000 --fstype ext4
+part / --size=5000 --fstype ext4
 
 %packages
 -initial-setup
