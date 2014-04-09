@@ -90,6 +90,12 @@ cat > /home/liveuser/.kde/share/config/kdedrc << KDEDRC_EOF
 autoload=false
 KDEDRC_EOF
 
+# Disable baloo
+cat > /home/liveuser/.kde/share/config/baloofilerc << BALOO_EOF
+[Basic Settings]
+Indexing-Enabled=false
+BALOO_EOF
+
 # Disable kres-migrator
 cat > /home/liveuser/.kde/share/config/kres-migratorrc << KRES_EOF
 [Migration]
