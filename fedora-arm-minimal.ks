@@ -4,6 +4,11 @@
 part swap --size=128 --fstype swap
 part / --size=1400 --fstype ext4
 
+%packages
+-@standard
+-@dial-up
+%end
+
 %post
 
 # setup systemd to boot to the right runlevel
