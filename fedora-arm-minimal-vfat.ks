@@ -7,6 +7,7 @@ part / --size=1400 --fstype ext4
 %packages
 -@standard
 -@dial-up
+-initial-setup-gui
 %end
 
 %post
