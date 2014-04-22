@@ -160,6 +160,7 @@ DEVICE="eth0"
 BOOTPROTO="dhcp"
 ONBOOT="yes"
 TYPE="Ethernet"
+PERSISTENT_DHCLIENT="yes"
 EOF
 
 # generic localhost names
