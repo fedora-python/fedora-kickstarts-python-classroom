@@ -1,4 +1,4 @@
-# This is a basic Fedora 20 spin designed to work in OpenStack and other
+# This is a basic Fedora 21 spin designed to work in OpenStack and other
 # private cloud environments. It's configured with cloud-init so it will
 # take advantage of ec2-compatible metadata services for provisioning ssh
 # keys. Cloud-init creates a user account named "fedora" with passwordless
@@ -11,6 +11,7 @@
 # may need slight modification for use with actual anaconda or other tools.
 # We intend to target anaconda-in-a-vm style image building for F20.
 
+text
 lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
@@ -23,9 +24,8 @@ firewall --disabled
 
 bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8" extlinux
 
-network --bootproto=dhcp --device=eth0 --onboot=on
+network --bootproto=dhcp --onboot=on
 services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
-
 
 zerombr
 clearpart --all
