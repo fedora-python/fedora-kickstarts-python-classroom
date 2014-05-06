@@ -27,8 +27,8 @@ scilab-doc
 
 # sagemath
 # BZ #1006230 should fix this
-sagemath
-sagemath-notebook
+#sagemath
+#sagemath-notebook
 
 #Devel tools
 
