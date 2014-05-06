@@ -1,5 +1,4 @@
 %include fedora-arm-base.ks
-%include fedora-arm-partitioning.ks
 
 part swap --size=128 --fstype swap
 part / --size=1400 --fstype ext4

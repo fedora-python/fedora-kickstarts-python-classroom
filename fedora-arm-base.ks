@@ -7,6 +7,10 @@ firewall --enabled --service=mdns,ssh
 # configure extlinux bootloader
 bootloader extlinux
 
+part /boot --size=512 --fstype ext3
+part swap --size=512 --fstype swap
+part / --size=3000 --fstype ext4
+
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
 
