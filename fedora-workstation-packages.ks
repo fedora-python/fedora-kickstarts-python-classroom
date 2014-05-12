@@ -13,6 +13,7 @@ qt5-qtdeclarative
 qt5-qtxmlpatterns
 
 devassistant
+scl-utils
 
 # FIXME; apparently the glibc maintainers dislike this, but it got put into the
 # desktop image at some point.  We won't touch this one for now.
