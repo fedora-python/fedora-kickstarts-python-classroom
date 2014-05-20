@@ -18,13 +18,14 @@ timezone --utc Etc/UTC
 
 auth --useshadow --enablemd5
 selinux --enforcing
-rootpw --lock --iscrypted locked
+rootpw --lock
+user --name=dummy --password=none --plaintext 
 
 firewall --disabled
 
 bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8" extlinux
 
-network --bootproto=dhcp --device=ens3 --activate --onboot=on
+network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 zerombr
@@ -219,6 +220,9 @@ mkdir -p /var/cache/yum
 chattr -i /boot/extlinux/ldlinux.sys
 /usr/sbin/fixfiles -R -a restore
 chattr +i /boot/extlinux/ldlinux.sys
+
+userdel dummy
+rm -rf /home/dummy
 
 echo "Zeroing out empty space."
 # This forces the filesystem to reclaim space from deleted files
