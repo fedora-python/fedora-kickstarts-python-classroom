@@ -38,6 +38,7 @@ reboot
 
 # Package list.
 %packages
+kernel-core
 @core
 grubby
 
@@ -72,6 +73,7 @@ rsync
 -iprutils
 -kbd
 -uboot-tools
+-kernel
 
 %end
 
