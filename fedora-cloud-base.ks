@@ -11,7 +11,7 @@
 # may need slight modification for use with actual anaconda or other tools.
 # We intend to target anaconda-in-a-vm style image building for F20.
 
-cmdline
+text
 lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
