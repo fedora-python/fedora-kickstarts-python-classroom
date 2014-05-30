@@ -18,14 +18,14 @@ timezone --utc Etc/UTC
 
 auth --useshadow --enablemd5
 selinux --enforcing
-rootpw --lock
-user --name=dummy --password=none --plaintext 
+rootpw --lock --iscrypted locked
+user --name=none
 
 firewall --disabled
 
 bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8" extlinux
 
-network --bootproto=dhcp --device=ens3 --activate --onboot=on
+network --bootproto=dhcp --device=eth0 --activate --onboot=on
 services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 zerombr
@@ -108,6 +108,8 @@ ln -sf /boot/grub/grub.conf /etc/grub.conf
 # older versions of livecd-tools do not follow "rootpw --lock" line above
 # https://bugzilla.redhat.com/show_bug.cgi?id=964299
 passwd -l root
+# remove the user anaconda forces us to make
+userdel -r none
 
 # Kickstart specifies timeout in seconds; syslinux uses 10ths.
 # 0 means wait forever, so instead we'll go with 1.
@@ -220,9 +222,6 @@ mkdir -p /var/cache/yum
 chattr -i /boot/extlinux/ldlinux.sys
 /usr/sbin/fixfiles -R -a restore
 chattr +i /boot/extlinux/ldlinux.sys
-
-userdel dummy
-rm -rf /home/dummy
 
 echo "Zeroing out empty space."
 # This forces the filesystem to reclaim space from deleted files
