@@ -50,9 +50,6 @@ dracut-config-generic
 
 syslinux-extlinux 
 
-# Needed initially, but removed below.
-firewalld
-
 # cherry-pick a few things from @standard
 tar
 rsync
@@ -65,6 +62,8 @@ rsync
 -kbd
 -uboot-tools
 -kernel
+-authconfig
+-firewalld
 
 %end
 
@@ -119,11 +118,6 @@ echo .
 # this is installed by default but we don't need it in virt
 echo "Removing linux-firmware package."
 yum -C -y remove linux-firmware
-
-# Remove firewalld; was supposed to be optional in F18+, but is required to
-# be present for install/image building.
-echo "Removing firewalld."
-yum -C -y remove firewalld --setopt="clean_requirements_on_remove=1"
 
 # Another one needed at install time but not after that, and it pulls
 # in some unneeded deps (like, newt and slang)
