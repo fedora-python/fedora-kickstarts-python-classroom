@@ -16,9 +16,9 @@ cat >> /etc/rc.d/init.d/livesys << EOF
 
 
 # disable updates plugin
-cat >> /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.updates.gschema.override << FOE
-[org.gnome.settings-daemon.plugins.updates]
-active=false
+cat >> /usr/share/glib-2.0/schemas/org.gnome.software.gschema.override << FOE
+[org.gnome.software]
+download-updates=false
 FOE
 
 # don't run gnome-initial-setup
