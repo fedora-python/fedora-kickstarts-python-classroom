@@ -76,9 +76,6 @@ gnome-keyring-pam
 -pads
 -pdfcrack
 -picviz-gui
--prelude-lml
--prelude-manager
--prewikka
 -proxychains
 -pyrit
 -raddump
@@ -86,7 +83,6 @@ gnome-keyring-pam
 -safecopy
 -samdump2
 -scalpel
--sshscan
 -sslstrip
 -tcpreen
 -tcpreplay
