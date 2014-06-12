@@ -54,6 +54,9 @@ syslinux-extlinux
 tar
 rsync
 
+# anaconda needs authconfig to be installed into the image to setup some things
+authconfig
+
 # Some things from @core we can do without in a minimal install
 -biosdevname
 -plymouth
@@ -62,7 +65,6 @@ rsync
 -kbd
 -uboot-tools
 -kernel
--authconfig
 -firewalld
 
 %end
