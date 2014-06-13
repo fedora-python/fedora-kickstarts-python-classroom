@@ -25,7 +25,7 @@ part / --size 10240
 @xfce-desktop
 @xfce-apps
 
-# Security tools (not ready at the moment)
+# Security tools
 @security-lab
 security-menus
 
@@ -88,6 +88,9 @@ gnome-keyring-pam
 -tcpreplay
 -tripwire
 -wipe
+
+# Is not available for OpenVAS-7. No longer supported by upstream.
+-openvas-client 
 
 %end
 
