@@ -2,7 +2,7 @@
 # images in rawhide. It won't be built for non-rawhide trees, let alone
 # actual releases.
 
-text
+cmdline
 lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
