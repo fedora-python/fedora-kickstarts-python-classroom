@@ -75,6 +75,7 @@ rsync
 -kbd
 -uboot-tools
 -kernel
+-grub2
 
 %end
 

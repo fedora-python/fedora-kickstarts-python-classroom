@@ -66,6 +66,7 @@ authconfig
 -uboot-tools
 -kernel
 -firewalld
+-grub2
 
 %end
 
