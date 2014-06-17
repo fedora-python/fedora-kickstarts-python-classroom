@@ -29,7 +29,7 @@ part / --size 3000 --fstype ext4
 reboot
 
 # Package list.
-%packages
+%packages --excludedocs
 kernel-core
 @core
 grubby
@@ -67,6 +67,7 @@ authconfig
 -kernel
 -firewalld
 -grub2
+-man-db
 
 %end
 
