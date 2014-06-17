@@ -29,7 +29,7 @@ part / --size 3000 --fstype ext4
 reboot
 
 # Package list.
-%packages --excludedocs
+%packages --excludedocs --instLangs=en_US
 kernel-core
 @core
 grubby
