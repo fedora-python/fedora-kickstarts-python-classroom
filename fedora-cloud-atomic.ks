@@ -16,7 +16,7 @@ user --name=none
 
 firewall --disabled
 
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8" --extlinux
+bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8" --extlinux
 
 network --bootproto=dhcp --device=eth0 --activate --onboot=on
 services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
@@ -88,7 +88,7 @@ echo -e 'default=0\ntimeout=0\n\n' > /boot/grub/grub.conf
 for kv in $( ls -1v /boot/vmlinuz* |grep -v rescue |sed s/.*vmlinuz-//  ); do
   echo "title Fedora ($kv)" >> /boot/grub/grub.conf
   echo -e "\troot (hd0)" >> /boot/grub/grub.conf
-  echo -e "\tkernel /boot/vmlinuz-$kv ro root=$rootuuid no_timer_check console=hvc0 LANG=en_US.UTF-8" >> /boot/grub/grub.conf
+  echo -e "\tkernel /boot/vmlinuz-$kv ro root=$rootuuid console=hvc0 LANG=en_US.UTF-8" >> /boot/grub/grub.conf
   echo -e "\tinitrd /boot/initramfs-$kv.img" >> /boot/grub/grub.conf
   echo
 done
