@@ -16,7 +16,7 @@ user --name=none
 
 firewall --disabled
 
-bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8" extlinux
+bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8" --extlinux
 
 network --bootproto=dhcp --device=eth0 --activate --onboot=on
 services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
