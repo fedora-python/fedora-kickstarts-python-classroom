@@ -149,6 +149,7 @@ pingus
 # puzzles (small)
 
 escape
+gbrainy
 magicor
 mirrormagic
 pipenightdreams
