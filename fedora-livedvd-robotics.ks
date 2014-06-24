@@ -78,7 +78,6 @@ firefox
 -ntsysv
 
 # Drop some system-config things
--system-config-boot
 -system-config-language
 -system-config-network
 -system-config-rootpassword

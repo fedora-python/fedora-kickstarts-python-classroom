@@ -15,11 +15,6 @@
 -coolkey
 -wget
 
-# qlogic firmwares
--ql2100-firmware
--ql2200-firmware
--ql23xx-firmware
-
 # scanning takes quite a bit of space :/
 -xsane
 -xsane-gimp

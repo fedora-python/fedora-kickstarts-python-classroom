@@ -80,7 +80,6 @@
 -dump
 
 # Drop some system-config things
--system-config-boot
 -system-config-language
 -system-config-rootpassword
 -system-config-services

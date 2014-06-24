@@ -38,7 +38,6 @@ gnome-keyring-pam
 #-man-pages-*
 
 # drop some system-config things
--system-config-boot
 -system-config-network
 -system-config-rootpassword
 #-system-config-services
