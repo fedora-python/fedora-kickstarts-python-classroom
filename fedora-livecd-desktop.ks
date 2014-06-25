@@ -25,7 +25,6 @@
 
 # Drop the Java plugin
 -icedtea-web
--java-1.7.0-openjdk
 -java-1.8.0-openjdk
 
 # Drop things that pull in perl
