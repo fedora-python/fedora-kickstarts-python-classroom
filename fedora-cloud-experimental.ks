@@ -17,7 +17,8 @@ firewall --disabled
 bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8" --extlinux
 
 network --bootproto=dhcp --device=eth0 --activate --onboot=on
-services --enabled=network,sshd,min-cloud-agent
+services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
+
 
 zerombr
 clearpart --all
@@ -34,8 +35,9 @@ kernel-core
 @core
 grubby
 
-# experimental light-weight replacement for cloud-init
-min-cloud-agent
+# cloud-init does magical things with EC2 metadata, including provisioning
+# a user account with ssh keys.
+cloud-init
 
 # this is used by openstack's cloud orchestration framework (and it's small)
 heat-cfntools
