@@ -12,6 +12,7 @@
 @lxde-apps
 @lxde-media
 @lxde-office
+@networkmanager-submodules
 
 # FIXME: can be omitted once comps is updated
 midori

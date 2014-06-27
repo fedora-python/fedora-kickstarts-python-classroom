@@ -3,6 +3,7 @@
 @kde-desktop
 @kde-media
 @kde-telepathy
+@networkmanager-submodules
 
 ### The KDE-Desktop
 

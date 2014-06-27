@@ -2,6 +2,7 @@
 @firefox
 @gnome-desktop
 @libreoffice
+@networkmanager-submodules
 
 #QT
 qt

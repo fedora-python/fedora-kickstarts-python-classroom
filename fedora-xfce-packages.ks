@@ -12,6 +12,7 @@
 
 %packages
 
+@networkmanager-submodules
 @xfce-desktop
 @xfce-apps
 @xfce-extra-plugins

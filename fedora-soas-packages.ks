@@ -41,6 +41,9 @@ lightdm-gtk
 # enable for testing in the F17 dev cycle
 @input-methods
 
+# Needed for wifi, bluetooth and WWAN connection support
+@networkmanager-submodules
+
 # == Platform Components ==
 # from http://wiki.sugarlabs.org/go/0.94/Platform_Components
 alsa-plugins-pulseaudio
