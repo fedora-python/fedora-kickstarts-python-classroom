@@ -63,7 +63,6 @@ dracut-*
 @basic-desktop
 
 # Workstation
-@eclipse
 @development-libs
 @development-tools
 @c-development
@@ -78,7 +77,6 @@ dracut-*
 @rubyonrails
 @mysql
 @sql-server
-@design-suite
 @jbossas
 
 # Things needed for installation
@@ -86,12 +84,8 @@ dracut-*
 
 # Langpacks
 autocorr-*
-eclipse-nls-*
 hunspell-*
 hyphen-*
-calligra-l10n-*
-kde-l10n-*
-libreoffice-langpack-*
 man-pages-*
 mythes-*
 -gimp-help-*
