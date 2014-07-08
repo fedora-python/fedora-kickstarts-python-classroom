@@ -101,8 +101,6 @@ dracut-*
 @ha
 
 # Packages that we need to add somewhere in comps (FIXME)
-bind
-bind-dyndb-ldap
 docker-io
 cockpit
 # Missing: rolekit, roles
