@@ -96,6 +96,15 @@ dracut-*
 @load-balancer
 @ha
 
+# Packages that we need to add somewhere in comps (FIXME)
+bind
+bind-dyndb-ldap
+docker-io
+cockpit
+# Missing: rolekit, roles
+# Should be part of @jbossas
+wildfly
+
 # Things needed for installation
 @anaconda-tools
 
