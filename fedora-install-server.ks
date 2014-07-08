@@ -103,6 +103,7 @@ dracut-*
 # Packages that we need to add somewhere in comps (FIXME)
 docker-io
 cockpit
+openlmi
 # Missing: rolekit, roles
 # Should be part of @jbossas
 wildfly
