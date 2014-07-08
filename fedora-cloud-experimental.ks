@@ -88,7 +88,7 @@ mkdir /boot/grub
 echo -e 'default=0\ntimeout=0\n\n' > /boot/grub/grub.conf
 for kv in $( ls -1v /boot/vmlinuz* |grep -v rescue |sed s/.*vmlinuz-//  ); do
   echo "title Fedora ($kv)" >> /boot/grub/grub.conf
-  echo -e "\troot (hd0)" >> /boot/grub/grub.conf
+  echo -e "\troot (hd0,0)" >> /boot/grub/grub.conf
   echo -e "\tkernel /boot/vmlinuz-$kv ro root=$rootuuid no_timer_check console=hvc0 LANG=en_US.UTF-8" >> /boot/grub/grub.conf
   echo -e "\tinitrd /boot/initramfs-$kv.img" >> /boot/grub/grub.conf
   echo
