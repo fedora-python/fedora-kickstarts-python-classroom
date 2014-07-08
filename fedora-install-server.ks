@@ -37,13 +37,11 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 -kernel-tools*
 -syslog-ng*
 -astronomy-bookmarks
--generic*
+-generic-logos*
+-generic-release*
 -GConf2-dbus*
 -bluez-gnome
-# Periods cause problems in paterns, so replace with *s
--java-1*8*0-openjdk
 -community-mysql*
--jruby*
 
 # core
 kernel*
