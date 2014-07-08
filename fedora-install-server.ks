@@ -68,16 +68,33 @@ dracut-*
 @c-development
 @rpm-development-tools
 @fedora-packager
-@virtualization
-@web-server
-@mongodb
-@perl-web
-@php
-@python-web
-@rubyonrails
+
+# Common server packages
 @mysql
 @sql-server
+@web-server
+
+# Web Server environment
+@haproxy
 @jbossas
+@mongodb
+@perl-web
+@python-web
+@php
+@rubyonrails
+@tomcat
+
+# Infrastructure Server
+@dogtag
+@dns-server
+@freeipa-server
+@ftp-server
+@mail-server
+@network-server
+@smb-server
+@virtualization
+@load-balancer
+@ha
 
 # Things needed for installation
 @anaconda-tools
