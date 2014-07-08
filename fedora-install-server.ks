@@ -80,7 +80,6 @@ dracut-*
 
 # Web Server environment
 @haproxy
-@jbossas
 @mongodb
 @perl-web
 @python-web
@@ -100,13 +99,9 @@ dracut-*
 @load-balancer
 @ha
 
-# Packages that we need to add somewhere in comps (FIXME)
-docker-io
-cockpit
-openlmi
-# Missing: rolekit, roles
-# Should be part of @jbossas
-wildfly
+@container-management
+@headless-management
+@javaenterprise
 
 # Things needed for installation
 @anaconda-tools

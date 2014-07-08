@@ -76,7 +76,7 @@ dracut-*
 @rubyonrails
 @mysql
 @sql-server
-@jbossas
+@javaenterprise
 
 # Things needed for installation
 @anaconda-tools

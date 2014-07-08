@@ -124,7 +124,7 @@ dracut-*
 @sql-server
 @design-suite
 ## Not included yet due to space concerns
-#@jbossas
+#@javaenterprise
 #@milkymist
 #@mingw32
 #@ocaml
