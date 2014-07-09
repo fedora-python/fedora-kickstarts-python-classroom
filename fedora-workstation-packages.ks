@@ -47,9 +47,7 @@ nss-mdns
 -gtk3-immodule-xim
 -gtkmm24
 -guile
--imsettings
--imsettings-gsettings
--imsettings-libs
+-imsettings*
 -irda-utils
 -irqbalance
 -isdn4k-utils
