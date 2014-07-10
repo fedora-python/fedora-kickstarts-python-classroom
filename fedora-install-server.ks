@@ -107,6 +107,12 @@ dracut-*
 @headless-management
 @javaenterprise
 
+# “uservisible” groups we want to offer
+@editors
+@network-server
+@system-tools
+@text-internet
+
 # Things needed for installation
 @anaconda-tools
 
