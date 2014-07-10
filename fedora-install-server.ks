@@ -119,9 +119,7 @@ dracut-*
 # Langpacks
 autocorr-*
 hunspell-*
-hyphen-*
 man-pages-*
-mythes-*
 -gimp-help-*
 
 # Removals
