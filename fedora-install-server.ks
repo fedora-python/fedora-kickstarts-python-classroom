@@ -90,12 +90,14 @@ dracut-*
 @tomcat
 
 # Infrastructure Server
+@directory-server
 @dogtag
 @dns-server
 @freeipa-server
 @ftp-server
 @mail-server
 @network-server
+@printing
 @smb-server
 @virtualization
 @load-balancer
