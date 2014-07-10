@@ -42,29 +42,31 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 -GConf2-dbus*
 -bluez-gnome
 -community-mysql*
-# initial-setup-gui pulls in all kinds of desktops, avoid at least the largest
-# ones
--enlightenment*
--kde-runtime*
--kde-workspace*
--lightdm-kde
 
 # core
 kernel*
 dracut-*
 
-# Desktops
+# No desktops
+-cinnamon*
+-enlightenment*
+-gnome-shell
+-gnome-session
+-kde*
+-lightdm-kde
+-lightdm-razorqt
+# Pulls in qt
+-oprofile-gui
+
+-@legacy-fonts
+
 
 ## common stuff
-@base-x
 @guest-agents
 @standard
 @core
-@input-methods
 @multimedia
 @hardware-support
-@admin-tools
-@basic-desktop
 
 # Workstation
 @development-libs
