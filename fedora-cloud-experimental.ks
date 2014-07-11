@@ -19,7 +19,6 @@ bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,11520
 network --bootproto=dhcp --device=eth0 --activate --onboot=on
 services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
 
-
 zerombr
 clearpart --all
 part / --size 3000 --fstype ext4
@@ -55,12 +54,12 @@ dracut-config-generic
 
 syslinux-extlinux 
 
+# Needed initially, but removed below.
+firewalld
+
 # cherry-pick a few things from @standard
 tar
 rsync
-
-# anaconda needs authconfig to be installed into the image to setup some things
-authconfig
 
 # Some things from @core we can do without in a minimal install
 -biosdevname
@@ -70,9 +69,7 @@ authconfig
 -kbd
 -uboot-tools
 -kernel
--firewalld
 -grub2
--man-db
 
 %end
 
@@ -119,9 +116,19 @@ rm -f /etc/systemd/system/default.target
 ln -s /lib/systemd/system/multi-user.target /etc/systemd/system/default.target
 echo .
 
+# If you want to remove rsyslog and just use journald, remove this!
+echo -n "Disabling persistent journal"
+rmdir /var/log/journal/ 
+echo . 
+
 # this is installed by default but we don't need it in virt
 echo "Removing linux-firmware package."
 yum -C -y remove linux-firmware
+
+# Remove firewalld; was supposed to be optional in F18+, but is required to
+# be present for install/image building.
+echo "Removing firewalld."
+yum -C -y remove firewalld --setopt="clean_requirements_on_remove=1"
 
 # Another one needed at install time but not after that, and it pulls
 # in some unneeded deps (like, newt and slang)
