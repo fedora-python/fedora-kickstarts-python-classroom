@@ -32,9 +32,14 @@ reboot
 
 # Package list.
 %packages
+
+fedora-release-cloud
+
 kernel-core
 @core
 grubby
+
+
 
 # cloud-init does magical things with EC2 metadata, including provisioning
 # a user account with ssh keys.

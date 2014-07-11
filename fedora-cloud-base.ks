@@ -39,6 +39,9 @@ reboot
 
 # Package list.
 %packages
+
+fedora-release-cloud
+
 kernel-core
 @core
 grubby

@@ -31,6 +31,9 @@ reboot
 
 # Package list.
 %packages --excludedocs --instLangs=en_US
+
+fedora-release-cloud
+
 kernel-core
 @core
 grubby
