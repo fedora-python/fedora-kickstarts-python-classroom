@@ -34,7 +34,7 @@ extlinux-bootloader
 initial-setup
 initial-setup-gui
 #lets resize / on first boot
-dracut-modules-growroot
+# dracut-modules-growroot
 
 # remove this in %post
 dracut-config-generic
