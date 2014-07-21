@@ -25,8 +25,8 @@ zerombr
 clearpart --all
 part / --size 3000 --fstype ext4
 
-%include fedora-repo.ks
-
+# Equivalent of %include fedora-repo.ks
+ostreesetup --osname="fedora-atomic" --remote="fedora-atomic" --url="http://dl.fedoraproject.org/repo" --nogpg
 
 reboot
 
