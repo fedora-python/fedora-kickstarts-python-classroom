@@ -30,55 +30,6 @@ ostreesetup --osname="fedora-atomic" --remote="fedora-atomic" --url="http://dl.f
 
 reboot
 
-# Package list.
-%packages
-
-fedora-release-cloud
-
-kernel-core
-@core
-grubby
-
-
-
-# cloud-init does magical things with EC2 metadata, including provisioning
-# a user account with ssh keys.
-cloud-init
-
-# this is used by openstack's cloud orchestration framework (and it's small)
-heat-cfntools
-
-# need this for growpart, because parted doesn't yet support resizepart
-# https://bugzilla.redhat.com/show_bug.cgi?id=966993
-cloud-utils-growpart
-
-# We need this image to be portable; also, rescue mode isn't useful here.
-dracut-config-generic
--dracut-config-rescue
-
-syslinux-extlinux 
-
-# Needed initially, but removed below.
-firewalld
-
-# cherry-pick a few things from @standard
-tar
-rsync
-
-# Some things from @core we can do without in a minimal install
--biosdevname
--plymouth
--NetworkManager
--iprutils
--kbd
--uboot-tools
--kernel
--grub2
-
-%end
-
-
-
 %post --erroronfail
 
 # Create grub.conf for EC2. This used to be done by appliance creator but
