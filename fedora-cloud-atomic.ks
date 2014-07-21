@@ -42,12 +42,6 @@ userdel -r none
 # 0 means wait forever, so instead we'll go with 1.
 sed -i 's/^timeout 10/timeout 1/' /boot/extlinux/extlinux.conf
 
-# setup systemd to boot to the right runlevel
-echo -n "Setting default runlevel to multiuser text mode"
-rm -f /etc/systemd/system/default.target
-ln -s /lib/systemd/system/multi-user.target /etc/systemd/system/default.target
-echo .
-
 # If you want to remove rsyslog and just use journald, remove this!
 echo -n "Disabling persistent journal"
 rmdir /var/log/journal/ 
