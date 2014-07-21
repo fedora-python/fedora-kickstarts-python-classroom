@@ -121,15 +121,6 @@ echo "-----------------------------------------------------------------------"
 # Note that running rpm recreates the rpm db files which aren't needed/wanted
 rm -f /var/lib/rpm/__db*
 
-
-echo "Fixing SELinux contexts."
-touch /var/log/cron
-touch /var/log/boot.log
-mkdir -p /var/cache/yum
-chattr -i /boot/extlinux/ldlinux.sys
-/usr/sbin/fixfiles -R -a restore
-chattr +i /boot/extlinux/ldlinux.sys
-
 echo "Zeroing out empty space."
 # This forces the filesystem to reclaim space from deleted files
 dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
