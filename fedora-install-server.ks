@@ -68,12 +68,20 @@ dracut-*
 @multimedia
 @hardware-support
 
-# Workstation
+# Some development tools
 @development-libs
 @development-tools
 @c-development
 @rpm-development-tools
 @fedora-packager
+
+# Fedora Server.
+# Including this causes the fedora-release-server package to be included,
+# which in turn enables server-product-environment, and due to to its priority
+# this will be the default environment.
+@server-product
+@headless-management
+@container-management
 
 # Common server packages
 @mysql
@@ -103,8 +111,6 @@ dracut-*
 @load-balancer
 @ha
 
-@container-management
-@headless-management
 @javaenterprise
 
 # “uservisible” groups we want to offer
