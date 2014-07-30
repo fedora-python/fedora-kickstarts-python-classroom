@@ -4,7 +4,7 @@
 # yum configuration in order to enable other languages.
 
 
-bootloader --disable
+bootloader --location=none
 timezone America/New_York --isUtc --nontp
 rootpw --plaintext qweqwe
 
@@ -12,7 +12,7 @@ keyboard us
 firewall --disable
 zerombr
 clearpart --all
-part / --size 4096 --fstype ext4
+part / --size 3000 --fstype ext4
 reboot
 
 %packages --excludedocs --instLangs=en --nocore
