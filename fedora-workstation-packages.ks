@@ -4,6 +4,9 @@
 @libreoffice
 @networkmanager-submodules
 
+# Workstation specific package
+firewalld-config-workstation
+
 #QT
 qt
 qt-settings
