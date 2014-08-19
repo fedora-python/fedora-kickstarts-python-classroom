@@ -50,6 +50,7 @@ nss-mdns
 -gtk3-immodule-xim
 -gtkmm24
 -guile
+-icedtea-web
 -imsettings*
 -irda-utils
 -irqbalance
