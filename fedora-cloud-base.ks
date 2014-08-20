@@ -25,7 +25,7 @@ firewall --disabled
 
 bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8" --extlinux
 
-network --bootproto=dhcp --device=eth0 --activate --onboot=on
+network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 zerombr
