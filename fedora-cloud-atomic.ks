@@ -23,7 +23,8 @@ services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config
 
 zerombr
 clearpart --all
-part / --size 3000 --fstype ext4
+# Atomic differs from cloud - we want LVM
+autopart
 
 # Equivalent of %include fedora-repo.ks
 ostreesetup --osname="fedora-atomic" --remote="fedora-atomic" --url="http://dl.fedoraproject.org/repo" --nogpg
