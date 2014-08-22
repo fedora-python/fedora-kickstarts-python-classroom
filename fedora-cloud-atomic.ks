@@ -27,7 +27,7 @@ clearpart --all
 autopart
 
 # Equivalent of %include fedora-repo.ks
-ostreesetup --osname="fedora-atomic" --remote="fedora-atomic" --url="http://dl.fedoraproject.org/repo" --nogpg
+ostreesetup --nogpg --osname=fedora-atomic-host --remote=installmedia --url=http://kojipkgs.fedoraproject.org/mash/atomic/ --ref=fedora-atomic/rawhide/x86_64/docker-host
 
 reboot
 
