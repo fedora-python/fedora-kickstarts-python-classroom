@@ -37,6 +37,10 @@ gnome-keyring-pam
 -ibus-typing-booster
 -xfce4-sensors-plugin
 #-man-pages-*
+-adobe-source-han-* # save 94MB
+-rodent-icon-theme  # save 34MB
+-skkdic             # save 25MB
+-naver-nanum-gothic-fonts # save 14MB
 
 # drop some system-config things
 -system-config-network
