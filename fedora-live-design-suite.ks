@@ -25,6 +25,7 @@ entangle
 fontforge
 font-manager 
 gimp
+gimp-elsamuko
 gimp-*-plugin
 gimp-data-extras
 gimp-gap
@@ -34,7 +35,7 @@ gimp-normalmap
 gimp-resynthesizer
 gimp-separate+
 gpick
-GREYCstoration-gimp 
+gmic-gimp 
 hugin 
 mypaint
 inkscape
