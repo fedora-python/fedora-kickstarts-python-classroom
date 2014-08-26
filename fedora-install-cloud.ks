@@ -79,6 +79,9 @@ dracut-*
 # Things needed for installation
 @anaconda-tools
 
+# package cloud base image installs that probably should go in some comps group but what????
+heat-cfntools
+
 # Langpacks
 autocorr-*
 eclipse-nls-*
