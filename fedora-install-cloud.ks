@@ -40,8 +40,6 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 -generic*
 -GConf2-dbus*
 -bluez-gnome
-# Periods cause problems in paterns, so replace with *s
--java-1*8*0-openjdk
 -community-mysql*
 -jruby*
 
