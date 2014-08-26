@@ -3,6 +3,7 @@
 @gnome-desktop
 @libreoffice
 @networkmanager-submodules
+@workstation-product
 
 # Workstation specific package
 firewalld-config-workstation
