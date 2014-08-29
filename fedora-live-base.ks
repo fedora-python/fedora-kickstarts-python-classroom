@@ -44,9 +44,6 @@ memtest86+
 anaconda
 @anaconda-tools
 
-# Make live images easy to shutdown and the like in libvirt
-qemu-guest-agent
-
 %end
 
 %post
