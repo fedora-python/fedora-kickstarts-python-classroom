@@ -20,7 +20,7 @@ bash
 fedora-release
 vim-minimal
 yum
-#fakesystemd #TODO: waiting for review https://bugzilla.redhat.com/show_bug.cgi?id=1118740
+fakesystemd
 -kernel
 
 
