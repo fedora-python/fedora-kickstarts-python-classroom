@@ -156,12 +156,6 @@ if ! strstr "\`cat /proc/cmdline\`" nopersistenthome && [ -n "\$homedev" ] ; the
   action "Mounting persistent /home" mountPersistentHome
 fi
 
-# make it so that we don't do writing to the overlay for things which
-# are just tmpdirs/caches
-mount -t tmpfs -o mode=0755 varcacheyum /var/cache/yum
-mount -t tmpfs vartmp /var/tmp
-[ -x /sbin/restorecon ] && /sbin/restorecon /var/cache/yum /var/tmp >/dev/null 2>&1
-
 if [ -n "\$configdone" ]; then
   exit 0
 fi
@@ -274,6 +268,14 @@ chmod 755 /etc/rc.d/init.d/livesys-late
 
 # enable tmpfs for /tmp
 systemctl enable tmp.mount
+
+# make it so that we don't do writing to the overlay for things which
+# are just tmpdirs/caches
+# note https://bugzilla.redhat.com/show_bug.cgi?id=1135475
+cat >> /etc/fstab << EOF
+vartmp   /var/tmp    tmpfs   defaults   0  0
+varcacheyum /var/cache/yum  tmpfs   mode=0755,context=system_u:object_r:rpm_var_cache_t:s0   0   0
+EOF
 
 # work around for poor key import UI in PackageKit
 rm -f /var/lib/rpm/__db*
