@@ -3,7 +3,7 @@
 # To keep this image minimal it only installs English language. You need to change
 # yum configuration in order to enable other languages.
 
-
+cmdline
 bootloader --location=none
 timezone America/New_York --isUtc --nontp
 rootpw --plaintext qweqwe
