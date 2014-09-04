@@ -79,6 +79,7 @@ dracut-*
 # Including this causes the fedora-release-server package to be included,
 # which in turn enables server-product-environment, and due to to its priority
 # this will be the default environment.
+@^server-product-environment
 @server-product
 @headless-management
 @container-management
