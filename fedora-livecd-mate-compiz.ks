@@ -17,7 +17,6 @@
 -bluez-cups
 -@dial-up
 -dnf
--firefox
 -gnome-bluetooth-libs
 -gnome-icon-theme-symbolic
 -gnome-software
@@ -25,16 +24,12 @@
 -@guest-desktop-agents
 -@libreoffice
 -@mate-applications
--mate-bluetooth
 -mate-icon-theme-faenza
 -transmission-gtk
 
 # Drop oversized fonts that aren't needed
 -cjkuni-uming-fonts
 -wqy-zenhei-fonts
-
-# A web browser would be nice for a live cd
-midori
 
 # Drop the Java plugin
 -icedtea-web
