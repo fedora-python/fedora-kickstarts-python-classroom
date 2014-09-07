@@ -74,9 +74,6 @@ exists() {
     \$*
 }
 
-# Make sure we don't mangle the hardware clock on shutdown
-ln -sf /dev/null /etc/systemd/system/hwclock-save.service
-
 livedir="LiveOS"
 for arg in \`cat /proc/cmdline\` ; do
   if [ "\${arg##rd.live.dir=}" != "\${arg}" ]; then
