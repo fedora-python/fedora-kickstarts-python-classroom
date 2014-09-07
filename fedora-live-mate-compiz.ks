@@ -19,6 +19,8 @@ fi
 mkdir /home/liveuser/Desktop
 cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
 
+# temporarily fix for theme issue with anaconda rhbz (#1136994)
+sed -i "s/^gtk-theme='BlueMenta'/gtk-theme='Adwaita'/" /usr/share/glib-2.0/schemas/mate-fedora.gschema.override
 
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
