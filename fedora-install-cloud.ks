@@ -1,4 +1,4 @@
-# Kickstart file for composing the "Fedora" spin of Fedora (rawhide)
+# Kickstart file for composing the "Fedora Cloud" spin of Fedora (rawhide)
 # Maintained by the Fedora Release Engineering team:
 # https://fedoraproject.org/wiki/ReleaseEngineering
 # mailto:rel-eng@lists.fedoraproject.org
@@ -79,8 +79,8 @@ dracut-*
 # Things needed for installation
 @anaconda-tools
 
-# package cloud base image installs that probably should go in some comps group but what????
-heat-cfntools
+# Packages to enable server images to run in cloud environments
+@cloud-server
 
 # Langpacks
 autocorr-*
