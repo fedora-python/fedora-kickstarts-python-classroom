@@ -47,51 +47,35 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 kernel*
 dracut-*
 
-# Desktops
-
-## common stuff
-@base-x
-@guest-desktop-agents
-@guest-agents
-@standard
-@core
-@dial-up
-@fonts
-@input-methods
-@multimedia
-@hardware-support
-@printing
-@admin-tools
-@basic-desktop
-
-
-@virtualization
-@web-server
-@mongodb
-@perl-web
-@php
-@python-web
-@rubyonrails
-@mysql
-@sql-server
-@javaenterprise
 
 # Things needed for installation
 @anaconda-tools
 
 # Packages to enable server images to run in cloud environments
 @cloud-server
+@core
+@standard
+@headless-management
+@dogtag
+@directory-server
+@dns-server
+@freeipa-server
+@ftp-server
+@guest-agents
+@ha
+@load-balancer
+@mail-server
+@mysql
+@network-server
+@smb-server
+@sql-server
+@web-server
 
 # Langpacks
 autocorr-*
-eclipse-nls-*
 hunspell-*
 hyphen-*
-calligra-l10n-*
-kde-l10n-*
-libreoffice-langpack-*
 man-pages-*
-mythes-*
 -gimp-help-*
 
 # Removals
