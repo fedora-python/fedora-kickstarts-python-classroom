@@ -39,17 +39,11 @@ reboot
 # Package list.
 %packages
 
-fedora-release-cloud
-
 kernel-core
-@core
-@cloud-server
+@cloud-server-environment
 
 # rescue mode generally isn't useful in the cloud context
 -dracut-config-rescue
-
-# Needed initially, but removed below.
-firewalld
 
 # Some things from @core we can do without in a minimal install
 -biosdevname
@@ -114,11 +108,6 @@ echo .
 # this is installed by default but we don't need it in virt
 echo "Removing linux-firmware package."
 yum -C -y remove linux-firmware
-
-# Remove firewalld; was supposed to be optional in F18+, but is required to
-# be present for install/image building.
-echo "Removing firewalld."
-yum -C -y remove firewalld --setopt="clean_requirements_on_remove=1"
 
 # Another one needed at install time but not after that, and it pulls
 # in some unneeded deps (like, newt and slang)
