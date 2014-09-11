@@ -37,7 +37,9 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 -kernel-tools*
 -syslog-ng*
 -astronomy-bookmarks
--generic*
+# generic* would match generic-jms-ra, so don't 'simplify' this
+-generic-logos*
+-generic-release*
 -GConf2-dbus*
 -bluez-gnome
 -community-mysql*
