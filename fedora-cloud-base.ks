@@ -40,7 +40,7 @@ reboot
 %packages
 
 kernel-core
-@cloud-server-environment
+@^cloud-server-environment
 
 # rescue mode generally isn't useful in the cloud context
 -dracut-config-rescue
