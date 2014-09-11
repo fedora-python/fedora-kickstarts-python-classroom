@@ -41,7 +41,6 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 -GConf2-dbus*
 -bluez-gnome
 -community-mysql*
--jruby*
 
 # core
 kernel*
