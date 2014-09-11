@@ -41,6 +41,11 @@ repo --name=rawhide-source  --mirrorlist=http://mirrors.fedoraproject.org/mirror
 -GConf2-dbus*
 -bluez-gnome
 -community-mysql*
+# jruby used to be in this list, but springframework-context explicitly
+# requires it, not just 'any ruby implemention' - please check for things
+# on the image that require mvn(org.jruby:jruby) before adding jruby to
+# this list again - adamw 2014/09
+#-jruby
 
 # core
 kernel*
