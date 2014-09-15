@@ -136,7 +136,7 @@ ln -s /usr/share/applications/test-day-welcome.desktop /etc/xdg/autostart/
 rm -f /home/liveuser/.config/autostart/fedora-welcome.desktop
 
 PREFDIR=`ls -d /usr/lib*/firefox/browser/defaults/preferences`
-cat << FOE >> $PREFDIR/test-day.js
+cat << FOE >> $PREFDIR/00-test-day.js
 pref("startup.homepage_welcome_url","");
 pref("startup.homepage_override_url","");
 pref("browser.rights.3.shown", true);
