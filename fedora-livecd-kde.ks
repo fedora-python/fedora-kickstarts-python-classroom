@@ -1,7 +1,7 @@
 # fedora-livecd-kde.ks
 #
 # Description:
-# - Fedora Live Spin with the K Desktop Environment (KDE), default 1 GiB version
+# - Fedora Live Spin with the K Desktop Environment (KDE), default 1 GB version
 #
 # Maintainer(s):
 # - Sebastian Vahl <fedora@deadbabylon.de>
@@ -46,11 +46,12 @@ kdegames-minimal
 ### space issues
 
 # fonts (we make no bones about admitting we're english-only)
-wqy-microhei-fonts	# a compact CJK font, to replace:
--nhn-nanum-gothic-fonts	# Korean
--vlgothic-fonts		# Japanese
--wqy-zenhei-fonts	# simplified Chinese
--cjkuni-uming-fonts	# traditional Chinese
+wqy-microhei-fonts			# a compact CJK font, to replace:
+-nhn-nanum-gothic-fonts			# Korean (old name, still in comps)
+-naver-nanum-gothic-fonts		# Korean
+-vlgothic-fonts				# Japanese
+-adobe-source-han-sans-cn-fonts		# simplified Chinese
+-adobe-source-han-sans-twhk-fonts	# traditional Chinese
 
 -paratype-pt-sans-fonts	# Cyrillic (already supported by DejaVu), huge
 #-stix-fonts		# mathematical symbols
