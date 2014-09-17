@@ -3,7 +3,7 @@
 # http://fedoraproject.org/wiki/SIGs/Desktop
 # mailto:desktop@lists.fedoraproject.org
 
-%include fedora-live-mate-compiz.ks
+%include fedora-live-mate_compiz.ks
 %include fedora-live-minimization.ks
 
 %packages
