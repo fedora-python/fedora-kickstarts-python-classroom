@@ -44,6 +44,9 @@ memtest86+
 anaconda
 @anaconda-tools
 
+# Need aajohan-comfortaa-fonts for the SVG rnotes images
+aajohan-comfortaa-fonts
+
 %end
 
 %post
