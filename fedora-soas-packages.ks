@@ -29,6 +29,10 @@
 -realmd
 -eekboard-libs
 -open-vm-tools*
+-gfs2-utils
+-abrt-cli
+-ibus*
+-hyperv-daemons
 
 # == Core Sugar Platform ==
 @sugar-desktop
