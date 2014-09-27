@@ -70,6 +70,8 @@ wqy-microhei-fonts			# a compact CJK font, to replace:
 -gnome-disk-utility
 # kcm_clock still lacks some features, so keep system-config-date around
 #-system-config-date
+# prefer kcm_systemd
+-system-config-services
 # prefer/use kusers
 -system-config-users
 
