@@ -37,7 +37,7 @@ part / --size 3000 --fstype ext4
 reboot
 
 # Package list.
-%packages
+%packages --instLangs=en
 
 kernel-core
 @^cloud-server-environment
