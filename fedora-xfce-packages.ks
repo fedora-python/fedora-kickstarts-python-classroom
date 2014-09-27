@@ -41,6 +41,10 @@ gnome-keyring-pam
 -rodent-icon-theme  # save 34MB
 -skkdic             # save 25MB
 -naver-nanum-gothic-fonts # save 14MB
+-ibus-kkc
+-ibus-libpinyin
+-libpinyin-data
+-libkkc-data
 
 # drop some system-config things
 -system-config-network
