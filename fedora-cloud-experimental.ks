@@ -110,7 +110,7 @@ yum -C -y remove linux-firmware
 # Remove firewalld; was supposed to be optional in F18+, but is required to
 # be present for install/image building.
 echo "Removing firewalld."
-yum -C -y remove firewalld --setopt="clean_requirements_on_remove=1"
+yum -C -y remove "firewalld*" --setopt="clean_requirements_on_remove=1"
 
 # Another one needed at install time but not after that, and it pulls
 # in some unneeded deps (like, newt and slang)
