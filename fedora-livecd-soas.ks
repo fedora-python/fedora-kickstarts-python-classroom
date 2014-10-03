@@ -26,9 +26,9 @@ rm -f /var/lib/rpm/__db*
 
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
-Sugar on a Stick 11 (Unknown)
-Fedora release 21 (Rawhide)
+Sugar on a Stick
 EOF
+cat /etc/fedora-release >> /boot/olpc_build
 
 # Add our activities to the favorites
 cat > /usr/share/sugar/data/activities.defaults << EOF
