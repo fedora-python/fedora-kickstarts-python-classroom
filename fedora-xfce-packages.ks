@@ -33,6 +33,7 @@ gnome-keyring-pam
 -gnumeric
 -foomatic-db-ppds
 -foomatic
+-gutenprint
 -stix-fonts
 -ibus-typing-booster
 -xfce4-sensors-plugin
@@ -45,6 +46,11 @@ gnome-keyring-pam
 -ibus-libpinyin
 -libpinyin-data
 -libkkc-data
+# Drop some fonts for space
+-vlgothic-fonts
+-paratype-pt-sans-fonts
+-jomolhari-fonts
+-sil-abyssinca-fonts
 
 # drop some system-config things
 -system-config-network
