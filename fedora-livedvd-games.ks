@@ -58,7 +58,7 @@ nogravity
 pinball
 scorched3d
 supertux
-supertuxkart
+#supertuxkart #remove for size
 ultimatestunts
 warzone2100
 wesnoth
