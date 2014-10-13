@@ -11,7 +11,6 @@ compiz-plugins-extra
 compiz-manager
 compizconfig-python
 compiz-plugins-unsupported
-compiz-bcop
 compiz-mate
 libcompizconfig
 compiz-plugins-main

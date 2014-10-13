@@ -26,10 +26,29 @@
 -@mate-applications
 -mate-icon-theme-faenza
 -transmission-gtk
+-samba-client
+-gnome-themes
+-fedora-icon-theme
+-espeak
+-gstreamer-plugins-espeak
+-ibus-typing-booster
+-ibus-kkc
+-libkkc
+-libkkc-data        #save 30MB
+-skkdic             # save 25MB
+-ibus-libpinyin
+-libpinyin
+-libpinyin-data     #save 31MB
+-colord
 
 # Drop oversized fonts that aren't needed
--cjkuni-uming-fonts
--wqy-zenhei-fonts
+-adobe-source-han-* # save 94MB
+-naver-nanum-gothic-fonts # save 14MB
+-stix-fonts
+-vlgothic-fonts
+-paratype-pt-sans-fonts
+-jomolhari-fonts
+-sil-abyssinica-fonts
 
 # Drop the Java plugin
 -icedtea-web
@@ -41,6 +60,9 @@
 # No printing
 -foomatic-db-ppds
 -foomatic
+-gutenprint
+-gutenprint-cups
+-gutenprint-libs
 
 # Dictionaries are big
 # we're going to try keeping hunspell-* after notting, davidz, and ajax voiced
