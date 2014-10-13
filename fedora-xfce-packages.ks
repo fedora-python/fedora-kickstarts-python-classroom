@@ -24,6 +24,7 @@ gnome-keyring-pam
 
 # save some space
 -autofs
+-pidgin
 -acpid
 -gimp-help
 -desktop-backgrounds-basic
@@ -34,6 +35,7 @@ gnome-keyring-pam
 -foomatic-db-ppds
 -foomatic
 -gutenprint
+-gutenprint-cups
 -stix-fonts
 -ibus-typing-booster
 -xfce4-sensors-plugin
