@@ -52,7 +52,7 @@ gnome-keyring-pam
 -vlgothic-fonts
 -paratype-pt-sans-fonts
 -jomolhari-fonts
--sil-abyssinca-fonts
+-sil-abyssinica-fonts
 
 # drop some system-config things
 -system-config-network
