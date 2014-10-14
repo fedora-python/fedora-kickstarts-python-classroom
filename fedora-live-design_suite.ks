@@ -16,6 +16,9 @@ part / --size 8192
 
 # graphics
 blender
+# add blender plugins
+LuxRender-blender
+YafaRay-blender
 bluefish 
 #cinepaint
 cmyktool
