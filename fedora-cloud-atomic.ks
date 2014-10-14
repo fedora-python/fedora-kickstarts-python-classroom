@@ -122,6 +122,15 @@ echo "-----------------------------------------------------------------------"
 # Note that running rpm recreates the rpm db files which aren't needed/wanted
 rm -f /var/lib/rpm/__db*
 
+
+# This is a temporary workaround for
+# <https://bugzilla.redhat.com/show_bug.cgi?id=1147998>
+# where sfdisk seems to be messing up the mbr.
+# Long-term fix is to address this in anaconda directly and remove this.
+# <https://bugzilla.redhat.com/show_bug.cgi?id=1015931>
+dd if=/usr/share/syslinux/mbr.bin of=/dev/vda
+
+
 echo "Zeroing out empty space."
 # This forces the filesystem to reclaim space from deleted files
 dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
