@@ -76,13 +76,19 @@ sed -i 's/^#autologin-user=.*/autologin-user=liveuser/' /etc/lightdm/lightdm.con
 sed -i 's/^#autologin-user-timeout=.*/autologin-user-timeout=0/' /etc/lightdm/lightdm.conf
 
 # Don't use the default system user (in SoaS liveuser) as nick name
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t string /desktop/sugar/user/default_nick disabled >/dev/null
-
 # Disable the logout menu item in Sugar
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/show_logout false >/dev/null
-
 # Enable Sugar power management
-gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults -s -t bool /desktop/sugar/power/automatic True >/dev/null
+cat >/usr/share/glib-2.0/schemas/sugar.soas.gschema.override <<EOF
+[org.sugarlabs.user]
+default-nick='disabled'
+
+[org.sugarlabs]
+show-logout=false
+
+[org.sugarlabs.power]
+automatic=true
+EOF
+/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas/sugar.soas.gschema.override
 
 cat >> /etc/rc.d/init.d/livesys << EOF
 # set up lightdm autologin
