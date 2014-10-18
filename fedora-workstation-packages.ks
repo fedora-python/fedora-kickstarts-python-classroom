@@ -5,18 +5,8 @@
 -@input-methods
 -@standard
 
-# Make sure to sync any additions / removals done here with
-# workstation-product-environment in comps
-@base-x
-@core
-@fonts
-@guest-desktop-agents
-@hardware-support
-@libreoffice
-@multimedia
-@networkmanager-submodules
-@printing
-@workstation-product
+# Actual package selection is done in workstation-product-environment in comps
+@^workstation-product-environment
 
 # Exclude unwanted packages from @anaconda-tools group
 -gfs2-utils
