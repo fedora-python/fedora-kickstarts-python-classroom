@@ -2,6 +2,7 @@
 
 # Exclude unwanted groups that fedora-live-base.ks pulls in
 -@dial-up
+-@fedora-release-nonproduct
 -@input-methods
 -@standard
 

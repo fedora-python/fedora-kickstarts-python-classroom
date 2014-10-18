@@ -24,6 +24,7 @@ services --enabled=NetworkManager --disabled=network,sshd
 @guest-desktop-agents
 @standard
 @core
+@fedora-release-nonproduct
 @fonts
 @input-methods
 @dial-up
