@@ -1,7 +1,7 @@
 # fedora-livecd-kde.ks
 #
 # Description:
-# - Fedora Live Spin with the K Desktop Environment (KDE), default 1 GB version
+# - Fedora Live Spin with the K Desktop Environment (KDE), default 1.4 GB version
 #
 # Maintainer(s):
 # - Sebastian Vahl <fedora@deadbabylon.de>
