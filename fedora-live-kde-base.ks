@@ -43,7 +43,7 @@ chown liveuser:liveuser /home/liveuser/.xsession
 cat > /etc/sddm.conf << SDDM_EOF
 [Autologin]
 User=liveuser
-Session=plasma.desktop
+Session=kde-plasma.desktop
 SDDM_EOF
 
 # add liveinst.desktop to favorites menu
