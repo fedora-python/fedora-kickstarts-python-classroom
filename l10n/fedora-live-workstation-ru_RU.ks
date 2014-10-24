@@ -1,9 +1,9 @@
-# fedora-livecd-desktop-ru_RU.ks
+# fedora-live-workstation-ru_RU.ks
 #
 # Maintainer(s):
 # Sergey Mihailov <sergey.mihailov at gmail.com>
 
-%include ../fedora-livecd-desktop.ks
+%include ../fedora-live-workstation.ks
 
 lang ru_RU.UTF-8
 keyboard ru

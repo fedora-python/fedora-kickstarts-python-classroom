@@ -1,4 +1,4 @@
-# fedora-livecd-desktop-fr_FR.ks
+# fedora-live-workstation-fr_FR.ks
 #
 # Description:
 # - French Fedora Live Spin with the Gnome Desktop Environment
@@ -6,7 +6,7 @@
 # Maintainer(s):
 # - Matthieu Saulnier <fantom@fedoraproject.org>
 
-%include ../fedora-livecd-desktop.ks
+%include ../fedora-live-workstation.ks
 
 lang fr_FR.UTF-8
 keyboard fr-latin9

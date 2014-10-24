@@ -1,13 +1,13 @@
-# fedora-livecd-desktop-de_CH.ks
+# fedora-live-workstation-de_DE.ks
 #
 # Maintainer(s):
-# - Fabian Affolter <fab at fedoraproject.org>
+# - Jeroen van Meeuwen <kanarip a fedoraunity.org>
 
-%include ../fedora-livecd-desktop.ks
+%include ../fedora-live-workstation.ks
 
 lang de_DE.UTF-8
-keyboard sg-latin1-nodeadkeys
-timezone Europe/Zurich
+keyboard de-latin1-nodeadkeys
+timezone Europe/Berlin
 
 %packages
 -gnome-blog
@@ -23,7 +23,7 @@ cat >>/etc/X11/xorg.conf << EOF
 Section "InputDevice"
     Identifier "Keyboard0"
     Driver "kbd"
-    Option "XkbLayout" "sg-latin1-nodeadkeys"
+    Option "XkbLayout" "de-latin1-nodeadkeys"
 EndSection
 EOF
 %end

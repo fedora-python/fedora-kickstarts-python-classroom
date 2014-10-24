@@ -1,16 +1,17 @@
-# fedora-livecd-desktop-pt_BR.ks
+# fedora-live-workstation-de_CH.ks
 #
 # Maintainer(s):
-# - Igor Pires Soares <igor at projetofedora.org>
+# - Fabian Affolter <fab at fedoraproject.org>
 
-%include ../fedora-livecd-desktop.ks
+%include ../fedora-live-workstation.ks
 
-lang pt_BR.UTF-8
-keyboard br-abnt2
-timezone America/Sao_Paulo
+lang de_DE.UTF-8
+keyboard sg-latin1-nodeadkeys
+timezone Europe/Zurich
 
 %packages
-@brazilian-support
+-gnome-blog
+@german-support
 # exclude input methods
 -m17n*
 -scim*
@@ -22,7 +23,8 @@ cat >>/etc/X11/xorg.conf << EOF
 Section "InputDevice"
     Identifier "Keyboard0"
     Driver "kbd"
-    Option "XkbLayout" "br-abnt2"
+    Option "XkbLayout" "sg-latin1-nodeadkeys"
 EndSection
 EOF
 %end
+

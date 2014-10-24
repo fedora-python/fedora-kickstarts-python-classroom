@@ -1,9 +1,9 @@
-# fedora-livecd-desktop-pt_PT.ks
+# fedora-live-workstation-pt_PT.ks
 #
 # Maintainer(s):
 # - Pedro Silva <pedrofsilva a netcabo.pt>
 
-%include ../fedora-livecd-desktop.ks
+%include ../fedora-live-workstation.ks
 
 lang pt_PT.UTF-8
 keyboard pt-latin1
