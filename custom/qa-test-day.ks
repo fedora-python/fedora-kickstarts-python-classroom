@@ -3,7 +3,7 @@
 # Contact QA team if you have any improvements for this kickstart:
 # https://fedoraproject.org/wiki/QA
 
-%include ../fedora-livecd-desktop.ks
+%include ../fedora-live-workstation.ks
 
 
 ## System configuration

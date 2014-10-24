@@ -1,4 +1,4 @@
-%include ../fedora-livecd-desktop.ks
+%include ../fedora-live-workstation.ks
 
 part / --size 6000
 

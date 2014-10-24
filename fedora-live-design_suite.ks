@@ -7,7 +7,7 @@
 # - Luya Tshimbalanga <luya AT fedoraproject DOT org>
 # - Previous maintainer Sebastian Dziallas
 
-%include fedora-live-desktop.ks
+%include fedora-live-workstation.ks
 
 #DVD size partition
 part / --size 8192

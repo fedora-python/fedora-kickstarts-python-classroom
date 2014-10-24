@@ -4,7 +4,7 @@
 # - Chitlesh Goorah <chitlesh a fedoraproject.org>
 # - Thibault North  <tnorth   a fedoraproject.org>
 
-%include fedora-livecd-desktop.ks
+%include fedora-live-workstation.ks
 
 # DVD payload
 part / --size 10240
