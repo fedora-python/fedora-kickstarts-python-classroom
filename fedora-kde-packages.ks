@@ -2,6 +2,7 @@
 @kde-apps
 @kde-desktop
 @kde-media
+@kde-office
 @kde-telepathy
 @networkmanager-submodules
 

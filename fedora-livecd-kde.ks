@@ -19,7 +19,6 @@ part / --size=4096
 # don't include these for now to fit on a cd
 -desktop-backgrounds-basic
 -kdeaccessibility*
--scribus			# scribus is too big for the live images
 -kdeartwork-screensavers	# screensavers are not needed on live images
 #-ktorrent			# kget has also basic torrent features (~3 megs)
 -digikam			# digikam has duplicate functionality with gwenview (~28 megs)
@@ -28,14 +27,9 @@ part / --size=4096
 #-kdeplasma-addons		# ~16 megs
 #-krusader			# ~4 megs
 
-# Additional packages that are not default in kde-desktop but useful
+# Additional packages that are not default in kde-* groups, but useful
 k3b				# ~15 megs
--calligra			# don't include whole calligra, just parts of it
-calligra-words
-calligra-sheets			# ~1 megs
-calligra-stage			# ~3 megs
 #kdeartwork			# only include some parts of kdeartwork
-#twinkle			# (~10 megs)
 fuse
 liveusb-creator
 
