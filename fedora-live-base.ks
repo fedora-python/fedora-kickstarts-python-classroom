@@ -201,6 +201,12 @@ touch /.liveimg-configured
 # https://bugzilla.redhat.com/show_bug.cgi?id=679486
 echo "localhost" > /etc/hostname
 
+# Turn off mdadm homehost
+cat > /etc/mdadm.conf << FOE
+AUTO -all
+HOMEHOST <any>
+FOE
+
 EOF
 
 # bah, hal starts way too late
