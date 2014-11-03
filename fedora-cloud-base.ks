@@ -107,17 +107,22 @@ echo .
 
 # this is installed by default but we don't need it in virt
 echo "Removing linux-firmware package."
-yum -C -y remove linux-firmware
+dnf -C -y erase linux-firmware
 
 # Remove firewalld; was supposed to be optional in F18+, but is pulled in
 # in install/image building.
 echo "Removing firewalld."
-yum -C -y remove "firewalld*" --setopt="clean_requirements_on_remove=1"
+# FIXME! clean_requirements_on_remove is the default with DNF, but may
+# not work when package was installed by Anaconda instead of command line.
+# Also -- check if this is still even needed with new anaconda -- disabled
+# firewall should _not_ pull in this package.
+# yum -C -y remove "firewalld*" --setopt="clean_requirements_on_remove=1"
+dnf -C -y erase "firewalld*"
 
 # Another one needed at install time but not after that, and it pulls
 # in some unneeded deps (like, newt and slang)
 echo "Removing authconfig."
-yum -C -y remove authconfig --setopt="clean_requirements_on_remove=1"
+dnf -C -y erase authconfig
 
 echo -n "Getty fixes"
 # although we want console output going to the serial console, we don't
@@ -176,10 +181,11 @@ echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 echo "Removing random-seed so it's not the same in every image."
 rm -f /var/lib/random-seed
 
-echo "Cleaning old yum repodata."
-yum history new
-yum clean all
-truncate -c -s 0 /var/log/yum.log
+echo "Cleaning old dnf repodata."
+# FIXME: clear history?
+dnf clean all
+truncate -c -s 0 /var/log/dnf.log
+truncate -c -s 0 /var/log/dnf.rpm.log
 
 echo "Import RPM GPG key"
 releasever=$(rpm -q --qf '%{version}\n' fedora-release)
@@ -202,10 +208,10 @@ rm -f /var/lib/rpm/__db*
 dd if=/usr/share/syslinux/mbr.bin of=/dev/vda
 
 
+# FIXME: is this still needed?
 echo "Fixing SELinux contexts."
 touch /var/log/cron
 touch /var/log/boot.log
-mkdir -p /var/cache/yum
 chattr -i /boot/extlinux/ldlinux.sys
 /usr/sbin/fixfiles -R -a restore
 chattr +i /boot/extlinux/ldlinux.sys
