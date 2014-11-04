@@ -24,7 +24,10 @@ services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config
 zerombr
 clearpart --all
 # Atomic differs from cloud - we want LVM
-autopart
+part /boot --size=300 --fstype="xfs"
+part pv.01 --grow
+volgroup atomicos pv.01
+logvol / --size=3000 --fstype="xfs" --name=root --vgname=atomicos
 
 # Equivalent of %include fedora-repo.ks
 ostreesetup --nogpg --osname=fedora-atomic-host --remote=installmedia --url=http://kojipkgs.fedoraproject.org/mash/atomic/ --ref=fedora-atomic/rawhide/x86_64/docker-host
