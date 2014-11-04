@@ -104,16 +104,6 @@ echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 echo "Removing random-seed so it's not the same in every image."
 rm -f /var/lib/random-seed
 
-echo "Cleaning old yum repodata."
-yum history new
-yum clean all
-truncate -c -s 0 /var/log/yum.log
-
-echo "Import RPM GPG key"
-releasever=$(rpm -q --qf '%{version}\n' fedora-release)
-basearch=$(uname -i)
-rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-
 echo "Packages within this cloud image:"
 echo "-----------------------------------------------------------------------"
 rpm -qa
