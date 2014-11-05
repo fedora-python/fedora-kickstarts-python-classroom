@@ -24,7 +24,7 @@ services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config
 zerombr
 clearpart --all
 # Atomic differs from cloud - we want LVM
-part /boot --size=300 --fstype="xfs"
+part /boot --size=300 --fstype="ext4"
 part pv.01 --grow
 volgroup atomicos pv.01
 logvol / --size=3000 --fstype="xfs" --name=root --vgname=atomicos
