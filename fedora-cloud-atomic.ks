@@ -16,7 +16,7 @@ user --name=none
 
 firewall --disabled
 
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8" --extlinux
+bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8"
 
 network --bootproto=dhcp --device=eth0 --activate --onboot=on
 services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
@@ -41,10 +41,6 @@ reboot
 passwd -l root
 # remove the user anaconda forces us to make
 userdel -r none
-
-# Kickstart specifies timeout in seconds; syslinux uses 10ths.
-# 0 means wait forever, so instead we'll go with 1.
-sed -i 's/^timeout 10/timeout 1/' /boot/extlinux/extlinux.conf
 
 # If you want to remove rsyslog and just use journald, remove this!
 echo -n "Disabling persistent journal"
@@ -124,15 +120,6 @@ rpm -qa
 echo "-----------------------------------------------------------------------"
 # Note that running rpm recreates the rpm db files which aren't needed/wanted
 rm -f /var/lib/rpm/__db*
-
-
-# This is a temporary workaround for
-# <https://bugzilla.redhat.com/show_bug.cgi?id=1147998>
-# where sfdisk seems to be messing up the mbr.
-# Long-term fix is to address this in anaconda directly and remove this.
-# <https://bugzilla.redhat.com/show_bug.cgi?id=1015931>
-dd if=/usr/share/syslinux/mbr.bin of=/dev/vda
-
 
 echo "Zeroing out empty space."
 # This forces the filesystem to reclaim space from deleted files
