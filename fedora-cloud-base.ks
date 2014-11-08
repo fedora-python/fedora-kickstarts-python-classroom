@@ -37,6 +37,8 @@ part / --size 3000 --fstype ext4
 reboot
 
 # Package list.
+# FIXME: instLangs does not work, so there's a hack below
+# (see https://bugzilla.redhat.com/show_bug.cgi?id=1051816)
 %packages --instLangs=en
 
 kernel-core
@@ -118,6 +120,13 @@ dnf -C -y erase "firewalld*"
 # in some unneeded deps (like, newt and slang)
 echo "Removing authconfig."
 dnf -C -y erase authconfig
+
+# instlang hack. (Note! See bug referenced above package list)
+find /usr/share/locale -mindepth  1 -maxdepth 1 -type d -not -name en_US -exec rm -rf {} +
+localedef --list-archive | grep -v ^en_US | xargs localedef --delete-from-archive
+# this will kill a live system (since it's memory mapped) but should be safe offline
+mv -f /usr/lib/locale/locale-archive /usr/lib/locale/locale-archive.tmpl
+build-locale-archive
 
 echo -n "Getty fixes"
 # although we want console output going to the serial console, we don't
