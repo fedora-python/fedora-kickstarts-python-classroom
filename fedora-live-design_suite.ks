@@ -38,7 +38,8 @@ gimp-normalmap
 gimp-resynthesizer
 gimp-separate+
 gpick
-gmic-gimp # replaces GRECStationary 
+# replaces GREYCStationary
+gmic-gimp  
 hugin 
 mypaint
 inkscape
