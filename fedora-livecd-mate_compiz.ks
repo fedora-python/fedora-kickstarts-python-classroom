@@ -7,6 +7,10 @@
 %include fedora-live-minimization.ks
 
 %packages
+
+# audio player
+audacious
+
 # First, no office
 -planner
 
@@ -15,40 +19,50 @@
 -brasero
 -bluez
 -bluez-cups
+-caja-image-converter
+-colord
+-compiz-plugins-extra
+-compiz-plugins-unsupported
 -@dial-up
--dnf
+-espeak
+-fedora-icon-theme
+-GConf2
 -gnome-bluetooth-libs
+-gnome-icon-theme
 -gnome-icon-theme-symbolic
 -gnome-software
+-gnome-themes
 -gnome-user-docs
+-gstreamer1-plugins-good
+-gstreamer1-plugins-bad-free
+-gstreamer-plugins-good
+-gstreamer-plugins-bad-free
+-gstreamer-plugins-espeak
+-gucharmap
 -@guest-desktop-agents
 -@libreoffice
+-lftp
 -@mate-applications
 -mate-icon-theme-faenza
+-NetworkManager-bluetooth
 -transmission-gtk
 -samba-client
--gnome-themes
--fedora-icon-theme
--espeak
--gstreamer-plugins-espeak
--ibus-typing-booster
--ibus-kkc
--libkkc
--libkkc-data        #save 30MB
--skkdic             # save 25MB
--ibus-libpinyin
--libpinyin
--libpinyin-data     #save 31MB
--colord
+-ibus-chewing
+-ImageMagick
+-ImageMagick-libs
+-libical
+-OpenEXR-libs
+-reiserfs-utils
+-seahorse
+-vim-common
+-vim-enhanced
 
 # Drop oversized fonts that aren't needed
--adobe-source-han-* # save 94MB
--naver-nanum-gothic-fonts # save 14MB
+-gnu-free-mono-fonts
+-gnu-free-fonts-common
+-gnu-free-serif-fonts
+-gnu-free-sans-fonts
 -stix-fonts
--vlgothic-fonts
--paratype-pt-sans-fonts
--jomolhari-fonts
--sil-abyssinica-fonts
 
 # Drop the Java plugin
 -icedtea-web
@@ -63,6 +77,9 @@
 -gutenprint
 -gutenprint-cups
 -gutenprint-libs
+-cups
+-cups-filters
+-cups-pk-helper
 
 # Dictionaries are big
 # we're going to try keeping hunspell-* after notting, davidz, and ajax voiced
@@ -102,8 +119,11 @@
 # Drop some system-config things
 -system-config-language
 -system-config-printer
+-system-config-printer-libs
+-system-config-printer-udev
 -system-config-rootpassword
 -system-config-services
+-system-config-users
 -policycoreutils-gui
 
 %end
