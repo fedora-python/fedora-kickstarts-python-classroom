@@ -77,27 +77,6 @@ overpass-fonts
 -gnome-photos
 -rdesktop
 
-# Legacy cmdline things we don't want
--krb5-auth-dialog
--krb5-workstation
--pam_krb5
--quota
--minicom
--dos2unix
--finger
--ftp
--jwhois
--mtr
--pinfo
--rsh
--telnet
--nfs-utils
--ypbind
--yp-tools
--rpcbind
--acpid
--ntsysv
-
 %end
 
 %post
