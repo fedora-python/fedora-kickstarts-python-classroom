@@ -40,11 +40,16 @@ chmod a+x /home/liveuser/.xsession
 chown liveuser:liveuser /home/liveuser/.xsession
 
 # set up autologin for user liveuser
+if [ -f /etc/sddm.conf ]; then
+sed -i 's/^#User=.*/User=liveuser/' /etc/sddm.conf
+sed -i 's/^#Session=.*/Session=kde-plasma.desktop/' /etc/sddm.conf
+else
 cat > /etc/sddm.conf << SDDM_EOF
 [Autologin]
 User=liveuser
 Session=kde-plasma.desktop
 SDDM_EOF
+fi
 
 # add liveinst.desktop to favorites menu
 mkdir -p /home/liveuser/.kde/share/config/
