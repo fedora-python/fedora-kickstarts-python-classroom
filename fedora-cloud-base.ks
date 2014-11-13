@@ -127,6 +127,8 @@ localedef --list-archive | grep -v ^en_US | xargs localedef --delete-from-archiv
 # this will kill a live system (since it's memory mapped) but should be safe offline
 mv -f /usr/lib/locale/locale-archive /usr/lib/locale/locale-archive.tmpl
 build-locale-archive
+echo '%_install_langs C:en:en_US:en_US.UTF-8' >> /etc/rpm/macros.install_langs
+
 
 echo -n "Getty fixes"
 # although we want console output going to the serial console, we don't
