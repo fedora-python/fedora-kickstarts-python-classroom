@@ -1,5 +1,4 @@
 %packages
--realmd                     # only seems to be used in GNOME
 -PackageKit*                # we switched to yumex, so we don't need this
 -ConsoleKit                 # ConsoleKit is deprecated
 -ConsoleKit-x11             # ConsoleKit is deprecated

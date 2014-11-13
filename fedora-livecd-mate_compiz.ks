@@ -8,6 +8,16 @@
 
 %packages
 
+# some apps from mate-applications
+caja-actions
+mate-disk-usage-analyzer
+mate-netspeed
+
+# system tools
+system-config-printer
+system-config-printer-applet
+
+
 # audio player
 audacious
 
@@ -19,10 +29,7 @@ audacious
 -brasero
 -bluez
 -bluez-cups
--caja-image-converter
 -colord
--compiz-plugins-extra
--compiz-plugins-unsupported
 -@dial-up
 -espeak
 -fedora-icon-theme
@@ -38,24 +45,15 @@ audacious
 -gstreamer-plugins-good
 -gstreamer-plugins-bad-free
 -gstreamer-plugins-espeak
--gucharmap
 -@guest-desktop-agents
 -@libreoffice
--lftp
 -@mate-applications
 -mate-icon-theme-faenza
 -NetworkManager-bluetooth
--transmission-gtk
 -samba-client
 -ibus-chewing
--ImageMagick
--ImageMagick-libs
 -libical
 -OpenEXR-libs
--reiserfs-utils
--seahorse
--vim-common
--vim-enhanced
 
 # Drop oversized fonts that aren't needed
 -gnu-free-mono-fonts
@@ -70,16 +68,6 @@ audacious
 
 # Drop things that pull in perl
 -linux-atm
-
-# No printing
--foomatic-db-ppds
--foomatic
--gutenprint
--gutenprint-cups
--gutenprint-libs
--cups
--cups-filters
--cups-pk-helper
 
 # Dictionaries are big
 # we're going to try keeping hunspell-* after notting, davidz, and ajax voiced
@@ -99,31 +87,20 @@ audacious
 -krb5-auth-dialog
 -krb5-workstation
 -pam_krb5
--quota
--nano
+
 -minicom
--dos2unix
--finger
--ftp
+
 -jwhois
 -mtr
 -pinfo
 -rsh
--nfs-utils
 -ypbind
 -yp-tools
--rpcbind
--acpid
 -ntsysv
 
 # Drop some system-config things
--system-config-language
--system-config-printer
--system-config-printer-libs
--system-config-printer-udev
 -system-config-rootpassword
 -system-config-services
--system-config-users
 -policycoreutils-gui
 
 %end
