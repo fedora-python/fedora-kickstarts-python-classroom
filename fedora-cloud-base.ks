@@ -127,7 +127,10 @@ localedef --list-archive | grep -v ^en_US | xargs localedef --delete-from-archiv
 # this will kill a live system (since it's memory mapped) but should be safe offline
 mv -f /usr/lib/locale/locale-archive /usr/lib/locale/locale-archive.tmpl
 build-locale-archive
-echo '%_install_langs C:en:en_US:en_US.UTF-8' >> /etc/rpm/macros.install_langs
+echo '%_install_langs C:en:en_US:en_US.UTF-8' >> /etc/rpm/macros.image-language-conf
+awk '(NF==0&&!done){print "override_install_langs='$LANG'";done=1}{print}' \
+    < /etc/yum.conf > /etc/yum.conf.new
+mv /etc/yum.conf.new /etc/yum.conf
 
 
 echo -n "Getty fixes"
