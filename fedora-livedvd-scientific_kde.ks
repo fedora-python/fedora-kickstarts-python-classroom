@@ -48,14 +48,17 @@ ddd
 valgrind
 
 #python 2 tools/libraries not included from the groups
+python-tools
 python-ipython
 python-ipython-console
 python-ipython-notebook
 sympy
 python-networkx
+python-pandas
 
 #python 3 and tools/libraries not included from the groups
 python3
+python3-tools
 python3-matplotlib
 python3-scipy
 python3-numpy
@@ -63,6 +66,7 @@ python3-ipython
 python3-ipython-console
 python3-ipython-notebook
 python3-networkx
+python3-pandas
 
 # matplotlib backends
 python-matplotlib-qt4
