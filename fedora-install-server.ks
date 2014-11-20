@@ -123,6 +123,7 @@ dracut-*
 
 # Things needed for installation
 @anaconda-tools
+fedora-productimg-server
 
 # Langpacks
 autocorr-*

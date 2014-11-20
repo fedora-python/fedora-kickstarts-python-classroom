@@ -44,5 +44,6 @@ kernel*
 
 # Things needed for installation
 @anaconda-tools
+fedora-productimg-workstation
 
 %end
