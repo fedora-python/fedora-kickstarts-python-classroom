@@ -21,43 +21,18 @@
 
 # unlock default keyring. FIXME: Should probably be done in comps
 gnome-keyring-pam
+# Add some screensavers, people seem to like them
+# Note that blank is still default.
+xscreensaver-extras
 
 # save some space
 -autofs
--pidgin
 -acpid
 -gimp-help
 -desktop-backgrounds-basic
 -realmd                     # only seems to be used in GNOME
 -PackageKit*                # we switched to yumex, so we don't need this
 -aspell-*                   # dictionaries are big
--gnumeric
--foomatic-db-ppds
--foomatic
--gutenprint
--gutenprint-cups
--stix-fonts
--ibus-typing-booster
 -xfce4-sensors-plugin
-#-man-pages-*
--adobe-source-han-* # save 94MB
--rodent-icon-theme  # save 34MB
--skkdic             # save 25MB
--naver-nanum-gothic-fonts # save 14MB
--ibus-kkc
--ibus-libpinyin
--libpinyin-data
--libkkc-data
-# Drop some fonts for space
--vlgothic-fonts
--paratype-pt-sans-fonts
--jomolhari-fonts
--sil-abyssinica-fonts
-
-# drop some system-config things
--system-config-network
--system-config-rootpassword
-#-system-config-services
--policycoreutils-gui
 
 %end
