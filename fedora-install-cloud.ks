@@ -57,6 +57,8 @@ dracut-*
 # Things needed for installation
 @anaconda-tools
 fedora-productimg-cloud
+-fedora-productimg-server
+-fedora-productimg-workstation
 
 # Packages to enable server images to run in cloud environments
 @cloud-server
