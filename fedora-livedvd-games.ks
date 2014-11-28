@@ -53,7 +53,7 @@ maniadrive-music
 megaglest
 nethack-vultures
 netpanzer
-neverball
+#neverball #cut for size
 nogravity
 pinball
 scorched3d
