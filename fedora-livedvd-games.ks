@@ -171,7 +171,6 @@ celestia
 childsplay
 gcompris
 planets
-stellarium
 tuxpaint
 tuxpaint-stamps
 tuxtype2
