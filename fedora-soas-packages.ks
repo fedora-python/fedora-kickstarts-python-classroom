@@ -8,7 +8,6 @@
 # - Sebastian Dziallas <sdz AT fedoraproject DOT org>
 # - Mel Chua <mchua AT fedoraproject DOT org>
 
-
 %packages
 -@fonts
 -@dial-up
@@ -33,6 +32,14 @@
 -abrt-cli
 -ibus*
 -hyperv-daemons
+
+# Add some extra fonts
+dejavu-sans-fonts
+dejavu-sans-mono-fonts
+madan-fonts
+aajohan-comfortaa-fonts
+sil-abyssinica-fonts
+vlgothic-fonts
 
 # == Core Sugar Platform ==
 @sugar-desktop
