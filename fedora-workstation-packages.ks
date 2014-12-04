@@ -6,9 +6,21 @@
 -@input-methods
 -@standard
 
-# Most of the heavy work is done in comps
-@^workstation-product-environment
+# Make sure to sync any additions / removals done here with
+# workstation-product-environment in comps
+@base-x
+@core
+@fonts
+@guest-desktop-agents
+@hardware-support
 @libreoffice
+@multimedia
+@networkmanager-submodules
+@printing
+@workstation-product
+
+# Branding for the installer
+fedora-productimg-workstation
 
 # Exclude unwanted packages from @anaconda-tools group
 -gfs2-utils
