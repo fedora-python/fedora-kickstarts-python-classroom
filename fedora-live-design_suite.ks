@@ -85,8 +85,6 @@ overpass-fonts
 cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
 favorite-apps=['firefox.desktop', 'evolution.desktop', 'shotwell.desktop', 'gimp.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']
-#Enable categories in Gnome Shell
-app-folder-categories=['Utilities', 'Games', 'Sundry', 'Office', 'Network', 'Internet', 'Graphics', 'Multimedia', 'System', 'Development', 'Accessories', 'System Settings', 'wine-wine', 'Crossover', 'Crossover Games', 'Science', 'Education', 'Universal Access', 'Other']
 FOE
 
 # Add link to lists of tutorials
