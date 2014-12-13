@@ -1,5 +1,5 @@
 # fedora-design-suite.ks
-# Based on Live Desktop
+# Based on Live Workstation
 # Description:
 # - A Spin targeted towards professional designers
 # Website: http://fedoraproject.org/wiki/Design_Suite
