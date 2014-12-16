@@ -18,7 +18,8 @@
 cmdline
 bootloader --location=none
 timezone --isUtc --nontp Etc/UTC
-rootpw --plaintext qweqwe
+rootpw --lock --iscrypted locked
+user --name=none
 
 keyboard us
 zerombr
@@ -43,6 +44,9 @@ dnf-yum  # https://fedorahosted.org/fesco/ticket/1312#comment:29
 %post --log=/tmp/anaconda-post.log
 # Set the language rpm nodocs transaction flag persistently in the
 # image yum.conf and rpm macros
+
+# remove the user anaconda forces us to make
+userdel -r none
 
 LANG="en_US"
 echo "%_install_lang $LANG" > /etc/rpm/macros.image-language-conf
