@@ -19,6 +19,7 @@ reboot
 %packages --excludedocs --instLangs=en --nocore
 bash
 fedora-release
+rootfiles
 vim-minimal
 yum
 #fakesystemd #TODO: waiting for review https://bugzilla.redhat.com/show_bug.cgi?id=1118740
@@ -44,6 +45,10 @@ basearch=$(uname -i)
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
 rm -f /usr/lib/locale/locale-archive
+
+#Setup locale properly
+localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
+
 rm -rf /var/cache/yum/*
 rm -f /tmp/ks-script*
 
