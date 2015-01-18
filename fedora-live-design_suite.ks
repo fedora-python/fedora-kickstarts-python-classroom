@@ -16,12 +16,12 @@ part / --size 8192
 
 # graphics
 blender
-# add blender plugins
 LuxRender-blender
 YafaRay-blender
 bluefish 
 #cinepaint
-cmyktool
+#cmyktool
+colord-extra-profiles
 darktable
 dia
 entangle
@@ -38,27 +38,33 @@ gimp-normalmap
 gimp-resynthesizer
 gimp-separate+
 gpick
-# replaces GREYCStationary
-gmic-gimp  
+GraphicsMagick
+gmic-gimp
 hugin 
-mypaint
+ImageMagick
 inkscape
+inkscape-sozi
+inkscape-table
+mypaint
 nautilus-image-converter
 optipng
 phatch
 screenruler
 simple-scan
 scribus
-colord-extra-profiles 
+shutter
 synfigstudio
 xournal
 
 # office
 vym
+pdfmod
 pdfshuffler  
 
 # internet
 filezilla
+sparkleshare
+sshpass
 
 # audio & video
 audacity
