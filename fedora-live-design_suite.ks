@@ -69,9 +69,10 @@ aajohan-comfortaa-fonts
 adobe-source-sans-pro-fonts
 campivisivi-titillium-fonts
 lato-fonts
+opens-sans-fonts
 overpass-fonts
 
-# removal of duplicated and unneeded applications
+# removal of unneeded applications
 -gnome-boxes
 -gthumb
 -eog
@@ -84,7 +85,7 @@ overpass-fonts
 #Override the favorite desktop application in Dash
 cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
-favorite-apps=['firefox.desktop', 'evolution.desktop', 'shotwell.desktop', 'gimp.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']
+favorite-apps=['firefox.desktop', 'shotwell.desktop', 'gimp.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']
 FOE
 
 # Add link to lists of tutorials
