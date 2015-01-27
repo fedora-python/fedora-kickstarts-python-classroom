@@ -52,7 +52,7 @@ rm -f /var/lib/rpm/__db*
 releasever=$(rpm -q --qf '%{version}\n' fedora-release)
 basearch=armhfp
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-echo "Packages within this LiveCD"
+echo "Packages within this ARM disk image"
 rpm -qa
 # Note that running rpm recreates the rpm db files which aren't needed or wanted
 rm -f /var/lib/rpm/__db*
