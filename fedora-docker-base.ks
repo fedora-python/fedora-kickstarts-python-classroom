@@ -5,7 +5,7 @@
 
 cmdline
 bootloader --location=none
-timezone America/New_York --isUtc --nontp
+timezone --isUtc --nontp Etc/UTC
 rootpw --plaintext qweqwe
 
 keyboard us
