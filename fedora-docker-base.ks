@@ -60,5 +60,6 @@ sed -i 's/OOMScoreAdjust=-900//' /etc/systemd/system/dbus.service
 systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connections.mount systemd-logind.service getty.target console-getty.service
 
 rm -f /etc/machine-id
+rm -f /etc/fstab
 
 %end
