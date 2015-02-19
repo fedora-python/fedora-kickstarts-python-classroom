@@ -14,7 +14,7 @@ auth --useshadow --enablemd5
 selinux --enforcing
 firewall --enabled --service=mdns
 xconfig --startxonboot
-part / --size 3072 --fstype ext4
+part / --size 4096 --fstype ext4
 services --enabled=NetworkManager --disabled=network,sshd
 
 %include fedora-repo.ks

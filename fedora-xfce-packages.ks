@@ -24,6 +24,8 @@ gnome-keyring-pam
 # Add some screensavers, people seem to like them
 # Note that blank is still default.
 xscreensaver-extras
+wget
+system-config-printer
 
 # save some space
 -autofs
