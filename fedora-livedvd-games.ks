@@ -33,7 +33,7 @@ asc
 asc-music
 astromenace
 beneath-a-steel-sky-cd
-boswars
+#boswars # currently not building
 btanks
 bzflag
 crossfire-client
