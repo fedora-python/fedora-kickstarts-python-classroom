@@ -75,7 +75,6 @@ gnome-keyring-pam
 -packETH
 -pads
 -pdfcrack
--picviz-gui
 -proxychains
 -pyrit
 -raddump
@@ -88,9 +87,7 @@ gnome-keyring-pam
 -tcpreplay
 -tripwire
 -wipe
-
-# Is not available for OpenVAS-7. No longer supported by upstream.
--openvas-client 
+-zmap
 
 %end
 
