@@ -107,6 +107,19 @@ Categories=Graphics;Documentation;
 FOE
 chmod a+x /usr/share/applications/list-design-tutorials.desktop
 
+# Add link to lists of tutorials
+cat >> /usr/share/applications/fedora-design-team.desktop << FOE
+[Desktop Entry]
+Name=Fedora Design Team
+GenericName=Design Team
+Comment=Wiki page of Design Team
+Exec=xdg-open http://fedoraproject.org/wiki/Design
+Type=Application
+Icon=applications-graphics
+Categories=Graphics;Documentation;
+FOE
+chmod a+x /usr/share/applications/fedora-design-team.desktop
+
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
