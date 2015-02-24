@@ -72,13 +72,6 @@ dracut-*
 @core
 @hardware-support
 
-# Some development tools
-@development-libs
-@development-tools
-@c-development
-@rpm-development-tools
-@fedora-packager
-
 # Fedora Server.
 # Including this causes the fedora-release-server package to be included,
 # which in turn enables server-product-environment, and due to to its priority
