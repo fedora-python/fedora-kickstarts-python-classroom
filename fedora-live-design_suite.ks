@@ -75,7 +75,7 @@ aajohan-comfortaa-fonts
 adobe-source-sans-pro-fonts
 campivisivi-titillium-fonts
 lato-fonts
-opens-sans-fonts
+open-sans-fonts
 overpass-fonts
 
 # removal of unneeded applications
