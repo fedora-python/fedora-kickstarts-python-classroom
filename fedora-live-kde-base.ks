@@ -47,7 +47,7 @@ else
 cat > /etc/sddm.conf << SDDM_EOF
 [Autologin]
 User=liveuser
-Session=kde-plasma.desktop
+Session=plasma.desktop
 SDDM_EOF
 fi
 
