@@ -136,7 +136,5 @@ chmod a+x /usr/share/applications/fedora-design-team.desktop
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
-#EOF
-
 %end
 
