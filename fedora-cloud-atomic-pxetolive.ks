@@ -15,6 +15,7 @@ part / --fstype="ext4" --size=6000
 part /boot --size=500 --fstype="ext4"
 shutdown
 services --disabled=docker-storage-setup,network
+services --enabled=NetworkManager,sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
  
 ostreesetup --nogpg --osname=fedora-atomic --remote=fedora-atomic --url=http://kojipkgs.fedoraproject.org/mash/atomic/22/ --ref=fedora-atomic/f22/x86_64/docker-host
  
