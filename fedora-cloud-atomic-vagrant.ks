@@ -11,7 +11,7 @@ user --name=vagrant --password=vagrant
 
 # Work around cloud-init being both disabled and enabled; need
 # to refactor to a common base.
-rm /etc/systemd/system/multi-user.target.wants/cloud-init* /etc/systemd/system/multi-user.target.wants/cloud-config*
+systemctl mask cloud-init cloud-init-local cloud-config cloud-final
 
 # Vagrant setup
 sed -i 's,Defaults\\s*requiretty,Defaults !requiretty,' /etc/sudoers
