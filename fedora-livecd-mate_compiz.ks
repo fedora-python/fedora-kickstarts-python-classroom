@@ -12,6 +12,12 @@
 caja-actions
 mate-disk-usage-analyzer
 mate-netspeed
+mate-themes-extras
+
+# more backgrounds
+f22-backgrounds-mate
+f21-backgrounds-extras-base
+f21-backgrounds-extras-mate
 
 # system tools
 system-config-printer
@@ -26,17 +32,12 @@ audacious
 # dsl tools
 rp-pppoe
 
-# First, no office
-#-planner
-
 # Drop things for size
 -@3d-printing
 -brasero
 -bluez
 -bluez-cups
 -colord
--@dial-up
--espeak
 -fedora-icon-theme
 -GConf2
 -gnome-bluetooth-libs
@@ -63,10 +64,9 @@ rp-pppoe
 # Help and art can be big, too
 -gnome-user-docs
 -evolution-help
--desktop-backgrounds-basic
--*backgrounds-extras
 
 # Legacy cmdline things we don't want
+-telnet
 
 %end
 
