@@ -107,15 +107,6 @@ cat > /home/liveuser/.kde/share/config/kres-migratorrc << KRES_EOF
 Enabled=false
 KRES_EOF
 
-# Disable nepomuk
-cat > /home/liveuser/.kde/share/config/nepomukserverrc << NEPOMUK_EOF
-[Basic Settings]
-Start Nepomuk=false
-
-[Service-nepomukfileindexer]
-autostart=false
-NEPOMUK_EOF
-
 # make sure to set the right permissions and selinux contexts
 chown -R liveuser:liveuser /home/liveuser/
 restorecon -R /home/liveuser/
