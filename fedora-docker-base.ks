@@ -18,7 +18,9 @@ reboot
 
 %packages --excludedocs --instLangs=en --nocore
 bash
-fedora-release
+# dnf is pulling in fedora-release-server on installs. so for now pull in a product release that
+# does not pull in extra deps and makes the image smaller
+fedora-release-cloud
 rootfiles
 vim-minimal
 dnf
