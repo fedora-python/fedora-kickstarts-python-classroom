@@ -9,7 +9,6 @@ timezone --isUtc --nontp Etc/UTC
 rootpw --plaintext qweqwe
 
 keyboard us
-firewall --disable
 zerombr
 clearpart --all
 part / --size 3000 --fstype ext4
@@ -18,9 +17,7 @@ reboot
 
 %packages --excludedocs --instLangs=en --nocore
 bash
-# dnf is pulling in fedora-release-server on installs. so for now pull in a product release that
-# does not pull in extra deps and makes the image smaller
-fedora-release-cloud
+fedora-release
 rootfiles
 vim-minimal
 dnf
