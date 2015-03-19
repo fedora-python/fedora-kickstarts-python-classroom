@@ -199,7 +199,7 @@ thunderbird
 %post
 
 #setup kickoff favorites
-/bin/mkdir -p /etc/skel/.kde/share/config
+/bin/mkdir -p /etc/skel/.config
 
 JAMFAVORITES=/usr/share/applications/firefox.desktop,/usr/share/applications/qjackctl.desktop,/usr/share/applications/qtractor.desktop,/usr/share/applications/frescobaldi.desktop,/usr/share/applications/org.kde.konsole.desktop,/usr/share/applications/kde4/dolphin.desktop,/usr/share/applications/systemsettings.desktop,/usr/share/applications/pavucontrol.desktop,/usr/share/applications/kde4/kfmclient_html.desktop,/usr/share/applications/kde4/Kontact.desktop,/usr/share/applications/kde4/ktp-contactlist.desktop
 JAMFAVORITESLIVE=/usr/share/applications/liveinst.desktop,$JAMFAVORITES
