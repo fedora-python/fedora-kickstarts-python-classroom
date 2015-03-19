@@ -1,0 +1,8 @@
+## Lorax template to configure Anaconda to use the local OSTree
+## repository on disk.
+
+<%page args="ostree_osname, ostree_ref"/>
+append usr/share/anaconda/interactive-defaults.ks "ostreesetup --nogpg --osname=${ostree_osname} --remote=${ostree_osname} --url=file:////run/install/repo/content/repo --ref=${ostree_ref}\n"
+append usr/share/anaconda/interactive-defaults.ks "services --disabled cloud-init,cloud-config,cloud-final,cloud-init-local\n"
+append usr/share/anaconda/interactive-defaults.ks "%post --erroronfail\nrm -f /etc/ostree/remotes.d/${ostree_osname}.conf\n%end\n"
+

@@ -1,14 +1,11 @@
 ## Lorax template to embed an OSTree repository into the installer.iso
 ## and configure an interactive installer use to look for it.
+##
+## Note that we pull with depth=0 to only get *one* commit into the
+## ISO, because we obviously don't want the full history.
 
-<%page args='root'/>
-mkdir install/ostree
-runcmd ostree --repo=${root}/install/ostree init --mode=archive-z2
-runcmd ostree remote add ostree-mirror --repo=${root}/install/ostree/ --set=gpg-verify=false @OSTREE_URL@
-runcmd ostree --repo=${root}/install/ostree/ pull --mirror ostree-mirror @OSTREE_REF@
-
-
-append usr/share/anaconda/interactive-defaults.ks "ostreesetup --nogpg --osname=@OSTREE_OSNAME@ --remote=@OSTREE_OSNAME@ --url=file:///install/ostree --ref=@OSTREE_REF@\n"
-append usr/share/anaconda/interactive-defaults.ks "services --disabled cloud-init,cloud-config,cloud-final,cloud-init-local\n"
-append usr/share/anaconda/interactive-defaults.ks "%post --erroronfail\nrm -f /etc/ostree/remotes.d/@OSTREE_OSNAME@.conf\n%end\n"
-
+<%page args="workdir, ostree_osname, ostree_repo, ostree_ref"/>
+runcmd mkdir -p ${workdir}/iso-graft/content/repo
+runcmd ostree --repo=${workdir}/iso-graft/content/repo init --mode=archive-z2
+runcmd ostree --repo=${workdir}/iso-graft/content/repo remote add ostree-mirror --set=gpg-verify=false ${ostree_repo}
+runcmd ostree --repo=${workdir}/iso-graft/content/repo pull --mirror ostree-mirror ${ostree_ref}
