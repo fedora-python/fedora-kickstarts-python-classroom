@@ -2,6 +2,18 @@
 #
 # To keep this image minimal it only installs English language. You need to change
 # yum configuration in order to enable other languages.
+#
+###  Hacking on this image ###
+# This kickstart is processed using Anaconda-in-ImageFactory (via Koji typically),
+# but you can run imagefactory locally too.
+#
+# To do so, testing local changes, first you'll need a TDL file.  I store one here:
+# https://git.fedorahosted.org/cgit/fedora-atomic.git/tree/fedora-atomic-rawhide.tdl
+# 
+# Then, once you have imagefactory and imagefactory-plugins installed, run:
+# 
+#   imagefactory --debug target_image --template /path/to/fedora-atomic-rawhide.tdl --parameter offline_icicle true --file-parameter install_script $(pwd)/fedora-docker-base.ks docker
+#
 
 cmdline
 bootloader --location=none
