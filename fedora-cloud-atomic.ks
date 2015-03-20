@@ -1,8 +1,10 @@
-# Fedora Atomic is a cloud-focused spin implementing the Project Atomic
-# patterns. 
-#
-# RIGHT NOW, this is very like the traditional cloud image -- this is
-# just a starting point.
+# Fedora Atomic is a cloud-focused spin implementing the Project
+# Atomic patterns.  Note that this replicates the same tree which can
+# now be installed on bare metal.
+
+# This image allocates most space to an LVM-managed thin pool
+# dedicated for Docker containers, and uses docker-storage-setup to
+# dynamically resize storage on boot.
 
 text
 lang en_US.UTF-8
