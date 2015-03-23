@@ -13,14 +13,11 @@
 part / --size 8192
 
 %packages
-
 # graphics
 blender
 LuxRender-blender
 YafaRay-blender
 bluefish 
-#cinepaint
-#cmyktool
 colord-extra-profiles
 darktable
 dia
