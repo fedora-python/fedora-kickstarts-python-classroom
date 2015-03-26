@@ -142,9 +142,11 @@ NAutoVTs=0' /etc/systemd/logind.conf
 
 echo -n "Network fixes"
 # initscripts don't like this file to be missing.
+# and https://bugzilla.redhat.com/show_bug.cgi?id=1204612
 cat > /etc/sysconfig/network << EOF
 NETWORKING=yes
 NOZEROCONF=yes
+DEVTIMEOUT=10
 EOF
 
 # For cloud images, 'eth0' _is_ the predictable device name, since
