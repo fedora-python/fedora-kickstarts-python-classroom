@@ -70,7 +70,6 @@ dracut-*
 @guest-agents
 @standard
 @core
-@hardware-support
 
 # Fedora Server.
 # Including this causes the fedora-release-server package to be included,
@@ -81,6 +80,7 @@ dracut-*
 @headless-management
 @container-management
 @domain-client
+@server-hardware-support
 
 # Common server packages
 @mysql
