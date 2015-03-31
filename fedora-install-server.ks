@@ -70,6 +70,7 @@ dracut-*
 @guest-agents
 @standard
 @core
+@hardware-support
 
 # Fedora Server.
 # Including this causes the fedora-release-server package to be included,
