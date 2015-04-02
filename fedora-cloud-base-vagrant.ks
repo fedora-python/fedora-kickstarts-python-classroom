@@ -5,7 +5,30 @@
 
 services --disabled=cloud-init,cloud-init-local,cloud-config,cloud-final
 
+# So, to be clear, this gaping security hole is an integral part of how
+# Vagrant works - These images are _not_ supposed to be run in any public-
+# Internet facing way - They are for use on developer setups, almost always
+# with NAT
 user --name=vagrant --password=vagrant
+
+# Suggestion from @purpleidea that most/many vagrant boxes also set root PW
+# to "vagrant" for ease of use.  Again, see comments above.
+rootpw vagrant
+
+# The addition of the net.ifnames=0 and biosdevnames=0 option ensures that
+# even on VirtualBox virt, we get a primary network device with "eth0" as the name
+# This simplifies things and allows a single disk image for both supported Vagrant
+# platforms (virtualbox and kvm)
+bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0" --extlinux
+
+%packages
+# The default koji Vagrantfile configuration uses rsync to sync files between
+# the vagrant host and the guest.  It uses yum to verify that rsync is present
+# and/or install it if it is not.  It will fail without adding the yum compat
+# layer for dnf
+# TODO: Teach vagrant about dnf
+dnf-yum
+%end
 
 %post --erroronfail
 
@@ -23,6 +46,12 @@ ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7
 EOKEYS
 chmod 600 ~vagrant/.ssh/authorized_keys
 chown -R vagrant:vagrant ~vagrant/.ssh/
+
+# Further suggestion from @purpleidea (James Shubin) - extend key to root users as well
+mkdir -m 0700 -p /root/.ssh
+cp /home/vagrant/.ssh/authorized_keys /root/.ssh/authorized_keys
+chmod 600 /root/.ssh/authorized_keys
+chown -R root:root /root/.ssh
 
 %end
 
