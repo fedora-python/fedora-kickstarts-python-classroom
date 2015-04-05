@@ -1,5 +1,7 @@
 %include fedora-arm-base.ks
 
+part / --size=3000 --fstype xfs
+
 %packages
 -@fedora-release-nonproduct
 -@dial-up
