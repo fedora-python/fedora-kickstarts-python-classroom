@@ -1,5 +1,6 @@
 %include fedora-arm-base.ks
 
+# server defaults to xfs for / so lets do so on arm also
 part / --size=3000 --fstype xfs
 
 %packages
