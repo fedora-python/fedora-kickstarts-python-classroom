@@ -7,9 +7,22 @@
 # Note that unlike the standard F20 install, this image has /tmp on disk
 # rather than in tmpfs, since memory is usually at a premium.
 #
-# This kickstart file is designed to be used with appliance-creator and
-# may need slight modification for use with actual anaconda or other tools.
-# We intend to target anaconda-in-a-vm style image building for F20.
+# This kickstart file is designed to be used with ImageFactory (in Koji).
+#
+# To do a local build, you'll need to install ImageFactory.  See
+# http://worknotes.readthedocs.org/en/latest/cloudimages.html for some notes.
+#
+# For a TDL file, I store one here:
+# https://git.fedorahosted.org/cgit/fedora-atomic.git/tree/fedora-atomic-rawhide.tdl
+# (Koji generates one internally...what we really want is Koji to publish it statically)
+# 
+# Once you have imagefactory and imagefactory-plugins installed, run:
+# 
+#   curl -O https://git.fedorahosted.org/cgit/fedora-atomic.git/plain/fedora-atomic-rawhide.tdl 
+#   tempfile=$(mktemp --suffix=.ks)
+#   ksflatten -v F22 fedora-cloud-base.ks > ${tempfile}
+#   imagefactory --debug base_image --file-parameter install_script ${tempfile} fedora-atomic-rawhide.tdl
+#
 
 cmdline
 lang en_US.UTF-8
