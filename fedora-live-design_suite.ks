@@ -107,8 +107,8 @@ chmod a+x /usr/share/applications/list-design-tutorials.desktop
 # Add information about Fedora Design Suite
 cat >> /usr/share/applications/fedora-design-suite.desktop << FOE
 [Desktop Entry]
-Name=About Design Suite
-GenericName=About Design Suite Wiki Page
+Name=Design Suite Info
+GenericName=About Design Suite
 Comment=Wiki page of Design Suite
 Exec=xdg-open http://fedoraproject.org/wiki/Design_Suite
 Type=Application
@@ -120,7 +120,7 @@ chmod a+x /usr/share/applications/fedora-design-suite.desktop
 # Add information about Fedora Design Team
 cat >> /usr/share/applications/fedora-design-team.desktop << FOE
 [Desktop Entry]
-Name=About Design Team 
+Name=Design Team Info
 GenericName=About Design Team 
 Comment=Wiki page of Design Team
 Exec=xdg-open http://fedoraproject.org/wiki/Design
