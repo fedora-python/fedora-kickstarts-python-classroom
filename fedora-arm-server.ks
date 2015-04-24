@@ -4,7 +4,6 @@
 part / --size=3000 --fstype xfs
 
 %packages
--@fedora-release-nonproduct
 -@dial-up
 # install the default groups for the server evironment since installing the environment is not working
 @server-product

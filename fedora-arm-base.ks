@@ -23,7 +23,6 @@ services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd --disabled=ne
 @standard
 @hardware-support
 @dial-up
-@fedora-release-nonproduct
 
 kernel
 
