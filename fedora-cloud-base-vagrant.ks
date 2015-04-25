@@ -28,6 +28,10 @@ bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,11520
 # layer for dnf
 # TODO: Teach vagrant about dnf
 dnf-yum
+# rsync gets installed when the Vagrant box is first launched on the
+# users setup. This can actually take a bit of time.  Just fold it
+# in to the base box disk image
+rsync
 %end
 
 %post --erroronfail
