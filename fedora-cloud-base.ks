@@ -20,7 +20,7 @@
 # 
 #   curl -O https://git.fedorahosted.org/cgit/fedora-atomic.git/plain/fedora-atomic-rawhide.tdl 
 #   tempfile=$(mktemp --suffix=.ks)
-#   ksflatten -v F22 fedora-cloud-base.ks > ${tempfile}
+#   ksflatten -v F22 -c fedora-cloud-base.ks > ${tempfile}
 #   imagefactory --debug base_image --file-parameter install_script ${tempfile} fedora-atomic-rawhide.tdl
 #
 
