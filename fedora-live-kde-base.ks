@@ -80,23 +80,8 @@ cat > /home/liveuser/.config/akonadi/akonadiserverrc << AKONADI_EOF
 Driver=QSQLITE3
 AKONADI_EOF
 
-# Disable the update notifications of apper 
-cat > /home/liveuser/.kde/share/config/apper << APPER_EOF
-[CheckUpdate]
-autoUpdate=0
-distroUpgrade=0
-interval=0
-APPER_EOF
-
-# Disable some kded modules
-# apperd: http://bugzilla.redhat.com/948099
-cat > /home/liveuser/.kde/share/config/kdedrc << KDEDRC_EOF
-[Module-apperd]
-autoload=false
-KDEDRC_EOF
-
 # Disable baloo
-cat > /home/liveuser/.kde/share/config/baloofilerc << BALOO_EOF
+cat > /home/liveuser/.config/baloofilerc << BALOO_EOF
 [Basic Settings]
 Indexing-Enabled=false
 BALOO_EOF
