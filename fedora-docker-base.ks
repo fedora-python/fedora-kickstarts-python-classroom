@@ -16,7 +16,7 @@
 #
 
 cmdline
-bootloader --location=none
+bootloader --disabled
 timezone --isUtc --nontp Etc/UTC
 rootpw --lock --iscrypted locked
 user --name=none
