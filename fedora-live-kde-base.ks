@@ -97,6 +97,15 @@ cat > /home/liveuser/.kde/share/config/kres-migratorrc << KRES_EOF
 Enabled=false
 KRES_EOF
 
+# Enable folderview on live, workaround for https://bugzilla.redhat.com/show_bug.cgi?id=1220862
+mkdir -p /usr/share/plasma/shells/org.kde.plasma.desktop/updates
+cat >    /usr/share/plasma/shells/org.kde.plasma.desktop/updates/live-add-folderview-1.js << ADD_FOLDER_EOF
+for (var i = 0; i < screenCount; ++i) {
+    desktop = desktopForScreen(i, 0);
+    desktop.addWidget("org.kde.plasma.folder");
+}
+ADD_FOLDER_EOF
+
 # make sure to set the right permissions and selinux contexts
 chown -R liveuser:liveuser /home/liveuser/
 restorecon -R /home/liveuser/
