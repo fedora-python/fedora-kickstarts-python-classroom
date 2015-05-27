@@ -6,8 +6,8 @@
 # Maintainer(s):
 # - Dan Book <grinnz@grinnz.com>
 
-%include /usr/share/spin-kickstarts/fedora-live-base.ks
-%include /usr/share/spin-kickstarts/fedora-live-minimization.ks
+%include fedora-live-base.ks
+%include fedora-live-minimization.ks
 %include fedora-cinnamon-packages.ks
 
 # DVD payload
