@@ -11,7 +11,7 @@
 %include fedora-cinnamon-packages.ks
 
 # DVD payload
-part / --size=6144
+part / --size=6656
 
 %post
 # cinnamon configuration
