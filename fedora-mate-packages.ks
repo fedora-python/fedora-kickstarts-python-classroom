@@ -21,6 +21,30 @@ fusion-icon-gtk
 @libreoffice
 @networkmanager-submodules
 
+# some apps from mate-applications
+caja-actions
+mate-disk-usage-analyzer
+mate-netspeed
+mate-themes-extras
+
+# more backgrounds
+f22-backgrounds-mate
+f21-backgrounds-extras-base
+f21-backgrounds-extras-mate
+
+# system tools
+system-config-printer
+system-config-printer-applet
+
+# audio player
+audacious
+
+# office
+@libreoffice
+
+# dsl tools
+rp-pppoe
+
 # FIXME; apparently the glibc maintainers dislike this, but it got put into the
 # desktop image at some point.  We won't touch this one for now.
 nss-mdns
