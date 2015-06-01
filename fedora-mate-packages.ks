@@ -36,8 +36,8 @@ f21-backgrounds-extras-mate
 system-config-printer
 system-config-printer-applet
 
-# audio player
-audacious
+# blacklist applications which breaks mate-desktop
+-audacious
 
 # office
 @libreoffice
