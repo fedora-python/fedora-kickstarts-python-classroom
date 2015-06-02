@@ -48,6 +48,10 @@ passwd -l root
 # remove the user anaconda forces us to make
 userdel -r none
 
+# Configure docker-storage-setup to resize the partition table on boot
+# https://github.com/projectatomic/docker-storage-setup/pull/25
+echo 'GROWPART=true' > /etc/sysconfig/docker-storage-setup.conf
+
 echo -n "Getty fixes"
 # although we want console output going to the serial console, we don't
 # actually have the opportunity to login there. FIX.
