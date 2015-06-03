@@ -1,5 +1,5 @@
 %packages
--PackageKit*                # we switched to yumex, so we don't need this
+PackageKit*                # we switched to yumex, so we don't need this
 -ConsoleKit                 # ConsoleKit is deprecated
 -ConsoleKit-x11             # ConsoleKit is deprecated
 firefox
@@ -35,6 +35,11 @@ f21-backgrounds-extras-mate
 # system tools
 system-config-printer
 system-config-printer-applet
+
+# audio video
+parole
+exaile
+PackageKit-gstreamer-plugin
 
 # blacklist applications which breaks mate-desktop
 -audacious
