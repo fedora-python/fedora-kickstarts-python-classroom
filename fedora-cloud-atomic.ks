@@ -40,7 +40,7 @@ reboot
 %post --erroronfail
 # See https://github.com/projectatomic/rpm-ostree/issues/42
 ostree remote delete fedora-atomic
-ostree remote add --set=gpg-verify=false fedora-atomic 'http://dl.fedoraproject.org/pub/fedora/linux/atomic/rawhide/'
+ostree remote add --set=gpg-verify=false fedora-atomic 'https://dl.fedoraproject.org/pub/fedora/linux/atomic/rawhide/'
 
 # older versions of livecd-tools do not follow "rootpw --lock" line above
 # https://bugzilla.redhat.com/show_bug.cgi?id=964299
