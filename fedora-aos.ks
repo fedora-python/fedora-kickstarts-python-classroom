@@ -4,7 +4,7 @@
 lang C
 keyboard us
 timezone US/Eastern
-auth --useshadow --enablemd5
+auth --useshadow --passalgo=sha512
 selinux --permissive
 firewall --disabled
 bootloader --timeout=1 --append="acpi=force"

@@ -16,7 +16,7 @@ lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
 
-auth --useshadow --enablemd5
+auth --useshadow --passalgo=sha512
 selinux --enforcing
 rootpw --lock --iscrypted locked
 user --name=none
