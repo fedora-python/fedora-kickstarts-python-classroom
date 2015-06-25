@@ -10,8 +10,7 @@
 %include fedora-live-minimization.ks
 %include fedora-cinnamon-packages.ks
 
-# DVD payload
-part / --size=6656
+part / --size=6144
 
 %post
 # cinnamon configuration

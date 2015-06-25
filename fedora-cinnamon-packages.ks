@@ -24,3 +24,5 @@ gnome-keyring-pam
 # save some space
 -fedora-icon-theme
 -PackageKit*                # we switched to yumex, so we don't need this
+
+%end
