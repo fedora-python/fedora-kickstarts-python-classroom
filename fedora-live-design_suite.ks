@@ -45,7 +45,7 @@ inkscape-table
 mypaint
 nautilus-image-converter
 optipng
-phatch
+# phatch
 screenruler
 simple-scan
 scribus
