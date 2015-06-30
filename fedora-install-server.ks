@@ -107,7 +107,7 @@ dracut-*
 @network-server
 @printing
 @smb-server
-@virtualization
+@virtualization-headless
 @load-balancer
 @ha
 
