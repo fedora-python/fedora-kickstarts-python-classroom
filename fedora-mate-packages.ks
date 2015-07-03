@@ -20,6 +20,7 @@ fusion-icon
 fusion-icon-gtk
 @libreoffice
 @networkmanager-submodules
+blueman
 
 # some apps from mate-applications
 caja-actions
