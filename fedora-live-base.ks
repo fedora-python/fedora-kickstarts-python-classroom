@@ -47,6 +47,9 @@ anaconda
 # Need aajohan-comfortaa-fonts for the SVG rnotes images
 aajohan-comfortaa-fonts
 
+# Without this, initramfs generation during live image creation fails: #1242586
+dracut-live
+
 %end
 
 %post
