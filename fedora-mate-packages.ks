@@ -52,6 +52,4 @@ rp-pppoe
 # desktop image at some point.  We won't touch this one for now.
 nss-mdns
 
-# This one needs to be kicked out of @standard
--smartmontools
 %end
