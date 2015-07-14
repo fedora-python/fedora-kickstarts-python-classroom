@@ -27,7 +27,6 @@ part / --size 6144
 
 -@mate-applications
 -mate-icon-theme-faenza
--NetworkManager-bluetooth
 
 # Drop oversized fonts that aren't needed
 
