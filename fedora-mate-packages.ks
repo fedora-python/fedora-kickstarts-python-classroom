@@ -24,7 +24,6 @@ blueman
 caja-actions
 mate-disk-usage-analyzer
 mate-netspeed
-mate-themes-extras
 
 # more backgrounds
 f22-backgrounds-mate
