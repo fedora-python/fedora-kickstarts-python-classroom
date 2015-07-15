@@ -116,8 +116,9 @@ ln -s /lib/systemd/system/multi-user.target /etc/systemd/system/default.target
 echo .
 
 # this is installed by default but we don't need it in virt
-echo "Removing linux-firmware package."
-dnf -C -y erase linux-firmware
+# Commenting out the following for #1234504
+#echo "Removing linux-firmware package."
+#dnf -C -y erase linux-firmware
 
 # Remove firewalld; was supposed to be optional in F18+, but is pulled in
 # in install/image building.
