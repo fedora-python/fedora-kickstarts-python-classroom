@@ -62,15 +62,15 @@ supertux
 ultimatestunts
 warzone2100
 wesnoth
-worminator
+# worminator # Would pull in fluid-soundfont-lite-patches
 warmux
 xmoto
 
 # traditional (small)
 
 abe
-alex4
-ballz
+# alex4 # Would pull in fluid-soundfont-lite-patches
+# ballz # Would pull in fluid-soundfont-lite-patches
 blobwars
 bombardier
 cdogs-sdl
@@ -85,11 +85,11 @@ hedgewars
 kcheckers
 knights
 lbrickbuster2
-liquidwar
+# liquidwar # Would pull in fluid-soundfont-lite-patches
 londonlaw
 lordsawar
 lure
-machineball
+# machineball # Would pull in fluid-soundfont-lite-patches
 nethack
 openlierox
 pachi
@@ -97,7 +97,7 @@ pioneers
 quarry
 Ri-li
 rogue
-scorchwentbonkers
+# scorchwentbonkers # Would pull in fluid-soundfont-lite-patches
 seahorse-adventures
 solarwolf
 sopwith
@@ -109,11 +109,11 @@ xblast
 
 auriferous
 alienblaster
-duel3
+# duel3 # Would pull in fluid-soundfont-lite-patches
 lmarbles
 powermanga
-raidem
-raidem-music
+# raidem # Would pull in fluid-soundfont-lite-patches
+# raidem-music # Would pull in fluid-soundfont-lite-patches
 trackballs
 trackballs-music
 
@@ -123,7 +123,7 @@ ballbuster
 CriticalMass
 dd2
 KoboDeluxe
-lacewing
+# lacewing # Would pull in fluid-soundfont-lite-patches
 Maelstrom
 methane
 njam
@@ -132,13 +132,13 @@ shippy
 tecnoballz
 wordwarvi
 xgalaxy
-zasx
+# zasx # Would pull in fluid-soundfont-lite-patches
 
 # falling blocks games (small) 
 
 amoebax
 crack-attack
-crystal-stacker
+# crystal-stacker # Would pull in fluid-soundfont-lite-patches
 gemdropx
 gweled
 
