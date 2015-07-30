@@ -32,6 +32,7 @@ f21-backgrounds-extras-mate
 # system tools
 system-config-printer
 system-config-printer-applet
+lightdm-gtk-greeter-settings
 
 # audio video
 parole
