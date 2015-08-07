@@ -25,9 +25,9 @@ mate-disk-usage-analyzer
 mate-netspeed
 
 # more backgrounds
-f22-backgrounds-mate
+f23-backgrounds-base
+f23-backgrounds-mate
 f21-backgrounds-extras-base
-f21-backgrounds-extras-mate
 
 # system tools
 system-config-printer
