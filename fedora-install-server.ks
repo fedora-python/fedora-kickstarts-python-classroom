@@ -71,6 +71,7 @@ dracut-*
 @standard
 @core
 @hardware-support
+@networkmanager-submodules
 
 # Fedora Server.
 # Including this causes the fedora-release-server package to be included,
