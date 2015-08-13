@@ -15,7 +15,7 @@ part / --size 8192
 %packages
 # graphics
 blender
-LuxRender-blender
+# LuxRender-blender
 YafaRay-blender
 bluefish 
 colord-extra-profiles
