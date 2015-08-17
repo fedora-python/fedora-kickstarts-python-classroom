@@ -110,8 +110,6 @@ pdfshuffler
 openmpi
 openmpi-devel
 valgrind-openmpi
-pvm
-pvm-gui #will install 'pvm' as well
 libgomp
 python-pp
 mpi4py-openmpi
