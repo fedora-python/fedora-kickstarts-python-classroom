@@ -40,6 +40,7 @@ jack-audio-connection-kit
 jack-audio-connection-kit-dbus
 qjackctl
 jackctlmmc
+ffado
 
 #pulse
 pulseaudio-module-jack
