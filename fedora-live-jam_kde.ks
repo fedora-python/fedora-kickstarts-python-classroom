@@ -11,7 +11,7 @@
 #             https://fedoraproject.org/wiki/User:jvlomax
 #             Brendan Jones <brendan.jones.it@gmail.com>
 
-%include fedora-livecd-kde.ks
+%include fedora-live-kde.ks
 
 # DVD size partition
 part / --size 10240 --fstype ext4
@@ -77,7 +77,7 @@ sooperlooper
 
 #recodring and DAW
 audacity
-ardour3
+ardour4
 rosegarden4
 seq24
 muse
