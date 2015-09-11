@@ -97,7 +97,7 @@ cat >> /usr/share/applications/list-design-tutorials.desktop << FOE
 Name=List of design tutorials
 GenericName=List of Tutorials for Designers
 Comment=Reference of Design Related Tutorials
-Exec=xdg-open http://fedoraproject.org/wiki/Design_Suite/Tutorials
+Exec=xdg-open https://fedoraproject.org/wiki/Design_Suite/Tutorials
 Type=Application
 Icon=applications-graphics
 Categories=Graphics;Documentation;
@@ -110,7 +110,7 @@ cat >> /usr/share/applications/fedora-design-suite.desktop << FOE
 Name=Design Suite Info
 GenericName=About Design Suite
 Comment=Wiki page of Design Suite
-Exec=xdg-open http://fedoraproject.org/wiki/Design_Suite
+Exec=xdg-open https://fedoraproject.org/wiki/Design_Suite
 Type=Application
 Icon=applications-internet
 Categories=Documentation;
@@ -123,7 +123,7 @@ cat >> /usr/share/applications/fedora-design-team.desktop << FOE
 Name=Design Team Info
 GenericName=About Design Team 
 Comment=Wiki page of Design Team
-Exec=xdg-open http://fedoraproject.org/wiki/Design
+Exec=xdg-open https://fedoraproject.org/wiki/Design
 Type=Application
 Icon=applications-internet
 Categories=Documentation;
