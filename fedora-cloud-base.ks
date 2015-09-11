@@ -52,7 +52,12 @@ reboot
 # Package list.
 # FIXME: instLangs does not work, so there's a hack below
 # (see https://bugzilla.redhat.com/show_bug.cgi?id=1051816)
-%packages --instLangs=en
+# FIXME: instLangs bug has been fixed but now having instLangs
+# with an arg causes no langs to get installed because of BZ1262040
+# which yields the errors in BZ1261249. For now fix by not using
+# --instLangs at all
+#%packages --instLangs=en
+%packages
 
 kernel-core
 @^cloud-server-environment
