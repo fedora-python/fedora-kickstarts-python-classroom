@@ -97,6 +97,12 @@ cat > /home/liveuser/.kde/share/config/kres-migratorrc << KRES_EOF
 Enabled=false
 KRES_EOF
 
+# Disable kwallet migrator
+cat > /home/liveuser/.config/kwalletrc << KWALLET_EOL
+[Migration]
+alreadyMigrated=true
+KWALLET_EOL
+
 # make sure to set the right permissions and selinux contexts
 chown -R liveuser:liveuser /home/liveuser/
 restorecon -R /home/liveuser/
