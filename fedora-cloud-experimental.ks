@@ -99,8 +99,10 @@ ln -s /lib/systemd/system/multi-user.target /etc/systemd/system/default.target
 echo .
 
 # this is installed by default but we don't need it in virt
+# Commenting out the following for #1234504
+# rpm works just fine for removing this, no idea why dnf can't cope
 echo "Removing linux-firmware package."
-yum -C -y remove linux-firmware
+rpm -e linux-firmware
 
 # Remove firewalld; was supposed to be optional in F18+, but is required to
 # be present for install/image building.

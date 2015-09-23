@@ -122,8 +122,9 @@ echo .
 
 # this is installed by default but we don't need it in virt
 # Commenting out the following for #1234504
-#echo "Removing linux-firmware package."
-#dnf -C -y erase linux-firmware
+# rpm works just fine for removing this, no idea why dnf can't cope
+echo "Removing linux-firmware package."
+rpm -e linux-firmware
 
 # Remove firewalld; was supposed to be optional in F18+, but is pulled in
 # in install/image building.
