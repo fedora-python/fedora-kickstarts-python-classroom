@@ -51,7 +51,7 @@ sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desk
 # set executable bit disable KDE security warning
 chmod +x /usr/share/applications/liveinst.desktop
 mkdir /home/liveuser/Desktop
-cp -a /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
+cp -a /usr/share/applications/liveinst.desktop /home/liveuser/Desktop/
 
 # Set akonadi backend
 mkdir -p /home/liveuser/.config/akonadi
