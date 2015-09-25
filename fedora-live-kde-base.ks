@@ -7,12 +7,6 @@
 
 %post
 
-# create /etc/sysconfig/desktop (needed for installation)
-cat > /etc/sysconfig/desktop <<EOF
-DESKTOP="KDE"
-DISPLAYMANAGER="KDE"
-EOF
-
 # set default GTK+ theme for root (see #683855, #689070, #808062)
 cat > /root/.gtkrc-2.0 << EOF
 include "/usr/share/themes/Adwaita/gtk-2.0/gtkrc"
