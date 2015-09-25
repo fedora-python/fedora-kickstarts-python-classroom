@@ -22,11 +22,6 @@ EOF
 # add initscript
 cat >> /etc/rc.d/init.d/livesys << EOF
 
-# make liveuser use KDE
-echo "startkde" > /home/liveuser/.xsession
-chmod a+x /home/liveuser/.xsession
-chown liveuser:liveuser /home/liveuser/.xsession
-
 # set up autologin for user liveuser
 if [ -f /etc/sddm.conf ]; then
 sed -i 's/^#User=.*/User=liveuser/' /etc/sddm.conf
