@@ -22,12 +22,6 @@ EOF
 # add initscript
 cat >> /etc/rc.d/init.d/livesys << EOF
 
-if [ -e /usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png ] ; then
-    # use image also for kdm
-    mkdir -p /usr/share/apps/kdm/faces
-    cp /usr/share/icons/hicolor/96x96/apps/fedora-logo-icon.png /usr/share/apps/kdm/faces/fedora.face.icon
-fi
-
 # make liveuser use KDE
 echo "startkde" > /home/liveuser/.xsession
 chmod a+x /home/liveuser/.xsession
