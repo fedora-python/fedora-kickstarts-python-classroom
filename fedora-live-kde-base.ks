@@ -60,9 +60,10 @@ MENU_EOF
 
 # show liveinst.desktop on desktop and in menu
 sed -i 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
-
-# chmod +x ~/Desktop/liveinst.desktop to disable KDE's security warning
+# set executable bit disable KDE security warning
 chmod +x /usr/share/applications/liveinst.desktop
+mkdir /home/liveuser/Desktop
+cp -a /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
 
 # copy over the icons for liveinst to hicolor
 cp /usr/share/icons/gnome/16x16/apps/system-software-install.png /usr/share/icons/hicolor/16x16/apps/
