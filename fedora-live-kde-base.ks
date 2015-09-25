@@ -65,15 +65,6 @@ chmod +x /usr/share/applications/liveinst.desktop
 mkdir /home/liveuser/Desktop
 cp -a /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
 
-# copy over the icons for liveinst to hicolor
-cp /usr/share/icons/gnome/16x16/apps/system-software-install.png /usr/share/icons/hicolor/16x16/apps/
-cp /usr/share/icons/gnome/22x22/apps/system-software-install.png /usr/share/icons/hicolor/22x22/apps/
-cp /usr/share/icons/gnome/24x24/apps/system-software-install.png /usr/share/icons/hicolor/24x24/apps/
-cp /usr/share/icons/gnome/32x32/apps/system-software-install.png /usr/share/icons/hicolor/32x32/apps/
-cp /usr/share/icons/gnome/48x48/apps/system-software-install.png /usr/share/icons/hicolor/48x48/apps/
-cp /usr/share/icons/gnome/256x256/apps/system-software-install.png /usr/share/icons/hicolor/256x256/apps/
-touch /usr/share/icons/hicolor/
-
 # Set akonadi backend
 mkdir -p /home/liveuser/.config/akonadi
 cat > /home/liveuser/.config/akonadi/akonadiserverrc << AKONADI_EOF
