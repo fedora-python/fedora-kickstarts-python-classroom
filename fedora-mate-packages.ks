@@ -27,7 +27,7 @@ mate-netspeed
 # more backgrounds
 f23-backgrounds-base
 f23-backgrounds-mate
-f21-backgrounds-extras-base
+f23-backgrounds-extras-base
 
 # system tools
 system-config-printer
