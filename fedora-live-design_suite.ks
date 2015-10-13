@@ -15,7 +15,7 @@ part / --size 8192
 %packages
 # graphics
 blender
-# LuxRender-blender
+LuxRender-blender
 YafaRay-blender
 bluefish 
 colord-extra-profiles
@@ -74,6 +74,10 @@ campivisivi-titillium-fonts
 lato-fonts
 open-sans-fonts
 overpass-fonts
+
+# Extra wallpapers
+f23-backgrounds-extras
+f23-backgrounds-extras-gnome
 
 # removal of unneeded applications
 -gnome-boxes
