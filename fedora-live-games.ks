@@ -21,7 +21,7 @@ part / --size 10240
 -libreoffice*
 
 # Extra screensavers isn't much help for the games spin
-xscreensaver-extras
+-xscreensaver-extras
 
 # Allow joysticks and game pads to work
 joystick-support
