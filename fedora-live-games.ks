@@ -20,6 +20,9 @@ part / --size 10240
 # will likely put the games spin over size and it is freeze time.
 -libreoffice*
 
+# Extra screensavers isn't much help for the games spin
+xscreensaver-extras
+
 # Allow joysticks and game pads to work
 joystick-support
 
@@ -150,7 +153,7 @@ pingus
 # puzzles (small)
 
 escape
-gbrainy
+# gbrainy Removed for space - only game that pulls in mono
 magicor
 mirrormagic
 pipenightdreams
