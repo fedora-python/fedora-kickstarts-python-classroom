@@ -253,5 +253,8 @@ dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
 rm -f /var/tmp/zeros
 echo "(Don't worry -- that out-of-space error was expected.)"
 
+# For trac ticket https://fedorahosted.org/cloud/ticket/128
+rm -f /etc/sysconfig/network-scripts/ifcfg-ens3
+
 %end
 
