@@ -15,7 +15,7 @@ part / --size 8192
 %packages
 # graphics
 blender
-LuxRender-blender
+#LuxRender-blender
 YafaRay-blender
 bluefish 
 colord-extra-profiles
@@ -76,7 +76,7 @@ open-sans-fonts
 overpass-fonts
 
 # Extra wallpapers
-f23-backgrounds-extras
+f23-backgrounds-extras-base
 f23-backgrounds-extras-gnome
 
 # removal of unneeded applications
@@ -138,4 +138,3 @@ chmod a+x /usr/share/applications/fedora-design-team.desktop
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
 %end
-
