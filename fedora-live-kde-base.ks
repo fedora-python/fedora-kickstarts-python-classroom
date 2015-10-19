@@ -19,6 +19,8 @@ cat > /root/.config/gtk-3.0/settings.ini << EOF
 gtk-theme-name = Adwaita
 EOF
 
+%include fedora-packagekit-cached-metadata.ks
+
 # add initscript
 cat >> /etc/rc.d/init.d/livesys << EOF
 
