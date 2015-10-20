@@ -1,4 +1,7 @@
-# Copy initial metadata for PackageKit
+# %post script to include initial metadata for PackageKit
+
+%post
+
 PK_PREFIX=`mktemp -d`
 mkdir -p $PK_PREFIX/etc/yum.repos.d
 if [ -f /etc/yum.repos.d/fedora.repo ] ; then
@@ -28,3 +31,4 @@ if [ -d /var/cache/PackageKit ] ; then
 fi
 rm -rf $PK_PREFIX
 
+%end
