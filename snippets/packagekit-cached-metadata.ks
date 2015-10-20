@@ -1,6 +1,19 @@
 # %post script to include initial metadata for PackageKit
 
+%post --nochroot
+# Copy over files needed for networking inside the chroot
+for f in /etc/resolv.conf /etc/hosts ; do
+  test -f $f && cp -a $f ${INSTALL_ROOT}${f}.kickstart
+done
+%end
+
 %post
+
+# Use host machine's resolv.conf and hosts files
+for f in /etc/resolv.conf /etc/hosts ; do
+  test -f $f && mv $f $f.orig
+  test -f $f.kickstart && mv -f $f.kickstart $f
+done
 
 PK_PREFIX=`mktemp -d`
 mkdir -p $PK_PREFIX/etc/yum.repos.d
@@ -30,5 +43,11 @@ if [ -d /var/cache/PackageKit ] ; then
   mv $PK_PREFIX/var/cache/PackageKit/* /var/cache/PackageKit/
 fi
 rm -rf $PK_PREFIX
+
+# Restore original resolv.conf and hosts files
+for f in /etc/resolv.conf /etc/hosts ; do
+  rm -f $f
+  test -f $f.orig && mv $f.orig $f
+done
 
 %end
