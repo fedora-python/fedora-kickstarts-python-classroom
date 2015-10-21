@@ -4,6 +4,7 @@
 
 %include fedora-live-base.ks
 %include fedora-kde-packages.ks
+%include snippets/packagekit-cached-metadata.ks
 
 %post
 
@@ -58,6 +59,7 @@ AKONADI_EOF
 # Disable plasma-pk-updates
 sed -i \
     -e "s|^X-KDE-PluginInfo-EnabledByDefault=true|X-KDE-PluginInfo-EnabledByDefault=false|g" \
+    /usr/share/plasma/plasmoids/org.kde.plasma.pkupdates/metadata.desktop \
     /usr/share/kservices5/plasma-applet-org.kde.plasma.pkupdates.desktop
 
 # Disable baloo
