@@ -18,6 +18,8 @@ install:
 	install -m 644 custom/* $(DATADIR)/$(name)/custom
 	mkdir -p -m 755 $(DATADIR)/$(name)/l10n
 	install -m 644 l10n/* $(DATADIR)/$(name)/l10n
+	mkdir -p -m 755 $(DATADIR)/$(name)/snippets
+	install -m 644 snippets/* $(DATADIR)/$(name)/snippets
 
 clean:
 	rm -f $(name)-*.tar.gz
