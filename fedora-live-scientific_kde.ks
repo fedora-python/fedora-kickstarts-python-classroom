@@ -158,7 +158,7 @@ gimp
 ggobi
 ggobi-devel
 #g3data
-Mayavi
+#Mayavi
 
 #Misc. Utils
 screen
