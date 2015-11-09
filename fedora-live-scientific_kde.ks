@@ -88,6 +88,10 @@ rkward
 # GUI for Octave
 qtoctave
 
+# julia
+julia
+julia-doc
+
 # IDEs for the IDE folks
 @eclipse
 spyder
