@@ -157,7 +157,7 @@ xzgv
 gimp
 ggobi
 ggobi-devel
-g3data
+#g3data
 Mayavi
 
 #Misc. Utils
