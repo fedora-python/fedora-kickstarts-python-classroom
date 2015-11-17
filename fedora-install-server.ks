@@ -115,6 +115,7 @@ dracut-*
 @javaenterprise
 
 # “uservisible” groups we want to offer
+@ansible-node
 @editors
 @network-server
 @system-tools
