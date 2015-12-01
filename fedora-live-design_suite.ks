@@ -34,6 +34,7 @@ gimp-high-pass-filter
 gimp-normalmap
 gimp-resynthesizer
 gimp-separate+
+gnome-photos
 gpick
 GraphicsMagick
 gmic-gimp
@@ -83,7 +84,7 @@ f23-backgrounds-extras-gnome
 -gnome-boxes
 -gthumb
 -eog
--gnome-photos
+-shotwell
 -rdesktop
 
 %end
@@ -92,7 +93,7 @@ f23-backgrounds-extras-gnome
 #Override the favorite desktop application in Dash
 cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
-favorite-apps=['firefox.desktop', 'shotwell.desktop', 'gimp.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']
+favorite-apps=['firefox.desktop', 'gnome-photos.desktop', 'gimp.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']
 FOE
 
 # Add link to lists of tutorials
