@@ -4,13 +4,11 @@
 
 %include fedora-live-base.ks
 %include fedora-workstation-packages.ks
+%include snippets/packagekit-cached-metadata.ks
 
 part / --size 6144 
 
 %post
-
-# This is a huge file and things work ok without it
-rm -f /usr/share/icons/HighContrast/icon-theme.cache
 
 cat >> /etc/rc.d/init.d/livesys << EOF
 

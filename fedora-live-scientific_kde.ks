@@ -88,6 +88,10 @@ rkward
 # GUI for Octave
 qtoctave
 
+# julia
+julia
+julia-doc
+
 # IDEs for the IDE folks
 @eclipse
 spyder
@@ -153,8 +157,8 @@ xzgv
 gimp
 ggobi
 ggobi-devel
-g3data
-Mayavi
+#g3data
+#Mayavi
 
 #Misc. Utils
 screen

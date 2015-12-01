@@ -35,13 +35,13 @@ armacycles-ad
 asc
 asc-music
 astromenace
-beneath-a-steel-sky-cd
+# beneath-a-steel-sky-cd scummvm games cut for size
 boswars
 btanks
 bzflag
 crossfire-client
 extremetuxracer
-flight-of-the-amazon-queen-cd
+# flight-of-the-amazon-queen-cd scummvm games cut for size
 freeciv
 freecol
 freedoom
@@ -91,7 +91,7 @@ lbrickbuster2
 # liquidwar # Would pull in fluid-soundfont-lite-patches
 londonlaw
 lordsawar
-lure
+# lure scummvm games cut for size
 # machineball # Would pull in fluid-soundfont-lite-patches
 nethack
 openlierox

@@ -94,9 +94,6 @@ gnome-keyring-pam
 %post
 # xfce configuration
 
-# This is a huge file and things work ok without it
-rm -f /usr/share/icons/HighContrast/icon-theme.cache
-
 # create /etc/sysconfig/desktop (needed for installation)
 
 cat > /etc/sysconfig/desktop <<EOF

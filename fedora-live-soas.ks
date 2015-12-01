@@ -51,6 +51,7 @@ org.laptop.StopWatchActivity
 org.laptop.community.Finance
 org.laptop.community.TypingTurtle
 org.laptop.sugar.Jukebox
+org.laptop.Words
 org.eq.FotoToon
 org.gnome.Labyrinth
 com.laptop.Ruler
@@ -58,6 +59,7 @@ org.sugarlabs.AbacusActivity
 org.sugarlabs.IRC
 org.sugarlabs.InfoSlicer
 org.sugarlabs.PortfolioActivity
+org.sugarlabs.StoryActivity
 org.sugarlabs.VisualMatchActivity
 com.garycmartin.Moon
 mulawa.Countries
