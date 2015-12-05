@@ -305,8 +305,6 @@ rm -f /var/lib/rpm/__db*
 # go ahead and pre-make the man -k cache (#455968)
 /usr/bin/mandb
 
-# save a little bit of space at least...
-rm -f /boot/initramfs*
 # make sure there aren't core files lying around
 rm -f /core*
 
