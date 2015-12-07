@@ -85,41 +85,19 @@ dracut-*
 @server-hardware-support
 
 # Common server packages
-@mysql
 @sql-server
 @web-server
 
-# Web Server environment
-@haproxy
-@mongodb
-@perl-web
-@python-web
-@php
-@rubyonrails
-@tomcat
 
 # Infrastructure Server
-@directory-server
-@dogtag
-@dns-server
 @freeipa-server
-@ftp-server
 @mail-server
-@network-server
-@printing
 @smb-server
 @virtualization-headless
-@load-balancer
-@ha
-
-@javaenterprise
 
 # “uservisible” groups we want to offer
 @ansible-node
 @editors
-@network-server
-@system-tools
-@text-internet
 
 # Things needed for installation
 @anaconda-tools
