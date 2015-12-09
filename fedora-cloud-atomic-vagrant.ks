@@ -8,6 +8,13 @@ services --disabled=cloud-init,cloud-init-local,cloud-config,cloud-final
 user --name=vagrant --password=vagrant
 rootpw vagrant
 
+# The addition of the net.ifnames=0 and biosdevnames=0 option ensures that
+# even on VirtualBox virt, we get a primary network device with "eth0" as the name
+# This simplifies things and allows a single disk image for both supported Vagrant
+# platforms (virtualbox and kvm)
+bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0"
+
+
 %post --erroronfail
 
 # Work around cloud-init being both disabled and enabled; need
