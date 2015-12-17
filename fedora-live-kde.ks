@@ -43,7 +43,7 @@ wqy-microhei-fonts			# a compact CJK font, to replace:
 -naver-nanum-gothic-fonts		# Korean
 -vlgothic-fonts				# Japanese
 -adobe-source-han-sans-cn-fonts		# simplified Chinese
--adobe-source-han-sans-twhk-fonts	# traditional Chinese
+-adobe-source-han-sans-tw-fonts 	# traditional Chinese
 
 -paratype-pt-sans-fonts	# Cyrillic (already supported by DejaVu), huge
 #-stix-fonts		# mathematical symbols
