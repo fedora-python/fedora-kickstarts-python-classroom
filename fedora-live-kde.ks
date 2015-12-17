@@ -19,7 +19,6 @@ part / --size=6144
 # don't include these for now to fit on a cd
 -desktop-backgrounds-basic
 -kdeaccessibility*
--kdeartwork-screensavers	# screensavers are not needed on live images
 #-ktorrent			# kget has also basic torrent features (~3 megs)
 -digikam			# digikam has duplicate functionality with gwenview (~28 megs)
 #-amarok 			# ~23 megs (mysql-embedded etc.)
