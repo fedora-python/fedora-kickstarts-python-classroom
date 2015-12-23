@@ -42,6 +42,7 @@ indi-apogee
 indi-eqmod
 indi-gphoto
 indi-sx
+indistarter
 kstars
 skychart
 skychart-data-dso
@@ -57,21 +58,6 @@ astronomy-bookmarks
 astronomy-menus
 astronomy-menus-toplevel
 
-#Devel tools
-
-#Install the mandatory packages from dev-tools and dev-libs
-# C/C++ compiler, gdb, autotools, bison, flex, make, strace..
-@development-tools
-@development-libs
-@c-development
-@rpm-development-tools
-# for astronomy
-cfitsio-devel
-CCfits-devel
-libnova-devel
-wcslib-devel
-
-
 #python 2 tools/libraries not included from the groups
 python-tools
 python-ipython
@@ -84,6 +70,8 @@ python-pandas
 astropy-tools
 python-astropy
 python-astroML
+python-astroML-addons
+python2-ccdproc
 python-photutils
 python-sep
 pyephem
@@ -106,8 +94,10 @@ python3-pandas
 # Python 3 astronomy
 python3-astropy
 python3-astroML
+python3-astroML-addons
 python3-APLpy
 python3-ATpy
+python3-ccdproc
 python3-photutils
 python3-sep
 
@@ -121,6 +111,7 @@ python3-matplotlib-tk
 
 
 # Python IDE very useful for scientific use
+python3-spyder
 spyder
 
 
@@ -133,9 +124,6 @@ git-gui
 # Mercurial
 mercurial
 mercurial-hgk
-
-#Backup Utilities
-backintime-kde
 
 #Drawing, Picture viewing tools, Visualization tools
 dia
