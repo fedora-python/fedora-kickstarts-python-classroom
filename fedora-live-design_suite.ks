@@ -15,9 +15,10 @@ part / --size 8192
 %packages
 # graphics
 blender
-#LuxRender-blender
+LuxRender-blender
 YafaRay-blender
 bluefish 
+calligra-krita
 colord-extra-profiles
 darktable
 dia
