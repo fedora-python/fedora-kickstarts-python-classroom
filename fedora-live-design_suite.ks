@@ -13,69 +13,14 @@
 part / --size 8192
 
 %packages
-# graphics
-blender
-LuxRender-blender
-YafaRay-blender
-bluefish 
-calligra-krita
-colord-extra-profiles
-darktable
-dia
-entangle
-fontforge
-font-manager 
-gimp
-gimp-elsamuko
-gimp-*-plugin
-gimp-data-extras
-gimp-gap
-gimp-paint-studio
-gimp-high-pass-filter
-gimp-normalmap
-gimp-resynthesizer
-gimp-separate+
+# Switch to groups for design suite
+@design-suite
+
+# Replace shotwell
 gnome-photos
-gpick
-GraphicsMagick
-gmic-gimp
-hugin 
-ImageMagick
-inkscape
-inkscape-sozi
-inkscape-table
-mypaint
-nautilus-image-converter
-optipng
-phatch
-screenruler
-simple-scan
-scribus
-shutter
-synfigstudio
-xournal
 
-# office
-vym
-pdfmod
-pdfshuffler  
-
-# internet
-filezilla
-sparkleshare
-sshpass
-
-# audio & video
-audacity
-pitivi
-
-# fonts
-aajohan-comfortaa-fonts
-adobe-source-sans-pro-fonts
-campivisivi-titillium-fonts
-lato-fonts
-open-sans-fonts
-overpass-fonts
+# Exclude darktable from x86 architecture
+-darktable.i386
 
 # Extra wallpapers
 f23-backgrounds-extras-base
