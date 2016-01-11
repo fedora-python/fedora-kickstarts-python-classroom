@@ -19,9 +19,6 @@ part / --size 8192
 # Replace shotwell
 gnome-photos
 
-# Exclude darktable from x86 architecture
--darktable.i386
-
 # Extra wallpapers
 f23-backgrounds-extras-base
 f23-backgrounds-extras-gnome
