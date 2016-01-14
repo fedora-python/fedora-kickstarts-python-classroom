@@ -14,7 +14,7 @@ part / --size=3000 --fstype ext4
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
 
-services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd --disabled=network
+services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd,initial-setup --disabled=network
 
 %include fedora-repo.ks
 
