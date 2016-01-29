@@ -122,5 +122,8 @@ dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
 rm -f /var/tmp/zeros
 echo "(Don't worry -- that out-of-space error was expected.)"
 
+echo "Adding Developer Mode GRUB2 menu item."
+/usr/libexec/atomic-devmode/bootentry add
+
 %end
 
