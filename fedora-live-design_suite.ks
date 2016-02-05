@@ -16,7 +16,7 @@ part / --size 8192
 # Switch to groups for design suite
 @design-suite
 
-# Replace shotwell
+# Preview Gnome Photos
 gnome-photos
 
 # Extra wallpapers
@@ -27,7 +27,6 @@ f23-backgrounds-extras-gnome
 -gnome-boxes
 -gthumb
 -eog
--shotwell
 -rdesktop
 
 %end
