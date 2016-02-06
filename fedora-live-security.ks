@@ -6,10 +6,9 @@
 # Maintainers:
 #   Fabian Affolter <fab [AT] fedoraproject <dot> org>
 #   Joerg Simon <jsimon [AT] fedoraproject <dot> org>
-#   Christoph Wickert <cwickert [AT] fedoraproject <dot> org>
 # Acknowledgements:
 #   Fedora LiveCD Xfce Spin team - some work here was and will be inherited,
-#   many thanks!
+#   many thanks, especially to Christoph Wickert!
 #   Fedora LXDE Spin - Copied over stuff to make LXDE Default
 #   Luke Macken and Adam Miller for the original OpenBox Security ks and all
 #   the Security Applications! 
