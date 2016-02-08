@@ -134,6 +134,8 @@ kst-docs
 kst-fits
 
 #Misc. Utils
+# icedtea-web to have webstart useful for VO tools
+icedtea-web
 ImageMagick
 kate
 kate-plugins
