@@ -132,7 +132,6 @@ inkscape
 kst
 kst-docs
 kst-fits
-scidavis
 
 #Misc. Utils
 ImageMagick
