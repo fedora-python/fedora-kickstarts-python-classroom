@@ -14,8 +14,12 @@ auth --useshadow --passalgo=sha512
 selinux --enforcing
 firewall --enabled --service=mdns
 xconfig --startxonboot
+zerombr
+clearpart --all
 part / --size 4096 --fstype ext4
 services --enabled=NetworkManager,ModemManager --disabled=network,sshd
+network --bootproto=dhcp --activate
+shutdown
 
 %include fedora-repo.ks
 
@@ -34,6 +38,8 @@ services --enabled=NetworkManager,ModemManager --disabled=network,sshd
 # Explicitly specified here:
 # <notting> walters: because otherwise dependency loops cause yum issues.
 kernel
+kernel-modules
+kernel-modules-extra
 
 # This was added a while ago, I think it falls into the category of
 # "Diagnosis/recovery tool useful from a Live OS image".  Leaving this untouched
@@ -49,6 +55,10 @@ aajohan-comfortaa-fonts
 
 # Without this, initramfs generation during live image creation fails: #1242586
 dracut-live
+dracut-config-generic
+-dracut-config-rescue
+grub2-efi
+syslinux
 
 %end
 
