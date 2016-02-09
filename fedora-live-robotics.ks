@@ -6,7 +6,7 @@
 %include fedora-live-minimization.ks
 
 # The recommended part size for DVDs is too close to use for the robotics spin
-part / --size 10240
+part / --size 10752
 
 %packages
 # Start with GNOME

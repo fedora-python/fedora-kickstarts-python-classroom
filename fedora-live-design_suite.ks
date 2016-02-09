@@ -10,7 +10,7 @@
 %include fedora-live-workstation.ks
 
 #DVD size partition
-part / --size 8192
+part / --size 8704
 
 %packages
 # Switch to groups for design suite

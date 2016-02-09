@@ -6,7 +6,7 @@
 %include fedora-workstation-packages.ks
 %include snippets/packagekit-cached-metadata.ks
 
-part / --size 6144 
+part / --size 6656
 
 %post
 
