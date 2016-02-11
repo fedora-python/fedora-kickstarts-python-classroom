@@ -18,7 +18,7 @@ zerombr
 clearpart --all
 part / --size 5120 --fstype ext4
 services --enabled=NetworkManager,ModemManager --disabled=network,sshd
-network --bootproto=dhcp --activate
+network --bootproto=dhcp --device=link --activate
 shutdown
 
 %include fedora-repo.ks
