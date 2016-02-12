@@ -71,7 +71,9 @@ astropy-tools
 python-astropy
 python-astroML
 python-astroML-addons
+python2-astroquery
 python2-ccdproc
+python2-gatspy
 python-photutils
 python-sep
 pyephem
@@ -95,9 +97,11 @@ python3-pandas
 python3-astropy
 python3-astroML
 python3-astroML-addons
+python3-astroquery
 python3-APLpy
 python3-ATpy
 python3-ccdproc
+python3-gatspy
 python3-photutils
 python3-sep
 
