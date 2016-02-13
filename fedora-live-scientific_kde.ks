@@ -1,11 +1,9 @@
-#fedora-livedvd-scientific-kde.ks
-# With KDE Desktop
+# Fedora Scientific with KDE Desktop
 
 # Fedora Scientific: For researchers in Science and Engineering
 # Fedora-Scientific aims to create a Fedora which has the generic
 # toolset for the researcher
-# Web: https://fedoraproject.org/wiki/Scientific_Spin
-# Web: http://spins.fedoraproject.org/scientific-kde/
+# Web: https://labs.fedoraproject.org/en/scientific/
 
 # Maintainer: Amit Saha <amitksaha@fedoraproject.org>
 #             https://fedoraproject.org/wiki/User:Amitksaha
@@ -13,7 +11,7 @@
 %include fedora-live-kde.ks
 
 # The recommended part size for DVDs is too close to use for the scientific spin
-part / --size 12288
+part / --size 14500
 
 %packages
 
