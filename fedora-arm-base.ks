@@ -63,7 +63,7 @@ systemctl mask tmp.mount
 
 /usr/sbin/a-b-c
 
-yum -y remove dracut-config-generic
+dnf -y remove dracut-config-generic
 
 %end
 
