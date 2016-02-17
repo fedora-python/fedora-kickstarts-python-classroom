@@ -29,7 +29,6 @@ kernel
 dracut-config-generic
 
 chrony
-arm-boot-config
 extlinux-bootloader
 initial-setup
 initial-setup-gui
@@ -60,8 +59,6 @@ rm -f /var/lib/rpm/__db*
 # default of having /tmp on tmpfs.
 echo "Disabling tmpfs for /tmp."
 systemctl mask tmp.mount
-
-/usr/sbin/a-b-c
 
 dnf -y remove dracut-config-generic
 
