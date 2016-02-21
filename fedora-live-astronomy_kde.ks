@@ -23,6 +23,8 @@ part / --size 12288
 
 # Installing the default/mandatory packages from engineering & scientific
 @engineering-and-scientific
+# Remove octave stuff until dependencies are fixed
+-octave*
 
 # astronomical data analysis
 cdsclient
