@@ -58,7 +58,7 @@ nethack-vultures
 netpanzer
 #neverball #cut for size
 nogravity
-pinball
+#pinball # Would pull in fluid-soundfont-lite-patches
 scorched3d
 supertux
 #supertuxkart #remove for size
