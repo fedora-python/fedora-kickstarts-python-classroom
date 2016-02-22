@@ -168,9 +168,6 @@ rtirq
 japa
 radium-compressor
 
-#streaming
-idjc
-
 # fedora jam theming (to be customized)
 kfaenza-icon-theme
 fedora-jam-backgrounds
