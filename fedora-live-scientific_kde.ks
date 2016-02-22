@@ -24,9 +24,7 @@ scilab-devel
 scilab-doc
 
 # sagemath
-# BZ #1006230 should fix this
-# sagemath
-# sagemath-notebook
+sagemath
 
 #Devel tools
 
@@ -84,7 +82,7 @@ gcc-gfortran
 rkward
 
 # GUI for Octave
-# qtoctave
+qtoctave
 
 # julia
 julia
