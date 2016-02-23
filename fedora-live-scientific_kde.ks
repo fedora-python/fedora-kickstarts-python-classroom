@@ -24,7 +24,7 @@ scilab-devel
 scilab-doc
 
 # sagemath
-sagemath
+# sagemath
 
 #Devel tools
 
