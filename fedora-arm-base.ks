@@ -9,7 +9,7 @@ bootloader extlinux
 
 part /boot --size=512 --fstype ext4
 part swap --size=512 --fstype swap
-part / --size=3000 --fstype ext4
+part / --size=3070 --fstype ext4
 
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
