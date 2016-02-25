@@ -23,8 +23,8 @@ scilab
 scilab-devel
 scilab-doc
 
-# sagemath
-# sagemath
+# Remove sagemath explicitly?
+-sagemath
 
 #Devel tools
 
