@@ -41,6 +41,8 @@ dracut-config-generic
 # install uboot images
 uboot-images-armv7
 
+# make sure all the locales are available for inital0-setup and anaconda to work
+glibc-all-langpacks
 %end
 
 %post

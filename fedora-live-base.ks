@@ -60,6 +60,8 @@ dracut-config-generic
 grub2-efi
 syslinux
 
+# anaconda needs the locales available to run for different locales
+glibc-all-langpacks
 %end
 
 %post
