@@ -9,6 +9,8 @@ part / --size=1279 --fstype ext4
 -@dial-up
 -initial-setup-gui
 -generic-release*
+-glibc-all-langpacks
+glibc-langpack-en
 %end
 
 %post
