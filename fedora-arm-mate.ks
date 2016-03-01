@@ -2,7 +2,7 @@
 %include fedora-arm-xbase.ks
 %include fedora-mate-packages.ks
 
-part / --size=5000 --fstype ext4
+part / --size=5500 --fstype ext4
 
 %post
 echo -n "Enabling initial-setup gui mode on startup"
