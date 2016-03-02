@@ -133,9 +133,10 @@ mercurial-hgk
 dia
 gimp
 inkscape
-kst
-kst-docs
-kst-fits
+# Disabled temp. due to dependency issue with gsl 2.1
+#kst
+#kst-docs
+#kst-fits
 
 #Misc. Utils
 # icedtea-web to have webstart useful for VO tools
