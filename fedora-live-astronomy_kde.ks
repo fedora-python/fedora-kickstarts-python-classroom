@@ -137,6 +137,7 @@ inkscape
 #kst
 #kst-docs
 #kst-fits
+LabPlot
 
 #Misc. Utils
 # icedtea-web to have webstart useful for VO tools
