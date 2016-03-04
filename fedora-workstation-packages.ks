@@ -11,7 +11,6 @@
 @core
 @firefox
 @fonts
-@gnome-desktop
 @guest-desktop-agents
 @hardware-support
 @libreoffice
