@@ -310,6 +310,9 @@ rm -f /var/lib/rpm/__db*
 # make sure there aren't core files lying around
 rm -f /core*
 
+# remove random seed, the newly installed instance should make it's own
+rm -f /var/lib/systemd/random-seed
+
 # convince readahead not to collect
 # FIXME: for systemd
 
