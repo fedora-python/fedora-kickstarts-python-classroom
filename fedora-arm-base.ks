@@ -57,6 +57,9 @@ rpm -qa
 # Note that running rpm recreates the rpm db files which aren't needed or wanted
 rm -f /var/lib/rpm/__db*
 
+# remove random seed, the newly installed instance should make it's own
+rm -f /var/lib/systemd/random-seed
+
 # Because memory is scarce resource in most arm systems we are differing from the Fedora
 # default of having /tmp on tmpfs.
 echo "Disabling tmpfs for /tmp."
