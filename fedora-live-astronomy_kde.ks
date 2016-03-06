@@ -133,10 +133,9 @@ mercurial-hgk
 dia
 gimp
 inkscape
-# Disabled temp. due to dependency issue with gsl 2.1
-#kst
-#kst-docs
-#kst-fits
+kst
+kst-docs
+kst-fits
 LabPlot
 
 #Misc. Utils
