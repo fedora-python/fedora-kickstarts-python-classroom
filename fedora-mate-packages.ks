@@ -15,14 +15,12 @@ ccsm
 emerald-themes
 emerald
 fusion-icon
-fusion-icon-gtk
 @networkmanager-submodules
 blueman
 
 # some apps from mate-applications
 caja-actions
 mate-disk-usage-analyzer
-mate-netspeed
 
 # more backgrounds
 f23-backgrounds-base
