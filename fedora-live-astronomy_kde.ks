@@ -51,7 +51,6 @@ stellarium
 
 # misc. astronomy
 celestia
-xvarstar
 
 # Some astro environment stuff
 astronomy-bookmarks
