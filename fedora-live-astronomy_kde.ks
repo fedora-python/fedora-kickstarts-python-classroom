@@ -136,6 +136,7 @@ kst
 kst-docs
 kst-fits
 LabPlot
+veusz
 
 #Misc. Utils
 # icedtea-web to have webstart useful for VO tools
