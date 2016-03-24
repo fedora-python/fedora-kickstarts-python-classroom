@@ -10,7 +10,7 @@
 %include fedora-live-workstation.ks
 
 # Size partition
-part / --size 10240
+part / --size 14336
 
 %packages
 # Switch to groups for design suite
