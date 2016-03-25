@@ -56,7 +56,6 @@ aajohan-comfortaa-fonts
 # Without this, initramfs generation during live image creation fails: #1242586
 dracut-live
 dracut-config-generic
--dracut-config-rescue
 grub2-efi
 syslinux
 
@@ -318,6 +317,10 @@ rm -f /var/lib/systemd/random-seed
 
 echo 'File created by kickstart. See systemd-update-done.service(8).' \
     | tee /etc/.updated >/var/.updated
+
+# Drop the rescue kernel and initramfs, we don't need them on the live media itself.
+# See bug 1317709
+rm -f /boot/*-rescue*
 
 %end
 
