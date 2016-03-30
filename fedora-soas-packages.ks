@@ -76,9 +76,6 @@ pulseaudio-utils
 # Usefulness for DSL connections as per:
 # http://bugs.sugarlabs.org/ticket/1951
 rp-pppoe
-# Useful for SoaS duplication from:
-# http://bugs.sugarlabs.org/ticket/74
-livecd-tools
 
 # Get the Sugar boot screen
 -plymouth-system-theme
