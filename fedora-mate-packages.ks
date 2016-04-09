@@ -7,11 +7,11 @@ compiz-plugins-main
 compiz-plugins-extra
 compiz-manager
 compizconfig-python
-compiz-plugins-unsupported
-compiz-mate
+compiz-plugins-experimental
 libcompizconfig
 compiz-plugins-main
 ccsm
+simple-ccsm
 emerald-themes
 emerald
 fusion-icon
@@ -23,8 +23,8 @@ caja-actions
 mate-disk-usage-analyzer
 
 # more backgrounds
-f23-backgrounds-base
-f23-backgrounds-mate
+f24-backgrounds-base
+f24-backgrounds-mate
 f23-backgrounds-extras-base
 
 # system tools
