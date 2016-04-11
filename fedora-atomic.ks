@@ -33,7 +33,7 @@ volgroup atomicos pv.01
 logvol / --size=3000 --fstype="xfs" --name=root --vgname=atomicos
 
 # Equivalent of %include fedora-repo.ks
-ostreesetup --nogpg --osname=fedora-atomic --remote=fedora-atomic --url=http://kojipkgs.fedoraproject.org/mash/atomic/rawhide/ --ref=fedora-atomic/rawhide/x86_64/docker-host
+ostreesetup --nogpg --osname=fedora-atomic --remote=fedora-atomic --url=https://kojipkgs.fedoraproject.org/compose/atomic/rawhide/ --ref=fedora-atomic/rawhide/x86_64/docker-host
 
 reboot
 

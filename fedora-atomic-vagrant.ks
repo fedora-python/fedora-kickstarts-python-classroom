@@ -1,7 +1,7 @@
 # Like the Atomic cloud image, but tuned for vagrant.  Enable
 # the vagrant user, disable cloud-init.
 
-%include fedora-cloud-atomic.ks
+%include fedora-atomic.ks
 
 services --disabled=cloud-init,cloud-init-local,cloud-config,cloud-final
 
