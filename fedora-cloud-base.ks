@@ -43,7 +43,7 @@ services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config
 
 zerombr
 clearpart --all
-part / --size 3000 --fstype ext4 --grow
+part / --fstype ext4 --grow
 
 %include fedora-repo.ks
 
