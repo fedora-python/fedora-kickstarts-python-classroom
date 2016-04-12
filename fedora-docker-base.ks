@@ -24,7 +24,7 @@ user --name=none
 keyboard us
 zerombr
 clearpart --all
-part / --size 3000 --fstype ext4
+part / --fstype ext4 --grow
 network --bootproto=dhcp --device=link --activate --onboot=on
 reboot
 
