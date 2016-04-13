@@ -61,6 +61,8 @@ reboot
 
 kernel-core
 @^cloud-server-environment
+# Need to pull in the udev subpackage
+systemd-udev
 
 # rescue mode generally isn't useful in the cloud context
 -dracut-config-rescue
