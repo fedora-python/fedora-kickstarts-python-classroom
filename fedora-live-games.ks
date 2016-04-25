@@ -45,7 +45,7 @@ extremetuxracer
 freeciv
 freecol
 freedoom
-freedroidrpg
+# freedroidrpg cut for size
 frozen-bubble
 gl-117
 glob2
