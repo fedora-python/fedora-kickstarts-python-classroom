@@ -98,7 +98,7 @@ openlierox
 pachi
 pioneers
 quarry
-Ri-li
+# Ri-li cut for size
 rogue
 # scorchwentbonkers # Would pull in fluid-soundfont-lite-patches
 seahorse-adventures
