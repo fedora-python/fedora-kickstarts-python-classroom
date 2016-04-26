@@ -19,12 +19,14 @@ part / --size 14336
 # Preview Gnome Photos
 gnome-photos
 
-# Add Geeqie for renaming group files
-geeqie
+# Add gthumb for renaming group files
+gthumb
 
 # Extra wallpapers
 f23-backgrounds-extras-base
 f23-backgrounds-extras-gnome
+f24-backgrounds-extras-base
+f24-backgrounds-extras-gnome
 
 # removal of unneeded applications
 -gnome-boxes
