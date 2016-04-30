@@ -32,6 +32,9 @@ dnf-yum
 # users setup. This can actually take a bit of time.  Just fold it
 # in to the base box disk image
 rsync
+# Add fuse-sshfs so that the vagrant-sshfs plugin won't have to
+# install it on boot. https://github.com/dustymabe/vagrant-sshfs
+fuse-sshfs
 %end
 
 %post --erroronfail
