@@ -55,7 +55,6 @@ aajohan-comfortaa-fonts
 
 # Without this, initramfs generation during live image creation fails: #1242586
 dracut-live
-dracut-config-generic
 grub2-efi
 syslinux
 
