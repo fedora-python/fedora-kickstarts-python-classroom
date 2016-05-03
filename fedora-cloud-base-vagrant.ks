@@ -19,7 +19,7 @@ rootpw vagrant
 # even on VirtualBox virt, we get a primary network device with "eth0" as the name
 # This simplifies things and allows a single disk image for both supported Vagrant
 # platforms (virtualbox and kvm)
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0"
+bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0" --extlinux
 
 %packages
 # The default koji Vagrantfile configuration uses rsync to sync files between
