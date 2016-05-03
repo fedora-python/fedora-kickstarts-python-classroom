@@ -25,10 +25,8 @@ gthumb
 # Extra wallpapers
 f23-backgrounds-extras-base
 f23-backgrounds-extras-gnome
-
-# Temporary disable for testing purpose
-#f24-backgrounds-extras-base
-#f24-backgrounds-extras-gnome
+f24-backgrounds-extras-base
+f24-backgrounds-extras-gnome
 
 # removal of unneeded applications
 -gnome-boxes
