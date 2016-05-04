@@ -64,6 +64,9 @@ kernel-core
 # Need to pull in the udev subpackage
 systemd-udev
 
+# after move away from grub2 - let's add 'which' back
+which
+
 # rescue mode generally isn't useful in the cloud context
 -dracut-config-rescue
 
