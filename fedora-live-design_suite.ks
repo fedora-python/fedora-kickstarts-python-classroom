@@ -30,7 +30,6 @@ f24-backgrounds-extras-gnome
 
 # removal of unneeded applications
 -gnome-boxes
--gthumb
 -eog
 -rdesktop
 
