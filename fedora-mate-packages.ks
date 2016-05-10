@@ -25,7 +25,7 @@ mate-disk-usage-analyzer
 # more backgrounds
 f24-backgrounds-base
 f24-backgrounds-mate
-f23-backgrounds-extras-base
+f24-backgrounds-extras-base
 
 # system tools
 system-config-printer
