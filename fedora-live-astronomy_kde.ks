@@ -51,6 +51,7 @@ stellarium
 
 # misc. astronomy
 celestia
+virtualplanet
 
 # Some astro environment stuff
 astronomy-bookmarks
@@ -146,6 +147,7 @@ kate
 kate-plugins
 rlwrap
 screen
+redshift-gtk
 
 # Omit KDE 4 translations for now: https://bugzilla.redhat.com/show_bug.cgi?id=1197940
 -kde-l10n-*
