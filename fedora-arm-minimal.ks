@@ -11,6 +11,8 @@ part / --size=1279 --fstype ext4
 -generic-release*
 -glibc-all-langpacks
 glibc-langpack-en
+iw
+NetworkManager-wifi
 %end
 
 %post
