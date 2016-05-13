@@ -18,8 +18,11 @@ hexchat
 transmission
 parole
 
-# unlock default keyring. FIXME: Should probably be done in comps
-gnome-keyring-pam
+# make sure we have a graphical installer
+yumex-dnf
+
+# extra backgrounds
+f24-backgrounds-extras-base
 
 # save some space
 -fedora-icon-theme
