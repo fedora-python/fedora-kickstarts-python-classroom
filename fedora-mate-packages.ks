@@ -46,6 +46,10 @@ PackageKit-gstreamer-plugin
 # dsl tools
 rp-pppoe
 
+# some tools
+p7zip
+p7zip-plugins
+
 # FIXME; apparently the glibc maintainers dislike this, but it got put into the
 # desktop image at some point.  We won't touch this one for now.
 nss-mdns
