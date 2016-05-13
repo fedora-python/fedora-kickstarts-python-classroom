@@ -9,3 +9,4 @@ part /boot/efi --fstype="vfat" --size=100
 efibootmgr
 grub2-efi
 shim
+%end
