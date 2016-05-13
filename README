@@ -1,15 +1,22 @@
-The master branch is where development takes place:
- - it may contain kickstart files that are broken, or
- - spin concepts that are in the process of being
-   approved by the Board (trademark approval), or
- - spin concepts that are in the process of being
-   approved by the Spins SIG
+This project is used to manage the Fedora kickstart
+files used in composing Fedora release images. 
 
-The release specific branches contain spin concepts that:
- - are approved (both by Board and Spin SIG)
- - maintained for the remainder of the release cycle
+The master branch is used by rawhide and each 
+release branch is used by that release. 
 
-git clone ssh://git.fedorahosted.org/git/spin-kickstarts.git spin-kickstarts
+Changes should be made to rawhide first, then 
+cherry-picked back to any release branches that require 
+it. 
+
+All changes should be made via the PR workflow. 
+
+This project is packaged in Fedora as the 
+spin-kickstarts package allowing users to see
+and modify the kickstart files for their local needs. 
+
+To make a release: 
+
+git clone ssh://git@pagure.io/spin-kickstarts.git spin-kickstarts
 cd spin-kickstarts
 # If you need a specific branch other than master:
 git checkout BRANCHNAME
