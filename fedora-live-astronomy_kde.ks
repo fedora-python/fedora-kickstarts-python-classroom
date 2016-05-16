@@ -44,9 +44,6 @@ indi-gphoto
 indi-sx
 indistarter
 kstars
-skychart
-skychart-data-dso
-skychart-data-stars
 stellarium
 
 # misc. astronomy
@@ -57,29 +54,6 @@ virtualplanet
 astronomy-bookmarks
 astronomy-menus
 astronomy-menus-toplevel
-
-#python 2 tools/libraries not included from the groups
-python-tools
-python-ipython
-python-ipython-console
-python-ipython-notebook
-sympy
-python-networkx
-python-pandas
-# Python astronomy
-astropy-tools
-python-astropy
-python-astroML
-python-astroML-addons
-python2-astroquery
-python2-ccdproc
-python2-gatspy
-python-photutils
-python-sep
-pyephem
-APLpy
-ATpy
-
 
 #python 3 and tools/libraries not included from the groups
 python3
@@ -106,9 +80,6 @@ python3-photutils
 python3-sep
 
 # matplotlib backends
-python-matplotlib-qt4
-python-matplotlib-qt5
-python-matplotlib-tk
 python3-matplotlib-qt4
 python3-matplotlib-qt5
 python3-matplotlib-tk
@@ -116,8 +87,6 @@ python3-matplotlib-tk
 
 # Python IDE very useful for scientific use
 python3-spyder
-spyder
-
 
 #Version control- a GUI for each as well
 
@@ -125,19 +94,14 @@ spyder
 rapidsvn 
 git
 git-gui
-# Mercurial
-mercurial
-mercurial-hgk
 
 #Drawing, Picture viewing tools, Visualization tools
 dia
 gimp
-inkscape
 kst
 kst-docs
 kst-fits
 LabPlot
-veusz
 
 #Misc. Utils
 # icedtea-web to have webstart useful for VO tools
@@ -147,7 +111,6 @@ kate
 kate-plugins
 rlwrap
 screen
-redshift-gtk
 
 # Omit KDE 4 translations for now: https://bugzilla.redhat.com/show_bug.cgi?id=1197940
 -kde-l10n-*
