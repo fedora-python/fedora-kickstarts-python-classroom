@@ -25,7 +25,7 @@ services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd,initial-setup
 @dial-up
 
 kernel
-
+fedora-arm-installer
 dracut-config-generic
 
 chrony
