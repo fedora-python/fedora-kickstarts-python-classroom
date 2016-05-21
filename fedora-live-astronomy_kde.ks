@@ -111,6 +111,7 @@ kate
 kate-plugins
 rlwrap
 screen
+plasma-applet-redshift-control
 
 # Omit KDE 4 translations for now: https://bugzilla.redhat.com/show_bug.cgi?id=1197940
 -kde-l10n-*
