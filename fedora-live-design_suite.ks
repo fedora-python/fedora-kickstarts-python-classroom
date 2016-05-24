@@ -16,6 +16,33 @@ part / --size 14336
 # Switch to groups for design suite
 @design-suite
 
+# Added addons to address rhbz#1336879 from dnf
+gimp-data-extras
+gimp-dbp
+gimp-dds
+gimp-elsamuko
+gimp-fourier-plugin
+gimp-gap
+gimp-help
+gimp-help-browser
+gimp-high-pass-filter
+gimp-lensfun
+gimp-lqr-plugin
+gimp-normalmap
+gimp-paint-studio
+gimp-resynthesizer
+gimp-save-for-web
+gimp-separate+
+gimp-wavelet-denoise-plugin
+gimpfx-foundry
+gmic-gimp
+inkscape-psd
+inkscape-sozi
+LuxRender-blender
+sane-backends-drivers-scanners
+xsane-gimp
+YafaRay-blender
+
 # Preview Gnome Photos
 gnome-photos
 
