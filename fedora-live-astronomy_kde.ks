@@ -51,7 +51,6 @@ celestia
 virtualplanet
 
 # Some astro environment stuff
-astronomy-bookmarks
 astronomy-menus
 astronomy-menus-toplevel
 
