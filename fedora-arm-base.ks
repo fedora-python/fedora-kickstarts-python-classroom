@@ -25,8 +25,9 @@ services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd,initial-setup
 @dial-up
 
 kernel
-fedora-arm-installer
 dracut-config-generic
+# install tools needed to manage and boot arm systems
+@arm-tools
 
 chrony
 extlinux-bootloader
@@ -38,8 +39,6 @@ initial-setup-gui
 # remove this in %post
 dracut-config-generic
 
-# install uboot images
-uboot-images-armv7
 
 # make sure all the locales are available for inital0-setup and anaconda to work
 glibc-all-langpacks
