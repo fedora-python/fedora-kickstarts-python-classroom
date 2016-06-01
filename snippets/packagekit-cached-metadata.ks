@@ -3,7 +3,7 @@
 %post --nochroot
 # Copy over files needed for networking inside the chroot
 for f in /etc/resolv.conf /etc/hosts ; do
-  test -f $f && cp -a $f ${INSTALL_ROOT}${f}.kickstart
+  test -f $f && cp $f /mnt/sysimage/$f.kickstart
 done
 %end
 
