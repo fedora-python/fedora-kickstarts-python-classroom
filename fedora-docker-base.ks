@@ -76,10 +76,6 @@ localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
 rm -rf /var/cache/yum/*
 rm -f /tmp/ks-script*
 
-#Make it easier for systemd to run in Docker container
-cp /usr/lib/systemd/system/dbus.service /etc/systemd/system/
-sed -i 's/OOMScoreAdjust=-900//' /etc/systemd/system/dbus.service
-
 #Mask mount units and getty service so that we don't get login prompt
 systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connections.mount systemd-logind.service getty.target console-getty.service
 
