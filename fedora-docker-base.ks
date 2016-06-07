@@ -68,6 +68,7 @@ releasever=$(rpm -q --qf '%{version}\n' fedora-release)
 basearch=$(uname -i)
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
+echo "# fstab intentionally empty for containers" > /etc/fstab
 rm -f /usr/lib/locale/locale-archive
 
 #Setup locale properly
