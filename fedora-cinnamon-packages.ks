@@ -22,7 +22,8 @@ parole
 yumex-dnf
 
 # extra backgrounds
-f24-backgrounds-extras-base
+desktop-backgrounds-basic
+f24-backgrounds-extras-gnome
 
 # save some space
 -fedora-icon-theme
