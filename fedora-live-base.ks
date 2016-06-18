@@ -72,7 +72,7 @@ cat > /etc/rc.d/init.d/livesys << EOF
 # chkconfig: 345 00 99
 # description: Init script for live image.
 ### BEGIN INIT INFO
-# X-Start-Before: display-manager
+# X-Start-Before: display-manager chronyd
 ### END INIT INFO
 
 . /etc/init.d/functions
