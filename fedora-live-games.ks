@@ -66,7 +66,7 @@ ultimatestunts
 warzone2100
 wesnoth
 # worminator # Would pull in fluid-soundfont-lite-patches
-# warmux - Cut for size
+warmux
 xmoto
 
 # traditional (small)
