@@ -60,7 +60,7 @@ netpanzer
 nogravity
 #pinball # Would pull in fluid-soundfont-lite-patches
 scorched3d
-supertux
+# supertux # Crashing
 #supertuxkart #remove for size
 ultimatestunts
 warzone2100
