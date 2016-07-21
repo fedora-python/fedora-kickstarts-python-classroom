@@ -42,7 +42,7 @@ inkscape-sozi
 LuxRender-blender
 sane-backends-drivers-scanners
 xsane-gimp
-YafaRay-blender
+#YafaRay-blender
 
 # Preview Gnome Photos
 gnome-photos
