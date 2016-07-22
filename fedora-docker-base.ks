@@ -1,4 +1,4 @@
-# This is a minimal Fedora install designed to serve as a Docker base image. 
+# This is a minimal Fedora install designed to serve as a Docker base image.
 #
 # To keep this image minimal it only installs English language. You need to change
 # yum configuration in order to enable other languages.
@@ -9,9 +9,9 @@
 #
 # To do so, testing local changes, first you'll need a TDL file.  I store one here:
 # https://git.fedorahosted.org/cgit/fedora-atomic.git/tree/fedora-atomic-rawhide.tdl
-# 
+#
 # Then, once you have imagefactory and imagefactory-plugins installed, run:
-# 
+#
 #   imagefactory --debug target_image --template /path/to/fedora-atomic-rawhide.tdl --parameter offline_icicle true --file-parameter install_script $(pwd)/fedora-docker-base.ks docker
 #
 
@@ -82,6 +82,10 @@ rm -f /tmp/ks-script*
 
 #Mask mount units and getty service so that we don't get login prompt
 systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connections.mount systemd-logind.service getty.target console-getty.service
+
+# Fix /run/lock breakage since it's not tmpfs in docker
+umount /run
+systemd-tmpfiles --create --boot
 
 rm -f /etc/machine-id
 
