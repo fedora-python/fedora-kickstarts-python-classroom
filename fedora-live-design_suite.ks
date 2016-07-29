@@ -19,7 +19,7 @@ part / --size 14336
 # Added addons to address rhbz#1336879 from dnf
 gimp-data-extras
 gimp-dbp
-gimp-dds
+gimp-dds-plugin
 gimp-elsamuko
 gimp-fourier-plugin
 gimp-gap
