@@ -56,6 +56,11 @@ f23-backgrounds-extras-gnome
 f24-backgrounds-extras-base
 f24-backgrounds-extras-gnome
 
+# temporary removal of package for testing purpose
+-LuxRender-blender
+-libreoffice-pdfimporter
+-unoconv
+
 # removal of unneeded applications
 -gnome-boxes
 -eog
