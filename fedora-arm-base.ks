@@ -42,6 +42,14 @@ dracut-config-generic
 
 # make sure all the locales are available for inital0-setup and anaconda to work
 glibc-all-langpacks
+
+# workaround for consequence of RHBZ #1324623: without this, with
+# yum-based creation tools, compose fails due to conflict between
+# libcrypt and libcrypt-nss. dnf does not seem to have the same
+# issue, so this may be dropped when appliance-creator is ported
+# to dnf.
+libcrypt-nss
+-libcrypt
 %end
 
 %post
