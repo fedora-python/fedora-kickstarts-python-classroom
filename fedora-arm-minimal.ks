@@ -1,6 +1,6 @@
 %include fedora-arm-base.ks
 
-part /boot --size=512 --fstype ext4
+part /boot --size=512 --fstype ext3
 part swap --size=256 --fstype swap
 part / --size=1279 --fstype ext4
 
