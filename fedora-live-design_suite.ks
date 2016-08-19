@@ -48,7 +48,7 @@ xsane-gimp
 gnome-photos
 
 # Add gthumb for renaming group files
-gthumb
+# gthumb
 
 # Extra wallpapers
 f23-backgrounds-extras-base
