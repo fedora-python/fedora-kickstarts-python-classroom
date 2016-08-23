@@ -108,7 +108,6 @@ ladspa-vco-plugins
 #lv2 plugins
 lv2
 lv2-avw-plugins
-lv2-fil-plugins
 lv2-invada-plugins
 lv2-kn0ck0ut
 lv2-ll-plugins
