@@ -9,7 +9,6 @@ selinux --permissive
 firewall --disabled
 bootloader --timeout=1 --append="acpi=force"
 network --bootproto=dhcp --device=eth0 --onboot=on
-services --enabled=network
 
 # Uncomment the next line
 # to make the root password be thincrust
@@ -94,6 +93,10 @@ generic-logos
 # Add custom post scripts after the base post.
 #
 %post
+
+# Enable network service here, as doing it in the services line
+# fails due to RHBZ #1369794
+/sbin/chkconfig network on
 
 %end
 

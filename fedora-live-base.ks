@@ -17,7 +17,7 @@ xconfig --startxonboot
 zerombr
 clearpart --all
 part / --size 5120 --fstype ext4
-services --enabled=NetworkManager,ModemManager --disabled=network,sshd
+services --enabled=NetworkManager,ModemManager --disabled=sshd
 network --bootproto=dhcp --device=link --activate
 shutdown
 
@@ -320,6 +320,10 @@ echo 'File created by kickstart. See systemd-update-done.service(8).' \
 # Drop the rescue kernel and initramfs, we don't need them on the live media itself.
 # See bug 1317709
 rm -f /boot/*-rescue*
+
+# Disable network service here, as doing it in the services line
+# fails due to RHBZ #1369794
+/sbin/chkconfig network off
 
 %end
 

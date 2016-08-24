@@ -14,7 +14,7 @@ network --bootproto=dhcp --device=link --activate
 part / --fstype="ext4" --size=6000
 part /boot --size=500 --fstype="ext4"
 shutdown
-services --disabled=docker-storage-setup,network
+services --disabled=docker-storage-setup
 services --enabled=NetworkManager,sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
  
 ostreesetup --nogpg --osname=fedora-atomic --remote=fedora-atomic --url=http://kojipkgs.fedoraproject.org/mash/atomic/22/ --ref=fedora-atomic/f22/x86_64/docker-host
@@ -28,4 +28,9 @@ userdel -r none
 # We copy content of separate /boot partition to root part when building live squashfs image,
 # and we don't want systemd to try to mount it when pxe booting
 cat /dev/null > /etc/fstab
+
+# Disable network service here, as doing it in the services line
+# fails due to RHBZ #1369794
+/sbin/chkconfig network off
+
 %end

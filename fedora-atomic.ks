@@ -21,8 +21,7 @@ firewall --disabled
 bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
-services --disabled=network
-services --enabled=sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
+services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 zerombr
 clearpart --all
@@ -124,6 +123,10 @@ echo "(Don't worry -- that out-of-space error was expected.)"
 
 echo "Adding Developer Mode GRUB2 menu item."
 /usr/libexec/atomic-devmode/bootentry add
+
+# Disable network service here, as doing it in the services line
+# fails due to RHBZ #1369794
+/sbin/chkconfig network off
 
 %end
 

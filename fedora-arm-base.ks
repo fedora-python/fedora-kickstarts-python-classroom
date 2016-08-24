@@ -14,7 +14,7 @@ part / --size=3584 --fstype ext4
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
 
-services --enabled=ssh,NetworkManager,avahi-daemon,rsyslog,chronyd,initial-setup --disabled=network
+services --enabled=sshd,NetworkManager,avahi-daemon,rsyslog,chronyd,initial-setup
 
 %include fedora-repo.ks
 
@@ -73,6 +73,10 @@ echo "Disabling tmpfs for /tmp."
 systemctl mask tmp.mount
 
 dnf -y remove dracut-config-generic
+
+# Disable network service here, as doing it in the services line
+# fails due to RHBZ #1369794
+/sbin/chkconfig network off
 
 %end
 

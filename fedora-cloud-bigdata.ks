@@ -26,7 +26,7 @@ firewall --disabled
 bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8" --extlinux
 
 network --bootproto=dhcp --device=eth0 --activate --onboot=on
-services --enabled=network,sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
+services --enabled=sshd,rsyslog,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 zerombr
 clearpart --all
@@ -218,6 +218,10 @@ echo "Zeroing out empty space."
 dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
 rm -f /var/tmp/zeros
 echo "(Don't worry -- that out-of-space error was expected.)"
+
+# Enable network service here, as doing it in the services line
+# fails due to RHBZ #1369794
+/sbin/chkconfig network on
 
 %end
 
