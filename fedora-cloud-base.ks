@@ -36,7 +36,7 @@ user --name=none
 
 firewall --disabled
 
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8" --extlinux
+bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
@@ -82,7 +82,7 @@ which
 #-kbd
 -uboot-tools
 -kernel
--grub2
+grub2
 
 %end
 
@@ -245,7 +245,8 @@ rm -f /var/lib/rpm/__db*
 # where sfdisk seems to be messing up the mbr.
 # Long-term fix is to address this in anaconda directly and remove this.
 # <https://bugzilla.redhat.com/show_bug.cgi?id=1015931>
-dd if=/usr/share/syslinux/mbr.bin of=/dev/vda
+#dd if=/usr/share/syslinux/mbr.bin of=/dev/vda
+# Disabled with the switch back to grub2
 
 
 # FIXME: is this still needed?
