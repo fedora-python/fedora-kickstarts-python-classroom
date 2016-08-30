@@ -36,14 +36,20 @@ user --name=none
 
 firewall --disabled
 
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8"
+bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8" --extlinux
 
 network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 zerombr
 clearpart --all
-part / --fstype ext4 --grow
+#
+# We need to disable 64bit options here or extlinux won't work.
+# See: http://www.syslinux.org/wiki/index.php/Filesystem#ext4
+# and
+# https://bugzilla.redhat.com/show_bug.cgi?id=1369934
+#
+part / --fstype ext4 --grow --mkfsoptions="-O ^64bit"
 
 %include fedora-repo.ks
 
@@ -82,7 +88,7 @@ which
 #-kbd
 -uboot-tools
 -kernel
-grub2
+-grub2
 
 %end
 
@@ -245,9 +251,7 @@ rm -f /var/lib/rpm/__db*
 # where sfdisk seems to be messing up the mbr.
 # Long-term fix is to address this in anaconda directly and remove this.
 # <https://bugzilla.redhat.com/show_bug.cgi?id=1015931>
-#dd if=/usr/share/syslinux/mbr.bin of=/dev/vda
-# Disabled with the switch back to grub2
-
+dd if=/usr/share/syslinux/mbr.bin of=/dev/vda
 
 # FIXME: is this still needed?
 echo "Fixing SELinux contexts."
