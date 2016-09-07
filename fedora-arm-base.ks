@@ -28,7 +28,7 @@ kernel
 dracut-config-generic
 # install tools needed to manage and boot arm systems
 @arm-tools
-
+rng-tools
 chrony
 extlinux-bootloader
 initial-setup
@@ -38,7 +38,6 @@ initial-setup-gui
 
 # remove this in %post
 dracut-config-generic
-
 
 # make sure all the locales are available for inital0-setup and anaconda to work
 glibc-all-langpacks
