@@ -47,12 +47,7 @@ xsane-gimp
 # Preview Gnome Photos
 gnome-photos
 
-# Add gthumb for renaming group files
-# gthumb
-
 # Extra wallpapers
-f23-backgrounds-extras-base
-f23-backgrounds-extras-gnome
 f24-backgrounds-extras-base
 f24-backgrounds-extras-gnome
 
@@ -67,7 +62,7 @@ f24-backgrounds-extras-gnome
 #Override the favorite desktop application in Dash
 cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
 [org.gnome.shell]
-favorite-apps=['firefox.desktop', 'shotwell.desktop', 'darktable.desktop', 'gimp.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']
+favorite-apps=['firefox.desktop', 'shotwell.desktop', 'gimp.desktop', 'darktable.desktop','krita', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']
 FOE
 
 # Add link to lists of tutorials
