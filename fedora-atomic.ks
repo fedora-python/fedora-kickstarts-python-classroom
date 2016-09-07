@@ -47,6 +47,9 @@ passwd -l root
 # remove the user anaconda forces us to make
 userdel -r none
 
+# Work around https://bugzilla.redhat.com/show_bug.cgi?id=1193590
+cp /etc/skel/.bash* /var/roothome
+
 # Configure docker-storage-setup to resize the partition table on boot
 # https://github.com/projectatomic/docker-storage-setup/pull/25
 echo 'GROWPART=true' > /etc/sysconfig/docker-storage-setup
@@ -129,4 +132,3 @@ echo "Adding Developer Mode GRUB2 menu item."
 /sbin/chkconfig network off
 
 %end
-
