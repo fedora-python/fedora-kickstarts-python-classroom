@@ -274,5 +274,8 @@ rm -f /etc/sysconfig/network-scripts/ifcfg-ens3
 # fails due to RHBZ #1369794
 /sbin/chkconfig network on
 
+# Remove machine-id on pre generated images
+rm -f /etc/machine-id
+
 %end
 

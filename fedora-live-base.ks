@@ -325,6 +325,9 @@ rm -f /boot/*-rescue*
 # fails due to RHBZ #1369794
 /sbin/chkconfig network off
 
+# Remove machine-id on pre generated images
+rm -f /etc/machine-id
+
 %end
 
 
@@ -336,4 +339,5 @@ if [ "$(uname -i)" = "i386" -o "$(uname -i)" = "x86_64" ]; then
   if [ ! -d $LIVE_ROOT/LiveOS ]; then mkdir -p $LIVE_ROOT/LiveOS ; fi
   cp /usr/bin/livecd-iso-to-disk $LIVE_ROOT/LiveOS
 fi
+
 %end

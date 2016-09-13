@@ -87,6 +87,7 @@ systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connec
 umount /run
 systemd-tmpfiles --create --boot
 
+# Remove machine-id on pre generated images
 rm -f /etc/machine-id
 
 %end

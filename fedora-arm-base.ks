@@ -77,5 +77,8 @@ dnf -y remove dracut-config-generic
 # fails due to RHBZ #1369794
 /sbin/chkconfig network off
 
+# Remove machine-id on pre generated images
+rm -f /etc/machine-id
+
 %end
 
