@@ -7,9 +7,10 @@ firewall --enabled --service=mdns,ssh
 # configure extlinux bootloader
 bootloader extlinux
 
-part /boot --size=512 --fstype ext3
-part swap --size=512 --fstype swap
-part / --size=3584 --fstype ext4
+part /boot/fw --size=30 --fstype vfat --asprimary
+part /boot --size=512 --fstype ext3 --asprimary
+part swap --size=512 --fstype swap --asprimary
+part / --size=3584 --fstype ext4 --asprimary
 
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
@@ -31,6 +32,7 @@ dracut-config-generic
 rng-tools
 chrony
 extlinux-bootloader
+bcm283x-firmware
 initial-setup
 initial-setup-gui
 #lets resize / on first boot
@@ -52,6 +54,12 @@ libcrypt-nss
 %end
 
 %post
+
+# Setup Raspberry Pi firmware
+cp -Pr /usr/share/bcm283x-firmware/* /boot/fw/
+cp -P /usr/share/uboot/rpi_2/u-boot.bin /boot/fw/rpi2-u-boot.bin
+cp -P /usr/share/uboot/rpi_3_32b/u-boot.bin /boot/fw/rpi3-u-boot.bin
+sed -i '/vfat/ d' /etc/fstab
 
 # work around for poor key import UI in PackageKit
 rm -f /var/lib/rpm/__db*
