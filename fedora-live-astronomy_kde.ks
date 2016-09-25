@@ -67,6 +67,7 @@ python3-sympy
 python3-networkx
 python3-pandas
 # Python 3 astronomy
+astropy-tools
 python3-astropy
 python3-astroML
 python3-astroML-addons
