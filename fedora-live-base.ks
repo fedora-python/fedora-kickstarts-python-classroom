@@ -327,6 +327,7 @@ rm -f /boot/*-rescue*
 
 # Remove machine-id on pre generated images
 rm -f /etc/machine-id
+touch /etc/machine-id
 
 %end
 
