@@ -1,11 +1,11 @@
 # fedora-design-suite.ks
 # Based on Live Workstation
 # Description:
-# - A Spin targeted towards professional designers
+# - A collection of applications targeted towards professional visual designers
 # Website: http://fedoraproject.org/wiki/Design_Suite
-# Maintainers:
+# Maintainer:
 # - Luya Tshimbalanga <luya AT fedoraproject DOT org>
-# - Previous maintainer Sebastian Dziallas
+# - Credit to Sebastian Dziallas for initiating the project
 
 %include fedora-live-workstation.ks
 
@@ -44,7 +44,9 @@ sane-backends-drivers-scanners
 xsane-gimp
 #YafaRay-blender
 
-# Preview Gnome Photos
+# Add extra gnome applications
+gnome-books
+gnome-calendar
 gnome-photos
 
 # Extra wallpapers
