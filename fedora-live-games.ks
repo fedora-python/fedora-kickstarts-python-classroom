@@ -51,8 +51,8 @@ gl-117
 glob2
 lincity-ng
 tmw
-maniadrive
-maniadrive-music
+#maniadrive - currently broken
+#maniadrive-music - has been retired
 megaglest
 nethack-vultures
 netpanzer
