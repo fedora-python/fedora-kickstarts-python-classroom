@@ -66,17 +66,25 @@ python3-ipython-notebook
 python3-sympy
 python3-networkx
 python3-pandas
+python3-pillow
+python3-seaborn
+python3-statsmodels
+python3-scikit-learn
+python3-scikit-image
 # Python 3 astronomy
 astropy-tools
 python3-astropy
 python3-astroML
 python3-astroML-addons
 python3-astroquery
+python3-astroscrappy
 python3-APLpy
 python3-ATpy
 python3-ccdproc
 python3-gatspy
 python3-photutils
+python3-pyvo
+python3-reproject
 python3-sep
 
 # matplotlib backends
