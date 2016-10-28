@@ -73,6 +73,7 @@ python3-scikit-learn
 python3-scikit-image
 # Python 3 astronomy
 astropy-tools
+ginga
 python3-astropy
 python3-astroML
 python3-astroML-addons
@@ -81,6 +82,7 @@ python3-astroscrappy
 python3-APLpy
 python3-ATpy
 python3-ccdproc
+python3-fitsio
 python3-gatspy
 python3-photutils
 python3-pyvo
