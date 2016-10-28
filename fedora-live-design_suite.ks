@@ -39,6 +39,7 @@ gimpfx-foundry
 gmic-gimp
 inkscape-psd
 inkscape-sozi
+inkscape-table
 LuxRender-blender
 sane-backends-drivers-scanners
 xsane-gimp
@@ -52,6 +53,9 @@ gnome-photos
 # Extra wallpapers
 f24-backgrounds-extras-base
 f24-backgrounds-extras-gnome
+f25-backgrounds-extras-base
+f25-backgrounds-extras-gnome
+
 
 # removal of unneeded applications
 -gnome-boxes
