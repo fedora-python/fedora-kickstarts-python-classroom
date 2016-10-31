@@ -30,7 +30,6 @@ part / --size=6144
 k3b				# ~15 megs
 #kdeartwork			# only include some parts of kdeartwork
 fuse
-liveusb-creator
 
 # only include kdegames-minimal
 -kdegames
