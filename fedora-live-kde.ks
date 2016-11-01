@@ -30,6 +30,7 @@ part / --size=6144
 k3b				# ~15 megs
 #kdeartwork			# only include some parts of kdeartwork
 fuse
+mediawriter
 
 # only include kdegames-minimal
 -kdegames
