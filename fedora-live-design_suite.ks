@@ -40,7 +40,7 @@ gmic-gimp
 inkscape-psd
 inkscape-sozi
 inkscape-table
-LuxRender-blender
+#LuxRender-blender Comment that line because i86 support is no longer available
 sane-backends-drivers-scanners
 xsane-gimp
 #YafaRay-blender
