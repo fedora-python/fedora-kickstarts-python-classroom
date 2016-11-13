@@ -24,7 +24,6 @@ gimp-elsamuko
 gimp-fourier-plugin
 gimp-gap
 gimp-help
-gimp-help-browser
 gimp-high-pass-filter
 gimp-layer-via-copy-cut
 gimp-lensfun
