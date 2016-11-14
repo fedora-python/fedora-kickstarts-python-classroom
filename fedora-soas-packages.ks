@@ -33,6 +33,7 @@
 -ibus*
 -hyperv-daemons
 -webkitgtk4-plugin-process-gtk2
+webkitgtk3
 
 # Add some extra fonts
 dejavu-sans-fonts
