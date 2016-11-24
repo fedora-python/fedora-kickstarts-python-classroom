@@ -53,18 +53,7 @@ set -e
 userdel -r none
 
 LANG="en_US"
-echo "%_install_lang $LANG" > /etc/rpm/macros.image-language-conf
-
-# Carry these configs for both dnf and yum for users who are calling
-# yum-deprecated directly. This will keep the experience between both
-# consistent
-awk '(NF==0&&!done){print "override_install_langs='$LANG'\ntsflags=nodocs";done=1}{print}' \
-    < /etc/yum.conf > /etc/yum.conf.new
-mv /etc/yum.conf.new /etc/yum.conf
-
-awk '(NF==0&&!done){print "override_install_langs='$LANG'\ntsflags=nodocs";done=1}{print}' \
-    < /etc/dnf/dnf.conf > /etc/dnf/dnf.conf.new
-mv /etc/dnf/dnf.conf.new /etc/dnf/dnf.conf
+echo "%_install_langs $LANG" > /etc/rpm/macros.image-language-conf
 
 echo "Import RPM GPG key"
 releasever=$(rpm -q --qf '%{version}\n' fedora-release)
