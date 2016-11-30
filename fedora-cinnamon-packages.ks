@@ -23,7 +23,7 @@ yumex-dnf
 
 # extra backgrounds
 desktop-backgrounds-basic
-f24-backgrounds-extras-gnome
+f25-backgrounds-extras-gnome
 
 # save some space
 -fedora-icon-theme
