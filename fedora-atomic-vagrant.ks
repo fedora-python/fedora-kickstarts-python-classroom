@@ -1,9 +1,7 @@
-# Like the Atomic cloud image, but tuned for vagrant.  Enable
-# the vagrant user, disable cloud-init.
+# Like the Atomic Host cloud image, but tuned for vagrant: enable the
+# vagrant user, disable cloud-init.
 
 %include fedora-atomic.ks
-
-services --disabled=cloud-init,cloud-init-local,cloud-config,cloud-final
 
 user --name=vagrant --password=vagrant
 rootpw vagrant
@@ -14,12 +12,15 @@ rootpw vagrant
 # platforms (virtualbox and kvm)
 bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0"
 
-
 %post --erroronfail
 
 # Work around cloud-init being both disabled and enabled; need
 # to refactor to a common base.
 systemctl mask cloud-init cloud-init-local cloud-config cloud-final
+
+# The inherited cloud %post locks the passwd, but we want it
+# unlocked for vagrant, just like downstream.
+passwd -u root
 
 # Vagrant setup
 sed -i 's,Defaults\\s*requiretty,Defaults !requiretty,' /etc/sudoers
