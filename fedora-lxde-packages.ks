@@ -43,7 +43,6 @@ metacity
 -acpid
 -gimp-help
 -desktop-backgrounds-basic
--realmd                     # only seems to be used in GNOME
 -PackageKit*                # we switched to yumex, so we don't need this
 -foomatic-db-ppds
 -foomatic

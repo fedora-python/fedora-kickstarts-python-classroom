@@ -24,8 +24,6 @@
 -glx-utils
 -nmap-ncat
 -PackageKit
--libfprint
--realmd
 -eekboard-libs
 -open-vm-tools*
 -gfs2-utils

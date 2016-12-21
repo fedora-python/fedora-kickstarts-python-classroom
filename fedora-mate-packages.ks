@@ -35,7 +35,6 @@ lightdm-gtk-greeter-settings
 # audio video
 parole
 exaile
-PackageKit-gstreamer-plugin
 
 # blacklist applications which breaks mate-desktop
 -audacious

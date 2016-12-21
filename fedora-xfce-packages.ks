@@ -38,7 +38,6 @@ system-config-printer
 -acpid
 -gimp-help
 -desktop-backgrounds-basic
--realmd                     # only seems to be used in GNOME
 -PackageKit*                # we switched to yumex, so we don't need this
 -aspell-*                   # dictionaries are big
 -xfce4-sensors-plugin
