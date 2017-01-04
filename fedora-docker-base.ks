@@ -30,6 +30,7 @@ reboot
 
 %packages --excludedocs --instLangs=en --nocore
 bash
+tar # https://bugzilla.redhat.com/show_bug.cgi?id=1409920
 fedora-release
 rootfiles
 vim-minimal
