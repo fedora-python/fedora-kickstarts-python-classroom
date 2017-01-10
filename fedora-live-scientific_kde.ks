@@ -44,7 +44,7 @@ ddd
 valgrind
 
 #python 2 tools/libraries not included from the groups
-python-tools
+python2-tools
 python-ipython
 python-ipython-console
 python-ipython-notebook
