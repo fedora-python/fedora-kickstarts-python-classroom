@@ -1,3 +1,5 @@
 /spin-kickstarts-*.tar.gz
 flat-*.ks
 *.iso
+results/
+vagrant/
